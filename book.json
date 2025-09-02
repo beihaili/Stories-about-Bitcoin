@@ -4,6 +4,6 @@
   "description": "首部权威中文比特币通史 - 用《明朝那些事儿》的风格讲述比特币的传奇历史",
   "language": "zh-hans",
   "structure": {
-    "readme": "README.md"
+    "readme": "INTRO.md"
   }
 }
