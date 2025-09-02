@@ -5,17 +5,5 @@
   "language": "zh-hans",
   "structure": {
     "readme": "README.md"
-  },
-  "plugins": ["search", "sharing", "fontsettings", "theme-default"],
-  "pluginsConfig": {
-    "sharing": {
-      "facebook": true,
-      "twitter": true,
-      "google": false,
-      "weibo": true,
-      "instapaper": false,
-      "vk": false,
-      "all": ["facebook", "google", "twitter", "weibo", "instapaper"]
-    }
   }
 }
