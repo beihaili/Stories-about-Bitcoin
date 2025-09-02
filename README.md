@@ -219,6 +219,10 @@ git push origin feature/your-contribution
 
 </div>
 
+## ⭐ Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=beihaili/Stories-about-Bitcoin&type=Date)](https://star-history.com/#beihaili/Stories-about-Bitcoin&Date)
+
 ---
 
 <div align="center">
