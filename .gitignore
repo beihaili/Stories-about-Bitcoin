@@ -38,3 +38,6 @@ Temporary Items
 
 # Deployment guide (internal use only)
 DEPLOY_GUIDE.md
+
+# HonKit build directory
+_book/
