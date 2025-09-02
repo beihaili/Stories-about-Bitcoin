@@ -35,3 +35,6 @@ Temporary Items
 # Temporary files
 *.tmp
 *.temp
+
+# Deployment guide (internal use only)
+DEPLOY_GUIDE.md
