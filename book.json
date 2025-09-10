@@ -6,29 +6,6 @@
   "structure": {
     "readme": "INTRO.md"
   },
-  "plugins": [
-    "search-plus",
-    "sharing",
-    "fontsettings",
-    "theme-default"
-  ],
-  "pluginsConfig": {
-    "sharing": {
-      "weibo": true,
-      "qq": true,
-      "qzone": true,
-      "facebook": true,
-      "twitter": true,
-      "google": false,
-      "instapaper": false,
-      "vk": false
-    },
-    "fontsettings": {
-      "theme": "white",
-      "family": "serif",
-      "size": 2
-    }
-  },
   "variables": {
     "version": "第一季完成版",
     "status": "✅ 创世纪篇已完成",
