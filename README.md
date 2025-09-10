@@ -65,7 +65,7 @@
 <td>技术积累，密码朋克运动</td>
 </tr>
 <tr>
-<td>⏰ <a href="04_创世纪：2008时机成熟.md"><strong>2008时机成熟</strong></a></td>
+<td>⏰ <a href="04_创世纪：08年发生了什么.md"><strong>08年发生了什么</strong></a></td>
 <td>金融危机背景，时代契机</td>
 </tr>
 <tr>
@@ -73,20 +73,18 @@
 <td>比特币诞生，白皮书发布</td>
 </tr>
 <tr>
-<td rowspan="3" align="center"><strong>初出茅庐</strong><br><small>(2009-2010)</small></td>
+<td rowspan="1" align="center"><strong>初出茅庐</strong><br><small>(2009-2010)</small></td>
 <td>👤 <a href="06_初出茅庐：第一个信徒.md"><strong>第一个信徒</strong></a></td>
 <td>早期采用者，首批比特币用户</td>
 </tr>
 <tr>
-<td>🏘️ <a href="07_初出茅庐：社区与工具.md"><strong>社区与工具</strong></a></td>
-<td>社区建设，基础设施发展</td>
+<td colspan="3" align="center"><strong>✅ 第一季完成</strong></td>
 </tr>
 <tr>
-<td>💰 <a href="08_初出茅庐：价值发现.md"><strong>价值发现</strong></a></td>
-<td>首次交易，价值体现</td>
+<td colspan="3" align="center"><em>从哈耶克的预言到第一个信徒，比特币创世纪的完整故事</em></td>
 </tr>
 <tr>
-<td colspan="3" align="center"><strong>🚧 即将更新</strong></td>
+<td colspan="3" align="center"><strong>🚧 后续章节筹备中</strong></td>
 </tr>
 <tr>
 <td align="center"><strong>崭露头角</strong></td>
@@ -111,11 +109,9 @@ Stories-about-Bitcoin/
 ├── 01_创世纪：哈耶克的预言.md
 ├── 02_创世纪：乔姆的孤独方舟.md
 ├── 03_创世纪：密码朋克的技术拼图.md
-├── 04_创世纪：2008时机成熟.md
+├── 04_创世纪：08年发生了什么.md
 ├── 05_创世纪：中本聪创世.md
 ├── 06_初出茅庐：第一个信徒.md
-├── 07_初出茅庐：社区与工具.md
-├── 08_初出茅庐：价值发现.md
 ├── img/              # 图片资源目录
 ├── LICENSE           # 项目许可证
 └── README.md         # 项目说明文档
