@@ -8,7 +8,7 @@
   [![Stars](https://img.shields.io/github/stars/beihaili/Stories-about-Bitcoin?color=yellow&style=for-the-badge)](https://github.com/beihaili/Stories-about-Bitcoin/stargazers)
   [![Contributors](https://img.shields.io/github/contributors/beihaili/Stories-about-Bitcoin?color=green&style=for-the-badge)](https://github.com/beihaili/Stories-about-Bitcoin/graphs/contributors)
   
-  <p>🎯 <strong>1976-2012</strong> | 📚 <strong>17个章节</strong> | 🔥 <strong>开源协作</strong></p>
+  <p>🎯 <strong>1976-2012</strong> | 📚 <strong>17个章节</strong> | ✅ <strong>第一季完成</strong></p>
   
 </div>
 
@@ -126,15 +126,10 @@
 <td colspan="3" align="center"><em>从哈耶克的预言到生态萌芽，比特币从理论到现实的完整历史</em></td>
 </tr>
 <tr>
-<td colspan="3" align="center"><strong>🚧 第二季筹备中</strong></td>
+<td colspan="3" align="center"><strong>🎉 完整作品</strong></td>
 </tr>
 <tr>
-<td align="center"><strong>崭露头角</strong></td>
-<td colspan="2">机构采用、技术升级、监管完善</td>
-</tr>
-<tr>
-<td align="center"><strong>走向成熟</strong></td>
-<td colspan="2">生态繁荣、全球普及、未来展望</td>
+<td colspan="3" align="center"><em>这是一部完整的比特币早期历史作品，涵盖了从思想起源到生态建设的全过程</em></td>
 </tr>
 </tbody>
 </table>
