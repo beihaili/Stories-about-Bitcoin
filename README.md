@@ -119,18 +119,6 @@
 <td>📖 <a href="特别篇：查理·柯克的比特币之路.md"><strong>查理·柯克的比特币之路</strong></a></td>
 <td>纪念逝世的自由主义先驱</td>
 </tr>
-<tr>
-<td colspan="3" align="center"><strong>✅ 第一季完成</strong></td>
-</tr>
-<tr>
-<td colspan="3" align="center"><em>从哈耶克的预言到生态萌芽，比特币从理论到现实的完整历史</em></td>
-</tr>
-<tr>
-<td colspan="3" align="center"><strong>🎉 完整作品</strong></td>
-</tr>
-<tr>
-<td colspan="3" align="center"><em>这是一部完整的比特币早期历史作品，涵盖了从思想起源到生态建设的全过程</em></td>
-</tr>
 </tbody>
 </table>
 
