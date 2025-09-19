@@ -8,7 +8,7 @@
   [![Stars](https://img.shields.io/github/stars/beihaili/Stories-about-Bitcoin?color=yellow&style=for-the-badge)](https://github.com/beihaili/Stories-about-Bitcoin/stargazers)
   [![Contributors](https://img.shields.io/github/contributors/beihaili/Stories-about-Bitcoin?color=green&style=for-the-badge)](https://github.com/beihaili/Stories-about-Bitcoin/graphs/contributors)
   
-  <p>🎯 <strong>1976-2025</strong> | 📚 <strong>中文原创</strong> | 🔥 <strong>开源协作</strong></p>
+  <p>🎯 <strong>1976-2012</strong> | 📚 <strong>17个章节</strong> | 🔥 <strong>开源协作</strong></p>
   
 </div>
 
@@ -18,7 +18,7 @@
   <h3>🌟 用《明朝那些事儿》的风格，讲述比特币的传奇历史</h3>
 </div>
 
-这是一个开源的中文比特币历史写作项目，致力于用生动有趣的叙事方式，为读者展现从 **1976年哈耶克的货币理论** 到 **2025年比特币生态繁荣** 的完整历史画卷。
+这是一个开源的中文比特币历史写作项目，致力于用生动有趣的叙事方式，为读者展现从 **1976年哈耶克的货币理论** 到 **2012年比特币生态萌芽** 的完整历史画卷。
 
 我们将带您：
 - 🕰️ **穿越时空** - 重访比特币诞生前后的关键历史时刻
@@ -73,30 +73,68 @@
 <td>比特币诞生，白皮书发布</td>
 </tr>
 <tr>
-<td rowspan="1" align="center"><strong>初出茅庐</strong><br><small>(2009-2010)</small></td>
+<td rowspan="5" align="center"><strong>初出茅庐</strong><br><small>(2009-2010)</small></td>
 <td>👤 <a href="06_初出茅庐：第一个信徒.md"><strong>第一个信徒</strong></a></td>
-<td>早期采用者，首批比特币用户</td>
+<td>哈尔·芬尼的传承故事</td>
+</tr>
+<tr>
+<td>🛠️ <a href="07_初出茅庐：社区与工具.md"><strong>社区与工具</strong></a></td>
+<td>BitcoinTalk论坛与工具生态</td>
+</tr>
+<tr>
+<td>💰 <a href="08_初出茅庐：价值发现.md"><strong>价值发现</strong></a></td>
+<td>从无价到有价的历史突破</td>
+</tr>
+<tr>
+<td>🔧 <a href="09_初出茅庐：第一次危机与修复.md"><strong>第一次危机与修复</strong></a></td>
+<td>史上最大胆的网络回滚</td>
+</tr>
+<tr>
+<td>👻 <a href="10_初出茅庐：中本聪的神秘退场.md"><strong>中本聪的神秘退场</strong></a></td>
+<td>数字时代最伟大的退场</td>
+</tr>
+<tr>
+<td rowspan="5" align="center"><strong>风起云涌</strong><br><small>(2011-2012)</small></td>
+<td>⚔️ <a href="11_风起云涌：理想与现实的第一次碰撞.md"><strong>理想与现实的第一次碰撞</strong></a></td>
+<td>丝绸之路的争议与影响</td>
+</tr>
+<tr>
+<td>🏰 <a href="12_风起云涌：Mt.Gox帝国的崛起.md"><strong>Mt.Gox帝国的崛起</strong></a></td>
+<td>从技术实验到商业帝国</td>
+</tr>
+<tr>
+<td>💥 <a href="13_风起云涌：第一次泡沫.md"><strong>第一次泡沫</strong></a></td>
+<td>从媒体风暴到理性回归</td>
+</tr>
+<tr>
+<td>⚡ <a href="14_风起云涌：算力革命.md"><strong>算力革命</strong></a></td>
+<td>从CPU到GPU的挖矿演进</td>
+</tr>
+<tr>
+<td>🌱 <a href="15_风起云涌：生态萌芽.md"><strong>生态萌芽</strong></a></td>
+<td>支付服务与全球网络效应</td>
+</tr>
+<tr>
+<td align="center"><strong>特别篇</strong></td>
+<td>📖 <a href="特别篇：查理·柯克的比特币之路.md"><strong>查理·柯克的比特币之路</strong></a></td>
+<td>纪念逝世的自由主义先驱</td>
 </tr>
 <tr>
 <td colspan="3" align="center"><strong>✅ 第一季完成</strong></td>
 </tr>
 <tr>
-<td colspan="3" align="center"><em>从哈耶克的预言到第一个信徒，比特币创世纪的完整故事</em></td>
+<td colspan="3" align="center"><em>从哈耶克的预言到生态萌芽，比特币从理论到现实的完整历史</em></td>
 </tr>
 <tr>
-<td colspan="3" align="center"><strong>🚧 后续章节筹备中</strong></td>
+<td colspan="3" align="center"><strong>🚧 第二季筹备中</strong></td>
 </tr>
 <tr>
 <td align="center"><strong>崭露头角</strong></td>
-<td colspan="2">披萨交易、交易所诞生、早期矿工故事</td>
-</tr>
-<tr>
-<td align="center"><strong>风云变幻</strong></td>
-<td colspan="2">丝绸之路、监管挑战、技术演进</td>
+<td colspan="2">机构采用、技术升级、监管完善</td>
 </tr>
 <tr>
 <td align="center"><strong>走向成熟</strong></td>
-<td colspan="2">机构采用、技术升级、生态繁荣</td>
+<td colspan="2">生态繁荣、全球普及、未来展望</td>
 </tr>
 </tbody>
 </table>
@@ -112,7 +150,21 @@ Stories-about-Bitcoin/
 ├── 04_创世纪：08年发生了什么.md
 ├── 05_创世纪：中本聪创世.md
 ├── 06_初出茅庐：第一个信徒.md
-├── img/              # 图片资源目录
+├── 07_初出茅庐：社区与工具.md
+├── 08_初出茅庐：价值发现.md
+├── 09_初出茅庐：第一次危机与修复.md
+├── 10_初出茅庐：中本聪的神秘退场.md
+├── 11_风起云涌：理想与现实的第一次碰撞.md
+├── 12_风起云涌：Mt.Gox帝国的崛起.md
+├── 13_风起云涌：第一次泡沫.md
+├── 14_风起云涌：算力革命.md
+├── 15_风起云涌：生态萌芽.md
+├── 特别篇：查理·柯克的比特币之路.md
+├── img/              # 原版图片资源
+├── img_800px/        # 800px版本图片
+├── img_webp/         # WebP格式图片
+├── INTRO.md          # 书籍介绍
+├── SUMMARY.md        # 目录结构
 ├── LICENSE           # 项目许可证
 └── README.md         # 项目说明文档
 ```
