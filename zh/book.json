@@ -1,0 +1,15 @@
+{
+  "title": "比特币那些事儿",
+  "author": "beihaili",
+  "description": "首部权威中文比特币通史 - 用《明朝那些事儿》的风格讲述比特币的传奇历史",
+  "language": "zh-hans",
+  "structure": {
+    "readme": "INTRO.md"
+  },
+  "variables": {
+    "version": "第一季完成版",
+    "status": "✅ 创世纪篇已完成",
+    "chapters": 6,
+    "lastUpdate": "2025-09"
+  }
+}

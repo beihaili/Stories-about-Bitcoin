@@ -1,0 +1,22 @@
+# Stories about Bitcoin
+
+**The First Comprehensive English Chronicle of Bitcoin History**
+
+This book tells the legendary story of Bitcoin from 1976 to 2013, using an engaging narrative style inspired by popular historical storytelling. We explore the fascinating journey from Hayek's monetary theory to the emergence of the Bitcoin ecosystem.
+
+## What You'll Discover
+
+- 🕰️ **Time Travel** - Revisit key historical moments before and after Bitcoin's birth
+- 👥 **Meet the Characters** - Learn about Hayek, Cypherpunks, Satoshi Nakamoto, and other key figures
+- 🔧 **Understand the Technology** - Complex technical concepts explained in accessible language
+- 💡 **Feel the Vision** - Experience the idealism behind this world-changing monetary revolution
+
+## Reading Experience
+
+This book is designed to make Bitcoin's complex history accessible to everyone, whether you're a blockchain professional, history enthusiast, tech geek, investor, or curious reader. We combine rigorous historical research with engaging storytelling to bring Bitcoin's early days to life.
+
+---
+
+*"The Times 03/Jan/2009 Chancellor on brink of second bailout for banks"*
+
+**Created and maintained by Bitcoin history enthusiasts**

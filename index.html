@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stories about Bitcoin | 比特币那些事儿</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        
+        .container {
+            text-align: center;
+            max-width: 800px;
+            padding: 2rem;
+        }
+        
+        .title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            opacity: 0.9;
+        }
+        
+        .language-selection {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            margin-bottom: 3rem;
+        }
+        
+        .lang-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 2rem;
+            min-width: 250px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: white;
+            display: block;
+        }
+        
+        .lang-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.2);
+            text-decoration: none;
+            color: white;
+        }
+        
+        .lang-flag {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .lang-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .lang-desc {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        .footer {
+            margin-top: 3rem;
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+        
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .title {
+                font-size: 2rem;
+            }
+            
+            .language-selection {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .lang-card {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">📖 Stories about Bitcoin</h1>
+        <p class="subtitle">The First Comprehensive Chronicle of Bitcoin History<br>首部权威比特币通史</p>
+        
+        <div class="language-selection">
+            <a href="zh/" class="lang-card">
+                <div class="lang-flag">🇨🇳</div>
+                <div class="lang-title">中文版</div>
+                <div class="lang-desc">用《明朝那些事儿》的风格<br>讲述比特币的传奇历史</div>
+            </a>
+            
+            <a href="en/" class="lang-card">
+                <div class="lang-flag">🇺🇸</div>
+                <div class="lang-title">English</div>
+                <div class="lang-desc">Bitcoin's legendary story told<br>in an engaging narrative style</div>
+            </a>
+        </div>
+        
+        <div class="footer">
+            <p>📅 1976-2013 | 📚 17 Chapters | ✅ Season One Complete</p>
+            <p>Created by <a href="https://twitter.com/bhbtc1337">@beihaili</a> | 
+               <a href="https://github.com/beihaili/Stories-about-Bitcoin">GitHub</a></p>
+        </div>
+    </div>
+    
+    <script>
+        // Auto-detect language preference
+        const userLang = navigator.language || navigator.userLanguage;
+        if (userLang.startsWith('zh')) {
+            // Chinese speakers see Chinese version highlighted
+            document.querySelector('a[href="zh/"]').style.background = 'rgba(255, 255, 255, 0.2)';
+        } else {
+            // Others see English version highlighted
+            document.querySelector('a[href="en/"]').style.background = 'rgba(255, 255, 255, 0.2)';
+        }
+    </script>
+</body>
+</html>
