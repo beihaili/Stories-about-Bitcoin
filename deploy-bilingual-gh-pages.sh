@@ -55,6 +55,12 @@ mkdir -p "$TEMP_DIR/en"
 cp -R _book/* "$TEMP_DIR/en/"
 cd ..
 
+# 复制图片资源
+echo "👉 复制图片资源..."
+cp -R img "$TEMP_DIR/"
+cp -R img_800px "$TEMP_DIR/"
+cp -R img_webp "$TEMP_DIR/"
+
 # 复制语言选择页面
 echo "👉 复制语言选择页面..."
 cp index.html "$TEMP_DIR/"
