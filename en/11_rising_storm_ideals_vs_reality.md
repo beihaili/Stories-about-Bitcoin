@@ -1,8 +1,8 @@
 # Rising Storm: The First Collision Between Ideals and Reality
 
 <picture>
-  <source srcset="img_webp/11.webp" type="image/webp">
-  <img src="img/11.png" alt="Rising Storm: The First Collision Between Ideals and Reality" loading="lazy" width="800">
+  <source srcset="../img_webp/11.webp" type="image/webp">
+  <img src="../img/11.png" alt="Rising Storm: The First Collision Between Ideals and Reality" loading="lazy" width="800">
 </picture>
 
 ![author](https://img.shields.io/badge/Author-beihaili-blue)

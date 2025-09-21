@@ -1,8 +1,8 @@
 # Rising Storm: The First Bubble
 
 <picture>
-  <source srcset="img_webp/13.webp" type="image/webp">
-  <img src="img/13.png" alt="Rising Storm: The First Bubble" loading="lazy" width="800">
+  <source srcset="../img_webp/13.webp" type="image/webp">
+  <img src="../img/13.png" alt="Rising Storm: The First Bubble" loading="lazy" width="800">
 </picture>
 
 ![author](https://img.shields.io/badge/Author-beihaili-blue)

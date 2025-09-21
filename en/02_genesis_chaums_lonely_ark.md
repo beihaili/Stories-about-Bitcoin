@@ -1,8 +1,8 @@
 # Genesis: Chaum's Lonely Ark
 
 <picture>
-  <source srcset="img_webp/02.webp" type="image/webp">
-  <img src="img/02.png" alt="Chaum's Lonely Ark" loading="lazy" width="800">
+  <source srcset="../img_webp/02.webp" type="image/webp">
+  <img src="../img/02.png" alt="Chaum's Lonely Ark" loading="lazy" width="800">
 </picture>
 
 ![author](https://img.shields.io/badge/Author-beihaili-blue)

@@ -1,8 +1,8 @@
 # First Steps: Community and Tools
 
 <picture>
-  <source srcset="img_webp/07.webp" type="image/webp">
-  <img src="img/07.png" alt="Community and Tools" loading="lazy" width="800">
+  <source srcset="../img_webp/07.webp" type="image/webp">
+  <img src="../img/07.png" alt="Community and Tools" loading="lazy" width="800">
 </picture>
 
 ![author](https://img.shields.io/badge/Author-beihaili-blue)

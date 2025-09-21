@@ -1,8 +1,8 @@
 # Rising Storm: The Hashpower Revolution
 
 <picture>
-  <source srcset="img_webp/14.webp" type="image/webp">
-  <img src="img/14.png" alt="Rising Storm: The Hashpower Revolution" loading="lazy" width="800">
+  <source srcset="../img_webp/14.webp" type="image/webp">
+  <img src="../img/14.png" alt="Rising Storm: The Hashpower Revolution" loading="lazy" width="800">
 </picture>
 
 ![author](https://img.shields.io/badge/Author-beihaili-blue)

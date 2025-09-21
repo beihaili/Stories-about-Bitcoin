@@ -1,8 +1,8 @@
 # Special Chapter: Charlie Kirk's Bitcoin Journey—Freedom Currency, Freedom Spirit
 
 <picture>
-  <source srcset="img_webp/-01.webp" type="image/webp">
-  <img src="img/-01.png" alt="Special Chapter: Charlie Kirk's Bitcoin Journey" loading="lazy" width="800">
+  <source srcset="../img_webp/-01.webp" type="image/webp">
+  <img src="../img/-01.png" alt="Special Chapter: Charlie Kirk's Bitcoin Journey" loading="lazy" width="800">
 </picture>
 
 *This article is dedicated to the memory of conservative activist Charlie Kirk, who passed away on September 10, 2025*

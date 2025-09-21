@@ -1,8 +1,8 @@
 # First Steps: The First Believer
 
 <picture>
-  <source srcset="img_webp/06.webp" type="image/webp">
-  <img src="img/06.png" alt="The First Believer" loading="lazy" width="800">
+  <source srcset="../img_webp/06.webp" type="image/webp">
+  <img src="../img/06.png" alt="The First Believer" loading="lazy" width="800">
 </picture>
 
 ![author](https://img.shields.io/badge/Author-beihaili-blue)

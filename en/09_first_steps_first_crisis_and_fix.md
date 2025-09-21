@@ -1,8 +1,8 @@
 # First Steps: First Crisis and Fix
 
 <picture>
-  <source srcset="img_webp/09.webp" type="image/webp">
-  <img src="img/09.png" alt="First Steps: First Crisis and Fix" loading="lazy" width="800">
+  <source srcset="../img_webp/09.webp" type="image/webp">
+  <img src="../img/09.png" alt="First Steps: First Crisis and Fix" loading="lazy" width="800">
 </picture>
 
 ![author](https://img.shields.io/badge/Author-beihaili-blue)

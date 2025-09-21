@@ -1,8 +1,8 @@
 # The Rise of the Mt.Gox Empire
 
 <picture>
-  <source srcset="img_webp/12.webp" type="image/webp">
-  <img src="img/12.png" alt="The Rise of the Mt.Gox Empire" loading="lazy" width="800">
+  <source srcset="../img_webp/12.webp" type="image/webp">
+  <img src="../img/12.png" alt="The Rise of the Mt.Gox Empire" loading="lazy" width="800">
 </picture>
 
 ![author](https://img.shields.io/badge/Author-beihaili-blue)

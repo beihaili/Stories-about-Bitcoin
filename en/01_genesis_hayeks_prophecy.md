@@ -1,8 +1,8 @@
 # Genesis: Hayek's Prophecy
 
 <picture>
-  <source srcset="img_webp/01.webp" type="image/webp">
-  <img src="img/01.png" alt="Hayek's Prophecy" loading="lazy" width="800">
+  <source srcset="../img_webp/01.webp" type="image/webp">
+  <img src="../img/01.png" alt="Hayek's Prophecy" loading="lazy" width="800">
 </picture>
 
 ![author](https://img.shields.io/badge/Author-beihaili-blue)

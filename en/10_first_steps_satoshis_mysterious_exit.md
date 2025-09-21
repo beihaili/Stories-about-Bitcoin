@@ -1,8 +1,8 @@
 # First Steps: Satoshi's Mysterious Exit
 
 <picture>
-  <source srcset="img_webp/10.webp" type="image/webp">
-  <img src="img/10.png" alt="First Steps: Satoshi's Mysterious Exit" loading="lazy" width="800">
+  <source srcset="../img_webp/10.webp" type="image/webp">
+  <img src="../img/10.png" alt="First Steps: Satoshi's Mysterious Exit" loading="lazy" width="800">
 </picture>
 
 ![author](https://img.shields.io/badge/Author-beihaili-blue)

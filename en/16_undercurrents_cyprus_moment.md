@@ -1,8 +1,8 @@
 # Undercurrents: The Cyprus Moment
 
 <picture>
-  <source srcset="img_webp/16.webp" type="image/webp">
-  <img src="img/16.png" alt="Undercurrents: The Cyprus Moment" loading="lazy" width="800">
+  <source srcset="../img_webp/16.webp" type="image/webp">
+  <img src="../img/16.png" alt="Undercurrents: The Cyprus Moment" loading="lazy" width="800">
 </picture>
 
 ![author](https://img.shields.io/badge/Author-beihaili-blue)

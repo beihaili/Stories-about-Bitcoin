@@ -1,8 +1,8 @@
 # First Steps: Value Discovery
 
 <picture>
-  <source srcset="img_webp/08.webp" type="image/webp">
-  <img src="img/08.png" alt="First Steps: Value Discovery" loading="lazy" width="800">
+  <source srcset="../img_webp/08.webp" type="image/webp">
+  <img src="../img/08.png" alt="First Steps: Value Discovery" loading="lazy" width="800">
 </picture>
 
 ![author](https://img.shields.io/badge/Author-beihaili-blue)
