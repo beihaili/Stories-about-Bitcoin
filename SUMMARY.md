@@ -1,38 +1,51 @@
-# 比特币那些事儿
+# 比特币那些事儿 | Stories about Bitcoin
 
-* [关于这本书](INTRO.md)
+> 首部权威中文比特币通史 | The First Comprehensive Chinese Chronicle of Bitcoin History
 
----
-
-## 🌟 序言
-* [引子：一束照进现实的理想之光](00_引子：一束照进现实的理想之光.md)
-
-## 🔮 创世纪篇 (1976-2009)
-* [哈耶克的预言](01_创世纪：哈耶克的预言.md)
-* [乔姆的孤独方舟](02_创世纪：乔姆的孤独方舟.md)
-* [密码朋克的技术拼图](03_创世纪：密码朋克的技术拼图.md)
-* [08年发生了什么](04_创世纪：08年发生了什么.md)
-* [中本聪创世](05_创世纪：中本聪创世.md)
-
-## 👤 初出茅庐篇 (2009-2010)
-* [第一个信徒](06_初出茅庐：第一个信徒.md)
-* [社区与工具](07_初出茅庐：社区与工具.md)
-* [价值发现](08_初出茅庐：价值发现.md)
-* [第一次危机与修复](09_初出茅庐：第一次危机与修复.md)
-* [中本聪的神秘退场](10_初出茅庐：中本聪的神秘退场.md)
-
-## 🌪️ 风起云涌篇 (2011-2012)
-* [理想与现实的第一次碰撞](11_风起云涌：理想与现实的第一次碰撞.md)
-* [Mt.Gox帝国的崛起](12_风起云涌：Mt.Gox帝国的崛起.md)
-* [第一次泡沫](13_风起云涌：第一次泡沫.md)
-* [算力革命](14_风起云涌：算力革命.md)
-* [生态萌芽](15_风起云涌：生态萌芽.md)
-
-## 🌊 暗潮汹涌篇 (2013)
-* [塞浦路斯时刻](16_暗潮汹涌：塞浦路斯时刻.md)
+![status](https://img.shields.io/badge/状态-双语版本完成-green)
+![author](https://img.shields.io/badge/作者-beihaili-blue)
+![date](https://img.shields.io/badge/日期-2025--09-orange)
 
 ---
 
-## 📖 特别篇
-* [查理·柯克的比特币之路](特别篇：查理·柯克的比特币之路.md)
+## 🌐 语言选择 | Language Selection
 
+### 🇨🇳 中文版 | Chinese Version
+* [进入中文版](zh/INTRO.md)
+
+### 🇺🇸 英文版 | English Version  
+* [Enter English Version](en/INTRO.md)
+
+---
+
+## 📖 关于这本书 | About This Book
+
+这是一部用《明朝那些事儿》风格讲述比特币历史的开源作品。我们用生动有趣的叙事方式，为读者展现从 **1976年哈耶克的货币理论** 到 **比特币创世纪** 的完整历史画卷。
+
+This is an open-source work that tells the history of Bitcoin in the style of "Those Ming Dynasty Stories". We use vivid and interesting narrative methods to present readers with a complete historical picture from **Hayek's monetary theory in 1976** to **the Genesis of Bitcoin**.
+
+**已完成内容 | Completed Content:**
+- 🕰️ **1976-2013年** - 从理论到现实的完整脉络 | **1976-2013** - Complete context from theory to reality
+- 📖 **18个章节** - 引子(1章) + 创世纪篇(5章) + 初出茅庐篇(5章) + 风起云涌篇(5章) + 暗潮汹涌篇(1章) + 特别篇(1章) | **18 Chapters** - Introduction(1) + Genesis(5) + First Steps(5) + Rising Storm(5) + Undercurrents(1) + Special(1)
+
+## 🌟 写作特色 | Writing Features
+
+- **📚 史料丰富**：基于大量第一手资料和历史文献 | **Rich Historical Materials**: Based on extensive first-hand materials and historical documents
+- **🎭 生动叙事**：致敬《明朝那些事儿》的幽默风格 | **Vivid Narrative**: Paying tribute to the humorous style of "Those Ming Dynasty Stories"
+- **🔍 深度解析**：技术概念通俗化，历史事件故事化 | **In-depth Analysis**: Popularizing technical concepts and storytelling historical events
+- **🖼️ 配图精美**：每章配有精心制作的主题配图 | **Beautiful Illustrations**: Each chapter is accompanied by carefully crafted thematic illustrations
+
+## 🎯 适合读者 | Target Readers
+
+- **🚀 区块链从业者** - 深度了解行业历史根源，获取专业洞察 | **Blockchain Professionals** - Deep understanding of industry historical roots and professional insights
+- **📚 历史爱好者** - 见证新技术如何改变世界的精彩过程 | **History Enthusiasts** - Witness the wonderful process of how new technologies change the world
+- **💡 技术极客** - 理解比特币背后的技术演进脉络 | **Tech Geeks** - Understand the technical evolution behind Bitcoin
+- **💰 投资者** - 从历史中获取投资智慧和判断依据 | **Investors** - Gain investment wisdom and judgment basis from history
+- **📖 普通读者** - 用文学方式理解前沿科技概念 | **General Readers** - Understand cutting-edge technology concepts through literature
+
+---
+
+*"The Times 03/Jan/2009 Chancellor on brink of second bailout for banks"*
+
+**让我们一起，用文字记录这场伟大的货币革命。**  
+**Let us together record this great monetary revolution with words.**
