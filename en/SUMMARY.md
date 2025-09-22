@@ -30,6 +30,7 @@
 
 ## 🌊 Undercurrents (2013)
 * [The Cyprus Moment](16_undercurrents_cyprus_moment.md)
+* [Washington's Scrutiny](17_undercurrents_washingtons_scrutiny.md)
 
 ---
 
