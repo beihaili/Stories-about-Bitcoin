@@ -1,8 +1,8 @@
 <div align="center">
   
-  # 📖 Stories about Bitcoin | 比特币那些事儿
+  # 📖 比特币那些事儿
   
-  <p><i>The First Comprehensive Chronicle of Bitcoin History | 首部权威比特币通史</i></p>
+  <p><i>首部权威中文比特币通史 | The First Comprehensive Chinese Chronicle of Bitcoin History</i></p>
   
   [![License](https://img.shields.io/github/license/beihaili/Stories-about-Bitcoin?color=blue&style=for-the-badge)](https://github.com/beihaili/Stories-about-Bitcoin/blob/main/LICENSE)
   [![Stars](https://img.shields.io/github/stars/beihaili/Stories-about-Bitcoin?color=yellow&style=for-the-badge)](https://github.com/beihaili/Stories-about-Bitcoin/stargazers)
@@ -26,27 +26,15 @@
 - 🔧 **理解技术** - 用通俗易懂的方式解释复杂的技术概念
 - 💡 **感受理想** - 体会这场改变世界的货币革命背后的理想主义
 
-## 📖 开始阅读 | Start Reading
+## 📖 开始阅读
 
 <div align="center">
 
 | 方式 | 链接 | 特色 |
 |------|------|------|
-| 🌐 在线阅读 | **[GitHub Pages](https://beihaili.github.io/Stories-about-Bitcoin/)** | 双语版本，支持搜索和导航 |
-| 🇨🇳 中文版 | **[中文在线阅读](https://beihaili.github.io/Stories-about-Bitcoin/zh/)** | 《明朝那些事儿》风格 |
-| 🇺🇸 English | **[English Online](https://beihaili.github.io/Stories-about-Bitcoin/en/)** | Engaging narrative style |
+| 🌐 在线阅读 | **[GitHub Pages](https://beihaili.github.io/Stories-about-Bitcoin/)** | 支持搜索和导航，最佳体验 |
 | 📱 移动阅读 | **[下载 PDF](https://github.com/beihaili/Stories-about-Bitcoin/releases)** | 离线阅读，随时随地 |
-
-</div>
-
-## 🌐 Language Versions | 语言版本
-
-<div align="center">
-
-| Language | Link | Description |
-|:--------:|:----:|:-----------:|
-| 🇨🇳 **中文** | [中文版](zh/) | 用《明朝那些事儿》的风格讲述比特币的传奇历史 |
-| 🇺🇸 **English** | [English](en/) | Bitcoin's legendary story in engaging narrative style |
+| 📚 章节阅读 | **[从引子开始](https://github.com/beihaili/Stories-about-Bitcoin/blob/main/00_引子：一束照进现实的理想之光.md)** | 按章节逐步阅读 |
 
 </div>
 
@@ -134,27 +122,34 @@
 </tbody>
 </table>
 
-## 📊 项目结构 | Project Structure
+## 📊 项目结构
 
 ```
 Stories-about-Bitcoin/
-├── index.html                    # 语言选择页面 | Language selection
-├── zh/                          # 中文版 | Chinese version
-│   ├── *.md                     # 中文章节 | Chinese chapters
-│   ├── book.json                # 中文配置 | Chinese config
-│   ├── img/                     # 图片资源 | Images
-│   └── ...
-├── en/                          # English version
-│   ├── *.md                     # English chapters
-│   ├── book.json                # English config
-│   ├── img/                     # Image resources
-│   └── ...
-├── img/                         # 原版图片资源 | Original images
-├── img_800px/                   # 800px版本图片 | 800px images
-├── img_webp/                    # WebP格式图片 | WebP images
-├── deploy-bilingual-gh-pages.sh # 双语部署脚本 | Bilingual deploy
-├── LICENSE                      # 项目许可证 | License
-└── README.md                    # 项目说明 | Project documentation
+├── 00_引子：一束照进现实的理想之光.md
+├── 01_创世纪：哈耶克的预言.md
+├── 02_创世纪：乔姆的孤独方舟.md
+├── 03_创世纪：密码朋克的技术拼图.md
+├── 04_创世纪：08年发生了什么.md
+├── 05_创世纪：中本聪创世.md
+├── 06_初出茅庐：第一个信徒.md
+├── 07_初出茅庐：社区与工具.md
+├── 08_初出茅庐：价值发现.md
+├── 09_初出茅庐：第一次危机与修复.md
+├── 10_初出茅庐：中本聪的神秘退场.md
+├── 11_风起云涌：理想与现实的第一次碰撞.md
+├── 12_风起云涌：Mt.Gox帝国的崛起.md
+├── 13_风起云涌：第一次泡沫.md
+├── 14_风起云涌：算力革命.md
+├── 15_风起云涌：生态萌芽.md
+├── 特别篇：查理·柯克的比特币之路.md
+├── img/              # 原版图片资源
+├── img_800px/        # 800px版本图片
+├── img_webp/         # WebP格式图片
+├── INTRO.md          # 书籍介绍
+├── SUMMARY.md        # 目录结构
+├── LICENSE           # 项目许可证
+└── README.md         # 项目说明文档
 ```
 
 ## 👥 适合读者
