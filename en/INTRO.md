@@ -2,7 +2,7 @@
 
 **The First Comprehensive English Chronicle of Bitcoin History**
 
-This book tells the legendary story of Bitcoin from 1976 to 2013, using an engaging narrative style inspired by popular historical storytelling. We explore the fascinating journey from Hayek's monetary theory to the emergence of the Bitcoin ecosystem.
+This book tells the legendary story of Bitcoin from 1976 to 2015, using an engaging narrative style inspired by popular historical storytelling. We explore the fascinating journey from Hayek's monetary theory to the emergence of the Bitcoin ecosystem and global regulatory divergence.
 
 ## What You'll Discover
 
@@ -14,8 +14,8 @@ This book tells the legendary story of Bitcoin from 1976 to 2013, using an engag
 ## Content Overview
 
 **Completed Content:**
-- 🕰️ **1976-2013** - Complete context from theory to reality
-- 📖 **19 Chapters** - Introduction(1) + Genesis(5) + First Steps(5) + Rising Storm(5) + Undercurrents(2) + Special(1)
+- 🕰️ **1976-2015** - Complete context from theory to reality
+- 📖 **21 Chapters** - Introduction(1) + Genesis(5) + First Steps(5) + Rising Storm(5) + Undercurrents(5) + Special(1)
 
 ## Reading Experience
 

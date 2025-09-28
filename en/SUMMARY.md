@@ -28,9 +28,12 @@
 * [The Hash Power Revolution](14_rising_storm_hashpower_revolution.md)
 * [Ecosystem Sprouting](15_rising_storm_ecosystem_sprouting.md)
 
-## 🌊 Undercurrents (2013)
+## 🌊 Undercurrents (2013-2015)
 * [The Cyprus Moment](16_undercurrents_cyprus_moment.md)
 * [Washington's Scrutiny](17_undercurrents_washingtons_scrutiny.md)
+* [China's Policy Roller Coaster](18_undercurrents_chinas_policy_roller_coaster.md)
+* [The Demise of Mt.Gox](19_undercurrents_mtgox_demise.md)
+* [Global Regulatory Divergence](20_undercurrents_global_regulatory_divergence.md)
 
 ---
 
