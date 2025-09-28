@@ -8,7 +8,7 @@
   [![Stars](https://img.shields.io/github/stars/beihaili/Stories-about-Bitcoin?color=yellow&style=for-the-badge)](https://github.com/beihaili/Stories-about-Bitcoin/stargazers)
   [![Contributors](https://img.shields.io/github/contributors/beihaili/Stories-about-Bitcoin?color=green&style=for-the-badge)](https://github.com/beihaili/Stories-about-Bitcoin/graphs/contributors)
   
-  <p>🎯 <strong>1976-2012</strong> | 📚 <strong>17个章节</strong> | ✅ <strong>第一季完成</strong></p>
+  <p>🎯 <strong>1976-2015</strong> | 📚 <strong>21个章节</strong> | ✅ <strong>第一季完成</strong></p>
   
 </div>
 
@@ -18,7 +18,7 @@
   <h3>🌟 用《明朝那些事儿》的风格，讲述比特币的传奇历史</h3>
 </div>
 
-这是一个开源的中文比特币历史写作项目，致力于用生动有趣的叙事方式，为读者展现从 **1976年哈耶克的货币理论** 到 **2012年比特币生态萌芽** 的完整历史画卷。
+这是一个开源的中文比特币历史写作项目，致力于用生动有趣的叙事方式，为读者展现从 **1976年哈耶克的货币理论** 到 **2015年全球监管分化** 的完整历史画卷。
 
 我们将带您：
 - 🕰️ **穿越时空** - 重访比特币诞生前后的关键历史时刻
@@ -125,6 +125,28 @@
 <tr>
 <td>🌱 <a href="15_风起云涌：生态萌芽.md"><strong>生态萌芽</strong></a></td>
 <td>支付服务与全球网络效应</td>
+</tr>
+<tr>
+<td rowspan="3" align="center"><strong>暗潮汹涌</strong><br><small>(2013-2015)</small></td>
+<td>🏝️ <a href="16_暗潮汹涌：塞浦路斯时刻.md"><strong>塞浦路斯时刻</strong></a></td>
+<td>传统金融体系信任危机</td>
+</tr>
+<tr>
+<td>🏛️ <a href="17_暗潮汹涌：华盛顿的审视.md"><strong>华盛顿的审视</strong></a></td>
+<td>美国政府正式关注与监管</td>
+</tr>
+<tr>
+<td>🎢 <a href="18_暗潮汹涌：中国政策过山车_故事化优化版.md"><strong>中国政策过山车</strong></a></td>
+<td>从全民炒币到政策急刹车</td>
+</tr>
+<tr>
+<td rowspan="2" align="center"><strong>覆灭与分化</strong><br><small>(2014-2015)</small></td>
+<td>💥 <a href="19_暗潮汹涌：Mt.Gox的覆灭_故事化优化版.md"><strong>Mt.Gox的覆灭</strong></a></td>
+<td>中心化交易所的致命缺陷</td>
+</tr>
+<tr>
+<td>🌍 <a href="20_暗潮汹涌：全球监管分化_故事化优化版.md"><strong>全球监管分化</strong></a></td>
+<td>各国政策分歧重塑行业格局</td>
 </tr>
 <tr>
 <td align="center"><strong>特别篇</strong></td>
