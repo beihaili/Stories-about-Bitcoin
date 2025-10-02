@@ -8,7 +8,7 @@
   [![Stars](https://img.shields.io/github/stars/beihaili/Stories-about-Bitcoin?color=yellow&style=for-the-badge)](https://github.com/beihaili/Stories-about-Bitcoin/stargazers)
   [![Contributors](https://img.shields.io/github/contributors/beihaili/Stories-about-Bitcoin?color=green&style=for-the-badge)](https://github.com/beihaili/Stories-about-Bitcoin/graphs/contributors)
   
-  <p>🎯 <strong>1976-2015</strong> | 📚 <strong>21个章节</strong> | ✅ <strong>第一季完成</strong></p>
+  <p>🎯 <strong>1976-2017</strong> | 📚 <strong>23个章节</strong> | ✅ <strong>第一季完成</strong></p>
   
 </div>
 
@@ -18,7 +18,7 @@
   <h3>🌟 用《明朝那些事儿》的风格，讲述比特币的传奇历史</h3>
 </div>
 
-这是一个开源的中文比特币历史写作项目，致力于用生动有趣的叙事方式，为读者展现从 **1976年哈耶克的货币理论** 到 **2015年全球监管分化** 的完整历史画卷。
+这是一个开源的中文比特币历史写作项目，致力于用生动有趣的叙事方式，为读者展现从 **1976年哈耶克的货币理论** 到 **2017年扩容战争** 的完整历史画卷。
 
 我们将带您：
 - 🕰️ **穿越时空** - 重访比特币诞生前后的关键历史时刻
@@ -140,13 +140,21 @@
 <td>从全民炒币到政策急刹车</td>
 </tr>
 <tr>
-<td rowspan="2" align="center"><strong>覆灭与分化</strong><br><small>(2014-2015)</small></td>
+<td rowspan="4" align="center"><strong>覆灭与分化</strong><br><small>(2014-2017)</small></td>
 <td>💥 <a href="19_暗潮汹涌：Mt.Gox的覆灭_故事化优化版.md"><strong>Mt.Gox的覆灭</strong></a></td>
 <td>中心化交易所的致命缺陷</td>
 </tr>
 <tr>
 <td>🌍 <a href="20_暗潮汹涌：全球监管分化_故事化优化版.md"><strong>全球监管分化</strong></a></td>
 <td>各国政策分歧重塑行业格局</td>
+</tr>
+<tr>
+<td>⚡ <a href="21_暗潮汹涌：扩容争议萌芽_故事化优化版.md"><strong>扩容争议萌芽</strong></a></td>
+<td>1MB限制引发的技术哲学分歧</td>
+</tr>
+<tr>
+<td>🔥 <a href="22_破浪前行：扩容战争白热化_故事化优化版.md"><strong>扩容战争白热化</strong></a></td>
+<td>纽约协议与技术路线之争</td>
 </tr>
 <tr>
 <td align="center"><strong>特别篇</strong></td>

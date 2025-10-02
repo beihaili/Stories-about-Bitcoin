@@ -25,8 +25,8 @@
 This is an open-source work that tells the history of Bitcoin in the style of "Those Ming Dynasty Stories". We use vivid and interesting narrative methods to present readers with a complete historical picture from **Hayek's monetary theory in 1976** to **the Genesis of Bitcoin**.
 
 **已完成内容 | Completed Content:**
-- 🕰️ **1976-2015年** - 从理论到现实的完整脉络 | **1976-2015** - Complete context from theory to reality
-- 📖 **21个章节** - 引子(1章) + 创世纪篇(5章) + 初出茅庐篇(5章) + 风起云涌篇(5章) + 暗潮汹涌篇(5章) + 特别篇(1章) | **21 Chapters** - Introduction(1) + Genesis(5) + First Steps(5) + Rising Storm(5) + Undercurrents(5) + Special(1)
+- 🕰️ **1976-2017年** - 从理论到现实的完整脉络 | **1976-2017** - Complete context from theory to reality
+- 📖 **23个章节** - 引子(1章) + 创世纪篇(5章) + 初出茅庐篇(5章) + 风起云涌篇(5章) + 暗潮汹涌篇(7章) + 特别篇(1章) | **23 Chapters** - Introduction(1) + Genesis(5) + First Steps(5) + Rising Storm(5) + Undercurrents(7) + Special(1)
 
 ## 🌟 写作特色 | Writing Features
 
