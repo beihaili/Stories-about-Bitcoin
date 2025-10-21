@@ -1,8 +1,8 @@
 # Undercurrents: Global Regulatory Divergence
 
 <picture>
-  <source srcset="img_webp/20.webp" type="image/webp">
-  <img src="img/20.png" alt="Undercurrents: Global Regulatory Divergence" loading="lazy" width="800">
+  <source srcset="../img_webp/20.webp" type="image/webp">
+  <img src="../img/20.png" alt="Undercurrents: Global Regulatory Divergence" loading="lazy" width="800">
 </picture>
 
 As the dust from Mt.Gox settled, global regulators faced an unprecedented challenge: how to regulate a digital currency without borders or a center? Different countries gave completely different answers, and these divergences not only reflected various attitudes toward technological innovation but also revealed the fundamental dilemmas facing global financial governance in the digital age.

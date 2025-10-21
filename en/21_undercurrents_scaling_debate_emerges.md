@@ -1,8 +1,8 @@
 # Undercurrents: The Scaling Debate Emerges
 
 <picture>
-  <source srcset="img_webp/21.webp" type="image/webp">
-  <img src="img/21.png" alt="Undercurrents: The Scaling Debate Emerges" loading="lazy" width="800">
+  <source srcset="../img_webp/21.webp" type="image/webp">
+  <img src="../img/21.png" alt="Undercurrents: The Scaling Debate Emerges" loading="lazy" width="800">
 </picture>
 
 In the spring of 2015, the Bitcoin network was experiencing a seemingly minor but actually significant change. In Princeton University's Computer Science Department, graduate students noticed that Bitcoin transaction confirmation times were beginning to significantly lengthen. What used to take minutes now took over ten minutes, sometimes even an hour. Transaction fees were also quietly rising, making small transactions increasingly uneconomical.

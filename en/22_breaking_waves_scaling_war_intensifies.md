@@ -1,8 +1,8 @@
 # Breaking Waves: The Scaling War Intensifies
 
 <picture>
-  <source srcset="img_webp/22.webp" type="image/webp">
-  <img src="img/22.png" alt="Breaking Waves: The Scaling War Intensifies" loading="lazy" width="800">
+  <source srcset="../img_webp/22.webp" type="image/webp">
+  <img src="../img/22.png" alt="Breaking Waves: The Scaling War Intensifies" loading="lazy" width="800">
 </picture>
 
 In the spring of 2017, in an upscale coffee shop in Manhattan, New York, a hedge fund manager was trying to pay for a latte with Bitcoin. The transaction had been waiting in the mempool for three hours, still unconfirmed. The fee was set too low—only $10, while the network's average fee had soared to over $50.

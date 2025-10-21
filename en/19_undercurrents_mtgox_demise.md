@@ -1,8 +1,8 @@
 # Undercurrents: The Demise of Mt.Gox
 
 <picture>
-  <source srcset="img_webp/19.webp" type="image/webp">
-  <img src="img/19.png" alt="Undercurrents: The Demise of Mt.Gox" loading="lazy" width="800">
+  <source srcset="../img_webp/19.webp" type="image/webp">
+  <img src="../img/19.png" alt="Undercurrents: The Demise of Mt.Gox" loading="lazy" width="800">
 </picture>
 
 On February 7, 2014, in an office in Tokyo's Shibuya district, Marc Karpelès, the once-proud creator of a digital empire, now stared pale-faced at the flickering numbers on his computer screen. Three years earlier, he was the hero who built a Bitcoin trading empire with technical genius and business intuition; now, he was about to become the culprit of the biggest disaster in cryptocurrency history.

@@ -1,6 +1,6 @@
 # Stories about Bitcoin - Prologue: A Beam of Idealistic Light Piercing Reality
 
-![Cover Image](img/00.png)
+![Cover Image](../img/00.png)
 
 ![author](https://img.shields.io/badge/Author-beihaili-blue)
 ![date](https://img.shields.io/badge/Date-2025--07%20block%20903975-orange)

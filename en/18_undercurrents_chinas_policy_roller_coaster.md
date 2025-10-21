@@ -1,8 +1,8 @@
 # Undercurrents: China's Policy Roller Coaster
 
 <picture>
-  <source srcset="img_webp/18.webp" type="image/webp">
-  <img src="img/18.png" alt="Undercurrents: China's Policy Roller Coaster" loading="lazy" width="800">
+  <source srcset="../img_webp/18.webp" type="image/webp">
+  <img src="../img/18.png" alt="Undercurrents: China's Policy Roller Coaster" loading="lazy" width="800">
 </picture>
 
 In the spring of 2013, as long queues formed outside banks in Cyprus, a group of young programmers in Beijing's Zhongguancun, eight thousand kilometers away from the Mediterranean, were excited about a seemingly incredible phenomenon. Trading data from BTCChina showed that China had become the world's largest Bitcoin trading market, accounting for over 90% of global trading volume.
