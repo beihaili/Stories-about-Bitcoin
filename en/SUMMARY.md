@@ -37,10 +37,14 @@
 * [The Scaling Debate Emerges](21_undercurrents_scaling_debate_emerges.md)
 * [The Scaling War Intensifies](22_breaking_waves_scaling_war_intensifies.md)
 
-## ⚡ Breaking Waves (2017-2019)
+## ⚡ Breaking Waves (2017-2021)
 * [Bitcoin Independence Day](23_breaking_waves_bitcoin_independence_day.md)
 * [Price Euphoria and Speculative Bubble](24_breaking_waves_price_euphoria_and_speculative_bubble.md)
 * [The Beginning of Institutional Awakening](25_breaking_waves_the_beginning_of_institutional_awakening.md)
+* [Safe Haven Shift Under COVID-19](26_breaking_waves_covid_safe_haven_shift.md)
+* [Institutional Entry Milestone](27_breaking_waves_institutional_entry_milestone.md)
+* [El Salvador Pioneer](28_promising_future_el_salvador_pioneer.md)
+* [Geopolitical New Variables](29_Promising_Future_Geopolitical_New_Variables.md)
 
 ---
 
