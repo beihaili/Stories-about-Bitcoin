@@ -7,9 +7,9 @@
     "readme": "INTRO.md"
   },
   "variables": {
-    "version": "第一季完成版",
-    "status": "✅ 创世纪篇已完成",
-    "chapters": 6,
-    "lastUpdate": "2025-09"
+    "version": "全书完成版",
+    "status": "✅ 全书已完成 - 中英双语版本",
+    "chapters": 30,
+    "lastUpdate": "2025-10"
   }
 }
