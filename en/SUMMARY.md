@@ -45,6 +45,9 @@
 * [Institutional Entry Milestone](27_breaking_waves_institutional_entry_milestone.md)
 * [El Salvador Pioneer](28_promising_future_el_salvador_pioneer.md)
 * [Geopolitical New Variables](29_Promising_Future_Geopolitical_New_Variables.md)
+* [Historic ETF Breakthrough](30_Promising_Future_Historic_ETF_Breakthrough.md)
+* [One Hundred Thousand Dollar Breakthrough](31_Promising_Future_One_Hundred_Thousand_Dollar_Breakthrough.md)
+* [Path to Global Reserve Currency](32_Promising_Future_Path_to_Global_Reserve_Currency.md)
 
 ---
 
