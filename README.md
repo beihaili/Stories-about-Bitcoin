@@ -1,3 +1,4 @@
+<a id="top"></a>
 <div align="center">
   
   # 📖 Stories about Bitcoin | 比特币那些事儿
@@ -25,6 +26,22 @@
 - 👥 **走近人物** - 了解哈耶克、密码朋克、中本聪等关键人物
 - 🔧 **理解技术** - 用通俗易懂的方式解释复杂的技术概念
 - 💡 **感受理想** - 体会这场改变世界的货币革命背后的理想主义
+
+This is an open-source Bitcoin history writing project. Through vivid, story-driven narration, it presents the full arc from **Hayek’s monetary theory (1976)** to **the scaling wars (2017)** in an accessible way.
+
+We will take you on a journey to:
+- 🕰️ **Travel Through Time** - revisit key moments before and after Bitcoin’s birth
+- 👥 **Meet the Characters** - understand Hayek, the Cypherpunks, Satoshi Nakamoto, and more
+- 🔧 **Understand the Technology** - explain complex concepts in plain language
+- 💡 **Feel the Vision** - experience the idealism behind this world-changing monetary revolution
+
+## 🇺🇸 For English Readers | 英文读者入口
+
+- **English Online (best)**: https://beihaili.github.io/Stories-about-Bitcoin/en/
+- **English on GitHub**:
+  - `en/INTRO.md`（About this book）
+  - `en/SUMMARY.md`
+  - `en/00_introduction_beam_of_idealistic_light.md`
 
 ## 📖 开始阅读 | Start Reading
 
@@ -60,105 +77,105 @@
 <tbody>
 <tr>
 <td align="center"><strong>序言</strong></td>
-<td>📖 <a href="00_引子：一束照进现实的理想之光.md"><strong>一束照进现实的理想之光</strong></a></td>
+<td>📖 <a href="zh/00_引子：一束照进现实的理想之光.md"><strong>一束照进现实的理想之光</strong></a></td>
 <td>理想与现实的思辨，比特币的哲学意义</td>
 </tr>
 <tr>
 <td rowspan="5" align="center"><strong>创世纪</strong><br><small>(1976-2009)</small></td>
-<td>🔮 <a href="01_创世纪：哈耶克的预言.md"><strong>哈耶克的预言</strong></a></td>
+<td>🔮 <a href="zh/01_创世纪：哈耶克的预言.md"><strong>哈耶克的预言</strong></a></td>
 <td>货币理论基础，私人货币的设想</td>
 </tr>
 <tr>
-<td>⛵ <a href="02_创世纪：乔姆的孤独方舟.md"><strong>乔姆的孤独方舟</strong></a></td>
+<td>⛵ <a href="zh/02_创世纪：乔姆的孤独方舟.md"><strong>乔姆的孤独方舟</strong></a></td>
 <td>数字现金先驱，密码学货币雏形</td>
 </tr>
 <tr>
-<td>🧩 <a href="03_创世纪：密码朋克的技术拼图.md"><strong>密码朋克的技术拼图</strong></a></td>
+<td>🧩 <a href="zh/03_创世纪：密码朋克的技术拼图.md"><strong>密码朋克的技术拼图</strong></a></td>
 <td>技术积累，密码朋克运动</td>
 </tr>
 <tr>
-<td>⏰ <a href="04_创世纪：08年发生了什么.md"><strong>08年发生了什么</strong></a></td>
+<td>⏰ <a href="zh/04_创世纪：08年发生了什么.md"><strong>08年发生了什么</strong></a></td>
 <td>金融危机背景，时代契机</td>
 </tr>
 <tr>
-<td>🎯 <a href="05_创世纪：中本聪创世.md"><strong>中本聪创世</strong></a></td>
+<td>🎯 <a href="zh/05_创世纪：中本聪创世.md"><strong>中本聪创世</strong></a></td>
 <td>比特币诞生，白皮书发布</td>
 </tr>
 <tr>
 <td rowspan="5" align="center"><strong>初出茅庐</strong><br><small>(2009-2010)</small></td>
-<td>👤 <a href="06_初出茅庐：第一个信徒.md"><strong>第一个信徒</strong></a></td>
+<td>👤 <a href="zh/06_初出茅庐：第一个信徒.md"><strong>第一个信徒</strong></a></td>
 <td>哈尔·芬尼的传承故事</td>
 </tr>
 <tr>
-<td>🛠️ <a href="07_初出茅庐：社区与工具.md"><strong>社区与工具</strong></a></td>
+<td>🛠️ <a href="zh/07_初出茅庐：社区与工具.md"><strong>社区与工具</strong></a></td>
 <td>BitcoinTalk论坛与工具生态</td>
 </tr>
 <tr>
-<td>💰 <a href="08_初出茅庐：价值发现.md"><strong>价值发现</strong></a></td>
+<td>💰 <a href="zh/08_初出茅庐：价值发现.md"><strong>价值发现</strong></a></td>
 <td>从无价到有价的历史突破</td>
 </tr>
 <tr>
-<td>🔧 <a href="09_初出茅庐：第一次危机与修复.md"><strong>第一次危机与修复</strong></a></td>
+<td>🔧 <a href="zh/09_初出茅庐：第一次危机与修复.md"><strong>第一次危机与修复</strong></a></td>
 <td>史上最大胆的网络回滚</td>
 </tr>
 <tr>
-<td>👻 <a href="10_初出茅庐：中本聪的神秘退场.md"><strong>中本聪的神秘退场</strong></a></td>
+<td>👻 <a href="zh/10_初出茅庐：中本聪的神秘退场.md"><strong>中本聪的神秘退场</strong></a></td>
 <td>数字时代最伟大的退场</td>
 </tr>
 <tr>
 <td rowspan="5" align="center"><strong>风起云涌</strong><br><small>(2011-2012)</small></td>
-<td>⚔️ <a href="11_风起云涌：理想与现实的第一次碰撞.md"><strong>理想与现实的第一次碰撞</strong></a></td>
+<td>⚔️ <a href="zh/11_风起云涌：理想与现实的第一次碰撞.md"><strong>理想与现实的第一次碰撞</strong></a></td>
 <td>丝绸之路的争议与影响</td>
 </tr>
 <tr>
-<td>🏰 <a href="12_风起云涌：Mt.Gox帝国的崛起.md"><strong>Mt.Gox帝国的崛起</strong></a></td>
+<td>🏰 <a href="zh/12_风起云涌：Mt.Gox帝国的崛起.md"><strong>Mt.Gox帝国的崛起</strong></a></td>
 <td>从技术实验到商业帝国</td>
 </tr>
 <tr>
-<td>💥 <a href="13_风起云涌：第一次泡沫.md"><strong>第一次泡沫</strong></a></td>
+<td>💥 <a href="zh/13_风起云涌：第一次泡沫.md"><strong>第一次泡沫</strong></a></td>
 <td>从媒体风暴到理性回归</td>
 </tr>
 <tr>
-<td>⚡ <a href="14_风起云涌：算力革命.md"><strong>算力革命</strong></a></td>
+<td>⚡ <a href="zh/14_风起云涌：算力革命.md"><strong>算力革命</strong></a></td>
 <td>从CPU到GPU的挖矿演进</td>
 </tr>
 <tr>
-<td>🌱 <a href="15_风起云涌：生态萌芽.md"><strong>生态萌芽</strong></a></td>
+<td>🌱 <a href="zh/15_风起云涌：生态萌芽.md"><strong>生态萌芽</strong></a></td>
 <td>支付服务与全球网络效应</td>
 </tr>
 <tr>
 <td rowspan="3" align="center"><strong>暗潮汹涌</strong><br><small>(2013-2015)</small></td>
-<td>🏝️ <a href="16_暗潮汹涌：塞浦路斯时刻.md"><strong>塞浦路斯时刻</strong></a></td>
+<td>🏝️ <a href="zh/16_暗潮汹涌：塞浦路斯时刻.md"><strong>塞浦路斯时刻</strong></a></td>
 <td>传统金融体系信任危机</td>
 </tr>
 <tr>
-<td>🏛️ <a href="17_暗潮汹涌：华盛顿的审视.md"><strong>华盛顿的审视</strong></a></td>
+<td>🏛️ <a href="zh/17_暗潮汹涌：华盛顿的审视.md"><strong>华盛顿的审视</strong></a></td>
 <td>美国政府正式关注与监管</td>
 </tr>
 <tr>
-<td>🎢 <a href="18_暗潮汹涌：中国政策过山车_故事化优化版.md"><strong>中国政策过山车</strong></a></td>
+<td>🎢 <a href="zh/18_暗潮汹涌：中国政策过山车.md"><strong>中国政策过山车</strong></a></td>
 <td>从全民炒币到政策急刹车</td>
 </tr>
 <tr>
 <td rowspan="4" align="center"><strong>覆灭与分化</strong><br><small>(2014-2017)</small></td>
-<td>💥 <a href="19_暗潮汹涌：Mt.Gox的覆灭_故事化优化版.md"><strong>Mt.Gox的覆灭</strong></a></td>
+<td>💥 <a href="zh/19_暗潮汹涌：Mt.Gox的覆灭.md"><strong>Mt.Gox的覆灭</strong></a></td>
 <td>中心化交易所的致命缺陷</td>
 </tr>
 <tr>
-<td>🌍 <a href="20_暗潮汹涌：全球监管分化_故事化优化版.md"><strong>全球监管分化</strong></a></td>
+<td>🌍 <a href="zh/20_暗潮汹涌：全球监管分化.md"><strong>全球监管分化</strong></a></td>
 <td>各国政策分歧重塑行业格局</td>
 </tr>
 <tr>
-<td>⚡ <a href="21_暗潮汹涌：扩容争议萌芽_故事化优化版.md"><strong>扩容争议萌芽</strong></a></td>
+<td>⚡ <a href="zh/21_暗潮汹涌：扩容争议萌芽.md"><strong>扩容争议萌芽</strong></a></td>
 <td>1MB限制引发的技术哲学分歧</td>
 </tr>
 <tr>
-<td>🔥 <a href="22_破浪前行：扩容战争白热化_故事化优化版.md"><strong>扩容战争白热化</strong></a></td>
+<td>🔥 <a href="zh/22_破浪前行：扩容战争白热化.md"><strong>扩容战争白热化</strong></a></td>
 <td>纽约协议与技术路线之争</td>
 </tr>
 <tr>
 <td align="center"><strong>特别篇</strong></td>
-<td>📖 <a href="特别篇：查理·柯克的比特币之路.md"><strong>查理·柯克的比特币之路</strong></a></td>
+<td>📖 <a href="zh/特别篇：查理·柯克的比特币之路.md"><strong>查理·柯克的比特币之路</strong></a></td>
 <td>纪念逝世的自由主义先驱</td>
 </tr>
 </tbody>
@@ -298,8 +315,9 @@ git push origin feature/your-contribution
   <p><strong>由 ₿ 的历史爱好者们共同创作和维护</strong></p>
   
   <p>
-    <a href="#-比特币那些事儿">⬆️ 回到顶部</a> | 
-    <a href="00_引子：一束照进现实的理想之光.md">📖 开始阅读</a> | 
+    <a href="#top">⬆️ 回到顶部</a> | 
+    <a href="zh/00_引子：一束照进现实的理想之光.md">📖 中文开始阅读</a> | 
+    <a href="en/00_introduction_beam_of_idealistic_light.md">📖 Start Reading (EN)</a> | 
     <a href="https://github.com/beihaili/Stories-about-Bitcoin/stargazers">⭐ 给个星标</a>
   </p>
   

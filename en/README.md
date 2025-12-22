@@ -1,3 +1,4 @@
+<a id="top"></a>
 <div align="center">
   
   # 📖 Stories about Bitcoin
@@ -8,7 +9,7 @@
   [![Stars](https://img.shields.io/github/stars/beihaili/Stories-about-Bitcoin?color=yellow&style=for-the-badge)](https://github.com/beihaili/Stories-about-Bitcoin/stargazers)
   [![Contributors](https://img.shields.io/github/contributors/beihaili/Stories-about-Bitcoin?color=green&style=for-the-badge)](https://github.com/beihaili/Stories-about-Bitcoin/graphs/contributors)
   
-  <p>🎯 <strong>1976-2013</strong> | 📚 <strong>17 Chapters</strong> | ✅ <strong>Season One Complete</strong></p>
+  <p>🎯 <strong>1976-2022</strong> | 📚 <strong>34 Chapters</strong> | ✅ <strong>Bilingual Edition</strong></p>
   
 </div>
 
@@ -235,7 +236,7 @@ git push origin feature/your-contribution
   <p><strong>Created and maintained by ₿ history enthusiasts</strong></p>
   
   <p>
-    <a href="#-stories-about-bitcoin">⬆️ Back to Top</a> | 
+    <a href="#top">⬆️ Back to Top</a> | 
     <a href="00_introduction_beam_of_idealistic_light.md">📖 Start Reading</a> | 
     <a href="https://github.com/beihaili/Stories-about-Bitcoin/stargazers">⭐ Give a Star</a>
   </p>
