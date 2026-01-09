@@ -1,0 +1,11 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "devCommand": "npm run dev",
+  "installCommand": "npm install",
+  "framework": "vite",
+  "regions": ["sin1", "hkg1", "icn1"],
+  "env": {
+    "NODE_VERSION": "22"
+  }
+}
