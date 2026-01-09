@@ -7,6 +7,11 @@
 
 set -e  # 遇到错误立即退出
 
+# 加载nvm并使用Node 20
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+nvm use 20 > /dev/null 2>&1 || nvm use default > /dev/null 2>&1
+
 # 颜色定义
 RED='\033[0;31m'
 GREEN='\033[0;32m'
