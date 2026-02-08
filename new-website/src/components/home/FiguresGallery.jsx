@@ -1,10 +1,11 @@
-import { useState, useCallback, useEffect } from 'react';
+import { useState, useCallback, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaQuoteLeft, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { figures } from '../../data/figures';
 
 const FiguresGallery = ({ lang = 'zh' }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const touchStartX = useRef(null);
 
   const nextFigure = useCallback(() => {
     setCurrentIndex((prev) => (prev + 1) % figures.length);
@@ -13,6 +14,20 @@ const FiguresGallery = ({ lang = 'zh' }) => {
   const prevFigure = useCallback(() => {
     setCurrentIndex((prev) => (prev - 1 + figures.length) % figures.length);
   }, []);
+
+  const handleTouchStart = useCallback((e) => {
+    touchStartX.current = e.touches[0].clientX;
+  }, []);
+
+  const handleTouchEnd = useCallback((e) => {
+    if (touchStartX.current === null) return;
+    const diff = touchStartX.current - e.changedTouches[0].clientX;
+    touchStartX.current = null;
+    if (Math.abs(diff) > 50) {
+      if (diff > 0) nextFigure();
+      else prevFigure();
+    }
+  }, [nextFigure, prevFigure]);
 
   // Keyboard navigation
   useEffect(() => {
@@ -57,7 +72,7 @@ const FiguresGallery = ({ lang = 'zh' }) => {
         </motion.div>
 
         {/* Gallery */}
-        <div className="relative" aria-live="polite" aria-atomic="true">
+        <div className="relative" aria-live="polite" aria-atomic="true" onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd}>
           <AnimatePresence mode="wait">
             <motion.div
               key={currentIndex}
