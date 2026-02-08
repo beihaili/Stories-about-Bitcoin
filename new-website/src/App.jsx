@@ -1,14 +1,21 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, lazy, Suspense } from 'react';
 import Hero from './components/home/Hero';
-import Timeline from './components/home/Timeline';
-import ChapterGrid from './components/home/ChapterGrid';
-import FiguresGallery from './components/home/FiguresGallery';
 import Navbar from './components/common/Navbar';
 import Footer from './components/common/Footer';
-import GiscusComments from './components/common/GiscusComments';
 import BackToTop from './components/common/BackToTop';
 import useTheme from './hooks/useTheme';
 import useReadingProgress from './hooks/useReadingProgress';
+
+const Timeline = lazy(() => import('./components/home/Timeline'));
+const FiguresGallery = lazy(() => import('./components/home/FiguresGallery'));
+const ChapterGrid = lazy(() => import('./components/home/ChapterGrid'));
+const GiscusComments = lazy(() => import('./components/common/GiscusComments'));
+
+const LoadingSpinner = () => (
+  <div className="flex justify-center items-center py-20">
+    <div className="w-10 h-10 border-4 border-bitcoin-orange border-t-transparent rounded-full animate-spin" />
+  </div>
+);
 
 function getInitialLang() {
   // 1. URL param takes priority
@@ -74,21 +81,29 @@ function App() {
 
       {/* Timeline Section */}
       <section id="timeline">
-        <Timeline lang={lang} />
+        <Suspense fallback={<LoadingSpinner />}>
+          <Timeline lang={lang} />
+        </Suspense>
       </section>
 
       {/* Key Figures Gallery */}
       <section id="figures">
-        <FiguresGallery lang={lang} />
+        <Suspense fallback={<LoadingSpinner />}>
+          <FiguresGallery lang={lang} />
+        </Suspense>
       </section>
 
       {/* Chapters Grid */}
       <section id="chapters">
-        <ChapterGrid lang={lang} markAsRead={markAsRead} isRead={isRead} readCount={readCount} />
+        <Suspense fallback={<LoadingSpinner />}>
+          <ChapterGrid lang={lang} markAsRead={markAsRead} isRead={isRead} readCount={readCount} />
+        </Suspense>
       </section>
 
       {/* Discussion Section */}
-      <GiscusComments lang={lang} theme={theme} />
+      <Suspense fallback={<LoadingSpinner />}>
+        <GiscusComments lang={lang} theme={theme} />
+      </Suspense>
       </main>
 
       {/* Footer */}
