@@ -7,6 +7,7 @@ import Navbar from './components/common/Navbar';
 import Footer from './components/common/Footer';
 import GiscusComments from './components/common/GiscusComments';
 import useTheme from './hooks/useTheme';
+import useReadingProgress from './hooks/useReadingProgress';
 
 function getInitialLang() {
   // 1. URL param takes priority
@@ -29,6 +30,7 @@ function getInitialLang() {
 function App() {
   const [lang, setLangState] = useState(getInitialLang);
   const { theme, toggleTheme } = useTheme();
+  const { markAsRead, isRead, readCount } = useReadingProgress();
 
   const setLang = useCallback((newLang) => {
     setLangState(newLang);
@@ -81,7 +83,7 @@ function App() {
 
       {/* Chapters Grid */}
       <section id="chapters">
-        <ChapterGrid lang={lang} />
+        <ChapterGrid lang={lang} markAsRead={markAsRead} isRead={isRead} readCount={readCount} />
       </section>
 
       {/* Discussion Section */}

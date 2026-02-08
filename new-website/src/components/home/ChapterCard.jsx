@@ -2,12 +2,13 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ShareButton } from '../common/ShareButtons';
 
-const ChapterCard = ({ chapter, lang = 'zh', index }) => {
+const ChapterCard = ({ chapter, lang = 'zh', index, markAsRead, isRead }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleClick = () => {
     const baseUrl = 'https://beihaili.github.io/Stories-about-Bitcoin';
     window.open(`${baseUrl}${chapter.link[lang]}`, '_blank');
+    markAsRead?.(chapter.id);
   };
 
   return (
@@ -46,6 +47,11 @@ const ChapterCard = ({ chapter, lang = 'zh', index }) => {
           {chapter.readingTime && (
             <span className="bg-white bg-opacity-90 px-2 py-1 rounded-full text-xs text-historical-antique">
               {chapter.readingTime} {lang === 'zh' ? '分钟' : 'min'}
+            </span>
+          )}
+          {isRead && (
+            <span className="bg-green-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
+              {lang === 'zh' ? '已读' : 'Read'}
             </span>
           )}
         </div>

@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import ChapterCard from './ChapterCard';
 import { chapters, periods, getChaptersByPeriod } from '../../data/chapters';
 
-const ChapterGrid = ({ lang = 'zh' }) => {
+const ChapterGrid = ({ lang = 'zh', markAsRead, isRead, readCount = 0 }) => {
   const [selectedPeriod, setSelectedPeriod] = useState('all');
 
   const filteredChapters = selectedPeriod === 'all'
@@ -75,6 +75,8 @@ const ChapterGrid = ({ lang = 'zh' }) => {
               chapter={chapter}
               lang={lang}
               index={index}
+              markAsRead={markAsRead}
+              isRead={isRead?.(chapter.id)}
             />
           ))}
         </motion.div>
@@ -92,6 +94,14 @@ const ChapterGrid = ({ lang = 'zh' }) => {
               : `${filteredChapters.length} Chapters${selectedPeriod !== 'all' ? ` · ${periods.find(p => p.id === selectedPeriod)?.name[lang]}` : ''}`
             }
           </p>
+          {readCount > 0 && (
+            <p className="text-sm text-bitcoin-orange mt-2">
+              {lang === 'zh'
+                ? `已读 ${readCount}/${chapters.length} 章`
+                : `${readCount}/${chapters.length} chapters read`
+              }
+            </p>
+          )}
         </motion.div>
       </div>
     </section>
