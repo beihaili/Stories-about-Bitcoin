@@ -3,6 +3,7 @@ import Hero from './components/home/Hero';
 import Navbar from './components/common/Navbar';
 import Footer from './components/common/Footer';
 import BackToTop from './components/common/BackToTop';
+import ErrorBoundary from './components/common/ErrorBoundary';
 import useTheme from './hooks/useTheme';
 import useReadingProgress from './hooks/useReadingProgress';
 
@@ -101,9 +102,11 @@ function App() {
       </section>
 
       {/* Discussion Section */}
-      <Suspense fallback={<LoadingSpinner />}>
-        <GiscusComments lang={lang} theme={theme} />
-      </Suspense>
+      <ErrorBoundary lang={lang}>
+        <Suspense fallback={<LoadingSpinner />}>
+          <GiscusComments lang={lang} theme={theme} />
+        </Suspense>
+      </ErrorBoundary>
       </main>
 
       {/* Footer */}

@@ -51,31 +51,31 @@ const Timeline = ({ lang = 'zh' }) => {
               >
                 {/* Content */}
                 <motion.div
-                  className={`w-5/12 ${
-                    isLeft ? 'text-right pr-12' : 'text-left pl-12'
-                  }`}
+                  className={`w-[calc(100%-2.5rem)] ml-10 md:ml-0 md:w-5/12 ${
+                    isLeft ? 'md:text-right md:pr-12' : 'md:text-left md:pl-12'
+                  } text-left pl-0`}
                   whileHover={{ scale: 1.05 }}
                 >
-                  <div className="bg-black bg-opacity-70 backdrop-blur-sm p-6 rounded-xl shadow-xl border-2 border-bitcoin-gold border-opacity-50 hover:border-opacity-100 transition-all duration-300">
+                  <div className="bg-black bg-opacity-70 backdrop-blur-sm p-4 md:p-6 rounded-xl shadow-xl border-2 border-bitcoin-gold border-opacity-50 hover:border-opacity-100 transition-all duration-300">
                     {/* Date */}
-                    <div className="text-bitcoin-gold font-bold text-xl mb-3">
+                    <div className="text-bitcoin-gold font-bold text-lg md:text-xl mb-2 md:mb-3">
                       {event.date}
                     </div>
 
                     {/* Title */}
-                    <h3 className="text-2xl font-bold mb-4 text-white">
+                    <h3 className="text-lg md:text-2xl font-bold mb-2 md:mb-4 text-white">
                       {event.title[lang]}
                     </h3>
 
                     {/* Description */}
-                    <p className="text-base text-white leading-relaxed">
+                    <p className="text-sm md:text-base text-white leading-relaxed">
                       {event.description[lang]}
                     </p>
 
                     {/* Category badge */}
-                    <div className="mt-4 inline-block">
+                    <div className="mt-3 md:mt-4 inline-block">
                       <span
-                        className="px-4 py-2 rounded-full text-sm font-semibold bg-white bg-opacity-20 text-white border border-white border-opacity-30"
+                        className="px-3 md:px-4 py-1 md:py-2 rounded-full text-xs md:text-sm font-semibold bg-white bg-opacity-20 text-white border border-white border-opacity-30"
                       >
                         {categories[event.category]?.[lang]}
                       </span>
@@ -83,18 +83,18 @@ const Timeline = ({ lang = 'zh' }) => {
                   </div>
                 </motion.div>
 
-                {/* Center dot */}
+                {/* Timeline dot */}
                 <motion.div
-                  className="absolute left-1/2 transform -translate-x-1/2"
+                  className="absolute left-4 md:left-1/2 transform -translate-x-1/2"
                   whileHover={{ scale: 1.5 }}
                 >
                   <div
                     className={`rounded-full shadow-lg ${
                       event.importance === 'critical'
-                        ? 'w-6 h-6 bg-bitcoin-orange'
+                        ? 'w-4 h-4 md:w-6 md:h-6 bg-bitcoin-orange'
                         : event.importance === 'high'
-                        ? 'w-5 h-5 bg-bitcoin-gold'
-                        : 'w-4 h-4 bg-bitcoin-darkGold'
+                        ? 'w-3.5 h-3.5 md:w-5 md:h-5 bg-bitcoin-gold'
+                        : 'w-3 h-3 md:w-4 md:h-4 bg-bitcoin-darkGold'
                     }`}
                     style={{
                       boxShadow: `0 0 20px ${categories[event.category]?.color}`,
