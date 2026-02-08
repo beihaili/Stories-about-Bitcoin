@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const TypewriterQuotes = ({ lang = 'zh' }) => {
@@ -22,41 +22,59 @@ const TypewriterQuotes = ({ lang = 'zh' }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
+  const containerRef = useRef(null);
+  const isVisibleRef = useRef(true);
 
   const currentQuotes = quotes[lang];
   const currentQuote = currentQuotes[currentIndex];
 
+  // IntersectionObserver to pause when offscreen
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => { isVisibleRef.current = entry.isIntersecting; },
+      { threshold: 0, rootMargin: '100px' }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
   useEffect(() => {
     let timeout;
 
-    if (!isDeleting) {
-      if (displayedText.length < currentQuote.text.length) {
-        timeout = setTimeout(() => {
-          setDisplayedText(currentQuote.text.slice(0, displayedText.length + 1));
-        }, 50);
-      } else {
-        timeout = setTimeout(() => {
-          setIsDeleting(true);
-        }, 3000);
+    const tick = () => {
+      if (!isVisibleRef.current) {
+        timeout = setTimeout(tick, 200);
+        return;
       }
-    } else {
-      if (displayedText.length > 0) {
-        timeout = setTimeout(() => {
-          setDisplayedText(displayedText.slice(0, -1));
-        }, 25);
+
+      if (!isDeleting) {
+        if (displayedText.length < currentQuote.text.length) {
+          setDisplayedText(currentQuote.text.slice(0, displayedText.length + 1));
+        } else {
+          timeout = setTimeout(() => setIsDeleting(true), 3000);
+          return;
+        }
       } else {
-        timeout = setTimeout(() => {
+        if (displayedText.length > 0) {
+          setDisplayedText(displayedText.slice(0, -1));
+        } else {
           setIsDeleting(false);
           setCurrentIndex((prev) => (prev + 1) % currentQuotes.length);
-        }, 0);
+          return;
+        }
       }
-    }
+    };
+
+    timeout = setTimeout(tick, isDeleting ? 25 : 50);
 
     return () => clearTimeout(timeout);
   }, [displayedText, isDeleting, currentQuote.text, currentQuotes.length]);
 
   return (
-    <div className="min-h-[120px] sm:min-h-[100px] flex flex-col items-center justify-center">
+    <div ref={containerRef} className="min-h-[120px] sm:min-h-[100px] flex flex-col items-center justify-center">
       <motion.div
         className="text-base sm:text-lg md:text-xl text-historical-antique max-w-3xl mx-auto leading-relaxed px-4 text-center font-serif italic"
         initial={{ opacity: 0 }}

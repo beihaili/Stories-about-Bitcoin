@@ -32,12 +32,20 @@ function drawParticle(ctx, p) {
 
 const ParticleBackground = () => {
   const canvasRef = useRef(null);
+  const isVisibleRef = useRef(true);
 
   useEffect(() => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext('2d');
     let animationFrameId;
     let particles = [];
+
+    // IntersectionObserver to pause when offscreen
+    const observer = new IntersectionObserver(
+      ([entry]) => { isVisibleRef.current = entry.isIntersecting; },
+      { threshold: 0, rootMargin: '100px' }
+    );
+    observer.observe(canvas);
 
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
@@ -79,6 +87,11 @@ const ParticleBackground = () => {
     };
 
     const animate = () => {
+      if (!isVisibleRef.current) {
+        animationFrameId = requestAnimationFrame(animate);
+        return;
+      }
+
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       particles.forEach(particle => {
@@ -94,6 +107,7 @@ const ParticleBackground = () => {
     animate();
 
     return () => {
+      observer.disconnect();
       window.removeEventListener('resize', resizeCanvas);
       cancelAnimationFrame(animationFrameId);
     };
@@ -102,6 +116,7 @@ const ParticleBackground = () => {
   return (
     <canvas
       ref={canvasRef}
+      aria-hidden="true"
       className="absolute inset-0 pointer-events-none"
       style={{ zIndex: 1 }}
     />
