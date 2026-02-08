@@ -53,9 +53,15 @@ function App() {
 
   return (
     <div className="min-h-screen">
+      {/* Skip to content link for keyboard users */}
+      <a href="#main-content" className="skip-link">
+        {lang === 'zh' ? '跳转到主要内容' : 'Skip to main content'}
+      </a>
+
       {/* Navigation */}
       <Navbar lang={lang} setLang={setLang} />
 
+      <main id="main-content">
       {/* Hero Section */}
       <section id="hero">
         <Hero lang={lang} />
@@ -78,6 +84,7 @@ function App() {
 
       {/* Discussion Section */}
       <GiscusComments lang={lang} />
+      </main>
 
       {/* Footer */}
       <Footer lang={lang} />

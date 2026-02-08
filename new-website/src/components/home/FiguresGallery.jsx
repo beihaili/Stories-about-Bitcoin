@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaQuoteLeft, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { figures } from '../../data/figures';
@@ -6,18 +6,37 @@ import { figures } from '../../data/figures';
 const FiguresGallery = ({ lang = 'zh' }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const nextFigure = () => {
+  const nextFigure = useCallback(() => {
     setCurrentIndex((prev) => (prev + 1) % figures.length);
-  };
+  }, []);
 
-  const prevFigure = () => {
+  const prevFigure = useCallback(() => {
     setCurrentIndex((prev) => (prev - 1 + figures.length) % figures.length);
-  };
+  }, []);
+
+  // Keyboard navigation
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      const gallery = document.getElementById('figures');
+      if (!gallery) return;
+      const rect = gallery.getBoundingClientRect();
+      const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+      if (!isVisible) return;
+
+      if (e.key === 'ArrowLeft') {
+        prevFigure();
+      } else if (e.key === 'ArrowRight') {
+        nextFigure();
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [nextFigure, prevFigure]);
 
   const currentFigure = figures[currentIndex];
 
   return (
-    <section className="py-20 px-6 bg-gradient-to-br from-bitcoin-lightGold via-white to-historical-parchment">
+    <section className="py-20 px-6 bg-gradient-to-br from-bitcoin-lightGold via-white to-historical-parchment" aria-label={lang === 'zh' ? '关键人物展示' : 'Key Figures Gallery'}>
       <div className="max-w-6xl mx-auto">
         {/* Section Title */}
         <motion.div
@@ -38,7 +57,7 @@ const FiguresGallery = ({ lang = 'zh' }) => {
         </motion.div>
 
         {/* Gallery */}
-        <div className="relative">
+        <div className="relative" aria-live="polite" aria-atomic="true">
           <AnimatePresence mode="wait">
             <motion.div
               key={currentIndex}
@@ -128,25 +147,30 @@ const FiguresGallery = ({ lang = 'zh' }) => {
           {/* Navigation Buttons */}
           <button
             onClick={prevFigure}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 bg-white hover:bg-bitcoin-orange text-historical-sepia hover:text-white rounded-full p-4 shadow-lg transition-all duration-300 z-10"
+            aria-label={lang === 'zh' ? '上一位人物' : 'Previous figure'}
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 bg-white hover:bg-bitcoin-orange text-historical-sepia hover:text-white rounded-full p-4 shadow-lg transition-all duration-300 z-10 focus-ring"
           >
             <FaChevronLeft className="text-xl" />
           </button>
           <button
             onClick={nextFigure}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 bg-white hover:bg-bitcoin-orange text-historical-sepia hover:text-white rounded-full p-4 shadow-lg transition-all duration-300 z-10"
+            aria-label={lang === 'zh' ? '下一位人物' : 'Next figure'}
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 bg-white hover:bg-bitcoin-orange text-historical-sepia hover:text-white rounded-full p-4 shadow-lg transition-all duration-300 z-10 focus-ring"
           >
             <FaChevronRight className="text-xl" />
           </button>
         </div>
 
         {/* Indicators */}
-        <div className="flex justify-center gap-3 mt-8">
-          {figures.map((_, idx) => (
+        <div className="flex justify-center gap-3 mt-8" role="tablist" aria-label={lang === 'zh' ? '人物选择' : 'Figure selection'}>
+          {figures.map((figure, idx) => (
             <button
               key={idx}
+              role="tab"
+              aria-selected={idx === currentIndex}
+              aria-label={figure.name[lang]}
               onClick={() => setCurrentIndex(idx)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+              className={`w-3 h-3 rounded-full transition-all duration-300 focus-ring ${
                 idx === currentIndex
                   ? 'bg-bitcoin-orange w-8'
                   : 'bg-gray-300 hover:bg-gray-400'

@@ -12,13 +12,17 @@ const ChapterCard = ({ chapter, lang = 'zh', index }) => {
 
   return (
     <motion.div
-      className="chapter-card group relative"
+      role="article"
+      tabIndex={0}
+      aria-label={chapter.title[lang]}
+      className="chapter-card group relative focus-ring"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ delay: Math.min(index * 0.05, 0.3), duration: 0.5 }}
       whileHover={{ y: -8 }}
       onClick={handleClick}
+      onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); handleClick(); } }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -47,7 +51,7 @@ const ChapterCard = ({ chapter, lang = 'zh', index }) => {
         </div>
 
         {/* Share button */}
-        <div className="absolute top-3 right-3 sm:top-4 sm:right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+        <div className="absolute top-3 right-3 sm:top-4 sm:right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-200" onClick={(e) => e.stopPropagation()} onKeyDown={(e) => e.stopPropagation()}>
           <ShareButton
             url={`https://beihaili.github.io/Stories-about-Bitcoin${chapter.link[lang]}`}
             title={chapter.title[lang]}

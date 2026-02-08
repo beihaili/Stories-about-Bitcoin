@@ -45,6 +45,7 @@ const Navbar = ({ lang, setLang }) => {
   return (
     <>
       <motion.nav
+        aria-label={lang === 'zh' ? '主导航' : 'Main navigation'}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
             ? 'bg-white/95 backdrop-blur-md shadow-lg'
@@ -103,7 +104,8 @@ const Navbar = ({ lang, setLang }) => {
                 href="https://github.com/beihaili/Stories-about-Bitcoin"
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`transition-colors ${
+                aria-label={lang === 'zh' ? 'GitHub 仓库' : 'GitHub repository'}
+                className={`transition-colors focus-ring rounded ${
                   isScrolled ? 'text-historical-antique hover:text-bitcoin-orange' : 'text-historical-sepia hover:text-bitcoin-orange'
                 }`}
               >
@@ -127,7 +129,9 @@ const Navbar = ({ lang, setLang }) => {
               <LanguageSwitcher lang={lang} setLang={setLang} isCompact />
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="p-2 text-historical-sepia"
+                aria-expanded={isMobileMenuOpen}
+                aria-label={lang === 'zh' ? '切换菜单' : 'Toggle menu'}
+                className="p-2 text-historical-sepia focus-ring rounded"
               >
                 {isMobileMenuOpen ? <FaTimes className="text-xl" /> : <FaBars className="text-xl" />}
               </button>

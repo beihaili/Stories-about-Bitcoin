@@ -26,15 +26,19 @@ const Hero = ({ lang = 'zh' }) => {
   const t = content[lang];
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-historical-parchment via-bitcoin-lightGold to-historical-parchment">
+    <section
+      aria-labelledby="hero-title"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-historical-parchment via-bitcoin-lightGold to-historical-parchment"
+    >
       {/* Particle Background - Bitcoin Network Nodes */}
       <ParticleBackground />
 
       {/* Background pattern */}
-      <div className="absolute inset-0 bg-book-pattern opacity-30" style={{ zIndex: 2 }}></div>
+      <div className="absolute inset-0 bg-book-pattern opacity-30" aria-hidden="true" style={{ zIndex: 2 }}></div>
 
       {/* Animated circles */}
       <motion.div
+        aria-hidden="true"
         className="absolute top-20 left-20 w-64 h-64 bg-bitcoin-gold opacity-10 rounded-full blur-3xl"
         animate={{
           scale: [1, 1.2, 1],
@@ -44,6 +48,7 @@ const Hero = ({ lang = 'zh' }) => {
         transition={{ duration: 20, repeat: Infinity }}
       />
       <motion.div
+        aria-hidden="true"
         className="absolute bottom-20 right-20 w-96 h-96 bg-bitcoin-orange opacity-10 rounded-full blur-3xl"
         animate={{
           scale: [1, 1.3, 1],
@@ -63,6 +68,7 @@ const Hero = ({ lang = 'zh' }) => {
           {/* Icon */}
           <motion.div
             className="inline-block mb-4 sm:mb-8"
+            aria-hidden="true"
             animate={{ rotateY: [0, 360] }}
             transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
           >
@@ -70,7 +76,7 @@ const Hero = ({ lang = 'zh' }) => {
           </motion.div>
 
           {/* Title */}
-          <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold text-historical-sepia mb-2 sm:mb-4 tracking-tight">
+          <h1 id="hero-title" className="text-4xl sm:text-6xl md:text-8xl font-bold text-historical-sepia mb-2 sm:mb-4 tracking-tight">
             {t.title}
           </h1>
 
@@ -149,6 +155,7 @@ const Hero = ({ lang = 'zh' }) => {
 
         {/* Scroll indicator */}
         <motion.div
+          aria-hidden="true"
           className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}

@@ -27,9 +27,11 @@ const Timeline = ({ lang = 'zh' }) => {
         </motion.div>
 
         {/* Timeline */}
-        <div className="relative">
+        <div className="relative" role="list" aria-label={lang === 'zh' ? '历史事件列表' : 'Historical events list'}>
           {/* Center line */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-bitcoin-gold via-bitcoin-orange to-bitcoin-darkGold opacity-30"></div>
+          <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-bitcoin-gold via-bitcoin-orange to-bitcoin-darkGold opacity-30 hidden md:block" aria-hidden="true"></div>
+          {/* Mobile left line */}
+          <div className="absolute left-4 w-1 h-full bg-gradient-to-b from-bitcoin-gold via-bitcoin-orange to-bitcoin-darkGold opacity-30 md:hidden" aria-hidden="true"></div>
 
           {/* Events */}
           {timelineEvents.map((event, index) => {
@@ -38,9 +40,10 @@ const Timeline = ({ lang = 'zh' }) => {
             return (
               <motion.div
                 key={index}
+                role="listitem"
                 className={`relative mb-12 flex items-center ${
-                  isLeft ? 'justify-start' : 'justify-end'
-                }`}
+                  isLeft ? 'md:justify-start' : 'md:justify-end'
+                } justify-start`}
                 initial={{ opacity: 0, x: isLeft ? -50 : 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}

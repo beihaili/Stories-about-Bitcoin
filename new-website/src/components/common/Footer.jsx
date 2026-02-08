@@ -46,7 +46,7 @@ const Footer = ({ lang = 'zh' }) => {
   };
 
   return (
-    <footer className="bg-gradient-to-b from-historical-sepia to-[#5a3510] text-bitcoin-lightGold">
+    <footer className="bg-gradient-to-b from-historical-sepia to-[#5a3510] text-bitcoin-lightGold" aria-label={lang === 'zh' ? '页脚导航' : 'Footer navigation'}>
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
@@ -121,6 +121,7 @@ const Footer = ({ lang = 'zh' }) => {
                 href="https://twitter.com/bhbtc1337"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label={lang === 'zh' ? 'Twitter 账号' : 'Twitter account'}
                 className="flex items-center gap-3 text-sm opacity-80 hover:opacity-100 hover:text-bitcoin-orange transition-all"
               >
                 <FaTwitter className="text-lg" />
