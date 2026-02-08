@@ -36,7 +36,7 @@ const FiguresGallery = ({ lang = 'zh' }) => {
   const currentFigure = figures[currentIndex];
 
   return (
-    <section className="py-20 px-6 bg-gradient-to-br from-bitcoin-lightGold via-white to-historical-parchment" aria-label={lang === 'zh' ? '关键人物展示' : 'Key Figures Gallery'}>
+    <section className="py-20 px-6 bg-gradient-to-br from-bitcoin-lightGold via-white to-historical-parchment dark:from-gray-900 dark:via-gray-800 dark:to-gray-900" aria-label={lang === 'zh' ? '关键人物展示' : 'Key Figures Gallery'}>
       <div className="max-w-6xl mx-auto">
         {/* Section Title */}
         <motion.div
@@ -48,7 +48,7 @@ const FiguresGallery = ({ lang = 'zh' }) => {
           <h2 className="section-title">
             {lang === 'zh' ? '👥 关键人物' : '👥 Key Figures'}
           </h2>
-          <p className="text-xl text-historical-antique max-w-2xl mx-auto">
+          <p className="text-xl text-historical-antique dark:text-gray-300 max-w-2xl mx-auto">
             {lang === 'zh'
               ? '认识这场货币革命背后的先驱者和传奇人物'
               : 'Meet the pioneers and legends behind this monetary revolution'
@@ -65,7 +65,7 @@ const FiguresGallery = ({ lang = 'zh' }) => {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -100 }}
               transition={{ duration: 0.5 }}
-              className="bg-white rounded-2xl shadow-book overflow-hidden"
+              className="bg-white dark:bg-gray-800 rounded-2xl shadow-book overflow-hidden"
             >
               <div className="grid md:grid-cols-2 gap-8 p-8">
                 {/* Left: Image & Basic Info */}
@@ -82,7 +82,7 @@ const FiguresGallery = ({ lang = 'zh' }) => {
                   </motion.div>
 
                   {/* Name */}
-                  <h3 className="text-3xl font-bold text-historical-sepia mb-2">
+                  <h3 className="text-3xl font-bold text-historical-sepia dark:text-bitcoin-lightGold mb-2">
                     {currentFigure.name[lang]}
                   </h3>
 
@@ -92,14 +92,14 @@ const FiguresGallery = ({ lang = 'zh' }) => {
                   </p>
 
                   {/* Years */}
-                  <p className="text-historical-antique mb-6">
+                  <p className="text-historical-antique dark:text-gray-400 mb-6">
                     {currentFigure.years}
                   </p>
 
                   {/* Quote */}
-                  <div className="bg-historical-parchment p-6 rounded-xl relative">
+                  <div className="bg-historical-parchment dark:bg-gray-700 p-6 rounded-xl relative">
                     <FaQuoteLeft className="text-bitcoin-orange opacity-30 text-3xl absolute top-4 left-4" />
-                    <p className="text-historical-sepia italic pt-8 leading-relaxed text-sm">
+                    <p className="text-historical-sepia dark:text-gray-200 italic pt-8 leading-relaxed text-sm">
                       "{currentFigure.quote[lang]}"
                     </p>
                   </div>
@@ -109,18 +109,18 @@ const FiguresGallery = ({ lang = 'zh' }) => {
                 <div>
                   {/* Description */}
                   <div className="mb-6">
-                    <h4 className="text-xl font-bold text-historical-sepia mb-3 flex items-center gap-2">
+                    <h4 className="text-xl font-bold text-historical-sepia dark:text-bitcoin-lightGold mb-3 flex items-center gap-2">
                       <span className="text-2xl">📜</span>
                       {lang === 'zh' ? '简介' : 'Biography'}
                     </h4>
-                    <p className="text-historical-antique leading-relaxed">
+                    <p className="text-historical-antique dark:text-gray-300 leading-relaxed">
                       {currentFigure.description[lang]}
                     </p>
                   </div>
 
                   {/* Contributions */}
                   <div>
-                    <h4 className="text-xl font-bold text-historical-sepia mb-3 flex items-center gap-2">
+                    <h4 className="text-xl font-bold text-historical-sepia dark:text-bitcoin-lightGold mb-3 flex items-center gap-2">
                       <span className="text-2xl">🌟</span>
                       {lang === 'zh' ? '主要贡献' : 'Key Contributions'}
                     </h4>
@@ -128,7 +128,7 @@ const FiguresGallery = ({ lang = 'zh' }) => {
                       {currentFigure.contributions[lang].map((contribution, idx) => (
                         <motion.li
                           key={idx}
-                          className="flex items-start gap-3 text-historical-antique"
+                          className="flex items-start gap-3 text-historical-antique dark:text-gray-300"
                           initial={{ opacity: 0, x: -20 }}
                           animate={{ opacity: 1, x: 0 }}
                           transition={{ delay: idx * 0.1 }}
@@ -148,14 +148,14 @@ const FiguresGallery = ({ lang = 'zh' }) => {
           <button
             onClick={prevFigure}
             aria-label={lang === 'zh' ? '上一位人物' : 'Previous figure'}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 bg-white hover:bg-bitcoin-orange text-historical-sepia hover:text-white rounded-full p-4 shadow-lg transition-all duration-300 z-10 focus-ring"
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 bg-white dark:bg-gray-700 hover:bg-bitcoin-orange text-historical-sepia dark:text-gray-200 hover:text-white rounded-full p-4 shadow-lg transition-all duration-300 z-10 focus-ring"
           >
             <FaChevronLeft className="text-xl" />
           </button>
           <button
             onClick={nextFigure}
             aria-label={lang === 'zh' ? '下一位人物' : 'Next figure'}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 bg-white hover:bg-bitcoin-orange text-historical-sepia hover:text-white rounded-full p-4 shadow-lg transition-all duration-300 z-10 focus-ring"
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 bg-white dark:bg-gray-700 hover:bg-bitcoin-orange text-historical-sepia dark:text-gray-200 hover:text-white rounded-full p-4 shadow-lg transition-all duration-300 z-10 focus-ring"
           >
             <FaChevronRight className="text-xl" />
           </button>
@@ -173,14 +173,14 @@ const FiguresGallery = ({ lang = 'zh' }) => {
               className={`w-3 h-3 rounded-full transition-all duration-300 focus-ring ${
                 idx === currentIndex
                   ? 'bg-bitcoin-orange w-8'
-                  : 'bg-gray-300 hover:bg-gray-400'
+                  : 'bg-gray-300 dark:bg-gray-600 hover:bg-gray-400'
               }`}
             />
           ))}
         </div>
 
         {/* Counter */}
-        <p className="text-center mt-6 text-historical-antique">
+        <p className="text-center mt-6 text-historical-antique dark:text-gray-400">
           {currentIndex + 1} / {figures.length}
         </p>
       </div>

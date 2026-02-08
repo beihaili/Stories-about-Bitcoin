@@ -6,6 +6,7 @@ import FiguresGallery from './components/home/FiguresGallery';
 import Navbar from './components/common/Navbar';
 import Footer from './components/common/Footer';
 import GiscusComments from './components/common/GiscusComments';
+import useTheme from './hooks/useTheme';
 
 function getInitialLang() {
   // 1. URL param takes priority
@@ -27,6 +28,7 @@ function getInitialLang() {
 
 function App() {
   const [lang, setLangState] = useState(getInitialLang);
+  const { theme, toggleTheme } = useTheme();
 
   const setLang = useCallback((newLang) => {
     setLangState(newLang);
@@ -59,7 +61,7 @@ function App() {
       </a>
 
       {/* Navigation */}
-      <Navbar lang={lang} setLang={setLang} />
+      <Navbar lang={lang} setLang={setLang} theme={theme} toggleTheme={toggleTheme} />
 
       <main id="main-content">
       {/* Hero Section */}
@@ -83,7 +85,7 @@ function App() {
       </section>
 
       {/* Discussion Section */}
-      <GiscusComments lang={lang} />
+      <GiscusComments lang={lang} theme={theme} />
       </main>
 
       {/* Footer */}

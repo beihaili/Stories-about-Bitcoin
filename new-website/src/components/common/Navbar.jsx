@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaBook, FaGithub, FaBars, FaTimes } from 'react-icons/fa';
+import { FaBook, FaGithub, FaBars, FaTimes, FaSun, FaMoon } from 'react-icons/fa';
 import LanguageSwitcher from './LanguageSwitcher';
 
-const Navbar = ({ lang, setLang }) => {
+const Navbar = ({ lang, setLang, theme, toggleTheme }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -48,7 +48,7 @@ const Navbar = ({ lang, setLang }) => {
         aria-label={lang === 'zh' ? '主导航' : 'Main navigation'}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
-            ? 'bg-white/95 backdrop-blur-md shadow-lg'
+            ? 'bg-white/95 dark:bg-gray-900/95 backdrop-blur-md shadow-lg'
             : 'bg-transparent'
         }`}
         initial={{ y: -100 }}
@@ -68,7 +68,7 @@ const Navbar = ({ lang, setLang }) => {
               }}
             >
               <FaBook className={`text-xl sm:text-2xl ${isScrolled ? 'text-bitcoin-orange' : 'text-bitcoin-orange'}`} />
-              <span className={`font-bold text-base sm:text-lg ${isScrolled ? 'text-historical-sepia' : 'text-historical-sepia'}`}>
+              <span className={`font-bold text-base sm:text-lg ${isScrolled ? 'text-historical-sepia dark:text-bitcoin-lightGold' : 'text-historical-sepia dark:text-bitcoin-lightGold'}`}>
                 {t.title}
               </span>
             </motion.a>
@@ -78,7 +78,7 @@ const Navbar = ({ lang, setLang }) => {
               <button
                 onClick={() => scrollToSection('timeline')}
                 className={`font-medium transition-colors ${
-                  isScrolled ? 'text-historical-antique hover:text-bitcoin-orange' : 'text-historical-sepia hover:text-bitcoin-orange'
+                  isScrolled ? 'text-historical-antique dark:text-gray-300 hover:text-bitcoin-orange' : 'text-historical-sepia dark:text-gray-300 hover:text-bitcoin-orange'
                 }`}
               >
                 {t.timeline}
@@ -86,7 +86,7 @@ const Navbar = ({ lang, setLang }) => {
               <button
                 onClick={() => scrollToSection('figures')}
                 className={`font-medium transition-colors ${
-                  isScrolled ? 'text-historical-antique hover:text-bitcoin-orange' : 'text-historical-sepia hover:text-bitcoin-orange'
+                  isScrolled ? 'text-historical-antique dark:text-gray-300 hover:text-bitcoin-orange' : 'text-historical-sepia dark:text-gray-300 hover:text-bitcoin-orange'
                 }`}
               >
                 {t.figures}
@@ -94,7 +94,7 @@ const Navbar = ({ lang, setLang }) => {
               <button
                 onClick={() => scrollToSection('chapters')}
                 className={`font-medium transition-colors ${
-                  isScrolled ? 'text-historical-antique hover:text-bitcoin-orange' : 'text-historical-sepia hover:text-bitcoin-orange'
+                  isScrolled ? 'text-historical-antique dark:text-gray-300 hover:text-bitcoin-orange' : 'text-historical-sepia dark:text-gray-300 hover:text-bitcoin-orange'
                 }`}
               >
                 {t.chapters}
@@ -112,6 +112,16 @@ const Navbar = ({ lang, setLang }) => {
                 <FaGithub className="text-xl" />
               </a>
 
+              <button
+                onClick={toggleTheme}
+                aria-label={lang === 'zh' ? (theme === 'dark' ? '切换到浅色模式' : '切换到深色模式') : (theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode')}
+                className={`p-2 rounded-full transition-colors focus-ring ${
+                  isScrolled ? 'text-historical-antique dark:text-gray-300 hover:text-bitcoin-orange' : 'text-historical-sepia dark:text-gray-300 hover:text-bitcoin-orange'
+                }`}
+              >
+                {theme === 'dark' ? <FaSun className="text-lg" /> : <FaMoon className="text-lg" />}
+              </button>
+
               <LanguageSwitcher lang={lang} setLang={setLang} isCompact />
 
               <a
@@ -126,6 +136,13 @@ const Navbar = ({ lang, setLang }) => {
 
             {/* Mobile Menu Button */}
             <div className="flex items-center gap-3 md:hidden">
+              <button
+                onClick={toggleTheme}
+                aria-label={lang === 'zh' ? (theme === 'dark' ? '切换到浅色模式' : '切换到深色模式') : (theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode')}
+                className="p-2 text-historical-sepia dark:text-gray-300 focus-ring rounded"
+              >
+                {theme === 'dark' ? <FaSun className="text-lg" /> : <FaMoon className="text-lg" />}
+              </button>
               <LanguageSwitcher lang={lang} setLang={setLang} isCompact />
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -144,7 +161,7 @@ const Navbar = ({ lang, setLang }) => {
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
-            className="fixed inset-0 z-40 bg-white md:hidden"
+            className="fixed inset-0 z-40 bg-white dark:bg-gray-900 md:hidden"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
@@ -153,19 +170,19 @@ const Navbar = ({ lang, setLang }) => {
             <div className="flex flex-col items-center justify-center h-full gap-6 pt-20">
               <button
                 onClick={() => scrollToSection('timeline')}
-                className="text-xl font-medium text-historical-sepia hover:text-bitcoin-orange transition-colors"
+                className="text-xl font-medium text-historical-sepia dark:text-gray-200 hover:text-bitcoin-orange transition-colors"
               >
                 {t.timeline}
               </button>
               <button
                 onClick={() => scrollToSection('figures')}
-                className="text-xl font-medium text-historical-sepia hover:text-bitcoin-orange transition-colors"
+                className="text-xl font-medium text-historical-sepia dark:text-gray-200 hover:text-bitcoin-orange transition-colors"
               >
                 {t.figures}
               </button>
               <button
                 onClick={() => scrollToSection('chapters')}
-                className="text-xl font-medium text-historical-sepia hover:text-bitcoin-orange transition-colors"
+                className="text-xl font-medium text-historical-sepia dark:text-gray-200 hover:text-bitcoin-orange transition-colors"
               >
                 {t.chapters}
               </button>
@@ -173,7 +190,7 @@ const Navbar = ({ lang, setLang }) => {
                 href="https://github.com/beihaili/Stories-about-Bitcoin"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-xl font-medium text-historical-sepia hover:text-bitcoin-orange transition-colors"
+                className="flex items-center gap-2 text-xl font-medium text-historical-sepia dark:text-gray-200 hover:text-bitcoin-orange transition-colors"
               >
                 <FaGithub />
                 GitHub

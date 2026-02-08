@@ -11,7 +11,7 @@ const ChapterGrid = ({ lang = 'zh' }) => {
     : getChaptersByPeriod(selectedPeriod);
 
   return (
-    <section className="py-20 px-6 bg-warm-gradient">
+    <section className="py-20 px-6 bg-warm-gradient dark:bg-gray-900">
       <div className="max-w-7xl mx-auto">
         {/* Section Title */}
         <motion.div
@@ -23,7 +23,7 @@ const ChapterGrid = ({ lang = 'zh' }) => {
           <h2 className="section-title">
             {lang === 'zh' ? '📚 章节目录' : '📚 Chapters'}
           </h2>
-          <p className="text-xl text-historical-antique max-w-2xl mx-auto">
+          <p className="text-xl text-historical-antique dark:text-gray-300 max-w-2xl mx-auto">
             {lang === 'zh'
               ? '穿越48年时光，重访比特币诞生前后的关键历史时刻'
               : 'Travel through 48 years to revisit key historical moments before and after Bitcoin\'s birth'
@@ -43,7 +43,7 @@ const ChapterGrid = ({ lang = 'zh' }) => {
             className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
               selectedPeriod === 'all'
                 ? 'bg-bitcoin-orange text-white shadow-lg scale-105'
-                : 'bg-white text-historical-sepia hover:bg-gray-50 shadow'
+                : 'bg-white dark:bg-gray-800 text-historical-sepia dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 shadow'
             }`}
           >
             {lang === 'zh' ? '全部' : 'All'}
@@ -55,7 +55,7 @@ const ChapterGrid = ({ lang = 'zh' }) => {
               className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                 selectedPeriod === period.id
                   ? 'bg-bitcoin-orange text-white shadow-lg scale-105'
-                  : 'bg-white text-historical-sepia hover:bg-gray-50 shadow'
+                  : 'bg-white dark:bg-gray-800 text-historical-sepia dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 shadow'
               }`}
             >
               {period.name[lang]}
@@ -86,7 +86,7 @@ const ChapterGrid = ({ lang = 'zh' }) => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
         >
-          <p className="text-lg text-historical-antique">
+          <p className="text-lg text-historical-antique dark:text-gray-400">
             {lang === 'zh'
               ? `共 ${filteredChapters.length} 章${selectedPeriod !== 'all' ? ` · ${periods.find(p => p.id === selectedPeriod)?.name[lang]}` : ''}`
               : `${filteredChapters.length} Chapters${selectedPeriod !== 'all' ? ` · ${periods.find(p => p.id === selectedPeriod)?.name[lang]}` : ''}`

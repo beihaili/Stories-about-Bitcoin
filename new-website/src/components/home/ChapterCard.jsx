@@ -95,12 +95,12 @@ const ChapterCard = ({ chapter, lang = 'zh', index }) => {
         <div className="text-3xl sm:text-4xl mb-2 sm:mb-3">{chapter.icon}</div>
 
         {/* Title */}
-        <h3 className="text-lg sm:text-xl font-bold text-historical-sepia mb-2 sm:mb-3 group-hover:text-bitcoin-orange transition-colors duration-300 line-clamp-2">
+        <h3 className="text-lg sm:text-xl font-bold text-historical-sepia dark:text-bitcoin-lightGold mb-2 sm:mb-3 group-hover:text-bitcoin-orange transition-colors duration-300 line-clamp-2">
           {chapter.title[lang]}
         </h3>
 
         {/* Summary - hidden on hover since it shows in overlay */}
-        <p className="text-historical-antique text-xs sm:text-sm leading-relaxed line-clamp-2 sm:line-clamp-3 group-hover:opacity-50 transition-opacity">
+        <p className="text-historical-antique dark:text-gray-300 text-xs sm:text-sm leading-relaxed line-clamp-2 sm:line-clamp-3 group-hover:opacity-50 transition-opacity">
           {chapter.summary[lang]}
         </p>
 

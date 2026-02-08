@@ -7,7 +7,7 @@
     font-family: Georgia, Cambria, 'Times New Roman', serif;
     line-height: 1.6;
     font-weight: 400;
-    color-scheme: light;
+    color-scheme: light dark;
     font-synthesis: none;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
@@ -20,12 +20,23 @@
     min-height: 100vh;
     background: linear-gradient(135deg, #F4ECD8 0%, #FFF8DC 100%);
     color: #2c1810;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .dark body,
+  :is(.dark) body {
+    background: #111827;
+    color: #e5e7eb;
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: Georgia, Cambria, 'Times New Roman', serif;
     color: #704214;
     font-weight: 600;
+  }
+
+  .dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
+    color: #FFF8DC;
   }
 
   a {
@@ -45,11 +56,11 @@
   }
 
   .chapter-card {
-    @apply bg-white rounded-xl shadow-book hover:shadow-2xl transition-all duration-500 overflow-hidden cursor-pointer transform hover:-translate-y-2;
+    @apply bg-white dark:bg-gray-800 rounded-xl shadow-book hover:shadow-2xl transition-all duration-500 overflow-hidden cursor-pointer transform hover:-translate-y-2;
   }
 
   .section-title {
-    @apply text-4xl md:text-5xl font-bold text-historical-sepia mb-8 text-center;
+    @apply text-4xl md:text-5xl font-bold text-historical-sepia dark:text-bitcoin-lightGold mb-8 text-center;
   }
 
   .timeline-dot {

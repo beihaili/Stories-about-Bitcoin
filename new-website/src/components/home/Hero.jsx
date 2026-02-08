@@ -28,7 +28,7 @@ const Hero = ({ lang = 'zh' }) => {
   return (
     <section
       aria-labelledby="hero-title"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-historical-parchment via-bitcoin-lightGold to-historical-parchment"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-historical-parchment via-bitcoin-lightGold to-historical-parchment dark:from-gray-900 dark:via-gray-800 dark:to-gray-900"
     >
       {/* Particle Background - Bitcoin Network Nodes */}
       <ParticleBackground />
@@ -76,17 +76,17 @@ const Hero = ({ lang = 'zh' }) => {
           </motion.div>
 
           {/* Title */}
-          <h1 id="hero-title" className="text-4xl sm:text-6xl md:text-8xl font-bold text-historical-sepia mb-2 sm:mb-4 tracking-tight">
+          <h1 id="hero-title" className="text-4xl sm:text-6xl md:text-8xl font-bold text-historical-sepia dark:text-bitcoin-lightGold mb-2 sm:mb-4 tracking-tight">
             {t.title}
           </h1>
 
           {/* Subtitle */}
-          <p className="text-lg sm:text-2xl md:text-3xl text-bitcoin-darkGold font-semibold mb-4 sm:mb-6">
+          <p className="text-lg sm:text-2xl md:text-3xl text-bitcoin-darkGold dark:text-bitcoin-gold font-semibold mb-4 sm:mb-6">
             {t.subtitle}
           </p>
 
           {/* Description */}
-          <p className="text-base sm:text-lg md:text-xl text-historical-antique max-w-3xl mx-auto mb-6 sm:mb-8 leading-relaxed px-2">
+          <p className="text-base sm:text-lg md:text-xl text-historical-antique dark:text-gray-300 max-w-3xl mx-auto mb-6 sm:mb-8 leading-relaxed px-2">
             {t.description}
           </p>
 
@@ -104,15 +104,15 @@ const Hero = ({ lang = 'zh' }) => {
           >
             <div className="text-center min-w-[60px]">
               <div className="text-2xl sm:text-4xl font-bold text-bitcoin-orange">33</div>
-              <div className="text-xs sm:text-sm text-historical-antique">{lang === 'zh' ? '章节' : 'Chapters'}</div>
+              <div className="text-xs sm:text-sm text-historical-antique dark:text-gray-400">{lang === 'zh' ? '章节' : 'Chapters'}</div>
             </div>
             <div className="text-center min-w-[80px]">
               <div className="text-xl sm:text-4xl font-bold text-bitcoin-orange">1976-2024</div>
-              <div className="text-xs sm:text-sm text-historical-antique">{lang === 'zh' ? '跨越48年' : '48 Years'}</div>
+              <div className="text-xs sm:text-sm text-historical-antique dark:text-gray-400">{lang === 'zh' ? '跨越48年' : '48 Years'}</div>
             </div>
             <div className="text-center min-w-[60px]">
               <div className="text-2xl sm:text-4xl font-bold text-bitcoin-orange">7</div>
-              <div className="text-xs sm:text-sm text-historical-antique">{lang === 'zh' ? '历史时期' : 'Periods'}</div>
+              <div className="text-xs sm:text-sm text-historical-antique dark:text-gray-400">{lang === 'zh' ? '历史时期' : 'Periods'}</div>
             </div>
           </motion.div>
 
@@ -145,7 +145,7 @@ const Hero = ({ lang = 'zh' }) => {
               href="https://github.com/beihaili/Stories-about-Bitcoin/releases"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-white hover:bg-gray-50 text-historical-sepia font-semibold py-3 sm:py-4 px-6 sm:px-8 rounded-lg shadow-lg transition-all duration-300 border-2 border-bitcoin-orange flex items-center justify-center gap-2 sm:gap-3"
+              className="bg-white hover:bg-gray-50 dark:bg-gray-800 dark:hover:bg-gray-700 text-historical-sepia dark:text-bitcoin-lightGold font-semibold py-3 sm:py-4 px-6 sm:px-8 rounded-lg shadow-lg transition-all duration-300 border-2 border-bitcoin-orange flex items-center justify-center gap-2 sm:gap-3"
             >
               <FaDownload />
               {t.download}

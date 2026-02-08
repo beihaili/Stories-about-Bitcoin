@@ -76,7 +76,7 @@ const TypewriterQuotes = ({ lang = 'zh' }) => {
   return (
     <div ref={containerRef} className="min-h-[120px] sm:min-h-[100px] flex flex-col items-center justify-center">
       <motion.div
-        className="text-base sm:text-lg md:text-xl text-historical-antique max-w-3xl mx-auto leading-relaxed px-4 text-center font-serif italic"
+        className="text-base sm:text-lg md:text-xl text-historical-antique dark:text-gray-300 max-w-3xl mx-auto leading-relaxed px-4 text-center font-serif italic"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
       >
