@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion';
 import { FaBook, FaGithub, FaDownload } from 'react-icons/fa';
+import ParticleBackground from './ParticleBackground';
+import TypewriterQuotes from './TypewriterQuotes';
 
 const Hero = ({ lang = 'zh' }) => {
   const content = {
@@ -25,8 +27,11 @@ const Hero = ({ lang = 'zh' }) => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-historical-parchment via-bitcoin-lightGold to-historical-parchment">
+      {/* Particle Background - Bitcoin Network Nodes */}
+      <ParticleBackground />
+
       {/* Background pattern */}
-      <div className="absolute inset-0 bg-book-pattern opacity-30"></div>
+      <div className="absolute inset-0 bg-book-pattern opacity-30" style={{ zIndex: 2 }}></div>
 
       {/* Animated circles */}
       <motion.div
@@ -49,7 +54,7 @@ const Hero = ({ lang = 'zh' }) => {
       />
 
       {/* Content */}
-      <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
+      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -57,52 +62,57 @@ const Hero = ({ lang = 'zh' }) => {
         >
           {/* Icon */}
           <motion.div
-            className="inline-block mb-8"
+            className="inline-block mb-4 sm:mb-8"
             animate={{ rotateY: [0, 360] }}
             transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
           >
-            <FaBook className="text-7xl text-bitcoin-orange drop-shadow-lg" />
+            <FaBook className="text-5xl sm:text-7xl text-bitcoin-orange drop-shadow-lg" />
           </motion.div>
 
           {/* Title */}
-          <h1 className="text-6xl md:text-8xl font-bold text-historical-sepia mb-4 tracking-tight">
+          <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold text-historical-sepia mb-2 sm:mb-4 tracking-tight">
             {t.title}
           </h1>
 
           {/* Subtitle */}
-          <p className="text-2xl md:text-3xl text-bitcoin-darkGold font-semibold mb-6">
+          <p className="text-lg sm:text-2xl md:text-3xl text-bitcoin-darkGold font-semibold mb-4 sm:mb-6">
             {t.subtitle}
           </p>
 
           {/* Description */}
-          <p className="text-lg md:text-xl text-historical-antique max-w-3xl mx-auto mb-12 leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-historical-antique max-w-3xl mx-auto mb-6 sm:mb-8 leading-relaxed px-2">
             {t.description}
           </p>
 
+          {/* Typewriter Quotes */}
+          <div className="mb-8 sm:mb-12">
+            <TypewriterQuotes key={lang} lang={lang} />
+          </div>
+
           {/* Stats */}
           <motion.div
-            className="flex justify-center gap-8 mb-12 flex-wrap"
+            className="flex justify-center gap-4 sm:gap-8 mb-8 sm:mb-12 flex-wrap"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
           >
-            <div className="text-center">
-              <div className="text-4xl font-bold text-bitcoin-orange">33</div>
-              <div className="text-sm text-historical-antique">{lang === 'zh' ? '章节' : 'Chapters'}</div>
+            <div className="text-center min-w-[60px]">
+              <div className="text-2xl sm:text-4xl font-bold text-bitcoin-orange">33</div>
+              <div className="text-xs sm:text-sm text-historical-antique">{lang === 'zh' ? '章节' : 'Chapters'}</div>
             </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-bitcoin-orange">1976-2024</div>
-              <div className="text-sm text-historical-antique">{lang === 'zh' ? '跨越48年' : '48 Years'}</div>
+            <div className="text-center min-w-[80px]">
+              <div className="text-xl sm:text-4xl font-bold text-bitcoin-orange">1976-2024</div>
+              <div className="text-xs sm:text-sm text-historical-antique">{lang === 'zh' ? '跨越48年' : '48 Years'}</div>
             </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-bitcoin-orange">7</div>
-              <div className="text-sm text-historical-antique">{lang === 'zh' ? '历史时期' : 'Periods'}</div>
+            <div className="text-center min-w-[60px]">
+              <div className="text-2xl sm:text-4xl font-bold text-bitcoin-orange">7</div>
+              <div className="text-xs sm:text-sm text-historical-antique">{lang === 'zh' ? '历史时期' : 'Periods'}</div>
             </div>
           </motion.div>
 
           {/* CTA Buttons */}
           <motion.div
-            className="flex justify-center gap-6 flex-wrap"
+            className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-6 flex-wrap px-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7 }}
@@ -111,7 +121,7 @@ const Hero = ({ lang = 'zh' }) => {
               href={`https://beihaili.github.io/Stories-about-Bitcoin/${lang}/`}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-primary text-lg px-8 py-4 flex items-center gap-3"
+              className="btn-primary text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 flex items-center justify-center gap-2 sm:gap-3"
             >
               <FaBook />
               {t.cta}
@@ -120,7 +130,7 @@ const Hero = ({ lang = 'zh' }) => {
               href="https://github.com/beihaili/Stories-about-Bitcoin"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-gray-800 hover:bg-gray-700 text-white font-semibold py-4 px-8 rounded-lg shadow-lg transition-all duration-300 flex items-center gap-3"
+              className="bg-gray-800 hover:bg-gray-700 text-white font-semibold py-3 sm:py-4 px-6 sm:px-8 rounded-lg shadow-lg transition-all duration-300 flex items-center justify-center gap-2 sm:gap-3"
             >
               <FaGithub />
               {t.github}
@@ -129,7 +139,7 @@ const Hero = ({ lang = 'zh' }) => {
               href="https://github.com/beihaili/Stories-about-Bitcoin/releases"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-white hover:bg-gray-50 text-historical-sepia font-semibold py-4 px-8 rounded-lg shadow-lg transition-all duration-300 border-2 border-bitcoin-orange flex items-center gap-3"
+              className="bg-white hover:bg-gray-50 text-historical-sepia font-semibold py-3 sm:py-4 px-6 sm:px-8 rounded-lg shadow-lg transition-all duration-300 border-2 border-bitcoin-orange flex items-center justify-center gap-2 sm:gap-3"
             >
               <FaDownload />
               {t.download}

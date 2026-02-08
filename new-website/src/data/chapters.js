@@ -66,7 +66,8 @@ export const chapters = [
     },
     image: 'img/00_intro.jpg',
     link: { zh: '/zh/00_引子：一束照进现实的理想之光.html', en: '/en/00_prologue.html' },
-    year: ''
+    year: '',
+    readingTime: 5
   },
 
   // 创世纪 (1976-2009)
@@ -84,7 +85,8 @@ export const chapters = [
     },
     image: 'img/01_hayek.jpg',
     link: { zh: '/zh/01_创世纪：哈耶克的预言.html', en: '/en/01_genesis_hayek.html' },
-    year: '1976'
+    year: '1976',
+    readingTime: 6
   },
   {
     id: 2,
@@ -100,7 +102,8 @@ export const chapters = [
     },
     image: 'img/02_chaum.jpg',
     link: { zh: '/zh/02_创世纪：乔姆的孤独方舟.html', en: '/en/02_genesis_chaum.html' },
-    year: '1982'
+    year: '1982',
+    readingTime: 5
   },
   {
     id: 3,
@@ -116,7 +119,8 @@ export const chapters = [
     },
     image: 'img/03_cypherpunk.jpg',
     link: { zh: '/zh/03_创世纪：密码朋克的技术拼图.html', en: '/en/03_genesis_cypherpunk.html' },
-    year: '1990s'
+    year: '1990s',
+    readingTime: 11
   },
   {
     id: 4,
@@ -132,7 +136,8 @@ export const chapters = [
     },
     image: 'img/04_crisis.jpg',
     link: { zh: '/zh/04_创世纪：08年发生了什么.html', en: '/en/04_genesis_2008.html' },
-    year: '2008'
+    year: '2008',
+    readingTime: 10
   },
   {
     id: 5,
@@ -148,7 +153,8 @@ export const chapters = [
     },
     image: 'img/05_satoshi.jpg',
     link: { zh: '/zh/05_创世纪：中本聪创世.html', en: '/en/05_genesis_satoshi.html' },
-    year: '2009'
+    year: '2009',
+    readingTime: 9
   },
 
   // 初出茅庐 (2009-2010)
@@ -166,7 +172,8 @@ export const chapters = [
     },
     image: 'img/06_hal.jpg',
     link: { zh: '/zh/06_初出茅庐：第一个信徒.html', en: '/en/06_first_believer.html' },
-    year: '2009'
+    year: '2009',
+    readingTime: 14
   },
   {
     id: 7,
@@ -182,7 +189,8 @@ export const chapters = [
     },
     image: 'img/07_community.jpg',
     link: { zh: '/zh/07_初出茅庐：社区与工具.html', en: '/en/07_community.html' },
-    year: '2009'
+    year: '2009',
+    readingTime: 7
   },
   {
     id: 8,
@@ -198,7 +206,8 @@ export const chapters = [
     },
     image: 'img/08_value.jpg',
     link: { zh: '/zh/08_初出茅庐：价值发现.html', en: '/en/08_value.html' },
-    year: '2010'
+    year: '2010',
+    readingTime: 13
   },
   {
     id: 9,
@@ -214,7 +223,8 @@ export const chapters = [
     },
     image: 'img/09_crisis.jpg',
     link: { zh: '/zh/09_初出茅庐：第一次危机与修复.html', en: '/en/09_crisis.html' },
-    year: '2010'
+    year: '2010',
+    readingTime: 13
   },
   {
     id: 10,
@@ -230,7 +240,8 @@ export const chapters = [
     },
     image: 'img/10_departure.jpg',
     link: { zh: '/zh/10_初出茅庐：中本聪的神秘退场.html', en: '/en/10_departure.html' },
-    year: '2010'
+    year: '2010',
+    readingTime: 10
   },
 
   // 风起云涌 (2011-2012)
@@ -248,7 +259,8 @@ export const chapters = [
     },
     image: 'img/11_silkroad.jpg',
     link: { zh: '/zh/11_风起云涌：理想与现实的第一次碰撞.html', en: '/en/11_collision.html' },
-    year: '2011'
+    year: '2011',
+    readingTime: 9
   },
   {
     id: 12,
@@ -264,7 +276,8 @@ export const chapters = [
     },
     image: 'img/12_mtgox.jpg',
     link: { zh: '/zh/12_风起云涌：Mt.Gox帝国的崛起.html', en: '/en/12_mtgox.html' },
-    year: '2011'
+    year: '2011',
+    readingTime: 8
   },
   {
     id: 13,
@@ -280,7 +293,8 @@ export const chapters = [
     },
     image: 'img/13_bubble.jpg',
     link: { zh: '/zh/13_风起云涌：第一次泡沫.html', en: '/en/13_bubble.html' },
-    year: '2011'
+    year: '2011',
+    readingTime: 9
   },
   {
     id: 14,
@@ -296,7 +310,8 @@ export const chapters = [
     },
     image: 'img/14_mining.jpg',
     link: { zh: '/zh/14_风起云涌：算力革命.html', en: '/en/14_mining.html' },
-    year: '2011'
+    year: '2011',
+    readingTime: 9
   },
   {
     id: 15,
@@ -312,7 +327,8 @@ export const chapters = [
     },
     image: 'img/15_ecosystem.jpg',
     link: { zh: '/zh/15_风起云涌：生态萌芽.html', en: '/en/15_ecosystem.html' },
-    year: '2012'
+    year: '2012',
+    readingTime: 10
   },
 
   // 暗潮汹涌 (2013-2015)
@@ -330,7 +346,8 @@ export const chapters = [
     },
     image: 'img/16_cyprus.jpg',
     link: { zh: '/zh/16_暗潮汹涌：塞浦路斯时刻.html', en: '/en/16_cyprus.html' },
-    year: '2013'
+    year: '2013',
+    readingTime: 7
   },
   {
     id: 17,
@@ -346,7 +363,8 @@ export const chapters = [
     },
     image: 'img/17_washington.jpg',
     link: { zh: '/zh/17_暗潮汹涌：华盛顿的审视.html', en: '/en/17_washington.html' },
-    year: '2013'
+    year: '2013',
+    readingTime: 7
   },
   {
     id: 18,
@@ -362,7 +380,8 @@ export const chapters = [
     },
     image: 'img/18_china.jpg',
     link: { zh: '/zh/18_暗潮汹涌：中国政策过山车.html', en: '/en/18_china.html' },
-    year: '2013'
+    year: '2013',
+    readingTime: 8
   },
   {
     id: 19,
@@ -378,7 +397,8 @@ export const chapters = [
     },
     image: 'img/19_mtgox_fall.jpg',
     link: { zh: '/zh/19_暗潮汹涌：Mt.Gox的覆灭.html', en: '/en/19_mtgox_fall.html' },
-    year: '2014'
+    year: '2014',
+    readingTime: 6
   },
   {
     id: 20,
@@ -394,7 +414,8 @@ export const chapters = [
     },
     image: 'img/20_regulation.jpg',
     link: { zh: '/zh/20_暗潮汹涌：全球监管分化.html', en: '/en/20_regulation.html' },
-    year: '2014-2015'
+    year: '2014-2015',
+    readingTime: 7
   },
   {
     id: 21,
@@ -410,7 +431,8 @@ export const chapters = [
     },
     image: 'img/21_scaling.jpg',
     link: { zh: '/zh/21_暗潮汹涌：扩容争议萌芽.html', en: '/en/21_scaling.html' },
-    year: '2015'
+    year: '2015',
+    readingTime: 9
   },
 
   // 破浪前行 (2016-2020)
@@ -428,7 +450,8 @@ export const chapters = [
     },
     image: 'img/22_scaling_war.jpg',
     link: { zh: '/zh/22_破浪前行：扩容战争白热化.html', en: '/en/22_scaling_war.html' },
-    year: '2016-2017'
+    year: '2016-2017',
+    readingTime: 10
   },
   {
     id: 23,
@@ -444,7 +467,8 @@ export const chapters = [
     },
     image: 'img/23_independence.jpg',
     link: { zh: '/zh/23_破浪前行：比特币独立日.html', en: '/en/23_independence.html' },
-    year: '2017'
+    year: '2017',
+    readingTime: 9
   },
   {
     id: 24,
@@ -460,7 +484,8 @@ export const chapters = [
     },
     image: 'img/24_bull_run.jpg',
     link: { zh: '/zh/24_破浪前行：价格狂欢与投机泡沫.html', en: '/en/24_bull_run.html' },
-    year: '2017'
+    year: '2017',
+    readingTime: 9
   },
   {
     id: 25,
@@ -476,7 +501,8 @@ export const chapters = [
     },
     image: 'img/25_institutions.jpg',
     link: { zh: '/zh/25_破浪前行：机构觉醒的开端.html', en: '/en/25_institutions.html' },
-    year: '2018-2019'
+    year: '2018-2019',
+    readingTime: 11
   },
   {
     id: 26,
@@ -492,7 +518,8 @@ export const chapters = [
     },
     image: 'img/26_covid.jpg',
     link: { zh: '/zh/26_破浪前行：新冠疫情下的避险转向.html', en: '/en/26_covid.html' },
-    year: '2020'
+    year: '2020',
+    readingTime: 15
   },
   {
     id: 27,
@@ -508,7 +535,8 @@ export const chapters = [
     },
     image: 'img/27_tesla.jpg',
     link: { zh: '/zh/27_破浪前行：机构入场里程碑.html', en: '/en/27_milestone.html' },
-    year: '2020'
+    year: '2020',
+    readingTime: 15
   },
 
   // 未来可期 (2021-2024)
@@ -526,7 +554,8 @@ export const chapters = [
     },
     image: 'img/28_elsalvador.jpg',
     link: { zh: '/zh/28_未来可期：萨尔瓦多先驱.html', en: '/en/28_elsalvador.html' },
-    year: '2021'
+    year: '2021',
+    readingTime: 13
   },
   {
     id: 29,
@@ -542,7 +571,8 @@ export const chapters = [
     },
     image: 'img/29_geopolitics.jpg',
     link: { zh: '/zh/29_未来可期：地缘政治新变量.html', en: '/en/29_geopolitics.html' },
-    year: '2022'
+    year: '2022',
+    readingTime: 13
   },
   {
     id: 30,
@@ -558,7 +588,8 @@ export const chapters = [
     },
     image: 'img/30_etf.jpg',
     link: { zh: '/zh/30_未来可期：ETF历史性突破.html', en: '/en/30_etf.html' },
-    year: '2024'
+    year: '2024',
+    readingTime: 14
   },
   {
     id: 31,
@@ -574,7 +605,8 @@ export const chapters = [
     },
     image: 'img/31_100k.jpg',
     link: { zh: '/zh/31_未来可期：十万美元突破.html', en: '/en/31_100k.html' },
-    year: '2024'
+    year: '2024',
+    readingTime: 15
   },
   {
     id: 32,
@@ -590,7 +622,8 @@ export const chapters = [
     },
     image: 'img/32_reserve.jpg',
     link: { zh: '/zh/32_未来可期：通往全球储备货币之路.html', en: '/en/32_reserve.html' },
-    year: '2024'
+    year: '2024',
+    readingTime: 15
   },
 
   // 特别篇
@@ -608,7 +641,8 @@ export const chapters = [
     },
     image: 'img/special_kirk.jpg',
     link: { zh: '/zh/特别篇：查理·柯克的比特币之路.html', en: '/en/special_kirk.html' },
-    year: ''
+    year: '',
+    readingTime: 6
   }
 ];
 

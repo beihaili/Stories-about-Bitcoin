@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { timelineEvents, categories, importanceLevels } from '../../data/timeline';
+import { timelineEvents, categories } from '../../data/timeline';
 
 const Timeline = ({ lang = 'zh' }) => {
   return (
@@ -34,7 +34,6 @@ const Timeline = ({ lang = 'zh' }) => {
           {/* Events */}
           {timelineEvents.map((event, index) => {
             const isLeft = index % 2 === 0;
-            const importance = importanceLevels[event.importance];
 
             return (
               <motion.div

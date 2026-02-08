@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://beihaili.github.io/Stories-about-Bitcoin/sitemap.xml

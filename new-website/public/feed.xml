@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>比特币那些事儿 | Stories about Bitcoin</title>
+    <link>https://beihaili.github.io/Stories-about-Bitcoin/</link>
+    <description>用《明朝那些事儿》风格讲述比特币48年历史的开源双语电子书。An open-source bilingual ebook telling Bitcoin's history in web novel style.</description>
+    <language>zh-CN</language>
+    <atom:link href="https://beihaili.github.io/Stories-about-Bitcoin/feed.xml" rel="self" type="application/rss+xml"/>
+
+    <item>
+      <title>引子：一束照进现实的理想之光 | Prologue: A Beam of Idealism</title>
+      <link>https://beihaili.github.io/Stories-about-Bitcoin/zh/00_%E5%BC%95%E5%AD%90%EF%BC%9A%E4%B8%80%E6%9D%9F%E7%85%A7%E8%BF%9B%E7%8E%B0%E5%AE%9E%E7%9A%84%E7%90%86%E6%83%B3%E4%B9%8B%E5%85%89.html</link>
+      <description>理想与现实的思辨，比特币的哲学意义。Philosophical Reflections on Ideals vs Reality.</description>
+      <guid isPermaLink="true">https://beihaili.github.io/Stories-about-Bitcoin/zh/00_%E5%BC%95%E5%AD%90%EF%BC%9A%E4%B8%80%E6%9D%9F%E7%85%A7%E8%BF%9B%E7%8E%B0%E5%AE%9E%E7%9A%84%E7%90%86%E6%83%B3%E4%B9%8B%E5%85%89.html</guid>
+    </item>
+
+    <item>
+      <title>第1章：哈耶克的预言 | Genesis: Hayek's Prophecy</title>
+      <link>https://beihaili.github.io/Stories-about-Bitcoin/zh/01_%E5%88%9B%E4%B8%96%E7%BA%AA%EF%BC%9A%E5%93%88%E8%80%B6%E5%85%8B%E7%9A%84%E9%A2%84%E8%A8%80.html</link>
+      <description>1976 - 货币理论基础，私人货币的设想。Monetary Theory Foundation, Vision of Private Currency.</description>
+      <guid isPermaLink="true">https://beihaili.github.io/Stories-about-Bitcoin/zh/01_%E5%88%9B%E4%B8%96%E7%BA%AA%EF%BC%9A%E5%93%88%E8%80%B6%E5%85%8B%E7%9A%84%E9%A2%84%E8%A8%80.html</guid>
+    </item>
+
+    <item>
+      <title>第2章：乔姆的孤独方舟 | Genesis: Chaum's Lonely Ark</title>
+      <link>https://beihaili.github.io/Stories-about-Bitcoin/zh/02_%E5%88%9B%E4%B8%96%E7%BA%AA%EF%BC%9A%E4%B9%94%E5%A7%86%E7%9A%84%E5%AD%A4%E7%8B%AC%E6%96%B9%E8%88%9F.html</link>
+      <description>1982 - 数字现金先驱，密码学货币雏形。Digital Cash Pioneer, Cryptographic Currency Prototype.</description>
+      <guid isPermaLink="true">https://beihaili.github.io/Stories-about-Bitcoin/zh/02_%E5%88%9B%E4%B8%96%E7%BA%AA%EF%BC%9A%E4%B9%94%E5%A7%86%E7%9A%84%E5%AD%A4%E7%8B%AC%E6%96%B9%E8%88%9F.html</guid>
+    </item>
+
+    <item>
+      <title>第3章：密码朋克的技术拼图 | Genesis: The Cypherpunk Technology Puzzle</title>
+      <link>https://beihaili.github.io/Stories-about-Bitcoin/zh/03_%E5%88%9B%E4%B8%96%E7%BA%AA%EF%BC%9A%E5%AF%86%E7%A0%81%E6%9C%8B%E5%85%8B%E7%9A%84%E6%8A%80%E6%9C%AF%E6%8B%BC%E5%9B%BE.html</link>
+      <description>1990s - 技术积累，密码朋克运动。Technical Accumulation, Cypherpunk Movement.</description>
+      <guid isPermaLink="true">https://beihaili.github.io/Stories-about-Bitcoin/zh/03_%E5%88%9B%E4%B8%96%E7%BA%AA%EF%BC%9A%E5%AF%86%E7%A0%81%E6%9C%8B%E5%85%8B%E7%9A%84%E6%8A%80%E6%9C%AF%E6%8B%BC%E5%9B%BE.html</guid>
+    </item>
+
+    <item>
+      <title>第4章：08年发生了什么 | Genesis: What Happened in 2008</title>
+      <link>https://beihaili.github.io/Stories-about-Bitcoin/zh/04_%E5%88%9B%E4%B8%96%E7%BA%AA%EF%BC%9A08%E5%B9%B4%E5%8F%91%E7%94%9F%E4%BA%86%E4%BB%80%E4%B9%88.html</link>
+      <description>2008 - 金融危机背景，时代契机。Financial Crisis Background, Historical Opportunity.</description>
+      <guid isPermaLink="true">https://beihaili.github.io/Stories-about-Bitcoin/zh/04_%E5%88%9B%E4%B8%96%E7%BA%AA%EF%BC%9A08%E5%B9%B4%E5%8F%91%E7%94%9F%E4%BA%86%E4%BB%80%E4%B9%88.html</guid>
+    </item>
+
+    <item>
+      <title>第5章：中本聪创世 | Genesis: Satoshi's Genesis</title>
+      <link>https://beihaili.github.io/Stories-about-Bitcoin/zh/05_%E5%88%9B%E4%B8%96%E7%BA%AA%EF%BC%9A%E4%B8%AD%E6%9C%AC%E8%81%AA%E5%88%9B%E4%B8%96.html</link>
+      <description>2009 - 比特币诞生，白皮书发布。Bitcoin Birth, Whitepaper Published.</description>
+      <guid isPermaLink="true">https://beihaili.github.io/Stories-about-Bitcoin/zh/05_%E5%88%9B%E4%B8%96%E7%BA%AA%EF%BC%9A%E4%B8%AD%E6%9C%AC%E8%81%AA%E5%88%9B%E4%B8%96.html</guid>
+    </item>
+
+    <item>
+      <title>第6章：第一个信徒 | First Steps: The First Believer</title>
+      <link>https://beihaili.github.io/Stories-about-Bitcoin/zh/06_%E5%88%9D%E5%87%BA%E8%8C%85%E5%BA%90%EF%BC%9A%E7%AC%AC%E4%B8%80%E4%B8%AA%E4%BF%A1%E5%BE%92.html</link>
+      <description>2009 - 哈尔·芬尼的传承故事。Hal Finney's Legacy Story.</description>
+      <guid isPermaLink="true">https://beihaili.github.io/Stories-about-Bitcoin/zh/06_%E5%88%9D%E5%87%BA%E8%8C%85%E5%BA%90%EF%BC%9A%E7%AC%AC%E4%B8%80%E4%B8%AA%E4%BF%A1%E5%BE%92.html</guid>
+    </item>
+
+    <item>
+      <title>第7章：社区与工具 | First Steps: Community and Tools</title>
+      <link>https://beihaili.github.io/Stories-about-Bitcoin/zh/07_%E5%88%9D%E5%87%BA%E8%8C%85%E5%BA%90%EF%BC%9A%E7%A4%BE%E5%8C%BA%E4%B8%8E%E5%B7%A5%E5%85%B7.html</link>
+      <description>2009 - BitcoinTalk论坛与工具生态。BitcoinTalk Forum and Tool Ecosystem.</description>
+      <guid isPermaLink="true">https://beihaili.github.io/Stories-about-Bitcoin/zh/07_%E5%88%9D%E5%87%BA%E8%8C%85%E5%BA%90%EF%BC%9A%E7%A4%BE%E5%8C%BA%E4%B8%8E%E5%B7%A5%E5%85%B7.html</guid>
+    </item>
+
+    <item>
+      <title>第8章：价值发现 | First Steps: Value Discovery</title>
+      <link>https://beihaili.github.io/Stories-about-Bitcoin/zh/08_%E5%88%9D%E5%87%BA%E8%8C%85%E5%BA%90%EF%BC%9A%E4%BB%B7%E5%80%BC%E5%8F%91%E7%8E%B0.html</link>
+      <description>2010 - 从无价到有价的历史突破。Historic Breakthrough from Priceless to Priced.</description>
+      <guid isPermaLink="true">https://beihaili.github.io/Stories-about-Bitcoin/zh/08_%E5%88%9D%E5%87%BA%E8%8C%85%E5%BA%90%EF%BC%9A%E4%BB%B7%E5%80%BC%E5%8F%91%E7%8E%B0.html</guid>
+    </item>
+
+    <item>
+      <title>第9章：第一次危机与修复 | First Steps: First Crisis and Recovery</title>
+      <link>https://beihaili.github.io/Stories-about-Bitcoin/zh/09_%E5%88%9D%E5%87%BA%E8%8C%85%E5%BA%90%EF%BC%9A%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%8D%B1%E6%9C%BA%E4%B8%8E%E4%BF%AE%E5%A4%8D.html</link>
+      <description>2010 - 史上最大胆的网络回滚。The Most Daring Network Rollback in History.</description>
+      <guid isPermaLink="true">https://beihaili.github.io/Stories-about-Bitcoin/zh/09_%E5%88%9D%E5%87%BA%E8%8C%85%E5%BA%90%EF%BC%9A%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%8D%B1%E6%9C%BA%E4%B8%8E%E4%BF%AE%E5%A4%8D.html</guid>
+    </item>
+
+    <item>
+      <title>第10章：中本聪的神秘退场 | First Steps: Satoshi's Mysterious Departure</title>
+      <link>https://beihaili.github.io/Stories-about-Bitcoin/zh/10_%E5%88%9D%E5%87%BA%E8%8C%85%E5%BA%90%EF%BC%9A%E4%B8%AD%E6%9C%AC%E8%81%AA%E7%9A%84%E7%A5%9E%E7%A7%98%E9%80%80%E5%9C%BA.html</link>
+      <description>2010 - 数字时代最伟大的退场。The Greatest Exit in the Digital Age.</description>
+      <guid isPermaLink="true">https://beihaili.github.io/Stories-about-Bitcoin/zh/10_%E5%88%9D%E5%87%BA%E8%8C%85%E5%BA%90%EF%BC%9A%E4%B8%AD%E6%9C%AC%E8%81%AA%E7%9A%84%E7%A5%9E%E7%A7%98%E9%80%80%E5%9C%BA.html</guid>
+    </item>
+
+    <item>
+      <title>第11章：理想与现实的第一次碰撞 | Rising Storm: First Collision</title>
+      <link>https://beihaili.github.io/Stories-about-Bitcoin/zh/11_%E9%A3%8E%E8%B5%B7%E4%BA%91%E6%B6%8C%EF%BC%9A%E7%90%86%E6%83%B3%E4%B8%8E%E7%8E%B0%E5%AE%9E%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%A1%E7%A2%B0%E6%92%9E.html</link>
+      <description>2011 - 丝绸之路的争议与影响。Silk Road's Controversy and Impact.</description>
+      <guid isPermaLink="true">https://beihaili.github.io/Stories-about-Bitcoin/zh/11_%E9%A3%8E%E8%B5%B7%E4%BA%91%E6%B6%8C%EF%BC%9A%E7%90%86%E6%83%B3%E4%B8%8E%E7%8E%B0%E5%AE%9E%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AC%A1%E7%A2%B0%E6%92%9E.html</guid>
+    </item>
+
+    <item>
+      <title>第12章：Mt.Gox帝国的崛起 | Rising Storm: Rise of Mt.Gox</title>
+      <link>https://beihaili.github.io/Stories-about-Bitcoin/zh/12_%E9%A3%8E%E8%B5%B7%E4%BA%91%E6%B6%8C%EF%BC%9AMt.Gox%E5%B8%9D%E5%9B%BD%E7%9A%84%E5%B4%9B%E8%B5%B7.html</link>
+      <description>2011 - 从技术实验到商业帝国。From Technical Experiment to Business Empire.</description>
+      <guid isPermaLink="true">https://beihaili.github.io/Stories-about-Bitcoin/zh/12_%E9%A3%8E%E8%B5%B7%E4%BA%91%E6%B6%8C%EF%BC%9AMt.Gox%E5%B8%9D%E5%9B%BD%E7%9A%84%E5%B4%9B%E8%B5%B7.html</guid>
+    </item>
+
+    <item>
+      <title>第13章：第一次泡沫 | Rising Storm: First Bubble</title>
+      <link>https://beihaili.github.io/Stories-about-Bitcoin/zh/13_%E9%A3%8E%E8%B5%B7%E4%BA%91%E6%B6%8C%EF%BC%9A%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%B3%A1%E6%B2%AB.html</link>
+      <description>2011 - 从媒体风暴到理性回归。From Media Storm to Rational Return.</description>
+      <guid isPermaLink="true">https://beihaili.github.io/Stories-about-Bitcoin/zh/13_%E9%A3%8E%E8%B5%B7%E4%BA%91%E6%B6%8C%EF%BC%9A%E7%AC%AC%E4%B8%80%E6%AC%A1%E6%B3%A1%E6%B2%AB.html</guid>
+    </item>
+
+    <item>
+      <title>第14章：算力革命 | Rising Storm: Hash Power Revolution</title>
+      <link>https://beihaili.github.io/Stories-about-Bitcoin/zh/14_%E9%A3%8E%E8%B5%B7%E4%BA%91%E6%B6%8C%EF%BC%9A%E7%AE%97%E5%8A%9B%E9%9D%A9%E5%91%BD.html</link>
+      <description>2011 - 从CPU到GPU的挖矿演进。Mining Evolution from CPU to GPU.</description>
+      <guid isPermaLink="true">https://beihaili.github.io/Stories-about-Bitcoin/zh/14_%E9%A3%8E%E8%B5%B7%E4%BA%91%E6%B6%8C%EF%BC%9A%E7%AE%97%E5%8A%9B%E9%9D%A9%E5%91%BD.html</guid>
+    </item>
+
+    <item>
+      <title>第15章：生态萌芽 | Rising Storm: Ecosystem Emergence</title>
+      <link>https://beihaili.github.io/Stories-about-Bitcoin/zh/15_%E9%A3%8E%E8%B5%B7%E4%BA%91%E6%B6%8C%EF%BC%9A%E7%94%9F%E6%80%81%E8%90%8C%E8%8A%BD.html</link>
+      <description>2012 - 支付服务与全球网络效应。Payment Services and Global Network Effects.</description>
+      <guid isPermaLink="true">https://beihaili.github.io/Stories-about-Bitcoin/zh/15_%E9%A3%8E%E8%B5%B7%E4%BA%91%E6%B6%8C%EF%BC%9A%E7%94%9F%E6%80%81%E8%90%8C%E8%8A%BD.html</guid>
+    </item>
+
+    <item>
+      <title>第16章：塞浦路斯时刻 | Undercurrents: The Cyprus Moment</title>
+      <link>https://beihaili.github.io/Stories-about-Bitcoin/zh/16_%E6%9A%97%E6%BD%AE%E6%B1%B9%E6%B6%8C%EF%BC%9A%E5%A1%9E%E6%B5%A6%E8%B7%AF%E6%96%AF%E6%97%B6%E5%88%BB.html</link>
+      <description>2013 - 金融危机催生避险需求。Financial Crisis Drives Safe-Haven Demand.</description>
+      <guid isPermaLink="true">https://beihaili.github.io/Stories-about-Bitcoin/zh/16_%E6%9A%97%E6%BD%AE%E6%B1%B9%E6%B6%8C%EF%BC%9A%E5%A1%9E%E6%B5%A6%E8%B7%AF%E6%96%AF%E6%97%B6%E5%88%BB.html</guid>
+    </item>
+
+    <item>
+      <title>第17章：华盛顿的审视 | Undercurrents: Washington's Scrutiny</title>
+      <link>https://beihaili.github.io/Stories-about-Bitcoin/zh/17_%E6%9A%97%E6%BD%AE%E6%B1%B9%E6%B6%8C%EF%BC%9A%E5%8D%8E%E7%9B%9B%E9%A1%BF%E7%9A%84%E5%AE%A1%E8%A7%86.html</link>
+      <description>2013 - 美国监管框架初步形成。Initial Formation of US Regulatory Framework.</description>
+      <guid isPermaLink="true">https://beihaili.github.io/Stories-about-Bitcoin/zh/17_%E6%9A%97%E6%BD%AE%E6%B1%B9%E6%B6%8C%EF%BC%9A%E5%8D%8E%E7%9B%9B%E9%A1%BF%E7%9A%84%E5%AE%A1%E8%A7%86.html</guid>
+    </item>
+
+    <item>
+      <title>第18章：中国政策过山车 | Undercurrents: China Policy Rollercoaster</title>
+      <link>https://beihaili.github.io/Stories-about-Bitcoin/zh/18_%E6%9A%97%E6%BD%AE%E6%B1%B9%E6%B6%8C%EF%BC%9A%E4%B8%AD%E5%9B%BD%E6%94%BF%E7%AD%96%E8%BF%87%E5%B1%B1%E8%BD%A6.html</link>
+      <description>2013 - 从狂热追捧到监管收紧。From Enthusiastic Embrace to Regulatory Tightening.</description>
+      <guid isPermaLink="true">https://beihaili.github.io/Stories-about-Bitcoin/zh/18_%E6%9A%97%E6%BD%AE%E6%B1%B9%E6%B6%8C%EF%BC%9A%E4%B8%AD%E5%9B%BD%E6%94%BF%E7%AD%96%E8%BF%87%E5%B1%B1%E8%BD%A6.html</guid>
+    </item>
+
+    <item>
+      <title>第19章：Mt.Gox的覆灭 | Undercurrents: The Fall of Mt.Gox</title>
+      <link>https://beihaili.github.io/Stories-about-Bitcoin/zh/19_%E6%9A%97%E6%BD%AE%E6%B1%B9%E6%B6%8C%EF%BC%9AMt.Gox%E7%9A%84%E8%A6%86%E7%81%AD.html</link>
+      <description>2014 - 帝国崩塌与行业震荡。Empire Collapse and Industry Shock.</description>
+      <guid isPermaLink="true">https://beihaili.github.io/Stories-about-Bitcoin/zh/19_%E6%9A%97%E6%BD%AE%E6%B1%B9%E6%B6%8C%EF%BC%9AMt.Gox%E7%9A%84%E8%A6%86%E7%81%AD.html</guid>
+    </item>
+
+    <item>
+      <title>第20章：全球监管分化 | Undercurrents: Global Regulatory Divergence</title>
+      <link>https://beihaili.github.io/Stories-about-Bitcoin/zh/20_%E6%9A%97%E6%BD%AE%E6%B1%B9%E6%B6%8C%EF%BC%9A%E5%85%A8%E7%90%83%E7%9B%91%E7%AE%A1%E5%88%86%E5%8C%96.html</link>
+      <description>2014-2015 - 各国监管立场的差异化发展。Divergent Development of National Regulatory Positions.</description>
+      <guid isPermaLink="true">https://beihaili.github.io/Stories-about-Bitcoin/zh/20_%E6%9A%97%E6%BD%AE%E6%B1%B9%E6%B6%8C%EF%BC%9A%E5%85%A8%E7%90%83%E7%9B%91%E7%AE%A1%E5%88%86%E5%8C%96.html</guid>
+    </item>
+
+    <item>
+      <title>第21章：扩容争议萌芽 | Undercurrents: Scaling Debate Emerges</title>
+      <link>https://beihaili.github.io/Stories-about-Bitcoin/zh/21_%E6%9A%97%E6%BD%AE%E6%B1%B9%E6%B6%8C%EF%BC%9A%E6%89%A9%E5%AE%B9%E4%BA%89%E8%AE%AE%E8%90%8C%E8%8A%BD.html</link>
+      <description>2015 - 区块大小之争的开端。Beginning of the Block Size Debate.</description>
+      <guid isPermaLink="true">https://beihaili.github.io/Stories-about-Bitcoin/zh/21_%E6%9A%97%E6%BD%AE%E6%B1%B9%E6%B6%8C%EF%BC%9A%E6%89%A9%E5%AE%B9%E4%BA%89%E8%AE%AE%E8%90%8C%E8%8A%BD.html</guid>
+    </item>
+
+    <item>
+      <title>第22章：扩容战争白热化 | Breaking Waves: Scaling War Intensifies</title>
+      <link>https://beihaili.github.io/Stories-about-Bitcoin/zh/22_%E7%A0%B4%E6%B5%AA%E5%89%8D%E8%A1%8C%EF%BC%9A%E6%89%A9%E5%AE%B9%E6%88%98%E4%BA%89%E7%99%BD%E7%83%AD%E5%8C%96.html</link>
+      <description>2016-2017 - 社区分裂与技术路线之争。Community Split and Technical Route Debate.</description>
+      <guid isPermaLink="true">https://beihaili.github.io/Stories-about-Bitcoin/zh/22_%E7%A0%B4%E6%B5%AA%E5%89%8D%E8%A1%8C%EF%BC%9A%E6%89%A9%E5%AE%B9%E6%88%98%E4%BA%89%E7%99%BD%E7%83%AD%E5%8C%96.html</guid>
+    </item>
+
+    <item>
+      <title>第23章：比特币独立日 | Breaking Waves: Bitcoin Independence Day</title>
+      <link>https://beihaili.github.io/Stories-about-Bitcoin/zh/23_%E7%A0%B4%E6%B5%AA%E5%89%8D%E8%A1%8C%EF%BC%9A%E6%AF%94%E7%89%B9%E5%B8%81%E7%8B%AC%E7%AB%8B%E6%97%A5.html</link>
+      <description>2017 - SegWit激活与BCH分叉。SegWit Activation and BCH Fork.</description>
+      <guid isPermaLink="true">https://beihaili.github.io/Stories-about-Bitcoin/zh/23_%E7%A0%B4%E6%B5%AA%E5%89%8D%E8%A1%8C%EF%BC%9A%E6%AF%94%E7%89%B9%E5%B8%81%E7%8B%AC%E7%AB%8B%E6%97%A5.html</guid>
+    </item>
+
+    <item>
+      <title>第24章：价格狂欢与投机泡沫 | Breaking Waves: Price Frenzy</title>
+      <link>https://beihaili.github.io/Stories-about-Bitcoin/zh/24_%E7%A0%B4%E6%B5%AA%E5%89%8D%E8%A1%8C%EF%BC%9A%E4%BB%B7%E6%A0%BC%E7%8B%82%E6%AC%A2%E4%B8%8E%E6%8A%95%E6%9C%BA%E6%B3%A1%E6%B2%AB.html</link>
+      <description>2017 - 2万美元突破与市场疯狂。$20K Breakthrough and Market Frenzy.</description>
+      <guid isPermaLink="true">https://beihaili.github.io/Stories-about-Bitcoin/zh/24_%E7%A0%B4%E6%B5%AA%E5%89%8D%E8%A1%8C%EF%BC%9A%E4%BB%B7%E6%A0%BC%E7%8B%82%E6%AC%A2%E4%B8%8E%E6%8A%95%E6%9C%BA%E6%B3%A1%E6%B2%AB.html</guid>
+    </item>
+
+    <item>
+      <title>第25章：机构觉醒的开端 | Breaking Waves: Awakening of Institutions</title>
+      <link>https://beihaili.github.io/Stories-about-Bitcoin/zh/25_%E7%A0%B4%E6%B5%AA%E5%89%8D%E8%A1%8C%EF%BC%9A%E6%9C%BA%E6%9E%84%E8%A7%89%E9%86%92%E7%9A%84%E5%BC%80%E7%AB%AF.html</link>
+      <description>2018-2019 - 传统金融机构入场试水。Traditional Financial Institutions Enter.</description>
+      <guid isPermaLink="true">https://beihaili.github.io/Stories-about-Bitcoin/zh/25_%E7%A0%B4%E6%B5%AA%E5%89%8D%E8%A1%8C%EF%BC%9A%E6%9C%BA%E6%9E%84%E8%A7%89%E9%86%92%E7%9A%84%E5%BC%80%E7%AB%AF.html</guid>
+    </item>
+
+    <item>
+      <title>第26章：新冠疫情下的避险转向 | Breaking Waves: COVID-19 Safe-Haven</title>
+      <link>https://beihaili.github.io/Stories-about-Bitcoin/zh/26_%E7%A0%B4%E6%B5%AA%E5%89%8D%E8%A1%8C%EF%BC%9A%E6%96%B0%E5%86%A0%E7%96%AB%E6%83%85%E4%B8%8B%E7%9A%84%E9%81%BF%E9%99%A9%E8%BD%AC%E5%90%91.html</link>
+      <description>2020 - 疫情引发的数字黄金叙事。Digital Gold Narrative Triggered by Pandemic.</description>
+      <guid isPermaLink="true">https://beihaili.github.io/Stories-about-Bitcoin/zh/26_%E7%A0%B4%E6%B5%AA%E5%89%8D%E8%A1%8C%EF%BC%9A%E6%96%B0%E5%86%A0%E7%96%AB%E6%83%85%E4%B8%8B%E7%9A%84%E9%81%BF%E9%99%A9%E8%BD%AC%E5%90%91.html</guid>
+    </item>
+
+    <item>
+      <title>第27章：机构入场里程碑 | Breaking Waves: Institutional Entry</title>
+      <link>https://beihaili.github.io/Stories-about-Bitcoin/zh/27_%E7%A0%B4%E6%B5%AA%E5%89%8D%E8%A1%8C%EF%BC%9A%E6%9C%BA%E6%9E%84%E5%85%A5%E5%9C%BA%E9%87%8C%E7%A8%8B%E7%A2%91.html</link>
+      <description>2020 - MicroStrategy与特斯拉的历史性决定。Historic Decisions by MicroStrategy and Tesla.</description>
+      <guid isPermaLink="true">https://beihaili.github.io/Stories-about-Bitcoin/zh/27_%E7%A0%B4%E6%B5%AA%E5%89%8D%E8%A1%8C%EF%BC%9A%E6%9C%BA%E6%9E%84%E5%85%A5%E5%9C%BA%E9%87%8C%E7%A8%8B%E7%A2%91.html</guid>
+    </item>
+
+    <item>
+      <title>第28章：萨尔瓦多先驱 | Future Promise: El Salvador Pioneer</title>
+      <link>https://beihaili.github.io/Stories-about-Bitcoin/zh/28_%E6%9C%AA%E6%9D%A5%E5%8F%AF%E6%9C%9F%EF%BC%9A%E8%90%A8%E5%B0%94%E7%93%A6%E5%A4%9A%E5%85%88%E9%A9%B1.html</link>
+      <description>2021 - 全球首个比特币法币化国家。World's First Bitcoin Legal Tender Country.</description>
+      <guid isPermaLink="true">https://beihaili.github.io/Stories-about-Bitcoin/zh/28_%E6%9C%AA%E6%9D%A5%E5%8F%AF%E6%9C%9F%EF%BC%9A%E8%90%A8%E5%B0%94%E7%93%A6%E5%A4%9A%E5%85%88%E9%A9%B1.html</guid>
+    </item>
+
+    <item>
+      <title>第29章：地缘政治新变量 | Future Promise: New Geopolitical Variable</title>
+      <link>https://beihaili.github.io/Stories-about-Bitcoin/zh/29_%E6%9C%AA%E6%9D%A5%E5%8F%AF%E6%9C%9F%EF%BC%9A%E5%9C%B0%E7%BC%98%E6%94%BF%E6%B2%BB%E6%96%B0%E5%8F%98%E9%87%8F.html</link>
+      <description>2022 - 比特币在国际政治中的角色。Bitcoin's Role in International Politics.</description>
+      <guid isPermaLink="true">https://beihaili.github.io/Stories-about-Bitcoin/zh/29_%E6%9C%AA%E6%9D%A5%E5%8F%AF%E6%9C%9F%EF%BC%9A%E5%9C%B0%E7%BC%98%E6%94%BF%E6%B2%BB%E6%96%B0%E5%8F%98%E9%87%8F.html</guid>
+    </item>
+
+    <item>
+      <title>第30章：ETF历史性突破 | Future Promise: Historic ETF Breakthrough</title>
+      <link>https://beihaili.github.io/Stories-about-Bitcoin/zh/30_%E6%9C%AA%E6%9D%A5%E5%8F%AF%E6%9C%9F%EF%BC%9AETF%E5%8E%86%E5%8F%B2%E6%80%A7%E7%AA%81%E7%A0%B4.html</link>
+      <description>2024 - 现货ETF获批的里程碑时刻。Milestone Moment of Spot ETF Approval.</description>
+      <guid isPermaLink="true">https://beihaili.github.io/Stories-about-Bitcoin/zh/30_%E6%9C%AA%E6%9D%A5%E5%8F%AF%E6%9C%9F%EF%BC%9AETF%E5%8E%86%E5%8F%B2%E6%80%A7%E7%AA%81%E7%A0%B4.html</guid>
+    </item>
+
+    <item>
+      <title>第31章：十万美元突破 | Future Promise: $100K Breakthrough</title>
+      <link>https://beihaili.github.io/Stories-about-Bitcoin/zh/31_%E6%9C%AA%E6%9D%A5%E5%8F%AF%E6%9C%9F%EF%BC%9A%E5%8D%81%E4%B8%87%E7%BE%8E%E5%85%83%E7%AA%81%E7%A0%B4.html</link>
+      <description>2024 - 价格里程碑与主流化进程。Price Milestone and Mainstream Adoption.</description>
+      <guid isPermaLink="true">https://beihaili.github.io/Stories-about-Bitcoin/zh/31_%E6%9C%AA%E6%9D%A5%E5%8F%AF%E6%9C%9F%EF%BC%9A%E5%8D%81%E4%B8%87%E7%BE%8E%E5%85%83%E7%AA%81%E7%A0%B4.html</guid>
+    </item>
+
+    <item>
+      <title>第32章：通往全球储备货币之路 | Future Promise: Road to Global Reserve</title>
+      <link>https://beihaili.github.io/Stories-about-Bitcoin/zh/32_%E6%9C%AA%E6%9D%A5%E5%8F%AF%E6%9C%9F%EF%BC%9A%E9%80%9A%E5%BE%80%E5%85%A8%E7%90%83%E5%82%A8%E5%A4%87%E8%B4%A7%E5%B8%81%E4%B9%8B%E8%B7%AF.html</link>
+      <description>2024 - 比特币的终极愿景。Bitcoin's Ultimate Vision.</description>
+      <guid isPermaLink="true">https://beihaili.github.io/Stories-about-Bitcoin/zh/32_%E6%9C%AA%E6%9D%A5%E5%8F%AF%E6%9C%9F%EF%BC%9A%E9%80%9A%E5%BE%80%E5%85%A8%E7%90%83%E5%82%A8%E5%A4%87%E8%B4%A7%E5%B8%81%E4%B9%8B%E8%B7%AF.html</guid>
+    </item>
+
+    <item>
+      <title>特别篇：查理·柯克的比特币之路 | Special: Charlie Kirk's Bitcoin Journey</title>
+      <link>https://beihaili.github.io/Stories-about-Bitcoin/zh/%E7%89%B9%E5%88%AB%E7%AF%87%EF%BC%9A%E6%9F%A5%E7%90%86%C2%B7%E6%9F%AF%E5%85%8B%E7%9A%84%E6%AF%94%E7%89%B9%E5%B8%81%E4%B9%8B%E8%B7%AF.html</link>
+      <description>纪念逝世的自由主义先驱。Tribute to Deceased Libertarian Pioneer.</description>
+      <guid isPermaLink="true">https://beihaili.github.io/Stories-about-Bitcoin/zh/%E7%89%B9%E5%88%AB%E7%AF%87%EF%BC%9A%E6%9F%A5%E7%90%86%C2%B7%E6%9F%AF%E5%85%8B%E7%9A%84%E6%AF%94%E7%89%B9%E5%B8%81%E4%B9%8B%E8%B7%AF.html</guid>
+    </item>
+
+  </channel>
+</rss>
