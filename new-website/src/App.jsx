@@ -6,6 +6,7 @@ import FiguresGallery from './components/home/FiguresGallery';
 import Navbar from './components/common/Navbar';
 import Footer from './components/common/Footer';
 import GiscusComments from './components/common/GiscusComments';
+import BackToTop from './components/common/BackToTop';
 import useTheme from './hooks/useTheme';
 import useReadingProgress from './hooks/useReadingProgress';
 
@@ -92,6 +93,9 @@ function App() {
 
       {/* Footer */}
       <Footer lang={lang} />
+
+      {/* Back to Top */}
+      <BackToTop lang={lang} />
     </div>
   );
 }
