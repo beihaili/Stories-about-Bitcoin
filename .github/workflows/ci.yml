@@ -1,0 +1,47 @@
+name: CI
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+jobs:
+  lint-test-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+          cache-dependency-path: new-website/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+        working-directory: new-website
+
+      - name: Lint
+        run: npm run lint
+        working-directory: new-website
+
+      - name: Test
+        run: npm run test:run
+        working-directory: new-website
+
+      - name: Build
+        run: npm run build
+        working-directory: new-website
+
+      - name: Check bundle size
+        run: |
+          MAIN_SIZE=$(stat -c%s dist/assets/*.js | sort -rn | head -1)
+          MAIN_KB=$((MAIN_SIZE / 1024))
+          echo "Largest JS bundle: ${MAIN_KB}KB"
+          if [ "$MAIN_KB" -gt 500 ]; then
+            echo "::warning::Bundle size ${MAIN_KB}KB exceeds 500KB threshold"
+          fi
+        working-directory: new-website

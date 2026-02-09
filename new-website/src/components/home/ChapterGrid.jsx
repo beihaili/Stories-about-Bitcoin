@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import ChapterCard from './ChapterCard';
 import { chapters, periods, getChaptersByPeriod } from '../../data/chapters';
@@ -6,9 +6,10 @@ import { chapters, periods, getChaptersByPeriod } from '../../data/chapters';
 const ChapterGrid = ({ lang = 'zh', markAsRead, isRead, readCount = 0 }) => {
   const [selectedPeriod, setSelectedPeriod] = useState('all');
 
-  const filteredChapters = selectedPeriod === 'all'
-    ? chapters
-    : getChaptersByPeriod(selectedPeriod);
+  const filteredChapters = useMemo(
+    () => selectedPeriod === 'all' ? chapters : getChaptersByPeriod(selectedPeriod),
+    [selectedPeriod]
+  );
 
   return (
     <section className="py-20 px-6 bg-warm-gradient dark:bg-gray-900">

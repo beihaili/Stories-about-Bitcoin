@@ -1,8 +1,8 @@
-import { useState } from 'react';
+import { useState, memo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ShareButton } from '../common/ShareButtons';
 
-const ChapterCard = ({ chapter, lang = 'zh', index, markAsRead, isRead }) => {
+const ChapterCard = memo(({ chapter, lang = 'zh', index, markAsRead, isRead }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleClick = () => {
@@ -15,7 +15,7 @@ const ChapterCard = ({ chapter, lang = 'zh', index, markAsRead, isRead }) => {
     <motion.div
       role="article"
       tabIndex={0}
-      aria-label={chapter.title[lang]}
+      aria-label={`${lang === 'zh' ? '第' : 'Chapter '}${chapter.id}${lang === 'zh' ? '章：' : ': '}${chapter.title[lang]}`}
       className="chapter-card group relative focus-ring"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -126,6 +126,6 @@ const ChapterCard = ({ chapter, lang = 'zh', index, markAsRead, isRead }) => {
       <div className="h-1 bg-gradient-to-r from-bitcoin-orange via-bitcoin-gold to-bitcoin-darkGold group-hover:h-2 transition-all duration-300"></div>
     </motion.div>
   );
-};
+});
 
 export default ChapterCard;

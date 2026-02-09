@@ -35,6 +35,14 @@ jobs:
         run: npm ci
         working-directory: new-website
 
+      - name: Lint
+        run: npm run lint
+        working-directory: new-website
+
+      - name: Test
+        run: npm run test:run
+        working-directory: new-website
+
       - name: Build React homepage
         run: npm run build
         working-directory: new-website
