@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F7931A;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F7931A;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="textGlow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#fff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fff;stop-opacity:0.9" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Subtle pattern overlay -->
+  <rect width="1200" height="630" fill="#000" opacity="0.15"/>
+
+  <!-- Decorative circles (blockchain nodes) -->
+  <circle cx="100" cy="100" r="60" fill="#fff" opacity="0.05"/>
+  <circle cx="1100" cy="530" r="80" fill="#fff" opacity="0.05"/>
+  <circle cx="200" cy="500" r="40" fill="#fff" opacity="0.04"/>
+  <circle cx="1000" cy="120" r="50" fill="#fff" opacity="0.04"/>
+  <circle cx="600" cy="80" r="30" fill="#fff" opacity="0.06"/>
+
+  <!-- Connection lines (blockchain network) -->
+  <line x1="100" y1="100" x2="200" y2="500" stroke="#fff" stroke-width="1" opacity="0.08"/>
+  <line x1="200" y1="500" x2="600" y2="80" stroke="#fff" stroke-width="1" opacity="0.08"/>
+  <line x1="600" y1="80" x2="1000" y2="120" stroke="#fff" stroke-width="1" opacity="0.08"/>
+  <line x1="1000" y1="120" x2="1100" y2="530" stroke="#fff" stroke-width="1" opacity="0.08"/>
+
+  <!-- Bitcoin symbol -->
+  <circle cx="600" cy="220" r="70" fill="#fff" opacity="0.15"/>
+  <text x="600" y="248" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="80" font-weight="bold" fill="#fff" opacity="0.9">&#8383;</text>
+
+  <!-- Main title (Chinese) -->
+  <text x="600" y="370" text-anchor="middle" font-family="'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei', sans-serif" font-size="72" font-weight="bold" fill="#fff">
+    比特币那些事儿
+  </text>
+
+  <!-- Subtitle (English) -->
+  <text x="600" y="430" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="36" fill="#fff" opacity="0.9">
+    Stories about Bitcoin
+  </text>
+
+  <!-- Tagline -->
+  <text x="600" y="490" text-anchor="middle" font-family="'PingFang SC', 'Noto Sans SC', Arial, sans-serif" font-size="24" fill="#fff" opacity="0.7">
+    33 Chapters | 1976-2024 | Bilingual
+  </text>
+
+  <!-- Bottom accent line -->
+  <rect x="400" y="520" width="400" height="3" rx="1.5" fill="#fff" opacity="0.4"/>
+
+  <!-- Open source badge -->
+  <rect x="490" y="545" width="220" height="32" rx="16" fill="#fff" opacity="0.15"/>
+  <text x="600" y="567" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#fff" opacity="0.8">
+    Open Source on GitHub
+  </text>
+</svg>

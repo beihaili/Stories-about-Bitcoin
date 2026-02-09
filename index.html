@@ -1,156 +1,86 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stories about Bitcoin | 比特币那些事儿</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-        }
-        
-        .container {
-            text-align: center;
-            max-width: 800px;
-            padding: 2rem;
-        }
-        
-        .title {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-        
-        .subtitle {
-            font-size: 1.2rem;
-            margin-bottom: 3rem;
-            opacity: 0.9;
-        }
-        
-        .language-selection {
-            display: flex;
-            gap: 2rem;
-            justify-content: center;
-            margin-bottom: 3rem;
-        }
-        
-        .lang-card {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 15px;
-            padding: 2rem;
-            min-width: 250px;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            color: white;
-            display: block;
-        }
-        
-        .lang-card:hover {
-            transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.2);
-            text-decoration: none;
-            color: white;
-        }
-        
-        .lang-flag {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-        
-        .lang-title {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-        
-        .lang-desc {
-            font-size: 0.9rem;
-            opacity: 0.8;
-        }
-        
-        .footer {
-            margin-top: 3rem;
-            opacity: 0.7;
-            font-size: 0.9rem;
-        }
-        
-        .footer a {
-            color: white;
-            text-decoration: none;
-        }
-        
-        .footer a:hover {
-            text-decoration: underline;
-        }
-        
-        @media (max-width: 768px) {
-            .title {
-                font-size: 2rem;
-            }
-            
-            .language-selection {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .lang-card {
-                width: 100%;
-                max-width: 300px;
-            }
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1 class="title">📖 Stories about Bitcoin</h1>
-        <p class="subtitle">The First Comprehensive Chronicle of Bitcoin History<br>首部权威比特币通史</p>
-        
-        <div class="language-selection">
-            <a href="zh/" class="lang-card">
-                <div class="lang-flag">🇨🇳</div>
-                <div class="lang-title">中文版</div>
-                <div class="lang-desc">用《明朝那些事儿》的风格<br>讲述比特币的传奇历史</div>
-            </a>
-            
-            <a href="en/" class="lang-card">
-                <div class="lang-flag">🇺🇸</div>
-                <div class="lang-title">English</div>
-                <div class="lang-desc">Bitcoin's legendary story told<br>in an engaging narrative style</div>
-            </a>
-        </div>
-        
-        <div class="footer">
-            <p>📅 1976-2013 | 📚 17 Chapters | ✅ Season One Complete</p>
-            <p>Created by <a href="https://twitter.com/bhbtc1337">@beihaili</a> | 
-               <a href="https://github.com/beihaili/Stories-about-Bitcoin">GitHub</a></p>
-        </div>
-    </div>
-    
-    <script>
-        // Auto-detect language preference
-        const userLang = navigator.language || navigator.userLanguage;
-        if (userLang.startsWith('zh')) {
-            // Chinese speakers see Chinese version highlighted
-            document.querySelector('a[href="zh/"]').style.background = 'rgba(255, 255, 255, 0.2)';
-        } else {
-            // Others see English version highlighted
-            document.querySelector('a[href="en/"]').style.background = 'rgba(255, 255, 255, 0.2)';
-        }
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>比特币那些事儿 | Stories about Bitcoin</title>
+    <meta name="description" content="一部用《明朝那些事儿》风格讲述比特币历史的开源双语电子书，涵盖1976年哈耶克到2024年BTC突破10万美元的33章故事。An open-source bilingual ebook telling Bitcoin's history from Hayek (1976) to $100K (2024) in 33 chapters." />
+    <meta name="keywords" content="比特币,Bitcoin,BTC,加密货币,cryptocurrency,区块链,blockchain,中本聪,Satoshi,比特币历史,Bitcoin history,开源电子书,open source ebook" />
+    <meta name="author" content="beihaili" />
+
+    <!-- Canonical & Language Alternates -->
+    <link rel="canonical" href="https://beihaili.github.io/Stories-about-Bitcoin/" />
+    <link rel="alternate" hreflang="zh" href="https://beihaili.github.io/Stories-about-Bitcoin/?lang=zh" />
+    <link rel="alternate" hreflang="en" href="https://beihaili.github.io/Stories-about-Bitcoin/?lang=en" />
+    <link rel="alternate" hreflang="x-default" href="https://beihaili.github.io/Stories-about-Bitcoin/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="book" />
+    <meta property="og:title" content="比特币那些事儿 | Stories about Bitcoin" />
+    <meta property="og:description" content="用《明朝那些事儿》风格讲述比特币48年历史的开源双语电子书。33章，从哈耶克的预言到BTC突破10万美元。" />
+    <meta property="og:image" content="https://beihaili.github.io/Stories-about-Bitcoin/og-image.svg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:url" content="https://beihaili.github.io/Stories-about-Bitcoin/" />
+    <meta property="og:site_name" content="比特币那些事儿" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:locale:alternate" content="en_US" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@bhbtc1337" />
+    <meta name="twitter:title" content="比特币那些事儿 | Stories about Bitcoin" />
+    <meta name="twitter:description" content="用《明朝那些事儿》风格讲述比特币48年历史的开源双语电子书。33章，从哈耶克的预言到BTC突破10万美元。" />
+    <meta name="twitter:image" content="https://beihaili.github.io/Stories-about-Bitcoin/og-image.svg" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/Stories-about-Bitcoin/favicon.svg" />
+
+    <!-- RSS Feed -->
+    <link rel="alternate" type="application/rss+xml" title="比特币那些事儿 RSS" href="/Stories-about-Bitcoin/feed.xml" />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Book",
+      "name": "比特币那些事儿 (Stories about Bitcoin)",
+      "alternateName": "Stories about Bitcoin",
+      "author": {
+        "@type": "Person",
+        "name": "beihaili",
+        "url": "https://github.com/beihaili"
+      },
+      "url": "https://beihaili.github.io/Stories-about-Bitcoin/",
+      "description": "一部用《明朝那些事儿》风格讲述比特币历史的开源双语电子书，涵盖1976-2024年的33章故事。",
+      "inLanguage": ["zh-CN", "en"],
+      "genre": ["History", "Technology", "Finance"],
+      "numberOfPages": 33,
+      "bookFormat": "https://schema.org/EBook",
+      "isAccessibleForFree": true,
+      "license": "https://opensource.org/licenses/MIT",
+      "datePublished": "2024-01-01",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Stories about Bitcoin",
+        "url": "https://github.com/beihaili/Stories-about-Bitcoin"
+      },
+      "about": {
+        "@type": "Thing",
+        "name": "Bitcoin",
+        "description": "The history of Bitcoin from 1976 to 2024"
+      }
+    }
     </script>
-</body>
+    <script type="module" crossorigin src="/Stories-about-Bitcoin/assets/index-0D3h4TOn.js"></script>
+    <link rel="stylesheet" crossorigin href="/Stories-about-Bitcoin/assets/index-CaZJKUt4.css">
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <!-- GoatCounter Analytics (privacy-friendly, no cookies, open source) -->
+    <script data-goatcounter="https://beihai.goatcounter.com/count"
+            async src="//gc.zgo.at/count.js"></script>
+  </body>
 </html>
