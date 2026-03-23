@@ -1,0 +1,67 @@
+\usepackage{fancyhdr}
+\usepackage{changepage}
+
+% 章节标题：只显示标题，不显示"第X章"
+\ctexset{
+  chapter = {
+    name = {},
+    number = {},
+    format = \huge\bfseries\centering,
+    beforeskip = 50pt,
+    afterskip = 40pt,
+  },
+  section = {
+    format = \Large\bfseries,
+    beforeskip = 20pt,
+    afterskip = 10pt,
+  }
+}
+
+% 天眉 + 页码
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE]{\small\itshape 比特币那些事儿}
+\fancyhead[RO]{\small\itshape \leftmark}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\fancypagestyle{plain}{
+  \fancyhf{}
+  \fancyfoot[C]{\thepage}
+  \renewcommand{\headrulewidth}{0pt}
+}
+
+% 水平线 → 三星号间隔
+\def\horizontalrule{%
+  \par\vspace{1.5em}%
+  \noindent\hfil{\large *\quad *\quad *}\hfil%
+  \par\vspace{1.5em}%
+}
+
+% 引用块样式（题词/引言）
+\renewenvironment{quote}{%
+  \vspace{0.8em}%
+  \begin{adjustwidth}{2em}{2em}%
+  \small\itshape
+}{%
+  \end{adjustwidth}%
+  \vspace{0.8em}%
+}
+
+% 版权页命令
+\newcommand{\copyrightpage}{%
+  \thispagestyle{empty}%
+  \null\vfill
+  \begin{center}
+  {\Large\bfseries 比特币那些事儿}\\[0.5em]
+  {\large\itshape Stories about Bitcoin}\\[2em]
+  {\normalsize 作者：beihaili}\\[1em]
+  {\small 本书以 CC-BY-SA 4.0 许可证开源}\\[0.5em]
+  {\small 在线阅读：https://beihaili.github.io/Stories-about-Bitcoin/zh/}\\[1.5em]
+  {\small 支持作者}\\[0.3em]
+  {\small Lightning: \texttt{latebrook396888@getalby.com}}\\[0.3em]
+  {\small BTC: \texttt{bc1qjt7uhztd2pumpx6p5w0sl8jxfzmxp3nyahysmcqklqfkecqftuysu733ca}}\\[2em]
+  {\footnotesize 2025年 · 第一版}
+  \end{center}
+  \vfill
+  \clearpage
+}

@@ -1,0 +1,31 @@
+---
+title: Stories about Bitcoin
+subtitle: "1976—2025: From Cypherpunks to Digital Gold"
+author: beihaili
+date: "2025"
+lang: en
+documentclass: book
+classoption:
+  - b5paper
+  - 12pt
+  - openright
+  - twoside
+geometry:
+  - inner=2.5cm
+  - outer=2cm
+  - top=2.5cm
+  - bottom=2cm
+  - bindingoffset=0.5cm
+linestretch: 1.4
+toc: true
+toc-depth: 1
+numbersections: false
+mainfont: Palatino
+sansfont: Helvetica Neue
+monofont: Menlo
+colorlinks: true
+linkcolor: black
+urlcolor: "blue!70!black"
+include-before: |
+  \copyrightpage
+---
