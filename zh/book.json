@@ -7,9 +7,9 @@
     "readme": "INTRO.md"
   },
   "variables": {
-    "version": "第一季完成版",
-    "status": "✅ 扩容战争篇已完成",
-    "chapters": 23,
-    "lastUpdate": "2025-09"
+    "version": "完整版",
+    "status": "✅ 全书完成（序章-第七章+特别篇）",
+    "chapters": 33,
+    "lastUpdate": "2026-03"
   }
 }

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaGithub, FaTwitter, FaBook, FaHeart, FaBitcoin, FaRss, FaBolt, FaCopy, FaCheck, FaQrcode } from 'react-icons/fa';
+import { FaGithub, FaTwitter, FaBook, FaHeart, FaBitcoin, FaRss, FaBolt, FaCopy, FaCheck, FaQrcode, FaDownload } from 'react-icons/fa';
 import { QRCodeSVG } from 'qrcode.react';
 import ShareButtons from './ShareButtons';
 
@@ -18,6 +18,7 @@ const Footer = ({ lang = 'zh' }) => {
       subtitle: '以网文笔法讲比特币的故事',
       description: '一部用《明朝那些事儿》风格讲述比特币历史的开源双语电子书',
       readNow: '立即阅读',
+      downloadEbook: '下载电子书',
       quickLinks: '快速链接',
       chapters: '章节目录',
       timeline: '时间线',
@@ -40,6 +41,7 @@ const Footer = ({ lang = 'zh' }) => {
       subtitle: 'Bitcoin History in Web Novel Style',
       description: 'An open-source bilingual ebook telling Bitcoin history in the style of "Those Things in Ming Dynasty"',
       readNow: 'Read Now',
+      downloadEbook: 'Download Ebook',
       quickLinks: 'Quick Links',
       chapters: 'Chapters',
       timeline: 'Timeline',
@@ -102,15 +104,26 @@ const Footer = ({ lang = 'zh' }) => {
             <p className="text-sm opacity-80 mb-4 leading-relaxed">
               {t.description}
             </p>
-            <a
-              href={`https://beihaili.github.io/Stories-about-Bitcoin/${lang}/`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-bitcoin-orange hover:bg-bitcoin-gold text-white font-semibold py-2 px-4 rounded-lg transition-colors"
-            >
-              <FaBook />
-              {t.readNow}
-            </a>
+            <div className="flex flex-wrap gap-2">
+              <a
+                href={`https://beihaili.github.io/Stories-about-Bitcoin/${lang}/`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-bitcoin-orange hover:bg-bitcoin-gold text-white font-semibold py-2 px-4 rounded-lg transition-colors"
+              >
+                <FaBook />
+                {t.readNow}
+              </a>
+              <a
+                href="https://github.com/beihaili/Stories-about-Bitcoin/releases/latest"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 border border-bitcoin-orange text-bitcoin-orange hover:bg-bitcoin-orange hover:text-white font-semibold py-2 px-4 rounded-lg transition-colors"
+              >
+                <FaDownload />
+                {t.downloadEbook}
+              </a>
+            </div>
           </div>
 
           {/* Quick Links */}
