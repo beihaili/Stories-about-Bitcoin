@@ -175,11 +175,7 @@ def build_pandoc_pdf(lang: str = "zh"):
             content = src_file.read_text(encoding="utf-8")
 
             if fname == "INTRO.md":
-                # 前言页：不用标题（标题页已有），改为"前言"
-                if lang == "zh":
-                    content = "# 前言\n\n" + _preface_zh()
-                else:
-                    content = "# Preface\n\n" + _preface_en()
+                continue  # 跳过前言，书从序言/第一章直接开始
             else:
                 content = clean_chapter(content, lang)
 
@@ -249,27 +245,27 @@ def build_honkit_epub(lang: str = "zh"):
         tmp_dir = Path(tmp)
 
         for f in src_dir.glob("*.md"):
-            if f.name == "README.md":
+            if f.name in ("README.md", "INTRO.md"):
                 continue
             content = f.read_text(encoding="utf-8")
-            if f.name == "INTRO.md":
-                content = f"# {title}\n\n" + (_preface_zh() if lang == "zh" else _preface_en())
-            elif f.name != "SUMMARY.md":
+            if f.name != "SUMMARY.md":
                 content = clean_chapter(content, lang)
             (tmp_dir / f.name).write_text(content, encoding="utf-8")
 
-        # 扁平化 SUMMARY.md
+        # 扁平化 SUMMARY.md，去掉 INTRO.md 引用
         summary = (src_dir / "SUMMARY.md").read_text(encoding="utf-8")
         summary = re.sub(r'^##\s+.*$', '', summary, flags=re.MULTILINE)
         summary = re.sub(r'^---\s*$', '', summary, flags=re.MULTILINE)
+        summary = re.sub(r'.*INTRO\.md.*\n?', '', summary)
         summary = re.sub(r'\n{3,}', '\n\n', summary)
         (tmp_dir / "SUMMARY.md").write_text(summary.strip() + '\n', encoding="utf-8")
 
+        # HonKit 需要 README.md 作为入口，创建一个最小的
+        (tmp_dir / "README.md").write_text(f"# {title}\n", encoding="utf-8")
         book_config = {
             "title": title,
             "author": "beihaili",
             "language": "zh-hans" if lang == "zh" else "en",
-            "structure": {"readme": "INTRO.md"},
         }
         (tmp_dir / "book.json").write_text(json.dumps(book_config, ensure_ascii=False, indent=2), encoding="utf-8")
 
