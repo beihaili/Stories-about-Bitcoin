@@ -84,9 +84,39 @@ def clean_chapter(content: str, lang: str = "zh") -> str:
         content
     )
 
-    # 10. 将 Markdown 水平线 --- 替换为 Pandoc raw LaTeX 三星号
-    ASTERISK_BREAK = '\n\n```{=latex}\n\\medskip\n\\begin{center}\n*\\quad\\quad *\\quad\\quad *\n\\end{center}\n\\medskip\n```\n\n'
-    content = re.sub(r'\n---\s*\n', lambda m: ASTERISK_BREAK, content)
+    # 10. 检测章末趣闻并包装成 funfact 环境
+    # 按 --- 分割，找到最后一个非空段落，检查是否是纯斜体（趣闻）
+    parts = re.split(r'\n---\s*\n', content)
+    # 找到最后一个非空 part 的索引
+    funfact_idx = None
+    for i in range(len(parts) - 1, -1, -1):
+        if parts[i].strip():
+            if parts[i].strip().startswith('*') and parts[i].strip().endswith('*') and '##' not in parts[i]:
+                funfact_idx = i
+            break
+
+    if funfact_idx is not None and funfact_idx > 0:
+        fun_fact_text = parts[funfact_idx].strip()[1:-1].strip()  # 去掉 * 包裹
+        fun_fact_latex = (
+            '\n\n```{=latex}\n'
+            '\\begin{funfact}\n'
+            '```\n\n'
+            + fun_fact_text +
+            '\n\n```{=latex}\n'
+            '\\end{funfact}\n'
+            '```\n'
+        )
+        # 重建内容：保留趣闻前的 parts，趣闻用 LaTeX，去掉趣闻后的空 parts
+        content = '\n---\n'.join(parts[:funfact_idx]) + fun_fact_latex
+
+    # 11. 替换宋体不支持的特殊符号为文本等价物
+    content = content.replace('→', ' -- ')
+    content = content.replace('×', 'x')
+    content = content.replace('≈', '约等于')
+
+    # 12. 将剩余 Markdown 水平线 --- 替换为纯垂直空间（无装饰）
+    SECTION_BREAK = '\n\n```{=latex}\n\\vspace{1em}\n```\n\n'
+    content = re.sub(r'\n---\s*\n', lambda m: SECTION_BREAK, content)
 
     # 11. 清理多余空行
     content = re.sub(r'\n{4,}', '\n\n\n', content)
