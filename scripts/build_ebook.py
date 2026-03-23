@@ -68,7 +68,27 @@ def clean_chapter(content: str, lang: str = "zh") -> str:
     # 8. 删除其他 HTML 残留
     content = re.sub(r'<div align="center">\s*</div>', '', content)
 
-    # 9. 清理多余空行
+    # 9. 删除所有 emoji（宋体无法渲染，会变成小方框）及其后的多余空格
+    content = re.sub(
+        '['
+        '\U0001F300-\U0001F9FF'   # Emoticons, Misc Symbols, Supplemental
+        '\U00002702-\U000027B0'   # Dingbats
+        '\U0001FA00-\U0001FAFF'   # Symbols extended
+        '\U00002600-\U000026FF'   # Misc symbols (⚡⚠ etc)
+        '\U000023F0-\U000023FF'   # Misc technical (⏰ etc)
+        '\U00002705'              # ✅
+        '\U0000270D'              # ✍
+        '\U0000FE0F'              # Variation selector
+        ']+ *',                   # 吃掉 emoji 后的空格
+        '',
+        content
+    )
+
+    # 10. 将 Markdown 水平线 --- 替换为 Pandoc raw LaTeX 三星号
+    ASTERISK_BREAK = '\n\n```{=latex}\n\\bigskip\n\\begin{center}\n\\large *\\quad\\quad *\\quad\\quad *\n\\end{center}\n\\bigskip\n```\n\n'
+    content = re.sub(r'\n---\s*\n', lambda m: ASTERISK_BREAK, content)
+
+    # 11. 清理多余空行
     content = re.sub(r'\n{4,}', '\n\n\n', content)
     content = re.sub(r'^(#[^\n]+\n)\n{2,}', r'\1\n', content)
 
