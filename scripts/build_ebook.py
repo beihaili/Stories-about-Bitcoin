@@ -21,6 +21,7 @@ import tempfile
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
+LOCAL_REPO = REPO_ROOT.parent / "比特币那些事儿本地版"  # 本地写作版（最新内容）
 XELATEX = "/usr/local/texlive/2026/bin/universal-darwin/xelatex"
 
 
@@ -137,8 +138,13 @@ def parse_summary(summary_path: Path) -> list[str]:
 
 
 def build_pandoc_pdf(lang: str = "zh"):
-    """用 Pandoc + XeLaTeX 构建专业排版的 PDF"""
-    src_dir = REPO_ROOT / lang
+    """用 Pandoc + XeLaTeX 构建排版的 PDF"""
+    # 中文从本地写作版读取（最新内容），英文从网站版读取
+    if lang == "zh" and LOCAL_REPO.exists():
+        src_dir = LOCAL_REPO / "正文"
+        print(f"[{lang}] 从本地写作版读取: {src_dir}")
+    else:
+        src_dir = REPO_ROOT / lang
     ebook_dir = REPO_ROOT / "ebook"
     ebook_dir.mkdir(exist_ok=True)
 
@@ -157,7 +163,15 @@ def build_pandoc_pdf(lang: str = "zh"):
         pdf_out = ebook_dir / "Stories-about-Bitcoin.pdf"
 
     # 获取章节顺序
-    chapter_files = parse_summary(src_dir / "SUMMARY.md")
+    summary_file = src_dir / "SUMMARY.md"
+    if summary_file.exists():
+        chapter_files = parse_summary(summary_file)
+    else:
+        # 本地版没有 SUMMARY.md，按文件名排序
+        chapter_files = sorted([
+            f.name for f in src_dir.glob("*.md")
+            if f.name not in ("README.md", "INTRO.md") and not f.name.startswith(".")
+        ])
     print(f"[{lang}] 找到 {len(chapter_files)} 个章节")
 
     # 创建临时工作目录
