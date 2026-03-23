@@ -85,7 +85,7 @@ def clean_chapter(content: str, lang: str = "zh") -> str:
     )
 
     # 10. 将 Markdown 水平线 --- 替换为 Pandoc raw LaTeX 三星号
-    ASTERISK_BREAK = '\n\n```{=latex}\n\\bigskip\n\\begin{center}\n\\large *\\quad\\quad *\\quad\\quad *\n\\end{center}\n\\bigskip\n```\n\n'
+    ASTERISK_BREAK = '\n\n```{=latex}\n\\medskip\n\\begin{center}\n*\\quad\\quad *\\quad\\quad *\n\\end{center}\n\\medskip\n```\n\n'
     content = re.sub(r'\n---\s*\n', lambda m: ASTERISK_BREAK, content)
 
     # 11. 清理多余空行

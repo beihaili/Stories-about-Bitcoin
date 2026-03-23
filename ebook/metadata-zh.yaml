@@ -8,7 +8,7 @@ documentclass: ctexbook
 classoption:
   - b5paper
   - 12pt
-  - openright
+  - openany
   - twoside
 geometry:
   - inner=2.5cm
