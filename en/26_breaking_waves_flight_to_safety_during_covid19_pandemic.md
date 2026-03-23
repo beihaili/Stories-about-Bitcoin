@@ -200,6 +200,12 @@ But this was just the beginning. Greater changes lay ahead.
 
 ---
 
+<div align="center" style="margin: 2em 0; padding: 1.2em; border: 1px solid #f7931a; border-radius: 8px; background: #fffbf0;">
+<p>⚡ <b>If you find this story valuable, consider supporting the author</b></p>
+<p>⚡ Lightning: <code>latebrook396888@getalby.com</code></p>
+<p>₿ BTC: <code>bc1qjt7uhztd2pumpx6p5w0sl8jxfzmxp3nyahysmcqklqfkecqftuysu733ca</code></p>
+</div>
+
 <div align="center">
 <a href="https://github.com/beihaili/Get-Started-with-Web3">🏠 Return to Homepage</a> | 
 <a href="https://twitter.com/bhbtc1337">🐦 Follow Author</a> | 

@@ -108,3 +108,11 @@ The wheel of history continued to turn, but the direction had changed. From this
 ---
 
 *The divergence of regulatory policies among countries continues to affect the global layout of the cryptocurrency industry today, and that era of rising regulatory arbitrage opened the door to truly globalized digital financial competition.*
+
+---
+
+<div align="center" style="margin: 2em 0; padding: 1.2em; border: 1px solid #f7931a; border-radius: 8px; background: #fffbf0;">
+<p>⚡ <b>If you find this story valuable, consider supporting the author</b></p>
+<p>⚡ Lightning: <code>latebrook396888@getalby.com</code></p>
+<p>₿ BTC: <code>bc1qjt7uhztd2pumpx6p5w0sl8jxfzmxp3nyahysmcqklqfkecqftuysu733ca</code></p>
+</div>

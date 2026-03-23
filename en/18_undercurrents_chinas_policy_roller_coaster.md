@@ -110,3 +110,11 @@ But the seeds of Bitcoin had been sown in this land. Although the cold wind of p
 ---
 
 *The December 5 notice remains the foundational document of China's digital currency policy to this day, and that winter afternoon that changed the entire industry's development trajectory is forever recorded in Bitcoin's history.*
+
+---
+
+<div align="center" style="margin: 2em 0; padding: 1.2em; border: 1px solid #f7931a; border-radius: 8px; background: #fffbf0;">
+<p>⚡ <b>If you find this story valuable, consider supporting the author</b></p>
+<p>⚡ Lightning: <code>latebrook396888@getalby.com</code></p>
+<p>₿ BTC: <code>bc1qjt7uhztd2pumpx6p5w0sl8jxfzmxp3nyahysmcqklqfkecqftuysu733ca</code></p>
+</div>

@@ -1,8 +1,17 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaGithub, FaTwitter, FaBook, FaHeart, FaBitcoin, FaRss } from 'react-icons/fa';
+import { FaGithub, FaTwitter, FaBook, FaHeart, FaBitcoin, FaRss, FaBolt, FaCopy, FaCheck, FaQrcode } from 'react-icons/fa';
+import { QRCodeSVG } from 'qrcode.react';
 import ShareButtons from './ShareButtons';
 
+const BTC_ADDRESS = 'bc1qjt7uhztd2pumpx6p5w0sl8jxfzmxp3nyahysmcqklqfkecqftuysu733ca';
+const LIGHTNING_ADDRESS = 'latebrook396888@getalby.com';
+const NOSTR_NPUB = 'npub1xk5up2m7egnktyulkwrj5wfyts2gmk3vur95qchwzvvnr9jkkgaqqvxa5t';
+
 const Footer = ({ lang = 'zh' }) => {
+  const [showQR, setShowQR] = useState(false);
+  const [copied, setCopied] = useState(null); // null | 'btc' | 'ln'
+
   const content = {
     zh: {
       title: '比特币那些事儿',
@@ -14,9 +23,16 @@ const Footer = ({ lang = 'zh' }) => {
       timeline: '时间线',
       figures: '关键人物',
       connect: '关注我们',
-      openSource: '开源项目',
-      license: 'MIT 许可证',
+      support: '支持项目',
+      supportDesc: '如果你喜欢这个故事，请考虑支持一下',
+      btcDonate: 'BTC 捐赠',
+      lnDonate: 'Lightning 打赏',
+      copyAddress: '复制地址',
+      copied: '已复制！',
+      showQR: '显示二维码',
+      hideQR: '隐藏二维码',
       madeWith: '用心制作',
+      license: 'MIT 许可证',
       copyright: '© 2024 Stories about Bitcoin',
     },
     en: {
@@ -29,9 +45,16 @@ const Footer = ({ lang = 'zh' }) => {
       timeline: 'Timeline',
       figures: 'Key Figures',
       connect: 'Connect',
-      openSource: 'Open Source',
-      license: 'MIT License',
+      support: 'Support',
+      supportDesc: 'If you enjoy this story, consider supporting the project',
+      btcDonate: 'BTC Donation',
+      lnDonate: 'Lightning Tips',
+      copyAddress: 'Copy Address',
+      copied: 'Copied!',
+      showQR: 'Show QR',
+      hideQR: 'Hide QR',
       madeWith: 'Made with',
+      license: 'MIT License',
       copyright: '© 2024 Stories about Bitcoin',
     }
   };
@@ -44,6 +67,23 @@ const Footer = ({ lang = 'zh' }) => {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
+
+  const copyToClipboard = async (text, type) => {
+    try {
+      await navigator.clipboard.writeText(text);
+    } catch {
+      const textarea = document.createElement('textarea');
+      textarea.value = text;
+      document.body.appendChild(textarea);
+      textarea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textarea);
+    }
+    setCopied(type);
+    setTimeout(() => setCopied(null), 2000);
+  };
+
+  const truncatedAddress = `${BTC_ADDRESS.slice(0, 10)}...${BTC_ADDRESS.slice(-6)}`;
 
   return (
     <footer className="bg-gradient-to-b from-historical-sepia to-[#5a3510] text-bitcoin-lightGold" aria-label={lang === 'zh' ? '页脚导航' : 'Footer navigation'}>
@@ -127,29 +167,93 @@ const Footer = ({ lang = 'zh' }) => {
                 <FaTwitter className="text-lg" />
                 Twitter
               </a>
+              <a
+                href={`https://njump.me/${NOSTR_NPUB}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Nostr"
+                className="flex items-center gap-3 text-sm opacity-80 hover:opacity-100 hover:text-bitcoin-orange transition-all"
+              >
+                <FaBolt className="text-lg" />
+                Nostr
+              </a>
             </div>
           </div>
 
-          {/* Share & Open Source */}
+          {/* Support Project */}
           <div>
-            <h4 className="text-lg font-semibold mb-4 text-white">
-              {lang === 'zh' ? '分享本书' : 'Share This Book'}
-            </h4>
-            <div className="mb-4">
+            <h4 className="text-lg font-semibold mb-4 text-white">{t.support}</h4>
+            <p className="text-sm opacity-80 mb-3">{t.supportDesc}</p>
+
+            {/* Lightning Address */}
+            <div className="bg-black/20 rounded-lg p-3 mb-2">
+              <div className="flex items-center gap-2 mb-1">
+                <FaBolt className="text-yellow-400 text-sm" />
+                <span className="text-xs font-semibold text-yellow-400">{t.lnDonate}</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <code className="text-xs opacity-90 flex-1 break-all">{LIGHTNING_ADDRESS}</code>
+                <button
+                  onClick={() => copyToClipboard(LIGHTNING_ADDRESS, 'ln')}
+                  className="text-sm hover:text-bitcoin-orange transition-colors p-1"
+                  title={copied === 'ln' ? t.copied : t.copyAddress}
+                >
+                  {copied === 'ln' ? <FaCheck className="text-green-400" /> : <FaCopy />}
+                </button>
+              </div>
+            </div>
+
+            {/* BTC Address */}
+            <div className="bg-black/20 rounded-lg p-3 mb-3">
+              <div className="flex items-center gap-2 mb-1">
+                <FaBitcoin className="text-bitcoin-orange text-sm" />
+                <span className="text-xs font-semibold text-bitcoin-orange">{t.btcDonate}</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <code className="text-xs opacity-90 flex-1">{truncatedAddress}</code>
+                <button
+                  onClick={() => copyToClipboard(BTC_ADDRESS, 'btc')}
+                  className="text-sm hover:text-bitcoin-orange transition-colors p-1"
+                  title={copied === 'btc' ? t.copied : t.copyAddress}
+                >
+                  {copied === 'btc' ? <FaCheck className="text-green-400" /> : <FaCopy />}
+                </button>
+                <button
+                  onClick={() => setShowQR(!showQR)}
+                  className="text-sm hover:text-bitcoin-orange transition-colors p-1"
+                  title={showQR ? t.hideQR : t.showQR}
+                >
+                  <FaQrcode />
+                </button>
+              </div>
+              {showQR && (
+                <motion.div
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: 'auto' }}
+                  className="mt-3 flex justify-center"
+                >
+                  <div className="bg-white p-2 rounded-lg">
+                    <QRCodeSVG
+                      value={`bitcoin:${BTC_ADDRESS}`}
+                      size={120}
+                      bgColor="#ffffff"
+                      fgColor="#000000"
+                    />
+                  </div>
+                </motion.div>
+              )}
+            </div>
+
+            {/* Share & RSS */}
+            <div className="mt-3">
               <ShareButtons lang={lang} />
             </div>
             <a
               href="/Stories-about-Bitcoin/feed.xml"
-              className="inline-flex items-center gap-2 text-sm opacity-80 hover:opacity-100 hover:text-bitcoin-orange transition-all"
+              className="inline-flex items-center gap-2 text-xs opacity-60 hover:opacity-100 hover:text-bitcoin-orange transition-all mt-2"
             >
-              <FaRss />
-              RSS Feed
+              <FaRss /> RSS
             </a>
-            <div className="flex items-center gap-2 text-sm opacity-60 mt-3">
-              <span>{t.madeWith}</span>
-              <FaHeart className="text-red-400" />
-              <span>& React | {t.license}</span>
-            </div>
           </div>
         </div>
       </div>
@@ -159,7 +263,11 @@ const Footer = ({ lang = 'zh' }) => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-2 text-xs opacity-60">
             <p>{t.copyright}</p>
-            <p>{t.subtitle}</p>
+            <div className="flex items-center gap-1">
+              <span>{t.madeWith}</span>
+              <FaHeart className="text-red-400" />
+              <span>& React | {t.license}</span>
+            </div>
           </div>
         </div>
       </div>

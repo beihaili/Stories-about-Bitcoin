@@ -116,3 +116,11 @@ This is the true meaning of Bitcoin Independence Day: it wasn't just a victory o
 ---
 
 *August 1st is forever remembered by the Bitcoin community as "Independence Day," that day proved users hold ultimate decision-making power in decentralized systems, and UASF became a classic case in blockchain governance history.*
+
+---
+
+<div align="center" style="margin: 2em 0; padding: 1.2em; border: 1px solid #f7931a; border-radius: 8px; background: #fffbf0;">
+<p>⚡ <b>If you find this story valuable, consider supporting the author</b></p>
+<p>⚡ Lightning: <code>latebrook396888@getalby.com</code></p>
+<p>₿ BTC: <code>bc1qjt7uhztd2pumpx6p5w0sl8jxfzmxp3nyahysmcqklqfkecqftuysu733ca</code></p>
+</div>

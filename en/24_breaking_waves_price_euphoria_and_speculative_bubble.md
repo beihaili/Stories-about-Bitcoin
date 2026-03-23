@@ -127,3 +127,11 @@ When the screen at Chicago Mercantile Exchange first displayed the $20,000 figur
 ---
 
 *The 2017 Bitcoin price euphoria, though ending in bubble collapse, completed the transformation from niche to mass awareness, laying the foundation for subsequent institutionalization and mainstreaming. The historic high of $20,000 remains an important milestone in cryptocurrency history, with the cheers from that Sunday afternoon in the CME trading floor forever echoing in Bitcoin history.*
+
+---
+
+<div align="center" style="margin: 2em 0; padding: 1.2em; border: 1px solid #f7931a; border-radius: 8px; background: #fffbf0;">
+<p>⚡ <b>If you find this story valuable, consider supporting the author</b></p>
+<p>⚡ Lightning: <code>latebrook396888@getalby.com</code></p>
+<p>₿ BTC: <code>bc1qjt7uhztd2pumpx6p5w0sl8jxfzmxp3nyahysmcqklqfkecqftuysu733ca</code></p>
+</div>

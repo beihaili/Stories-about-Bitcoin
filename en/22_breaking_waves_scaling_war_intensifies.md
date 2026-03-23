@@ -154,3 +154,11 @@ Summer was ending, and the moment of decisive battle was approaching. No one kne
 ---
 
 *The 58 signing companies of the SegWit2x New York Agreement represented over 85% of the Bitcoin ecosystem's economic activity at the time, but ultimately proved that economic power cannot forcibly drive technical change, becoming a classic case of decentralized governance.*
+
+---
+
+<div align="center" style="margin: 2em 0; padding: 1.2em; border: 1px solid #f7931a; border-radius: 8px; background: #fffbf0;">
+<p>⚡ <b>If you find this story valuable, consider supporting the author</b></p>
+<p>⚡ Lightning: <code>latebrook396888@getalby.com</code></p>
+<p>₿ BTC: <code>bc1qjt7uhztd2pumpx6p5w0sl8jxfzmxp3nyahysmcqklqfkecqftuysu733ca</code></p>
+</div>

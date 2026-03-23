@@ -52,3 +52,11 @@ In a sense, Mt.Gox's demise was not Bitcoin's failure but a victory of Bitcoin's
 ---
 
 *Interestingly, after years of legal proceedings following Mt.Gox's bankruptcy, Bitcoin began being returned to creditors in 2021. Due to Bitcoin price increases, some victims from that year ultimately recovered asset values that even exceeded their original losses. But this unexpected "happy ending" cannot offset the pain of that year, nor can it become a reason to ignore risk management.*
+
+---
+
+<div align="center" style="margin: 2em 0; padding: 1.2em; border: 1px solid #f7931a; border-radius: 8px; background: #fffbf0;">
+<p>⚡ <b>If you find this story valuable, consider supporting the author</b></p>
+<p>⚡ Lightning: <code>latebrook396888@getalby.com</code></p>
+<p>₿ BTC: <code>bc1qjt7uhztd2pumpx6p5w0sl8jxfzmxp3nyahysmcqklqfkecqftuysu733ca</code></p>
+</div>

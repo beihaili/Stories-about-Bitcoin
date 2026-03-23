@@ -70,3 +70,11 @@ This moment in Bitcoin's history showed that the technology had matured enough t
 ---
 
 *The Washington hearing was a pivotal moment that demonstrated Bitcoin's evolution from a niche technology to a mainstream phenomenon worthy of government scrutiny and regulatory consideration.*
+
+---
+
+<div align="center" style="margin: 2em 0; padding: 1.2em; border: 1px solid #f7931a; border-radius: 8px; background: #fffbf0;">
+<p>⚡ <b>If you find this story valuable, consider supporting the author</b></p>
+<p>⚡ Lightning: <code>latebrook396888@getalby.com</code></p>
+<p>₿ BTC: <code>bc1qjt7uhztd2pumpx6p5w0sl8jxfzmxp3nyahysmcqklqfkecqftuysu733ca</code></p>
+</div>

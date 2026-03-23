@@ -149,3 +149,11 @@ History would prove that 2011-2012's ecosystem building laid irreplaceable found
 ---
 
 *When Tony Gallippi and Stephen Pair processed the first $0.88 Bitcoin payment in 2011, they probably didn't imagine this tiny number would open a payment industry worth hundreds of billions of dollars. History's greatness often begins with the most ordinary starts; the key is whether someone is willing to take the first step.*
+
+---
+
+<div align="center" style="margin: 2em 0; padding: 1.2em; border: 1px solid #f7931a; border-radius: 8px; background: #fffbf0;">
+<p>⚡ <b>If you find this story valuable, consider supporting the author</b></p>
+<p>⚡ Lightning: <code>latebrook396888@getalby.com</code></p>
+<p>₿ BTC: <code>bc1qjt7uhztd2pumpx6p5w0sl8jxfzmxp3nyahysmcqklqfkecqftuysu733ca</code></p>
+</div>

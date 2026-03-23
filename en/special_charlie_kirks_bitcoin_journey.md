@@ -88,3 +88,11 @@ This article was written the day after Charlie Kirk's death, based on publicly a
 In Bitcoin's story, there are breakthroughs by tech geeks, persistence by early adopters, madness by speculators, and exploitation by politicians. Charlie Kirk belonged to the last category, but his unique perspective and sincere beliefs made him stand out in this group.
 
 How history will evaluate his role, time will tell. But what can be certain is that his story has become an inseparable part of Bitcoin history.
+
+---
+
+<div align="center" style="margin: 2em 0; padding: 1.2em; border: 1px solid #f7931a; border-radius: 8px; background: #fffbf0;">
+<p>⚡ <b>If you find this story valuable, consider supporting the author</b></p>
+<p>⚡ Lightning: <code>latebrook396888@getalby.com</code></p>
+<p>₿ BTC: <code>bc1qjt7uhztd2pumpx6p5w0sl8jxfzmxp3nyahysmcqklqfkecqftuysu733ca</code></p>
+</div>

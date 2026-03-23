@@ -116,3 +116,11 @@ From the moment Satoshi set the 1MB limit, this controversy was inevitable. The 
 ---
 
 *The 1MB block size limit still exists in the Bitcoin protocol today, and that scaling controversy that began in 2015 ultimately gave birth to the flourishing development of Layer 2 solutions like the Lightning Network.*
+
+---
+
+<div align="center" style="margin: 2em 0; padding: 1.2em; border: 1px solid #f7931a; border-radius: 8px; background: #fffbf0;">
+<p>⚡ <b>If you find this story valuable, consider supporting the author</b></p>
+<p>⚡ Lightning: <code>latebrook396888@getalby.com</code></p>
+<p>₿ BTC: <code>bc1qjt7uhztd2pumpx6p5w0sl8jxfzmxp3nyahysmcqklqfkecqftuysu733ca</code></p>
+</div>

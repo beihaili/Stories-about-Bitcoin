@@ -140,3 +140,11 @@ As an old miner who participated in the entire hashpower revolution later summar
 ---
 
 *Laszlo not only created the "pizza legend" in Bitcoin commercial history, but also pioneered the hashpower revolution. This programmer used practical actions to interpret what "practice brings true knowledge" means—whether using Bitcoin to buy pizza proving its monetary function, or using GPU mining proving its technical potential, all stemmed from deep understanding of technology's essence and bold experimentation.*
+
+---
+
+<div align="center" style="margin: 2em 0; padding: 1.2em; border: 1px solid #f7931a; border-radius: 8px; background: #fffbf0;">
+<p>⚡ <b>If you find this story valuable, consider supporting the author</b></p>
+<p>⚡ Lightning: <code>latebrook396888@getalby.com</code></p>
+<p>₿ BTC: <code>bc1qjt7uhztd2pumpx6p5w0sl8jxfzmxp3nyahysmcqklqfkecqftuysu733ca</code></p>
+</div>

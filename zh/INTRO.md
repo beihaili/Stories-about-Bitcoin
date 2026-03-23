@@ -78,3 +78,11 @@
 *"The Times 03/Jan/2009 Chancellor on brink of second bailout for banks"*
 
 **让我们一起，用文字记录这场伟大的货币革命。**
+
+---
+
+<div align="center" style="margin: 2em 0; padding: 1.2em; border: 1px solid #f7931a; border-radius: 8px; background: #fffbf0;">
+<p>⚡ <b>如果这个故事对你有价值，考虑支持一下作者</b></p>
+<p>⚡ Lightning: <code>latebrook396888@getalby.com</code></p>
+<p>₿ BTC: <code>bc1qjt7uhztd2pumpx6p5w0sl8jxfzmxp3nyahysmcqklqfkecqftuysu733ca</code></p>
+</div>
