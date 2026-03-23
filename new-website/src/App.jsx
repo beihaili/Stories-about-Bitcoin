@@ -3,9 +3,12 @@ import Hero from './components/home/Hero';
 import Navbar from './components/common/Navbar';
 import Footer from './components/common/Footer';
 import BackToTop from './components/common/BackToTop';
+import AchievementToast from './components/common/AchievementToast';
 import ErrorBoundary from './components/common/ErrorBoundary';
 import useTheme from './hooks/useTheme';
 import useReadingProgress from './hooks/useReadingProgress';
+import useAchievements from './hooks/useAchievements';
+import useBookmarks from './hooks/useBookmarks';
 
 const Timeline = lazy(() => import('./components/home/Timeline'));
 const FiguresGallery = lazy(() => import('./components/home/FiguresGallery'));
@@ -39,7 +42,14 @@ function getInitialLang() {
 function App() {
   const [lang, setLangState] = useState(getInitialLang);
   const { theme, toggleTheme } = useTheme();
-  const { markAsRead, isRead, readCount } = useReadingProgress();
+  const { readChapters, markAsRead, isRead, readCount } = useReadingProgress();
+  const { unlockedCount, totalCount, newAchievement, dismissAchievement, isPeriodComplete, onChapterRead } = useAchievements(readChapters);
+  const { toggleBookmark, isBookmarked } = useBookmarks();
+
+  const handleMarkAsRead = useCallback((chapterId) => {
+    markAsRead(chapterId);
+    onChapterRead();
+  }, [markAsRead, onChapterRead]);
 
   const setLang = useCallback((newLang) => {
     setLangState(newLang);
@@ -97,7 +107,17 @@ function App() {
       {/* Chapters Grid */}
       <section id="chapters">
         <Suspense fallback={<LoadingSpinner />}>
-          <ChapterGrid lang={lang} markAsRead={markAsRead} isRead={isRead} readCount={readCount} />
+          <ChapterGrid
+            lang={lang}
+            markAsRead={handleMarkAsRead}
+            isRead={isRead}
+            readCount={readCount}
+            unlockedCount={unlockedCount}
+            totalAchievements={totalCount}
+            isPeriodComplete={isPeriodComplete}
+            isBookmarked={isBookmarked}
+            toggleBookmark={toggleBookmark}
+          />
         </Suspense>
       </section>
 
@@ -114,6 +134,13 @@ function App() {
 
       {/* Back to Top */}
       <BackToTop lang={lang} />
+
+      {/* Achievement Toast */}
+      <AchievementToast
+        achievement={newAchievement}
+        lang={lang}
+        onDismiss={dismissAchievement}
+      />
     </div>
   );
 }

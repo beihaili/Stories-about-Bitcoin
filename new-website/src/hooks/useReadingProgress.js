@@ -23,9 +23,18 @@ export default function useReadingProgress() {
     });
   }, []);
 
+  const unmarkAsRead = useCallback((chapterId) => {
+    setReadChapters((prev) => {
+      if (!prev.includes(chapterId)) return prev;
+      const updated = prev.filter(id => id !== chapterId);
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(updated));
+      return updated;
+    });
+  }, []);
+
   const isRead = useCallback((chapterId) => {
     return readChapters.includes(chapterId);
   }, [readChapters]);
 
-  return { readChapters, markAsRead, isRead, readCount: readChapters.length };
+  return { readChapters, markAsRead, unmarkAsRead, isRead, readCount: readChapters.length };
 }

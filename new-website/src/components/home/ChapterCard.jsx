@@ -1,8 +1,9 @@
 import { useState, memo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { FaBookmark, FaRegBookmark } from 'react-icons/fa';
 import { ShareButton } from '../common/ShareButtons';
 
-const ChapterCard = memo(({ chapter, lang = 'zh', index, markAsRead, isRead }) => {
+const ChapterCard = memo(({ chapter, lang = 'zh', index, markAsRead, isRead, isBookmarked, toggleBookmark }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleClick = () => {
@@ -56,13 +57,27 @@ const ChapterCard = memo(({ chapter, lang = 'zh', index, markAsRead, isRead }) =
           )}
         </div>
 
-        {/* Share button */}
-        <div className="absolute top-3 right-3 sm:top-4 sm:right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-200" onClick={(e) => e.stopPropagation()} onKeyDown={(e) => e.stopPropagation()}>
-          <ShareButton
-            url={`https://beihaili.github.io/Stories-about-Bitcoin${chapter.link[lang]}`}
-            title={chapter.title[lang]}
-            lang={lang}
-          />
+        {/* Bookmark + Share buttons */}
+        <div className="absolute top-3 right-3 sm:top-4 sm:right-4 flex items-center gap-1.5" onClick={(e) => e.stopPropagation()} onKeyDown={(e) => e.stopPropagation()}>
+          {toggleBookmark && (
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                toggleBookmark(chapter.id);
+              }}
+              aria-label={lang === 'zh' ? (isBookmarked ? '取消收藏' : '收藏') : (isBookmarked ? 'Remove bookmark' : 'Bookmark')}
+              className="w-8 h-8 flex items-center justify-center rounded-full bg-white/80 hover:bg-white text-gray-500 hover:text-bitcoin-orange transition-all duration-200 shadow-sm"
+            >
+              {isBookmarked ? <FaBookmark className="text-bitcoin-orange text-xs" /> : <FaRegBookmark className="text-xs" />}
+            </button>
+          )}
+          <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+            <ShareButton
+              url={`https://beihaili.github.io/Stories-about-Bitcoin${chapter.link[lang]}`}
+              title={chapter.title[lang]}
+              lang={lang}
+            />
+          </div>
         </div>
 
         {/* Hover Preview Overlay */}

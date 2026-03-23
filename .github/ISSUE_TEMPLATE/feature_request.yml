@@ -1,0 +1,48 @@
+name: Feature Request | 功能请求
+description: Suggest a new feature or improvement
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Have an idea? We'd love to hear it!
+        有想法？我们很乐意听取！
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem | 问题描述
+      description: What problem does this solve? What's missing?
+      placeholder: I'm always frustrated when...
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution | 建议方案
+      description: Describe your ideal solution.
+      placeholder: It would be great if...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area | 影响区域
+      options:
+        - Website UI/UX
+        - Content / Writing
+        - SEO / Performance
+        - Accessibility
+        - Mobile Experience
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives | 替代方案
+      description: Any alternative solutions you've considered?

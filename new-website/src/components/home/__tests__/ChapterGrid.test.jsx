@@ -68,8 +68,11 @@ describe('ChapterGrid', () => {
     await user.click(screen.getByText('创世纪'))
     const filteredCount = screen.getAllByRole('article').length
 
-    // Click All
-    await user.click(screen.getByText('全部'))
+    // Click the period "全部" button (the larger one in the period filter row)
+    const allButtons = screen.getAllByText('全部')
+    // The period filter button has px-6 class, the status filter has px-4
+    const periodAllBtn = allButtons.find(btn => btn.className.includes('px-6'))
+    await user.click(periodAllBtn)
     const allCount = screen.getAllByRole('article').length
 
     expect(allCount).toBe(chapters.length)
