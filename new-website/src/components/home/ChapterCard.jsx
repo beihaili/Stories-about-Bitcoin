@@ -21,7 +21,7 @@ const ChapterCard = memo(({ chapter, lang = 'zh', index, markAsRead, isRead, isB
       role="article"
       tabIndex={0}
       aria-label={`${lang === 'zh' ? '第' : 'Chapter '}${chapter.id}${lang === 'zh' ? '章：' : ': '}${chapter.title[lang]}`}
-      className="chapter-card group relative focus-ring"
+      className={`chapter-card group relative focus-ring${!isAvailable ? ' cursor-default opacity-75' : ''}`}
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -137,15 +137,21 @@ const ChapterCard = memo(({ chapter, lang = 'zh', index, markAsRead, isRead, isB
           {chapter.summary[lang]}
         </p>
 
-        {/* Read more */}
+        {/* Read more / Coming soon */}
         <motion.div
-          className="mt-3 sm:mt-4 flex items-center text-bitcoin-orange font-semibold text-xs sm:text-sm"
-          whileHover={{ x: 5 }}
+          className={`mt-3 sm:mt-4 flex items-center font-semibold text-xs sm:text-sm ${isAvailable ? 'text-bitcoin-orange' : 'text-gray-400'}`}
+          whileHover={isAvailable ? { x: 5 } : {}}
         >
-          <span>{lang === 'zh' ? '阅读更多' : 'Read More'}</span>
-          <svg className="w-3 h-3 sm:w-4 sm:h-4 ml-1 sm:ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-          </svg>
+          {isAvailable ? (
+            <>
+              <span>{lang === 'zh' ? '阅读更多' : 'Read More'}</span>
+              <svg className="w-3 h-3 sm:w-4 sm:h-4 ml-1 sm:ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </>
+          ) : (
+            <span>{lang === 'zh' ? '阅读更多' : 'Coming Soon'}</span>
+          )}
         </motion.div>
       </div>
 

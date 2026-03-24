@@ -56,7 +56,7 @@ jobs:
         run: python3 scripts/build_zh.py
 
       - name: Create image symlink for HonKit
-        run: ln -sf ../img zh/img
+        run: ln -sfn ../img zh/img
 
       - name: Install HonKit
         run: npm install -g honkit

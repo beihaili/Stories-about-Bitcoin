@@ -748,7 +748,7 @@ export const chapters = [
       zh: '致敬那些未能见证今天的先驱',
       en: 'Tribute to Pioneers Who Couldn\'t Witness Today'
     },
-    image: 'img/32.png',
+    image: 'img/31.png',
     link: {
       zh: '/zh/33_未来可期：缺席的人.html',
       en: null
@@ -768,7 +768,7 @@ export const chapters = [
       zh: '比特币故事的终章与未来',
       en: 'The Final Chapter and the Future of Bitcoin'
     },
-    image: 'img/32.png',
+    image: 'img/30.png',
     link: {
       zh: '/zh/34_未来可期：光未熄灭.html',
       en: null
