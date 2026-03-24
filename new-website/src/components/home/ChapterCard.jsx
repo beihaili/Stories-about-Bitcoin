@@ -6,9 +6,13 @@ import { ShareButton } from '../common/ShareButtons';
 const ChapterCard = memo(({ chapter, lang = 'zh', index, markAsRead, isRead, isBookmarked, toggleBookmark }) => {
   const [isHovered, setIsHovered] = useState(false);
 
+  const chapterLink = chapter.link[lang];
+  const isAvailable = chapterLink != null;
+
   const handleClick = () => {
+    if (!isAvailable) return;
     const baseUrl = 'https://beihaili.github.io/Stories-about-Bitcoin';
-    window.open(`${baseUrl}${chapter.link[lang]}`, '_blank');
+    window.open(`${baseUrl}${chapterLink}`, '_blank');
     markAsRead?.(chapter.id);
   };
 
@@ -17,7 +21,7 @@ const ChapterCard = memo(({ chapter, lang = 'zh', index, markAsRead, isRead, isB
       role="article"
       tabIndex={0}
       aria-label={`${lang === 'zh' ? '第' : 'Chapter '}${chapter.id}${lang === 'zh' ? '章：' : ': '}${chapter.title[lang]}`}
-      className="chapter-card group relative focus-ring"
+      className={`chapter-card group relative focus-ring${!isAvailable ? ' cursor-default opacity-75' : ''}`}
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -71,13 +75,15 @@ const ChapterCard = memo(({ chapter, lang = 'zh', index, markAsRead, isRead, isB
               {isBookmarked ? <FaBookmark className="text-bitcoin-orange text-xs" /> : <FaRegBookmark className="text-xs" />}
             </button>
           )}
-          <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-            <ShareButton
-              url={`https://beihaili.github.io/Stories-about-Bitcoin${chapter.link[lang]}`}
-              title={chapter.title[lang]}
-              lang={lang}
-            />
-          </div>
+          {isAvailable && (
+            <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+              <ShareButton
+                url={`https://beihaili.github.io/Stories-about-Bitcoin${chapterLink}`}
+                title={chapter.title[lang]}
+                lang={lang}
+              />
+            </div>
+          )}
         </div>
 
         {/* Hover Preview Overlay */}
@@ -94,16 +100,22 @@ const ChapterCard = memo(({ chapter, lang = 'zh', index, markAsRead, isRead, isB
                 <p className="text-sm sm:text-base leading-relaxed mb-3">
                   {chapter.summary[lang]}
                 </p>
-                <motion.span
-                  className="inline-flex items-center gap-2 text-bitcoin-gold font-semibold text-sm"
-                  animate={{ x: [0, 5, 0] }}
-                  transition={{ duration: 1, repeat: Infinity }}
-                >
-                  {lang === 'zh' ? '点击阅读' : 'Click to Read'}
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                  </svg>
-                </motion.span>
+                {isAvailable ? (
+                  <motion.span
+                    className="inline-flex items-center gap-2 text-bitcoin-gold font-semibold text-sm"
+                    animate={{ x: [0, 5, 0] }}
+                    transition={{ duration: 1, repeat: Infinity }}
+                  >
+                    {lang === 'zh' ? '点击阅读' : 'Click to Read'}
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                    </svg>
+                  </motion.span>
+                ) : (
+                  <span className="text-gray-400 text-sm">
+                    {lang === 'zh' ? '翻译中...' : 'Translation in progress...'}
+                  </span>
+                )}
               </div>
             </motion.div>
           )}
@@ -125,15 +137,21 @@ const ChapterCard = memo(({ chapter, lang = 'zh', index, markAsRead, isRead, isB
           {chapter.summary[lang]}
         </p>
 
-        {/* Read more */}
+        {/* Read more / Coming soon */}
         <motion.div
-          className="mt-3 sm:mt-4 flex items-center text-bitcoin-orange font-semibold text-xs sm:text-sm"
-          whileHover={{ x: 5 }}
+          className={`mt-3 sm:mt-4 flex items-center font-semibold text-xs sm:text-sm ${isAvailable ? 'text-bitcoin-orange' : 'text-gray-400'}`}
+          whileHover={isAvailable ? { x: 5 } : {}}
         >
-          <span>{lang === 'zh' ? '阅读更多' : 'Read More'}</span>
-          <svg className="w-3 h-3 sm:w-4 sm:h-4 ml-1 sm:ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-          </svg>
+          {isAvailable ? (
+            <>
+              <span>{lang === 'zh' ? '阅读更多' : 'Read More'}</span>
+              <svg className="w-3 h-3 sm:w-4 sm:h-4 ml-1 sm:ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </>
+          ) : (
+            <span>{lang === 'zh' ? '阅读更多' : 'Coming Soon'}</span>
+          )}
         </motion.div>
       </div>
 

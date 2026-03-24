@@ -43,3 +43,50 @@ DEPLOY_GUIDE.md
 _book/
 img_backup/
 ebook/
+
+# ====== 写作工作流（本地使用，不推 GitHub）======
+
+# 写作工具链
+scripts/content_pipeline/
+scripts/writing_studio/
+scripts/twitter_slicer/
+scripts/analytics/
+scripts/create_chapter.sh
+scripts/build_ebook.py
+scripts/README.md
+scripts/chapter_checklist.md
+scripts/agent_prompt_template.txt
+scripts/writing_assistant_prompt.md
+scripts/比特币写作细化agent提示词.md
+Makefile
+写作圣经.md
+
+# 研究资料（32MB）
+资料/
+
+# AI 模型
+AI模型/
+
+# 正文附属文件（历史版本 + 内嵌图片）
+正文/历史版本/
+正文/img/
+正文/README.md
+
+# 草稿
+草稿/
+
+# 废弃目录
+manuscript/
+导出分享版/
+
+# zh/ 构建产物（由 build_zh.py 生成）
+zh/[0-9]*_*.md
+zh/特别篇*.md
+zh/SUMMARY.md
+zh/img
+
+# Python
+__pycache__/
+scripts/__pycache__/
+scripts/**/__pycache__/
+*.pyc
