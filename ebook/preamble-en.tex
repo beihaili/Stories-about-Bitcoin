@@ -1,6 +1,14 @@
 \usepackage{fancyhdr}
 \usepackage{changepage}
 \usepackage{titlesec}
+\usepackage{graphicx}
+
+% Prevent widow/orphan lines
+\widowpenalty=10000
+\clubpenalty=10000
+
+% Remove blank pages between chapters
+\let\cleardoublepage\clearpage
 
 % Chapter title: no "Chapter X" prefix
 \titleformat{\chapter}[display]

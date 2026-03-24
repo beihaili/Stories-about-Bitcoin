@@ -1,14 +1,16 @@
 #!/usr/bin/env python3
 """
-电子书构建脚本 v2
+电子书构建脚本 v3
 支持两种引擎：
-  - honkit: HonKit → EPUB → Calibre PDF（快速，排版一般）
-  - pandoc: Pandoc + XeLaTeX（慢，排版专业）
+  - pandoc: Pandoc + XeLaTeX（排版专业，默认）
+  - honkit: HonKit → EPUB（快速）
 
 用法：
-  python3 scripts/build_ebook.py zh              # 默认 pandoc 引擎
-  python3 scripts/build_ebook.py zh --honkit     # HonKit 引擎
+  python3 scripts/build_ebook.py zh              # 中文完整版 PDF+EPUB
+  python3 scripts/build_ebook.py en              # 英文完整版 PDF+EPUB
   python3 scripts/build_ebook.py zh en           # 双语
+  python3 scripts/build_ebook.py zh --sample     # 中文试读版
+  python3 scripts/build_ebook.py zh --honkit     # 仅 EPUB
 """
 
 import os
@@ -21,23 +23,54 @@ import tempfile
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-LOCAL_REPO = REPO_ROOT.parent / "比特币那些事儿本地版"  # 本地写作版（最新内容）
 XELATEX = "/usr/local/texlive/2026/bin/universal-darwin/xelatex"
+
+# 试读版章节（精彩篇章）
+SAMPLE_CHAPTERS_ZH = [
+    "00_引子：一束照进现实的理想之光.md",
+    "01_创世纪：预言与失败.md",
+    "02_创世纪：密码朋克的技术拼图.md",
+    "03_创世纪：危机与创世.md",
+    "06_初出茅庐：价值发现.md",  # 披萨日
+]
+SAMPLE_CHAPTERS_EN = [
+    "00_prologue_a_beam_of_idealistic_light.md",
+    "01_genesis_prophecy_and_failure.md",
+    "02_genesis_the_cypherpunk_technical_puzzle.md",
+    "03_genesis_crisis_and_creation.md",
+    "06_first_steps_value_discovery.md",
+]
+
+# 图片编号映射（章节文件名前缀 → 图片文件名）
+def get_chapter_image(fname: str) -> str | None:
+    """根据章节文件名推断配图路径"""
+    m = re.match(r'^(\d+)_', fname)
+    if m:
+        num = int(m.group(1))
+        img_path = REPO_ROOT / "img" / f"{num:02d}.png"
+        if img_path.exists():
+            return str(img_path)
+    if fname.startswith("特别篇") or fname.startswith("special"):
+        img_path = REPO_ROOT / "img" / "special_kirk.png"
+        if img_path.exists():
+            return str(img_path)
+    return None
 
 
 def clean_chapter(content: str, lang: str = "zh") -> str:
-    """清理单个章节的网页专属元素"""
+    """清理章节的网页专属元素，为电子书排版准备"""
 
     # 1. 删除 shields.io 徽章行
     content = re.sub(r'!\[(?:status|author|date|difficulty)\]\(.*?shields\.io.*?\)\n?', '', content)
     content = re.sub(r'!\[(?:status|author|date|difficulty)\]\(https://img\.shields\.io/.*?\)\n?', '', content)
 
-    # 2. 删除所有配图/图片标签
+    # 2. 删除原文中的图片标签（由 inject_chapter_image 统一注入）
     content = re.sub(r'!\[配图\]\(.*?\)\n?', '', content)
     content = re.sub(r'!\[.*?配图.*?\]\(.*?\)\n?', '', content)
     content = re.sub(r'^!\[.*?\]\(\.\./img.*?\)\s*$', '', content, flags=re.MULTILINE)
+    content = re.sub(r'^!\[.*?\]\(img/.*?\)\s*$', '', content, flags=re.MULTILINE)
 
-    # 3. 删除 HTML 图片块
+    # 3. 删除 HTML 图片块（这些无论如何都删，Pandoc 不处理 HTML img）
     content = re.sub(r'<picture>.*?</picture>\n?', '', content, flags=re.DOTALL)
     content = re.sub(r'<img\s+src="\.\.?/img.*?>\n?', '', content)
 
@@ -51,7 +84,6 @@ def clean_chapter(content: str, lang: str = "zh") -> str:
     content = re.sub(r'^>\s*欢迎关注.*?\n', '', content, flags=re.MULTILINE)
     content = re.sub(r'^>\s*进入微信.*?\n', '', content, flags=re.MULTILINE)
     content = re.sub(r'^>\s*文章开源.*?\n', '', content, flags=re.MULTILINE)
-    # 清理只有 > 的空引用行（但保留有内容的引用）
     content = re.sub(r'^>\s*$\n', '', content, flags=re.MULTILINE)
 
     # 6. 删除捐赠块
@@ -62,33 +94,31 @@ def clean_chapter(content: str, lang: str = "zh") -> str:
 
     # 7. 删除页脚导航链接块
     content = re.sub(
-        r'<div align="center">\s*\n.*?(?:返回主页|Return to Homepage).*?</div>',
+        r'<div align="center">\s*\n.*?(?:返回主页|Return to Homepage|关注作者).*?</div>',
         '', content, flags=re.DOTALL
     )
 
     # 8. 删除其他 HTML 残留
     content = re.sub(r'<div align="center">\s*</div>', '', content)
 
-    # 9. 删除所有 emoji（宋体无法渲染，会变成小方框）及其后的多余空格
+    # 9. 删除所有 emoji（宋体无法渲染）
     content = re.sub(
         '['
-        '\U0001F300-\U0001F9FF'   # Emoticons, Misc Symbols, Supplemental
-        '\U00002702-\U000027B0'   # Dingbats
-        '\U0001FA00-\U0001FAFF'   # Symbols extended
-        '\U00002600-\U000026FF'   # Misc symbols (⚡⚠ etc)
-        '\U000023F0-\U000023FF'   # Misc technical (⏰ etc)
-        '\U00002705'              # ✅
-        '\U0000270D'              # ✍
-        '\U0000FE0F'              # Variation selector
-        ']+ *',                   # 吃掉 emoji 后的空格
+        '\U0001F300-\U0001F9FF'
+        '\U00002702-\U000027B0'
+        '\U0001FA00-\U0001FAFF'
+        '\U00002600-\U000026FF'
+        '\U000023F0-\U000023FF'
+        '\U00002705'
+        '\U0000270D'
+        '\U0000FE0F'
+        ']+ *',
         '',
         content
     )
 
     # 10. 检测章末趣闻并包装成 funfact 环境
-    # 按 --- 分割，找到最后一个非空段落，检查是否是纯斜体（趣闻）
     parts = re.split(r'\n---\s*\n', content)
-    # 找到最后一个非空 part 的索引
     funfact_idx = None
     for i in range(len(parts) - 1, -1, -1):
         if parts[i].strip():
@@ -97,7 +127,7 @@ def clean_chapter(content: str, lang: str = "zh") -> str:
             break
 
     if funfact_idx is not None and funfact_idx > 0:
-        fun_fact_text = parts[funfact_idx].strip()[1:-1].strip()  # 去掉 * 包裹
+        fun_fact_text = parts[funfact_idx].strip()[1:-1].strip()
         fun_fact_latex = (
             '\n\n```{=latex}\n'
             '\\begin{funfact}\n'
@@ -107,44 +137,70 @@ def clean_chapter(content: str, lang: str = "zh") -> str:
             '\\end{funfact}\n'
             '```\n'
         )
-        # 重建内容：保留趣闻前的 parts，趣闻用 LaTeX，去掉趣闻后的空 parts
         content = '\n---\n'.join(parts[:funfact_idx]) + fun_fact_latex
 
-    # 11. 替换宋体不支持的特殊符号为文本等价物
+    # 11. 替换宋体不支持的特殊符号
     content = content.replace('→', ' -- ')
     content = content.replace('×', 'x')
     content = content.replace('≈', '约等于')
 
-    # 12. 将剩余 Markdown 水平线 --- 替换为纯垂直空间（无装饰）
+    # 12. Markdown 水平线 → LaTeX 垂直空间
     SECTION_BREAK = '\n\n```{=latex}\n\\vspace{1em}\n```\n\n'
     content = re.sub(r'\n---\s*\n', lambda m: SECTION_BREAK, content)
 
-    # 11. 清理多余空行
+    # 13. 清理多余空行
     content = re.sub(r'\n{4,}', '\n\n\n', content)
     content = re.sub(r'^(#[^\n]+\n)\n{2,}', r'\1\n', content)
 
     return content.strip() + '\n'
 
 
-def parse_summary(summary_path: Path) -> list[str]:
-    """从 SUMMARY.md 解析章节文件顺序"""
-    content = summary_path.read_text(encoding="utf-8")
-    files = []
-    for match in re.finditer(r'\[.*?\]\((.+?\.md)\)', content):
-        fname = match.group(1)
-        if fname not in ("README.md",):
-            files.append(fname)
-    return files
+def inject_chapter_image(content: str, fname: str, with_images: bool = True) -> str:
+    """在章节标题后插入配图（无 caption，无编号）"""
+    if not with_images:
+        return content
+
+    img_path = get_chapter_image(fname)
+    if not img_path:
+        return content
+
+    # 找到第一个 # 标题行，在其后插入图片
+    lines = content.split('\n')
+    for i, line in enumerate(lines):
+        if line.startswith('# '):
+            img_latex = (
+                '\n\n```{=latex}\n'
+                '\\begin{center}\n'
+                f'\\includegraphics[width=0.85\\textwidth]{{{img_path}}}\n'
+                '\\end{center}\n'
+                '\\vspace{0.5em}\n'
+                '```\n'
+            )
+            lines.insert(i + 1, img_latex)
+            break
+
+    return '\n'.join(lines)
 
 
-def build_pandoc_pdf(lang: str = "zh"):
-    """用 Pandoc + XeLaTeX 构建排版的 PDF"""
-    # 中文从本地写作版读取（最新内容），英文从网站版读取
-    if lang == "zh" and LOCAL_REPO.exists():
-        src_dir = LOCAL_REPO / "正文"
-        print(f"[{lang}] 从本地写作版读取: {src_dir}")
-    else:
-        src_dir = REPO_ROOT / lang
+def get_source_dir(lang: str) -> Path:
+    """获取章节源目录"""
+    if lang == "zh":
+        return REPO_ROOT / "正文"
+    return REPO_ROOT / "en"
+
+
+def get_chapter_files(src_dir: Path, lang: str) -> list[str]:
+    """获取章节文件列表（排序）"""
+    return sorted([
+        f.name for f in src_dir.glob("*.md")
+        if f.name not in ("README.md", "INTRO.md", "SUMMARY.md")
+        and not f.name.startswith(".")
+    ])
+
+
+def build_pandoc_pdf(lang: str = "zh", sample: bool = False):
+    """用 Pandoc + XeLaTeX 构建 PDF"""
+    src_dir = get_source_dir(lang)
     ebook_dir = REPO_ROOT / "ebook"
     ebook_dir.mkdir(exist_ok=True)
 
@@ -157,41 +213,40 @@ def build_pandoc_pdf(lang: str = "zh"):
         print(f"错误：找不到 {preamble_file}")
         return False
 
-    if lang == "zh":
-        pdf_out = ebook_dir / "比特币那些事儿.pdf"
+    if sample:
+        if lang == "zh":
+            pdf_out = ebook_dir / "Bitcoin-Stories-ZH-Sample.pdf"
+            chapter_filter = set(SAMPLE_CHAPTERS_ZH)
+        else:
+            pdf_out = ebook_dir / "Bitcoin-Stories-EN-Sample.pdf"
+            chapter_filter = set(SAMPLE_CHAPTERS_EN)
     else:
-        pdf_out = ebook_dir / "Stories-about-Bitcoin.pdf"
+        if lang == "zh":
+            pdf_out = ebook_dir / "比特币那些事儿.pdf"
+        else:
+            pdf_out = ebook_dir / "Stories-about-Bitcoin.pdf"
+        chapter_filter = None
 
-    # 获取章节顺序
-    summary_file = src_dir / "SUMMARY.md"
-    if summary_file.exists():
-        chapter_files = parse_summary(summary_file)
-    else:
-        # 本地版没有 SUMMARY.md，按文件名排序
-        chapter_files = sorted([
-            f.name for f in src_dir.glob("*.md")
-            if f.name not in ("README.md", "INTRO.md") and not f.name.startswith(".")
-        ])
-    print(f"[{lang}] 找到 {len(chapter_files)} 个章节")
+    chapter_files = get_chapter_files(src_dir, lang)
+    if chapter_filter:
+        chapter_files = [f for f in chapter_files if f in chapter_filter]
 
-    # 创建临时工作目录
+    print(f"[{lang}] 源目录: {src_dir}")
+    print(f"[{lang}] 章节数: {len(chapter_files)}" + (" (试读版)" if sample else ""))
+
     with tempfile.TemporaryDirectory(prefix="ebook-pandoc-") as tmp:
         tmp_dir = Path(tmp)
 
-        # 清理并复制章节文件
         cleaned_files = []
         for fname in chapter_files:
             src_file = src_dir / fname
             if not src_file.exists():
-                print(f"  跳过（不存在）: {fname}")
+                print(f"  跳过: {fname}")
                 continue
 
             content = src_file.read_text(encoding="utf-8")
-
-            if fname == "INTRO.md":
-                continue  # 跳过前言，书从序言/第一章直接开始
-            else:
-                content = clean_chapter(content, lang)
+            content = clean_chapter(content, lang)
+            content = inject_chapter_image(content, fname)
 
             out_file = tmp_dir / fname
             out_file.write_text(content, encoding="utf-8")
@@ -201,21 +256,19 @@ def build_pandoc_pdf(lang: str = "zh"):
             print("错误：没有可用的章节文件")
             return False
 
-        # 构建 Pandoc 命令
         pandoc_cmd = [
             "pandoc",
             f"--metadata-file={metadata_file}",
             f"--include-in-header={preamble_file}",
             f"--pdf-engine={XELATEX}",
             "--top-level-division=chapter",
-            f"--resource-path={src_dir}:{REPO_ROOT}",
+            f"--resource-path={src_dir}:{REPO_ROOT}:{REPO_ROOT / 'img'}",
             "--toc",
             "--toc-depth=1",
             "-o", str(pdf_out),
         ] + cleaned_files
 
-        print(f"[{lang}] 正在用 Pandoc + XeLaTeX 生成 PDF...")
-        print(f"  文件数: {len(cleaned_files)}")
+        print(f"[{lang}] 正在生成 PDF...")
 
         result = subprocess.run(
             pandoc_cmd, capture_output=True, text=True,
@@ -224,14 +277,12 @@ def build_pandoc_pdf(lang: str = "zh"):
 
         if result.returncode != 0:
             print(f"PDF 生成失败:")
-            # 显示关键错误行（过滤掉 LaTeX 的冗长日志）
             for line in result.stderr.split('\n'):
                 if 'error' in line.lower() or 'fatal' in line.lower() or '!' in line[:3]:
                     print(f"  {line}")
-            # 显示最后 20 行作为上下文
             stderr_lines = result.stderr.strip().split('\n')
             if len(stderr_lines) > 20:
-                print(f"\n  ... 最后 20 行日志:")
+                print(f"\n  ... 最后 20 行:")
                 for line in stderr_lines[-20:]:
                     print(f"  {line}")
             return False
@@ -248,9 +299,15 @@ def build_honkit_epub(lang: str = "zh"):
     ebook_dir = REPO_ROOT / "ebook"
     ebook_dir.mkdir(exist_ok=True)
 
+    # 中文 EPUB 需要先构建 zh/
     if lang == "zh":
         epub_out = ebook_dir / "比特币那些事儿.epub"
         title = "比特币那些事儿"
+        # 确保 zh/ 已构建
+        build_zh = REPO_ROOT / "scripts" / "build_zh.py"
+        if build_zh.exists():
+            print(f"[{lang}] 先构建 zh/...")
+            subprocess.run([sys.executable, str(build_zh)], capture_output=True)
     else:
         epub_out = ebook_dir / "Stories-about-Bitcoin.epub"
         title = "Stories about Bitcoin"
@@ -266,7 +323,7 @@ def build_honkit_epub(lang: str = "zh"):
                 content = clean_chapter(content, lang)
             (tmp_dir / f.name).write_text(content, encoding="utf-8")
 
-        # 扁平化 SUMMARY.md，去掉 INTRO.md 引用
+        # 扁平化 SUMMARY.md
         summary = (src_dir / "SUMMARY.md").read_text(encoding="utf-8")
         summary = re.sub(r'^##\s+.*$', '', summary, flags=re.MULTILINE)
         summary = re.sub(r'^---\s*$', '', summary, flags=re.MULTILINE)
@@ -274,7 +331,6 @@ def build_honkit_epub(lang: str = "zh"):
         summary = re.sub(r'\n{3,}', '\n\n', summary)
         (tmp_dir / "SUMMARY.md").write_text(summary.strip() + '\n', encoding="utf-8")
 
-        # HonKit 需要 README.md 作为入口，创建一个最小的
         (tmp_dir / "README.md").write_text(f"# {title}\n", encoding="utf-8")
         book_config = {
             "title": title,
@@ -293,48 +349,24 @@ def build_honkit_epub(lang: str = "zh"):
     return True
 
 
-def _preface_zh() -> str:
-    return """这是一部讲述比特币历史的作品。从1976年哈耶克写下《货币的非国家化》，到2025年比特币突破十万美元——我们用故事的方式，记录这场持续半个世纪的货币革命。
-
-33个章节，覆盖密码朋克的理想、中本聪的创世、丝绸之路的争议、Mt.Gox的崩塌、扩容战争的撕裂、ETF的突破，以及战略储备的诞生。
-
-每一个章节都是一段真实的历史，每一个人物都有名有姓。
-
-> *"The Times 03/Jan/2009 Chancellor on brink of second bailout for banks"*
->
-> ——创世区块，2009年1月3日
-"""
-
-
-def _preface_en() -> str:
-    return """This is a chronicle of Bitcoin's history. From Hayek's *Denationalization of Money* in 1976 to Bitcoin breaking $100,000 in 2025 — we tell this half-century monetary revolution through stories.
-
-33 chapters covering the Cypherpunk dream, Satoshi's genesis, the Silk Road controversy, Mt. Gox's collapse, the Scaling Wars, the ETF breakthrough, and the birth of the Strategic Bitcoin Reserve.
-
-Every chapter is real history. Every character has a name.
-
-> *"The Times 03/Jan/2009 Chancellor on brink of second bailout for banks"*
->
-> — Genesis Block, January 3, 2009
-"""
-
-
 def main():
     args = [a for a in sys.argv[1:] if not a.startswith('--')]
     flags = [a for a in sys.argv[1:] if a.startswith('--')]
 
     langs = args if args else ["zh", "en"]
     use_honkit = "--honkit" in flags
+    sample = "--sample" in flags
 
     for lang in langs:
         print(f"\n{'='*50}")
-        print(f"构建 {lang} 电子书")
+        print(f"构建 {lang} 电子书" + (" (试读版)" if sample else ""))
         print(f"{'='*50}")
 
         if use_honkit:
             build_honkit_epub(lang)
+        elif sample:
+            build_pandoc_pdf(lang, sample=True)
         else:
-            # Pandoc PDF + HonKit EPUB
             build_pandoc_pdf(lang)
             build_honkit_epub(lang)
 

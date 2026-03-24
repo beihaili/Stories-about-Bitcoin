@@ -1,5 +1,14 @@
 \usepackage{fancyhdr}
 \usepackage{changepage}
+\usepackage{graphicx}
+
+% 防止 widow/orphan（孤行/寡行）
+\widowpenalty=10000
+\clubpenalty=10000
+
+% 消除目录后的空白页
+\AtEndEnvironment{document}{}
+\let\cleardoublepage\clearpage
 
 % 章节标题：只显示标题，不显示"第X章"
 \ctexset{
