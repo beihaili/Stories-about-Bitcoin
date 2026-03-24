@@ -1,7 +1,7 @@
 // 比特币那些事儿 - 章节数据
 // 对齐 正文/ 目录结构（00-34 + 特别篇，共 36 章）
 // link.zh 必须与 zh/SUMMARY.md 中的文件名完全一致
-// link.en 保留旧英文版文件名，null 表示翻译中
+// link.en 对齐 en/ 新文件名（全量重翻完成）
 
 export const periods = [
   {
@@ -77,7 +77,7 @@ export const chapters = [
     image: 'img/00.png',
     link: {
       zh: '/zh/00_引子：一束照进现实的理想之光.html',
-      en: '/en/00_introduction_beam_of_idealistic_light.html'
+      en: '/en/00_prologue_a_beam_of_idealistic_light.html'
     },
     year: '',
     readingTime: 5
@@ -99,7 +99,7 @@ export const chapters = [
     image: 'img/01.png',
     link: {
       zh: '/zh/01_创世纪：预言与失败.html',
-      en: '/en/01_genesis_hayeks_prophecy.html'
+      en: '/en/01_genesis_prophecy_and_failure.html'
     },
     year: '1976-1998',
     readingTime: 8
@@ -119,7 +119,7 @@ export const chapters = [
     image: 'img/02.png',
     link: {
       zh: '/zh/02_创世纪：密码朋克的技术拼图.html',
-      en: '/en/03_genesis_cypherpunk_technical_puzzle.html'
+      en: '/en/02_genesis_the_cypherpunk_technical_puzzle.html'
     },
     year: '1990s',
     readingTime: 11
@@ -139,7 +139,7 @@ export const chapters = [
     image: 'img/03.png',
     link: {
       zh: '/zh/03_创世纪：危机与创世.html',
-      en: null
+      en: '/en/03_genesis_crisis_and_creation.html'
     },
     year: '2008-2009',
     readingTime: 12
@@ -161,7 +161,7 @@ export const chapters = [
     image: 'img/04.png',
     link: {
       zh: '/zh/04_初出茅庐：第一个信徒.html',
-      en: '/en/06_first_steps_first_believer.html'
+      en: '/en/04_first_steps_the_first_believer.html'
     },
     year: '2009',
     readingTime: 14
@@ -181,7 +181,7 @@ export const chapters = [
     image: 'img/05.png',
     link: {
       zh: '/zh/05_初出茅庐：社区与工具.html',
-      en: '/en/07_first_steps_community_and_tools.html'
+      en: '/en/05_first_steps_community_and_tools.html'
     },
     year: '2009',
     readingTime: 7
@@ -201,7 +201,7 @@ export const chapters = [
     image: 'img/06.png',
     link: {
       zh: '/zh/06_初出茅庐：价值发现.html',
-      en: '/en/08_first_steps_value_discovery.html'
+      en: '/en/06_first_steps_value_discovery.html'
     },
     year: '2010',
     readingTime: 13
@@ -221,7 +221,7 @@ export const chapters = [
     image: 'img/07.png',
     link: {
       zh: '/zh/07_初出茅庐：第一次危机与修复.html',
-      en: '/en/09_first_steps_first_crisis_and_fix.html'
+      en: '/en/07_first_steps_the_first_crisis_and_recovery.html'
     },
     year: '2010',
     readingTime: 13
@@ -241,7 +241,7 @@ export const chapters = [
     image: 'img/08.png',
     link: {
       zh: '/zh/08_初出茅庐：中本聪的神秘退场.html',
-      en: '/en/10_first_steps_satoshis_mysterious_exit.html'
+      en: '/en/08_first_steps_satoshis_mysterious_departure.html'
     },
     year: '2010',
     readingTime: 10
@@ -263,7 +263,7 @@ export const chapters = [
     image: 'img/09.png',
     link: {
       zh: '/zh/09_风起云涌：理想与现实的第一次碰撞.html',
-      en: '/en/11_rising_storm_ideals_vs_reality.html'
+      en: '/en/09_rising_storm_the_first_collision_of_ideals_and_reality.html'
     },
     year: '2011',
     readingTime: 9
@@ -283,7 +283,7 @@ export const chapters = [
     image: 'img/10.png',
     link: {
       zh: '/zh/10_风起云涌：Mt.Gox帝国的崛起.html',
-      en: '/en/12_rising_storm_mtgox_empire.html'
+      en: '/en/10_rising_storm_the_rise_of_the_mt_gox_empire.html'
     },
     year: '2011',
     readingTime: 8
@@ -303,7 +303,7 @@ export const chapters = [
     image: 'img/11.png',
     link: {
       zh: '/zh/11_风起云涌：第一次泡沫.html',
-      en: '/en/13_rising_storm_first_bubble.html'
+      en: '/en/11_rising_storm_the_first_bubble.html'
     },
     year: '2011',
     readingTime: 9
@@ -323,7 +323,7 @@ export const chapters = [
     image: 'img/12.png',
     link: {
       zh: '/zh/12_风起云涌：算力革命.html',
-      en: '/en/14_rising_storm_hashpower_revolution.html'
+      en: '/en/12_rising_storm_the_hash_power_revolution.html'
     },
     year: '2011',
     readingTime: 9
@@ -343,7 +343,7 @@ export const chapters = [
     image: 'img/13.png',
     link: {
       zh: '/zh/13_风起云涌：生态萌芽.html',
-      en: '/en/15_rising_storm_ecosystem_sprouting.html'
+      en: '/en/13_rising_storm_ecosystem_emergence.html'
     },
     year: '2012',
     readingTime: 10
@@ -365,7 +365,7 @@ export const chapters = [
     image: 'img/14.png',
     link: {
       zh: '/zh/14_暗潮汹涌：塞浦路斯时刻.html',
-      en: '/en/16_undercurrents_cyprus_moment.html'
+      en: '/en/14_undercurrents_the_cyprus_moment.html'
     },
     year: '2013',
     readingTime: 7
@@ -385,7 +385,7 @@ export const chapters = [
     image: 'img/15.png',
     link: {
       zh: '/zh/15_暗潮汹涌：华盛顿的审视.html',
-      en: '/en/17_undercurrents_washingtons_scrutiny.html'
+      en: '/en/15_undercurrents_washingtons_scrutiny.html'
     },
     year: '2013',
     readingTime: 7
@@ -405,7 +405,7 @@ export const chapters = [
     image: 'img/16.png',
     link: {
       zh: '/zh/16_暗潮汹涌：中国政策过山车.html',
-      en: '/en/18_undercurrents_chinas_policy_roller_coaster.html'
+      en: '/en/16_undercurrents_chinas_policy_rollercoaster.html'
     },
     year: '2013',
     readingTime: 8
@@ -425,7 +425,7 @@ export const chapters = [
     image: 'img/17.png',
     link: {
       zh: '/zh/17_暗潮汹涌：Mt.Gox的覆灭.html',
-      en: '/en/19_undercurrents_mtgox_demise.html'
+      en: '/en/17_undercurrents_the_fall_of_mt_gox.html'
     },
     year: '2014',
     readingTime: 6
@@ -445,7 +445,7 @@ export const chapters = [
     image: 'img/18.png',
     link: {
       zh: '/zh/18_暗潮汹涌：全球监管分化.html',
-      en: '/en/20_undercurrents_global_regulatory_divergence.html'
+      en: '/en/18_undercurrents_global_regulatory_divergence.html'
     },
     year: '2014-2015',
     readingTime: 7
@@ -465,7 +465,7 @@ export const chapters = [
     image: 'img/19.png',
     link: {
       zh: '/zh/19_暗潮汹涌：扩容争议萌芽.html',
-      en: '/en/21_undercurrents_scaling_debate_emerges.html'
+      en: '/en/19_undercurrents_the_scaling_debate_emerges.html'
     },
     year: '2015-2016',
     readingTime: 9
@@ -487,7 +487,7 @@ export const chapters = [
     image: 'img/20.png',
     link: {
       zh: '/zh/20_内战与独立：扩容战争白热化.html',
-      en: '/en/22_breaking_waves_scaling_war_intensifies.html'
+      en: '/en/20_civil_war_the_scaling_war_intensifies.html'
     },
     year: '2017',
     readingTime: 10
@@ -507,7 +507,7 @@ export const chapters = [
     image: 'img/21.png',
     link: {
       zh: '/zh/21_内战与独立：比特币独立日.html',
-      en: '/en/23_breaking_waves_bitcoin_independence_day.html'
+      en: '/en/21_civil_war_bitcoin_independence_day.html'
     },
     year: '2017',
     readingTime: 9
@@ -527,7 +527,7 @@ export const chapters = [
     image: 'img/22.png',
     link: {
       zh: '/zh/22_内战与独立：价格狂欢与投机泡沫.html',
-      en: '/en/24_breaking_waves_price_euphoria_and_speculative_bubble.html'
+      en: '/en/22_civil_war_price_frenzy_and_speculative_bubble.html'
     },
     year: '2017',
     readingTime: 9
@@ -549,7 +549,7 @@ export const chapters = [
     image: 'img/23.png',
     link: {
       zh: '/zh/23_西装革命：机构觉醒的开端.html',
-      en: '/en/25_breaking_waves_the_beginning_of_institutional_awakening.html'
+      en: '/en/23_suit_revolution_the_awakening_of_institutions.html'
     },
     year: '2018-2019',
     readingTime: 11
@@ -569,7 +569,7 @@ export const chapters = [
     image: 'img/24.png',
     link: {
       zh: '/zh/24_西装革命：新冠疫情下的避险转向.html',
-      en: '/en/26_breaking_waves_flight_to_safety_during_covid19_pandemic.html'
+      en: '/en/24_suit_revolution_safe_haven_shift_during_covid19.html'
     },
     year: '2020',
     readingTime: 15
@@ -589,7 +589,7 @@ export const chapters = [
     image: 'img/25.png',
     link: {
       zh: '/zh/25_西装革命：机构入场里程碑.html',
-      en: '/en/27_breaking_waves_institutional_entry_milestone.html'
+      en: '/en/25_suit_revolution_the_institutional_entry_milestone.html'
     },
     year: '2020',
     readingTime: 15
@@ -609,7 +609,7 @@ export const chapters = [
     image: 'img/26.png',
     link: {
       zh: '/zh/26_西装革命：矿业大迁徙.html',
-      en: null
+      en: '/en/26_suit_revolution_the_great_mining_migration.html'
     },
     year: '2021',
     readingTime: 12
@@ -631,7 +631,7 @@ export const chapters = [
     image: 'img/27.png',
     link: {
       zh: '/zh/27_未来可期：萨尔瓦多先驱.html',
-      en: '/en/28_future_promise_el_salvador_pioneer.html'
+      en: '/en/27_future_promise_the_el_salvador_pioneer.html'
     },
     year: '2021',
     readingTime: 13
@@ -651,7 +651,7 @@ export const chapters = [
     image: 'img/28.png',
     link: {
       zh: '/zh/28_未来可期：地缘政治新变量.html',
-      en: '/en/29_Promising_Future_Geopolitical_New_Variables.html'
+      en: '/en/28_future_promise_the_new_geopolitical_variable.html'
     },
     year: '2022',
     readingTime: 13
@@ -671,7 +671,7 @@ export const chapters = [
     image: 'img/29.png',
     link: {
       zh: '/zh/29_未来可期：信任再次破碎.html',
-      en: null
+      en: '/en/29_future_promise_trust_shattered_again.html'
     },
     year: '2022',
     readingTime: 12
@@ -691,7 +691,7 @@ export const chapters = [
     image: 'img/30.png',
     link: {
       zh: '/zh/30_未来可期：ETF历史性突破.html',
-      en: '/en/30_Promising_Future_Historic_ETF_Breakthrough.html'
+      en: '/en/30_future_promise_the_historic_etf_breakthrough.html'
     },
     year: '2024',
     readingTime: 14
@@ -711,7 +711,7 @@ export const chapters = [
     image: 'img/31.png',
     link: {
       zh: '/zh/31_未来可期：大选与战略储备.html',
-      en: null
+      en: '/en/31_future_promise_the_election_and_strategic_reserve.html'
     },
     year: '2024',
     readingTime: 13
@@ -731,7 +731,7 @@ export const chapters = [
     image: 'img/32.png',
     link: {
       zh: '/zh/32_未来可期：十万美元突破.html',
-      en: '/en/31_Promising_Future_One_Hundred_Thousand_Dollar_Breakthrough.html'
+      en: '/en/32_future_promise_the_100k_breakthrough.html'
     },
     year: '2024',
     readingTime: 15
@@ -748,10 +748,10 @@ export const chapters = [
       zh: '致敬那些未能见证今天的先驱',
       en: 'Tribute to Pioneers Who Couldn\'t Witness Today'
     },
-    image: 'img/31.png',
+    image: 'img/33.png',
     link: {
       zh: '/zh/33_未来可期：缺席的人.html',
-      en: null
+      en: '/en/33_future_promise_the_absent_ones.html'
     },
     year: '2024',
     readingTime: 10
@@ -768,10 +768,10 @@ export const chapters = [
       zh: '比特币故事的终章与未来',
       en: 'The Final Chapter and the Future of Bitcoin'
     },
-    image: 'img/30.png',
+    image: 'img/34.png',
     link: {
       zh: '/zh/34_未来可期：光未熄灭.html',
-      en: null
+      en: '/en/34_future_promise_the_light_still_burns.html'
     },
     year: '2025',
     readingTime: 12
