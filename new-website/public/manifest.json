@@ -1,0 +1,19 @@
+{
+  "name": "比特币那些事儿 | Stories about Bitcoin",
+  "short_name": "比特币故事",
+  "description": "用文学风格讲述比特币48年历史的开源双语电子书",
+  "start_url": "/Stories-about-Bitcoin/",
+  "display": "standalone",
+  "theme_color": "#F7931A",
+  "background_color": "#FFFBF0",
+  "icons": [
+    {
+      "src": "/Stories-about-Bitcoin/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    }
+  ],
+  "categories": ["books", "education"],
+  "lang": "zh-CN",
+  "dir": "ltr"
+}
