@@ -56,7 +56,7 @@ The first day, they could still process them. The second day, a queue formed. By
 
 Three words.
 
-Anyone who had seen Mt. Gox's blank white webpage six years earlier felt their stomach turn. They recognized this script. They had seen this scene before.
+Anyone who had seen Mt. Gox's blank white webpage eight years earlier felt their stomach turn. They recognized this script. They had seen this scene before.
 
 SBF began posting on Twitter, his tone like a child who had just broken a vase. "Assets are fine." "Processing the backlog." "All is well."
 
