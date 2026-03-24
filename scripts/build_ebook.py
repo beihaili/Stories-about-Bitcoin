@@ -57,51 +57,51 @@ def get_chapter_image(fname: str) -> str | None:
     return None
 
 
-def clean_chapter(content: str, lang: str = "zh") -> str:
-    """清理章节的网页专属元素，为电子书排版准备"""
+def _clean_common(content: str) -> str:
+    """通用清理：删除网页专属元素（PDF 和 EPUB 共用）"""
 
-    # 1. 删除 shields.io 徽章行
+    # 删除 shields.io 徽章
     content = re.sub(r'!\[(?:status|author|date|difficulty)\]\(.*?shields\.io.*?\)\n?', '', content)
     content = re.sub(r'!\[(?:status|author|date|difficulty)\]\(https://img\.shields\.io/.*?\)\n?', '', content)
 
-    # 2. 删除原文中的图片标签（由 inject_chapter_image 统一注入）
+    # 删除图片标签（PDF 由 inject_chapter_image 统一注入）
     content = re.sub(r'!\[配图\]\(.*?\)\n?', '', content)
     content = re.sub(r'!\[.*?配图.*?\]\(.*?\)\n?', '', content)
     content = re.sub(r'^!\[.*?\]\(\.\./img.*?\)\s*$', '', content, flags=re.MULTILINE)
     content = re.sub(r'^!\[.*?\]\(img/.*?\)\s*$', '', content, flags=re.MULTILINE)
+    # 英文章节也可能有 cover 图
+    content = re.sub(r'^!\[cover\]\(.*?\)\s*$', '', content, flags=re.MULTILINE)
 
-    # 3. 删除 HTML 图片块（这些无论如何都删，Pandoc 不处理 HTML img）
+    # 删除 HTML 图片块
     content = re.sub(r'<picture>.*?</picture>\n?', '', content, flags=re.DOTALL)
     content = re.sub(r'<img\s+src="\.\.?/img.*?>\n?', '', content)
 
-    # 4. 删除 > 💡 引言块（包含社交链接的整个 blockquote）
+    # 删除 > 💡 引言块（含社交链接）
     content = re.sub(
         r'^> 💡.*?(?=\n[^>]|\n\n[^>]|\Z)',
         '', content, flags=re.MULTILINE | re.DOTALL
     )
 
-    # 5. 删除社交链接 blockquote 残留
+    # 删除社交链接残留
     content = re.sub(r'^>\s*欢迎关注.*?\n', '', content, flags=re.MULTILINE)
     content = re.sub(r'^>\s*进入微信.*?\n', '', content, flags=re.MULTILINE)
     content = re.sub(r'^>\s*文章开源.*?\n', '', content, flags=re.MULTILINE)
     content = re.sub(r'^>\s*$\n', '', content, flags=re.MULTILINE)
 
-    # 6. 删除捐赠块
+    # 删除捐赠块
     content = re.sub(
         r'<div align="center"[^>]*style="[^"]*border.*?f7931a.*?</div>',
         '', content, flags=re.DOTALL
     )
 
-    # 7. 删除页脚导航链接块
+    # 删除页脚导航
     content = re.sub(
         r'<div align="center">\s*\n.*?(?:返回主页|Return to Homepage|关注作者).*?</div>',
         '', content, flags=re.DOTALL
     )
-
-    # 8. 删除其他 HTML 残留
     content = re.sub(r'<div align="center">\s*</div>', '', content)
 
-    # 9. 删除所有 emoji（宋体无法渲染）
+    # 删除 emoji（宋体无法渲染）
     content = re.sub(
         '['
         '\U0001F300-\U0001F9FF'
@@ -117,7 +117,23 @@ def clean_chapter(content: str, lang: str = "zh") -> str:
         content
     )
 
-    # 10. 检测章末趣闻并包装成 funfact 环境
+    # 清理多余空行
+    content = re.sub(r'\n{4,}', '\n\n\n', content)
+    content = re.sub(r'^(#[^\n]+\n)\n{2,}', r'\1\n', content)
+
+    return content
+
+
+def clean_for_pdf(content: str, lang: str = "zh") -> str:
+    """PDF 专用清理：注入 LaTeX 代码"""
+    content = _clean_common(content)
+
+    # 替换宋体不支持的特殊符号
+    content = content.replace('→', ' -- ')
+    content = content.replace('×', 'x')
+    content = content.replace('≈', '约等于')
+
+    # 检测章末趣闻 → funfact LaTeX 环境
     parts = re.split(r'\n---\s*\n', content)
     funfact_idx = None
     for i in range(len(parts) - 1, -1, -1):
@@ -139,18 +155,20 @@ def clean_chapter(content: str, lang: str = "zh") -> str:
         )
         content = '\n---\n'.join(parts[:funfact_idx]) + fun_fact_latex
 
-    # 11. 替换宋体不支持的特殊符号
-    content = content.replace('→', ' -- ')
-    content = content.replace('×', 'x')
-    content = content.replace('≈', '约等于')
-
-    # 12. Markdown 水平线 → LaTeX 垂直空间
+    # 水平线 → LaTeX 垂直空间
     SECTION_BREAK = '\n\n```{=latex}\n\\vspace{1em}\n```\n\n'
     content = re.sub(r'\n---\s*\n', lambda m: SECTION_BREAK, content)
 
-    # 13. 清理多余空行
-    content = re.sub(r'\n{4,}', '\n\n\n', content)
-    content = re.sub(r'^(#[^\n]+\n)\n{2,}', r'\1\n', content)
+    return content.strip() + '\n'
+
+
+def clean_for_epub(content: str, lang: str = "zh") -> str:
+    """EPUB 专用清理：不注入任何 LaTeX 代码"""
+    content = _clean_common(content)
+
+    # 趣闻保留为斜体（markdown 原样），不包装 LaTeX 环境
+    # 水平线保留为 ---（HonKit 原生支持）
+    # 不替换特殊符号（EPUB 字体支持更广）
 
     return content.strip() + '\n'
 
@@ -245,7 +263,7 @@ def build_pandoc_pdf(lang: str = "zh", sample: bool = False):
                 continue
 
             content = src_file.read_text(encoding="utf-8")
-            content = clean_chapter(content, lang)
+            content = clean_for_pdf(content, lang)
             content = inject_chapter_image(content, fname)
 
             out_file = tmp_dir / fname
@@ -320,7 +338,7 @@ def build_honkit_epub(lang: str = "zh"):
                 continue
             content = f.read_text(encoding="utf-8")
             if f.name != "SUMMARY.md":
-                content = clean_chapter(content, lang)
+                content = clean_for_epub(content, lang)
             (tmp_dir / f.name).write_text(content, encoding="utf-8")
 
         # 扁平化 SUMMARY.md

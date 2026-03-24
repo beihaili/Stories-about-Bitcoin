@@ -1,85 +1,100 @@
 \usepackage{fancyhdr}
 \usepackage{changepage}
 \usepackage{graphicx}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins, breakable}
+\usepackage[all]{nowidow}
 
-% 防止 widow/orphan（孤行/寡行）
+% ===== 颜色定义（Bitcoin 主题）=====
+\definecolor{btcorange}{HTML}{F7931A}
+\definecolor{btcgold}{HTML}{FFD700}
+\definecolor{btcdark}{HTML}{1A1A2E}
+\definecolor{chaptergray}{HTML}{4A4A4A}
+\definecolor{funfactbg}{HTML}{FFF8E7}
+
+% ===== 排版控制 =====
 \widowpenalty=10000
 \clubpenalty=10000
-
-% 消除目录后的空白页
-\AtEndEnvironment{document}{}
+\brokenpenalty=10000
+\parskip=0pt
 \let\cleardoublepage\clearpage
 
-% 章节标题：只显示标题，不显示"第X章"
+% ===== 章节标题风格（借鉴 ElegantBook）=====
 \ctexset{
   chapter = {
     name = {},
     number = {},
-    format = \huge\bfseries\centering,
-    beforeskip = 30pt,
-    afterskip = 25pt,
+    format = \huge\bfseries\color{btcdark}\centering,
+    beforeskip = 20pt,
+    afterskip = 20pt,
+    aftertitle = {\par\vspace{4pt}\noindent\textcolor{btcorange}{\rule{6cm}{1.5pt}}\par},
   },
   section = {
-    format = \Large\bfseries,
-    beforeskip = 20pt,
-    afterskip = 10pt,
+    format = \Large\bfseries\color{btcdark},
+    beforeskip = 18pt,
+    afterskip = 8pt,
   }
 }
 
-% 天眉 + 页码
+% ===== 天眉 + 页码 =====
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[LE]{\small\itshape 比特币那些事儿}
-\fancyhead[RO]{\small\itshape \leftmark}
-\fancyfoot[C]{\thepage}
-\renewcommand{\headrulewidth}{0.4pt}
+\fancyhead[LE]{\small\color{chaptergray}\itshape 比特币那些事儿}
+\fancyhead[RO]{\small\color{chaptergray}\itshape \leftmark}
+\fancyfoot[C]{\small\color{chaptergray}\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{btcorange}\leaders\hrule height \headrulewidth\hfill}}
 \fancypagestyle{plain}{
   \fancyhf{}
-  \fancyfoot[C]{\thepage}
+  \fancyfoot[C]{\small\color{chaptergray}\thepage}
   \renewcommand{\headrulewidth}{0pt}
 }
 
-% 水平线 → 三星号间隔
+% ===== 水平线 → 三星号间隔 =====
 \def\horizontalrule{%
-  \par\vspace{1.5em}%
-  \noindent\hfil{\large *\quad *\quad *}\hfil%
-  \par\vspace{1.5em}%
+  \par\vspace{1.2em}%
+  \noindent\hfil{\color{btcorange}\large *\quad *\quad *}\hfil%
+  \par\vspace{1.2em}%
 }
 
-% 引用块样式（题词/引言）
+% ===== 引用块样式 =====
 \renewenvironment{quote}{%
-  \vspace{0.8em}%
+  \vspace{0.6em}%
   \begin{adjustwidth}{2em}{2em}%
-  \small\itshape
+  \small\itshape\color{chaptergray}
 }{%
   \end{adjustwidth}%
-  \vspace{0.8em}%
+  \vspace{0.6em}%
 }
 
-% 趣闻环境（章末小知识）
-\newenvironment{funfact}{%
-  \vspace{0.8em}%
-  \begin{adjustwidth}{1.5em}{1.5em}%
-  \small\itshape
-}{%
-  \end{adjustwidth}%
-  \vspace{0.5em}%
+% ===== 趣闻环境（tcolorbox 彩色框）=====
+\newtcolorbox{funfact}{
+  colback=funfactbg,
+  colframe=btcorange,
+  boxrule=0.5pt,
+  arc=3pt,
+  left=10pt, right=10pt, top=8pt, bottom=8pt,
+  fontupper=\small\itshape,
+  breakable,
+  before upper={\noindent},
 }
 
-% 版权页命令
+% ===== 版权页 =====
 \newcommand{\copyrightpage}{%
   \thispagestyle{empty}%
   \null\vfill
   \begin{center}
-  {\Large\bfseries 比特币那些事儿}\\[0.5em]
-  {\large\itshape Stories about Bitcoin}\\[2em]
+  {\Huge\bfseries\color{btcdark} 比特币那些事儿}\\[0.6em]
+  {\large\itshape\color{chaptergray} Stories about Bitcoin}\\[0.3em]
+  {\small\color{chaptergray} 1976--2025：从密码朋克到数字黄金}\\[2.5em]
   {\normalsize 作者：beihaili}\\[1em]
-  {\small 本书以 CC-BY-SA 4.0 许可证开源}\\[0.5em]
-  {\small 在线阅读：https://beihaili.github.io/Stories-about-Bitcoin/zh/}\\[1.5em]
-  {\small 支持作者}\\[0.3em]
-  {\small Lightning: \texttt{latebrook396888@getalby.com}}\\[0.3em]
-  {\small BTC: \texttt{bc1qjt7uhztd2pumpx6p5w0sl8jxfzmxp3nyahysmcqklqfkecqftuysu733ca}}\\[2em]
-  {\footnotesize 2025年 · 第一版}
+  {\small\color{chaptergray} 本书以 CC-BY-SA 4.0 许可证开源}\\[0.4em]
+  {\small\color{chaptergray} 在线阅读：https://beihaili.github.io/Stories-about-Bitcoin/zh/}\\[1.5em]
+  {\small\color{btcorange} 支持作者}\\[0.3em]
+  {\small Lightning: \texttt{latebrook396888@getalby.com}}\\[0.2em]
+  {\small BTC: \texttt{\footnotesize bc1qjt7uhztd2pumpx6p5w0sl8jxfzmxp3nyahysmcqklqfkecqftuysu733ca}}\\[2.5em]
+  {\footnotesize\color{chaptergray} 2025年 · 第二版}
   \end{center}
   \vfill
   \clearpage

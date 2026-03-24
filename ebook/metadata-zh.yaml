@@ -11,12 +11,12 @@ classoption:
   - openany
   - twoside
 geometry:
-  - inner=2.5cm
-  - outer=2cm
-  - top=2.5cm
+  - inner=2.2cm
+  - outer=1.8cm
+  - top=2.2cm
   - bottom=2cm
   - bindingoffset=0.5cm
-linestretch: 1.5
+linestretch: 1.35
 toc: true
 toc-depth: 1
 toc-title: "目　录"
@@ -29,7 +29,7 @@ sansfont: Helvetica Neue
 monofont: Menlo
 colorlinks: true
 linkcolor: black
-urlcolor: "blue!70!black"
+urlcolor: "btcorange"
 include-before: |
   \copyrightpage
 ---

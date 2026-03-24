@@ -2,73 +2,92 @@
 \usepackage{changepage}
 \usepackage{titlesec}
 \usepackage{graphicx}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins, breakable}
+\usepackage[all]{nowidow}
 
-% Prevent widow/orphan lines
+% ===== Colors (Bitcoin theme) =====
+\definecolor{btcorange}{HTML}{F7931A}
+\definecolor{btcdark}{HTML}{1A1A2E}
+\definecolor{chaptergray}{HTML}{4A4A4A}
+\definecolor{funfactbg}{HTML}{FFF8E7}
+
+% ===== Typesetting control =====
 \widowpenalty=10000
 \clubpenalty=10000
-
-% Remove blank pages between chapters
+\brokenpenalty=10000
+\parskip=0pt
 \let\cleardoublepage\clearpage
 
-% Chapter title: no "Chapter X" prefix
+% ===== Chapter title style =====
 \titleformat{\chapter}[display]
-  {\huge\bfseries\centering}{}{0pt}{}
-\titlespacing*{\chapter}{0pt}{30pt}{25pt}
+  {\huge\bfseries\color{btcdark}\centering}{}{0pt}{}
+  [\vspace{4pt}\noindent\centering\textcolor{btcorange}{\rule{6cm}{1.5pt}}]
+\titlespacing*{\chapter}{0pt}{20pt}{20pt}
 
-% Running headers + page numbers
+\titleformat{\section}
+  {\Large\bfseries\color{btcdark}}{}{0pt}{}
+\titlespacing*{\section}{0pt}{18pt}{8pt}
+
+% ===== Running headers + page numbers =====
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[LE]{\small\itshape Stories about Bitcoin}
-\fancyhead[RO]{\small\itshape \leftmark}
-\fancyfoot[C]{\thepage}
-\renewcommand{\headrulewidth}{0.4pt}
+\fancyhead[LE]{\small\color{chaptergray}\itshape Stories about Bitcoin}
+\fancyhead[RO]{\small\color{chaptergray}\itshape \leftmark}
+\fancyfoot[C]{\small\color{chaptergray}\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{btcorange}\leaders\hrule height \headrulewidth\hfill}}
 \fancypagestyle{plain}{
   \fancyhf{}
-  \fancyfoot[C]{\thepage}
+  \fancyfoot[C]{\small\color{chaptergray}\thepage}
   \renewcommand{\headrulewidth}{0pt}
 }
 
-% Horizontal rule → three asterisks
+% ===== Section break =====
 \def\horizontalrule{%
-  \par\vspace{1.5em}%
-  \noindent\hfil{\large *\quad *\quad *}\hfil%
-  \par\vspace{1.5em}%
+  \par\vspace{1.2em}%
+  \noindent\hfil{\color{btcorange}\large *\quad *\quad *}\hfil%
+  \par\vspace{1.2em}%
 }
 
-% Block quote style (epigraphs)
+% ===== Block quote style =====
 \renewenvironment{quote}{%
-  \vspace{0.8em}%
+  \vspace{0.6em}%
   \begin{adjustwidth}{2em}{2em}%
-  \small\itshape
+  \small\itshape\color{chaptergray}
 }{%
   \end{adjustwidth}%
-  \vspace{0.8em}%
+  \vspace{0.6em}%
 }
 
-% Fun fact environment
-\newenvironment{funfact}{%
-  \vspace{0.8em}%
-  \begin{adjustwidth}{1.5em}{1.5em}%
-  \small\itshape
-}{%
-  \end{adjustwidth}%
-  \vspace{0.5em}%
+% ===== Fun fact environment =====
+\newtcolorbox{funfact}{
+  colback=funfactbg,
+  colframe=btcorange,
+  boxrule=0.5pt,
+  arc=3pt,
+  left=10pt, right=10pt, top=8pt, bottom=8pt,
+  fontupper=\small\itshape,
+  breakable,
+  before upper={\noindent},
 }
 
-% Copyright page
+% ===== Copyright page =====
 \newcommand{\copyrightpage}{%
   \thispagestyle{empty}%
   \null\vfill
   \begin{center}
-  {\Large\bfseries Stories about Bitcoin}\\[0.5em]
-  {\large\itshape Bitcoin History in Web Novel Style}\\[2em]
+  {\Huge\bfseries\color{btcdark} Stories about Bitcoin}\\[0.6em]
+  {\large\itshape\color{chaptergray} Bitcoin History in Web Novel Style}\\[0.3em]
+  {\small\color{chaptergray} 1976--2025: From Cypherpunks to Digital Gold}\\[2.5em]
   {\normalsize Author: beihaili}\\[1em]
-  {\small Licensed under CC-BY-SA 4.0}\\[0.5em]
-  {\small Read online: https://beihaili.github.io/Stories-about-Bitcoin/en/}\\[1.5em]
-  {\small Support the Author}\\[0.3em]
-  {\small Lightning: \texttt{latebrook396888@getalby.com}}\\[0.3em]
-  {\small BTC: \texttt{bc1qjt7uhztd2pumpx6p5w0sl8jxfzmxp3nyahysmcqklqfkecqftuysu733ca}}\\[2em]
-  {\footnotesize 2025 · First Edition}
+  {\small\color{chaptergray} Licensed under CC-BY-SA 4.0}\\[0.4em]
+  {\small\color{chaptergray} Read online: https://beihaili.github.io/Stories-about-Bitcoin/en/}\\[1.5em]
+  {\small\color{btcorange} Support the Author}\\[0.3em]
+  {\small Lightning: \texttt{latebrook396888@getalby.com}}\\[0.2em]
+  {\small BTC: \texttt{\footnotesize bc1qjt7uhztd2pumpx6p5w0sl8jxfzmxp3nyahysmcqklqfkecqftuysu733ca}}\\[2.5em]
+  {\footnotesize\color{chaptergray} 2025 · Second Edition}
   \end{center}
   \vfill
   \clearpage
