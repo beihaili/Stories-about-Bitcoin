@@ -1,103 +1,139 @@
-# Contributing | 贡献指南
+# Contributing to Stories about Bitcoin
 
-[English](#english) | [中文](#中文)
+Thank you for your interest in contributing to **Stories about Bitcoin** (比特币那些事儿) -- an open-source bilingual Bitcoin history book covering 1976-2024 in 36 chapters, with a React website and free ebooks.
+
+Whether you're a translator, historian, developer, or designer, there's a way for you to help. This guide will get you started.
+
+## Quick Start
+
+```bash
+# 1. Fork the repo on GitHub, then clone your fork
+git clone https://github.com/YOUR_USERNAME/Stories-about-Bitcoin.git
+cd Stories-about-Bitcoin
+
+# 2. Create a branch for your work
+git checkout -b your-branch-name
+
+# 3. Make your changes, then commit
+git add <files>
+git commit -m "Brief description of changes"
+
+# 4. Push and open a Pull Request on GitHub
+git push origin your-branch-name
+```
+
+## Ways to Contribute
+
+### 1. Translation (most needed)
+
+The book is written in Chinese and translated into English. Translations that read like natural, literary prose are far more valuable than literal word-for-word conversions.
+
+**Proofread existing English translations:**
+
+1. Compare files in `en/` with the Chinese originals in `正文/` (the source of truth).
+2. Look for mistranslations, awkward phrasing, or missing nuance.
+3. Open a PR with your improvements.
+
+**Add a new language:**
+
+1. Fork the repo and create a new directory (e.g., `ja/` for Japanese, `es/` for Spanish).
+2. Copy the structure from `en/` -- each chapter has a corresponding file.
+3. Translate the chapters, preserving the literary narrative tone.
+4. Add a `SUMMARY.md` listing all translated chapters.
+5. Open a PR. One reviewer must approve before merge.
+
+**Translation guidelines:**
+
+- Use the glossary at `scripts/content_pipeline/glossary.json` for consistent terminology.
+- Maintain the book's storytelling voice -- this is narrative history, not a textbook.
+- Proper nouns, technical terms, and dates must be accurate.
+- Each PR should cover complete chapters (not partial translations).
+
+### 2. Fact-Checking
+
+Bitcoin history involves specific dates, numbers, and people. Accuracy matters.
+
+**How to report an error:**
+
+- Open a GitHub Issue with: the chapter name, the incorrect claim, and a source citation (link, paper, or book reference).
+
+**How to fix it directly:**
+
+- Edit the source file in `正文/` (not `zh/` -- that directory is auto-generated).
+- Include your source citation in the PR description.
+- Reference materials are maintained in `资料/` (not on GitHub), but you can cite any reputable external source.
+
+### 3. Website Development
+
+The website is a React SPA with HonKit-powered ebooks.
+
+**Setup:**
+
+```bash
+cd new-website
+npm install
+npm run dev          # Dev server at localhost:5173
+```
+
+**Stack:** React + Vite + Tailwind CSS + Framer Motion
+
+**Before submitting a PR:**
+
+```bash
+npm run lint         # Must pass
+npm run test:run     # Must pass
+npm run build        # Must succeed
+```
+
+**Key conventions:**
+
+- Bilingual strings use `{ zh: '中文', en: 'English' }` objects.
+- Components receive a `lang` prop for internationalization.
+- Custom Tailwind tokens: `bitcoin-orange`, `bitcoin-gold`, `historical-parchment`.
+- Check GitHub Issues for items labeled `good first issue`.
+
+### 4. Design
+
+**Chapter illustrations:**
+
+- See [Issue #11](https://github.com/beihaili/Stories-about-Bitcoin/issues/11) for the style guide.
+- Submit source files to `img/` (PNG format).
+- Resized variants are generated automatically: `img_800px/` (via `sips -Z 800`) and `img_webp/` (via `cwebp -q 80`).
+
+**OG share images:**
+
+- Dimensions: 1200 x 630 px
+- Use Bitcoin orange (`#F7931A`) as the primary accent color.
+- Submit to `new-website/public/og/`.
+
+### 5. Content Improvements
+
+- Fix typos, improve wording, tighten prose.
+- **Always edit `正文/`, never `zh/` directly.** The `zh/` directory is built from `正文/` by `scripts/build_zh.py` and CI.
+- `en/` can be edited directly for English-only fixes.
+
+## Commit Messages
+
+- Write in English.
+- Keep the first line concise (under 72 characters).
+- Use the imperative mood: "Fix date in chapter 12", not "Fixed date in chapter 12".
+
+## Code of Conduct
+
+This project follows the [Contributor Covenant v2.1](https://www.contributor-covenant.org/version/2/1/code_of_conduct/). Be respectful and constructive in all interactions.
+
+## Questions?
+
+- **GitHub Issues**: [Open an issue](https://github.com/beihaili/Stories-about-Bitcoin/issues) for bugs, suggestions, or questions.
+- **Discord**: Community server (link TBD).
+
+## License
+
+- **Content** (chapters, translations): [CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
+- **Code** (website, scripts): [MIT](LICENSE)
+
+By contributing, you agree that your contributions will be licensed under these terms.
 
 ---
 
-## English
-
-Thank you for your interest in contributing to **Stories about Bitcoin**! This project tells Bitcoin's 48-year history in an engaging web novel style.
-
-### Ways to Contribute
-
-- **Report Bugs** — Found a broken link, typo, or rendering issue? [Open a bug report](https://github.com/beihaili/Stories-about-Bitcoin/issues/new?template=bug_report.yml)
-- **Suggest Features** — Have an idea for the website or ebook? [Open a feature request](https://github.com/beihaili/Stories-about-Bitcoin/issues/new?template=feature_request.yml)
-- **Submit a PR** — Fix a bug, improve the UI, or add translations
-- **Improve Content** — Correct historical facts, improve writing, or add references
-
-### Development Setup
-
-```bash
-# Prerequisites: Node.js 20+
-git clone https://github.com/beihaili/Stories-about-Bitcoin.git
-cd Stories-about-Bitcoin/new-website
-npm install
-npm run dev       # Start dev server at localhost:5173
-npm run test:run  # Run tests
-npm run build     # Production build
-npm run lint      # ESLint check
-```
-
-### Project Structure
-
-```
-Stories-about-Bitcoin/
-├── new-website/          # React SPA homepage (Vite + Tailwind)
-│   ├── src/
-│   │   ├── components/   # React components
-│   │   ├── hooks/        # Custom hooks
-│   │   ├── data/         # Chapter data
-│   │   └── test/         # Test utilities & mocks
-│   └── public/           # Static assets (feed.xml, robots.txt, etc.)
-├── zh/                   # Chinese ebook (HonKit markdown)
-├── en/                   # English ebook (HonKit markdown)
-└── img/                  # Chapter images
-```
-
-### Code Standards
-
-- **Linting**: ESLint with React + Hooks plugins. Run `npm run lint` before committing.
-- **Testing**: Vitest + React Testing Library. Aim to add tests for new components.
-- **Commits**: Use clear, descriptive commit messages in English.
-- **Components**: Follow existing patterns — `lang` prop for i18n, `{ zh, en }` data objects.
-- **Styling**: Tailwind CSS with custom tokens (`bitcoin-orange`, `bitcoin-gold`, `historical-parchment`).
-
-### Pull Request Process
-
-1. Fork the repo and create a feature branch from `main`
-2. Make your changes, add tests if applicable
-3. Ensure `npm run lint` and `npm run test:run` pass
-4. Ensure `npm run build` succeeds
-5. Open a PR with a clear description of changes
-
----
-
-## 中文
-
-感谢你有兴趣为 **比特币那些事儿** 做贡献！本项目以网文笔法讲述比特币 48 年历史。
-
-### 贡献方式
-
-- **报告 Bug** — 发现坏链接、错别字或渲染问题？[提交 Bug 报告](https://github.com/beihaili/Stories-about-Bitcoin/issues/new?template=bug_report.yml)
-- **建议功能** — 对网站或电子书有想法？[提交功能请求](https://github.com/beihaili/Stories-about-Bitcoin/issues/new?template=feature_request.yml)
-- **提交 PR** — 修复 Bug、改进 UI 或添加翻译
-- **改进内容** — 修正历史事实、改善文笔或添加参考资料
-
-### 开发环境
-
-```bash
-# 前提：Node.js 20+
-git clone https://github.com/beihaili/Stories-about-Bitcoin.git
-cd Stories-about-Bitcoin/new-website
-npm install
-npm run dev       # 启动开发服务器 localhost:5173
-npm run test:run  # 运行测试
-npm run build     # 生产构建
-npm run lint      # ESLint 检查
-```
-
-### 代码规范
-
-- **代码检查**：ESLint，提交前运行 `npm run lint`
-- **测试**：Vitest + React Testing Library，新组件请添加测试
-- **提交信息**：清晰描述性的英文提交信息
-- **组件规范**：遵循现有模式 — `lang` prop 用于国际化，`{ zh, en }` 数据对象
-- **样式**：Tailwind CSS，使用项目自定义 token
-
-### PR 流程
-
-1. Fork 仓库，从 `main` 创建功能分支
-2. 进行修改，如适用请添加测试
-3. 确保 `npm run lint` 和 `npm run test:run` 通过
-4. 确保 `npm run build` 成功
-5. 提交 PR，清晰描述变更内容
+Thank you for helping tell Bitcoin's story.
