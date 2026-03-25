@@ -14,24 +14,32 @@
 \definecolor{funfactbg}{HTML}{FFF8E7}
 
 % ===== 排版控制 =====
+\usepackage{indentfirst}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0pt plus 0.5pt}
 \widowpenalty=10000
 \clubpenalty=10000
 \brokenpenalty=10000
-\parskip=0pt
 \let\cleardoublepage\clearpage
 
-% ===== 章节标题风格（借鉴 ElegantBook）=====
+% 覆盖 Pandoc 默认的段间距（tightlist）
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+% ===== 章节标题风格 =====
 \ctexset{
   chapter = {
-    name = {},
-    number = {},
+    name = {第,章},
+    number = \chinese{chapter},
     format = \huge\bfseries\color{btcdark}\centering,
+    nameformat = {},
+    titleformat = {},
     beforeskip = 20pt,
     afterskip = 20pt,
     aftertitle = {\par\vspace{4pt}\noindent\textcolor{btcorange}{\rule{6cm}{1.5pt}}\par},
   },
   section = {
     format = \Large\bfseries\color{btcdark},
+    number = \thesection,
     beforeskip = 18pt,
     afterskip = 8pt,
   }

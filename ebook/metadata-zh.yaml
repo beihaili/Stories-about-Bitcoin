@@ -20,7 +20,7 @@ linestretch: 1.35
 toc: true
 toc-depth: 1
 toc-title: "目　录"
-numbersections: false
+numbersections: true
 CJKmainfont: Songti SC
 CJKsansfont: Hiragino Sans GB
 CJKmonofont: Heiti SC

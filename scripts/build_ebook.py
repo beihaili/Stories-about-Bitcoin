@@ -124,9 +124,80 @@ def _clean_common(content: str) -> str:
     return content
 
 
+def _merge_short_paragraphs(content: str, max_len: int = 35) -> str:
+    """合并连续的短段落，减少 PDF 中过多缩进导致的碎片感。
+
+    规则：
+    - 连续 2+ 个纯文本短段落（< max_len 字符）合并为一段
+    - 不合并：标题行(#)、引用(>)、列表(- *)、LaTeX代码块、空行后的长段落
+    - 保留独立的短段落（前后都是长段落或特殊行）
+    """
+    lines = content.split('\n')
+    result = []
+    i = 0
+
+    while i < len(lines):
+        line = lines[i]
+
+        # 跳过特殊行（标题、引用、列表、代码、空行）
+        if (not line.strip() or
+            line.startswith('#') or
+            line.startswith('>') or
+            line.startswith('- ') or
+            line.startswith('* ') or
+            line.startswith('```') or
+            line.startswith('\\') or
+            '```{=latex}' in line):
+            result.append(line)
+            i += 1
+            continue
+
+        # 当前是普通文本行，检查是否是短段落的开始
+        stripped = line.strip()
+        if len(stripped) > max_len:
+            result.append(line)
+            i += 1
+            continue
+
+        # 短段落：往后看，收集连续的短段落
+        batch = [stripped]
+        j = i + 1
+
+        while j < len(lines):
+            # 期望下一行是空行（段落分隔）
+            if j < len(lines) and lines[j].strip() == '':
+                # 再下一行是否也是短段落？
+                if j + 1 < len(lines):
+                    next_line = lines[j + 1].strip()
+                    if (next_line and
+                        len(next_line) <= max_len and
+                        not next_line.startswith('#') and
+                        not next_line.startswith('>') and
+                        not next_line.startswith('- ') and
+                        not next_line.startswith('* ') and
+                        not next_line.startswith('```')):
+                        batch.append(next_line)
+                        j += 2  # 跳过空行和下一段
+                        continue
+            break
+
+        # 只有 2+ 个短段落才合并
+        if len(batch) >= 2:
+            result.append(''.join(batch))
+        else:
+            result.append(line)
+
+        i = j
+
+    return '\n'.join(result)
+
+
 def clean_for_pdf(content: str, lang: str = "zh") -> str:
     """PDF 专用清理：注入 LaTeX 代码"""
     content = _clean_common(content)
+
+    # 合并连续短段落（减少碎片感）
+    content = _merge_short_paragraphs(content)
 
     # 替换宋体不支持的特殊符号
     content = content.replace('→', ' -- ')
@@ -155,8 +226,8 @@ def clean_for_pdf(content: str, lang: str = "zh") -> str:
         )
         content = '\n---\n'.join(parts[:funfact_idx]) + fun_fact_latex
 
-    # 水平线 → LaTeX 垂直空间
-    SECTION_BREAK = '\n\n```{=latex}\n\\vspace{1em}\n```\n\n'
+    # 水平线 → LaTeX 小间隔（不要太大，避免段落松散）
+    SECTION_BREAK = '\n\n```{=latex}\n\\vspace{0.6em}\n```\n\n'
     content = re.sub(r'\n---\s*\n', lambda m: SECTION_BREAK, content)
 
     return content.strip() + '\n'
