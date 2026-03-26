@@ -24,7 +24,7 @@ Once there was a number, things began to change.
 
 Almost simultaneously, Bitcoin's second developer — Finnish student Martti Malmi (forum handle: sirius) — completed the first publicly recorded fiat-to-bitcoin transaction.
 
-This was the same young man who had built the BitcoinTalk forum. Months earlier he'd been helping Satoshi Nakamoto maintain the website and codebase. Now he put real money on the line: via PayPal, he paid $5.02 for 5,050 bitcoins.
+This was the same young man who had built the BitcoinTalk forum. Months earlier he'd been helping Satoshi Nakamoto maintain the website and codebase. Now he put real money on the line: via PayPal, he sold 5,050 bitcoins for $5.02.
 
 $5.02. Roughly the price of a Starbucks latte.
 
@@ -74,7 +74,7 @@ Laszlo overpaid by sixty percent — $41 worth of bitcoin for $25 worth of pizza
 
 In fact, Laszlo didn't stop at one purchase. Throughout the summer of 2010, he kept posting on the forum asking to buy more pizzas, only stopping in August. Years later, when someone asked if he regretted it, he said no — "The fact that Bitcoin could buy something was worth 10,000 coins in itself."
 
-As for Jeremy? He spent the 10,000 bitcoins over the following year — buying games, taking a road trip with his girlfriend — netting roughly $400 in total profit. Years later those coins would be worth hundreds of millions of dollars, but a 19-year-old spends like a 19-year-old. Neither of them "hodled." One traded his coins for pizza, the other for games and a road trip. In that era, circulation was closer to Bitcoin's original spirit than hoarding ever was.
+As for Jeremy? He spent the 10,000 bitcoins over the following year — buying games, taking a road trip with his girlfriend — netting roughly $400 in total profit. Years later those coins would be worth hundreds of millions of dollars, but a 19-year-old spends like a 19-year-old. Neither of them "HODLed." One traded his coins for pizza, the other for games and a road trip. In that era, circulation was closer to Bitcoin's original spirit than hoarding ever was.
 
 ---
 
