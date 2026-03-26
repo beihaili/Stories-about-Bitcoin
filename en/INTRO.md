@@ -1,31 +1,25 @@
 # Stories about Bitcoin
 
-**The First Comprehensive English Chronicle of Bitcoin History**
+A bilingual (Chinese/English) Bitcoin history book covering 1976–2025 in 36 chapters, written in literary narrative style.
 
-This book tells the legendary story of Bitcoin from 1976 to 2017, using an engaging narrative style inspired by popular historical storytelling. We explore the fascinating journey from Hayek's monetary theory to the emergence of the Bitcoin ecosystem, global regulatory divergence, and the scaling wars.
+## What's Inside
 
-## What You'll Discover
+- **1976–2009**: From Hayek's prophecy through the Cypherpunks to Satoshi's genesis block
+- **2009–2012**: First believers, Pizza Day, Silk Road, Mt. Gox's rise, the first bubble
+- **2013–2016**: Cyprus moment, global regulation, Mt. Gox collapse, scaling debate
+- **2017**: The Scaling War, Bitcoin Independence Day, $20K bubble
+- **2018–2021**: Institutional awakening, COVID safe-haven shift, mining migration
+- **2021–2025**: El Salvador, FTX collapse, ETF breakthrough, $100K, the light still burns
 
-- 🕰️ **Time Travel** - Revisit key historical moments before and after Bitcoin's birth
-- 👥 **Meet the Characters** - Learn about Hayek, Cypherpunks, Satoshi Nakamoto, and other key figures
-- 🔧 **Understand the Technology** - Complex technical concepts explained in accessible language
-- 💡 **Feel the Vision** - Experience the idealism behind this world-changing monetary revolution
+## How to Read
 
-## Content Overview
-
-**Completed Content:**
-- 🕰️ **1976-2017** - Complete context from theory to reality
-- 📖 **23 Chapters** - Introduction(1) + Genesis(5) + First Steps(5) + Rising Storm(5) + Undercurrents(7) + Special(1)
-
-## Reading Experience
-
-This book is designed to make Bitcoin's complex history accessible to everyone, whether you're a blockchain professional, history enthusiast, tech geek, investor, or curious reader. We combine rigorous historical research with engaging storytelling to bring Bitcoin's early days to life.
+- **Online**: You're here — browse chapters from the sidebar
+- **Website**: [beihaili.github.io/Stories-about-Bitcoin](https://beihaili.github.io/Stories-about-Bitcoin/)
+- **Ebook**: Free PDF/EPUB at [GitHub Release](https://github.com/beihaili/Stories-about-Bitcoin/releases/tag/v2.0)
 
 ---
 
 *"The Times 03/Jan/2009 Chancellor on brink of second bailout for banks"*
-
-**Created and maintained by Bitcoin history enthusiasts**
 
 ---
 

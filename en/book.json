@@ -1,15 +1,15 @@
 {
   "title": "Stories about Bitcoin",
   "author": "beihaili",
-  "description": "The First Comprehensive English Chronicle of Bitcoin History - Telling Bitcoin's legendary story in an engaging narrative style",
+  "description": "A bilingual Bitcoin history book — 36 chapters covering 1976-2025, in literary narrative style",
   "language": "en",
   "structure": {
     "readme": "INTRO.md"
   },
   "variables": {
     "version": "Complete Edition",
-    "status": "✅ Full book completed (Prologue through Chapter 7 + Special)",
-    "chapters": 33,
+    "status": "36 chapters completed",
+    "chapters": 36,
     "lastUpdate": "2026-03"
   }
 }
