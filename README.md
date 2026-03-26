@@ -102,6 +102,12 @@ python3 scripts/build_ebook.py zh               # Chinese PDF + EPUB
 python3 scripts/build_ebook.py en               # English PDF + EPUB
 ```
 
+## Contributors
+
+<a href="https://github.com/beihaili/Stories-about-Bitcoin/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=beihaili/Stories-about-Bitcoin" />
+</a>
+
 ## License
 
 - **Content** (chapters, images): [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)

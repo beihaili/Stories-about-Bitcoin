@@ -282,6 +282,7 @@ const Footer = ({ lang = 'zh' }) => {
               <span>& React | {t.license}</span>
             </div>
           </div>
+          <p className="text-center text-[10px] opacity-40 mt-3">v2.2 · Updated 2026-03</p>
         </div>
       </div>
     </footer>
