@@ -17,6 +17,7 @@ The only open-source literary history of Bitcoin -- bilingual, 36 chapters, 1976
 | Read Online (Chinese) | [beihaili.github.io/Stories-about-Bitcoin/zh/](https://beihaili.github.io/Stories-about-Bitcoin/zh/) |
 | Read Online (English) | [beihaili.github.io/Stories-about-Bitcoin/en/](https://beihaili.github.io/Stories-about-Bitcoin/en/) |
 | Download Ebook (PDF/EPUB) | [GitHub Release v2.0](https://github.com/beihaili/Stories-about-Bitcoin/releases/tag/v2.0) |
+| Community | [Discord (English)](https://discord.gg/TTFuH9de) / [WeChat (中文)](https://forms.gle/QMBwL6LwZyQew1tX8) |
 | Support the Project | Lightning: `latebrook396888@getalby.com` / BTC: `bc1qjt7uhztd2pumpx6p5w0sl8jxfzmxp3nyahysmcqklqfkecqftuysu733ca` |
 
 ## What is this?

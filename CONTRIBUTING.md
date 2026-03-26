@@ -125,7 +125,7 @@ This project follows the [Contributor Covenant v2.1](https://www.contributor-cov
 ## Questions?
 
 - **GitHub Issues**: [Open an issue](https://github.com/beihaili/Stories-about-Bitcoin/issues) for bugs, suggestions, or questions.
-- **Discord**: Community server (link TBD).
+- **Discord**: [Join our community server](https://discord.gg/TTFuH9de).
 
 ## License
 
