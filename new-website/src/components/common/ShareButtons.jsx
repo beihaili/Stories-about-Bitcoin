@@ -54,7 +54,7 @@ const ShareButtons = ({ url, title, lang = 'zh', compact = false }) => {
           href={btn.href}
           target="_blank"
           rel="noopener noreferrer"
-          className={`${btnSize} flex items-center justify-center rounded-full bg-gray-100 text-gray-600 transition-all duration-200 ${btn.color}`}
+          className={`${btnSize} flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 transition-all duration-200 ${btn.color}`}
           title={btn.label}
           onClick={(e) => e.stopPropagation()}
         >
@@ -65,7 +65,7 @@ const ShareButtons = ({ url, title, lang = 'zh', compact = false }) => {
       {/* WeChat - show copy hint */}
       <div className="relative">
         <button
-          className={`${btnSize} flex items-center justify-center rounded-full bg-gray-100 text-gray-600 transition-all duration-200 hover:bg-[#07C160] hover:text-white`}
+          className={`${btnSize} flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 transition-all duration-200 hover:bg-[#07C160] hover:text-white`}
           title={lang === 'zh' ? '微信分享' : 'WeChat'}
           onClick={(e) => {
             e.stopPropagation();
@@ -76,18 +76,18 @@ const ShareButtons = ({ url, title, lang = 'zh', compact = false }) => {
           <FaWeixin />
         </button>
         {showQR && (
-          <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-white rounded-lg shadow-lg p-3 text-xs text-center whitespace-nowrap z-50">
-            <p className="text-gray-700 font-medium">
+          <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-white dark:bg-gray-700 rounded-lg shadow-lg p-3 text-xs text-center whitespace-nowrap z-50">
+            <p className="text-gray-700 dark:text-gray-200 font-medium">
               {lang === 'zh' ? '链接已复制，去微信粘贴分享' : 'Link copied! Paste in WeChat'}
             </p>
-            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 rotate-45 w-2 h-2 bg-white"></div>
+            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 rotate-45 w-2 h-2 bg-white dark:bg-gray-700"></div>
           </div>
         )}
       </div>
 
       {/* Copy Link */}
       <button
-        className={`${btnSize} flex items-center justify-center rounded-full bg-gray-100 text-gray-600 transition-all duration-200 hover:bg-bitcoin-orange hover:text-white`}
+        className={`${btnSize} flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 transition-all duration-200 hover:bg-bitcoin-orange hover:text-white`}
         title={lang === 'zh' ? '复制链接' : 'Copy Link'}
         onClick={(e) => {
           e.stopPropagation();
@@ -117,7 +117,7 @@ export const ShareButton = ({ url, title, lang = 'zh' }) => {
       </button>
       {isOpen && (
         <div
-          className="absolute top-full right-0 mt-2 bg-white rounded-xl shadow-lg p-3 z-50"
+          className="absolute top-full right-0 mt-2 bg-white dark:bg-gray-800 rounded-xl shadow-lg p-3 z-50"
           onClick={(e) => e.stopPropagation()}
         >
           <ShareButtons url={url} title={title} lang={lang} compact />

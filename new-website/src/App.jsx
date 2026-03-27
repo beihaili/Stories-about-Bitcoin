@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback, lazy, Suspense } from 'react';
+import { Helmet } from 'react-helmet-async';
 import Hero from './components/home/Hero';
 import Navbar from './components/common/Navbar';
 import Footer from './components/common/Footer';
@@ -76,6 +77,29 @@ function App() {
 
   return (
     <div className="min-h-screen">
+      {/* Dynamic meta tags — override static index.html values based on language */}
+      <Helmet>
+        <html lang={lang === 'zh' ? 'zh-CN' : 'en'} />
+        <title>
+          {lang === 'zh'
+            ? '比特币那些事儿 — 用文学风格讲述比特币历史'
+            : 'Stories about Bitcoin — Bitcoin History in Literary Style'}
+        </title>
+        <meta property="og:title" content={lang === 'zh'
+          ? '比特币那些事儿 — 用文学风格讲述比特币历史'
+          : 'Stories about Bitcoin — Bitcoin History in Literary Style'} />
+        <meta property="og:description" content={lang === 'zh'
+          ? '36章开源双语电子书，覆盖1976-2025年比特币历史'
+          : '36-chapter open-source bilingual ebook covering Bitcoin history from 1976 to 2025'} />
+        <meta property="og:locale" content={lang === 'zh' ? 'zh_CN' : 'en_US'} />
+        <meta name="twitter:title" content={lang === 'zh'
+          ? '比特币那些事儿 — 用文学风格讲述比特币历史'
+          : 'Stories about Bitcoin — Bitcoin History in Literary Style'} />
+        <meta name="twitter:description" content={lang === 'zh'
+          ? '36章开源双语电子书，覆盖1976-2025年比特币历史'
+          : '36-chapter open-source bilingual ebook covering Bitcoin history from 1976 to 2025'} />
+      </Helmet>
+
       {/* Skip to content link for keyboard users */}
       <a href="#main-content" className="skip-link">
         {lang === 'zh' ? '跳转到主要内容' : 'Skip to main content'}

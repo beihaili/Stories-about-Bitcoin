@@ -106,4 +106,4 @@ The next disaster was already waiting in line.
 
 ---
 
-*Bobby Lee, founder of BTCChina, later recalled December 5th: his customer service lines were jammed within five minutes of the notice's release and kept ringing until three in the morning. The operators repeated the same sentence over and over: "Personal trading is legal. Please don't panic." But every voice on the other end of the line was panicking.*
+*Yang Linke, founder of BTCChina, later recalled December 5th: his customer service lines were jammed within five minutes of the notice's release and kept ringing until three in the morning. The operators repeated the same sentence over and over: "Personal trading is legal. Please don't panic." But every voice on the other end of the line was panicking.*

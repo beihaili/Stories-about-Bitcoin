@@ -139,7 +139,7 @@ const ChapterCard = memo(({ chapter, lang = 'zh', index, markAsRead, isRead, isB
 
         {/* Read more / Coming soon */}
         <motion.div
-          className={`mt-3 sm:mt-4 flex items-center font-semibold text-xs sm:text-sm ${isAvailable ? 'text-bitcoin-orange' : 'text-gray-400'}`}
+          className={`mt-3 sm:mt-4 flex items-center font-semibold text-xs sm:text-sm ${isAvailable ? 'text-bitcoin-orange' : 'text-gray-400 dark:text-gray-300'}`}
           whileHover={isAvailable ? { x: 5 } : {}}
         >
           {isAvailable ? (

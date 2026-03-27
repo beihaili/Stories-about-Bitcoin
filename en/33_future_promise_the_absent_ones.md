@@ -1,6 +1,6 @@
 # Future Promise: The Absent Ones
 
-![Chapter Image](img/31.png)
+![Chapter Image](img/33.png)
 
 > Friedrich Hayek died in 1992 — he never even heard the word "Bitcoin." Hal Finney passed away in 2014, never seeing $100,000. Satoshi Nakamoto is still alive — probably — but his estimated one million bitcoins have never moved a single satoshi. Not one of the people who lit this fire has stood beside it to warm their hands.
 

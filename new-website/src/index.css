@@ -113,7 +113,7 @@
   }
 
   .focus-ring {
-    @apply outline-none focus-visible:ring-2 focus-visible:ring-bitcoin-orange focus-visible:ring-offset-2;
+    @apply outline-none focus-visible:ring-2 focus-visible:ring-bitcoin-orange focus-visible:ring-offset-2 dark:focus-visible:ring-offset-gray-900;
   }
 
   .skip-link {
