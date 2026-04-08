@@ -73,6 +73,18 @@
   before upper={\noindent},
 }
 
+% ===== Suppress Pandoc default title page =====
+\renewcommand{\maketitle}{}
+
+% ===== Cover page =====
+\newcommand{\coverpage}{%
+  \thispagestyle{empty}%
+  \newgeometry{margin=0pt}%
+  \noindent\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{img/封面英文.png}%
+  \restoregeometry%
+  \clearpage
+}
+
 % ===== Copyright page =====
 \newcommand{\copyrightpage}{%
   \thispagestyle{empty}%

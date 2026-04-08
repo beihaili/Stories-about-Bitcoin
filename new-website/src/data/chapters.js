@@ -74,7 +74,7 @@ export const chapters = [
       zh: '理想与现实的思辨，比特币的哲学意义',
       en: 'Philosophical Reflections on Ideals vs Reality'
     },
-    image: 'img/00.png',
+    image: 'img/ch00.png',
     link: {
       zh: '/zh/00_引子：一束照进现实的理想之光.html',
       en: '/en/00_prologue_a_beam_of_idealistic_light.html'
@@ -96,7 +96,7 @@ export const chapters = [
       zh: '哈耶克的预言与乔姆的孤独方舟',
       en: 'Hayek\'s Prophecy and Chaum\'s Lonely Ark'
     },
-    image: 'img/01.png',
+    image: 'img/ch01.png',
     link: {
       zh: '/zh/01_创世纪：预言与失败.html',
       en: '/en/01_genesis_prophecy_and_failure.html'
@@ -116,7 +116,7 @@ export const chapters = [
       zh: '技术积累，密码朋克运动',
       en: 'Technical Accumulation, Cypherpunk Movement'
     },
-    image: 'img/02.png',
+    image: 'img/ch02.png',
     link: {
       zh: '/zh/02_创世纪：密码朋克的技术拼图.html',
       en: '/en/02_genesis_the_cypherpunk_technical_puzzle.html'
@@ -136,7 +136,7 @@ export const chapters = [
       zh: '金融危机与比特币的诞生',
       en: 'Financial Crisis and the Birth of Bitcoin'
     },
-    image: 'img/03.png',
+    image: 'img/ch03.png',
     link: {
       zh: '/zh/03_创世纪：危机与创世.html',
       en: '/en/03_genesis_crisis_and_creation.html'
@@ -158,7 +158,7 @@ export const chapters = [
       zh: '哈尔·芬尼的传承故事',
       en: 'Hal Finney\'s Legacy Story'
     },
-    image: 'img/04.png',
+    image: 'img/ch04.png',
     link: {
       zh: '/zh/04_初出茅庐：第一个信徒.html',
       en: '/en/04_first_steps_the_first_believer.html'
@@ -178,7 +178,7 @@ export const chapters = [
       zh: 'BitcoinTalk论坛与工具生态',
       en: 'BitcoinTalk Forum and Tool Ecosystem'
     },
-    image: 'img/05.png',
+    image: 'img/ch05.png',
     link: {
       zh: '/zh/05_初出茅庐：社区与工具.html',
       en: '/en/05_first_steps_community_and_tools.html'
@@ -198,7 +198,7 @@ export const chapters = [
       zh: '从无价到有价的历史突破',
       en: 'Historic Breakthrough from Priceless to Priced'
     },
-    image: 'img/06.png',
+    image: 'img/ch06.png',
     link: {
       zh: '/zh/06_初出茅庐：价值发现.html',
       en: '/en/06_first_steps_value_discovery.html'
@@ -218,7 +218,7 @@ export const chapters = [
       zh: '史上最大胆的网络回滚',
       en: 'The Most Daring Network Rollback in History'
     },
-    image: 'img/07.png',
+    image: 'img/ch07.png',
     link: {
       zh: '/zh/07_初出茅庐：第一次危机与修复.html',
       en: '/en/07_first_steps_the_first_crisis_and_recovery.html'
@@ -238,7 +238,7 @@ export const chapters = [
       zh: '数字时代最伟大的退场',
       en: 'The Greatest Exit in the Digital Age'
     },
-    image: 'img/08.png',
+    image: 'img/ch08.png',
     link: {
       zh: '/zh/08_初出茅庐：中本聪的神秘退场.html',
       en: '/en/08_first_steps_satoshis_mysterious_departure.html'
@@ -260,7 +260,7 @@ export const chapters = [
       zh: '丝绸之路的争议与影响',
       en: 'Silk Road\'s Controversy and Impact'
     },
-    image: 'img/09.png',
+    image: 'img/ch09.png',
     link: {
       zh: '/zh/09_风起云涌：理想与现实的第一次碰撞.html',
       en: '/en/09_rising_storm_the_first_collision_of_ideals_and_reality.html'
@@ -280,7 +280,7 @@ export const chapters = [
       zh: '从技术实验到商业帝国',
       en: 'From Technical Experiment to Business Empire'
     },
-    image: 'img/10.png',
+    image: 'img/ch10.png',
     link: {
       zh: '/zh/10_风起云涌：Mt.Gox帝国的崛起.html',
       en: '/en/10_rising_storm_the_rise_of_the_mt_gox_empire.html'
@@ -300,7 +300,7 @@ export const chapters = [
       zh: '从媒体风暴到理性回归',
       en: 'From Media Storm to Rational Return'
     },
-    image: 'img/11.png',
+    image: 'img/ch11.png',
     link: {
       zh: '/zh/11_风起云涌：第一次泡沫.html',
       en: '/en/11_rising_storm_the_first_bubble.html'
@@ -320,7 +320,7 @@ export const chapters = [
       zh: '从CPU到GPU的挖矿演进',
       en: 'Mining Evolution from CPU to GPU'
     },
-    image: 'img/12.png',
+    image: 'img/ch12.png',
     link: {
       zh: '/zh/12_风起云涌：算力革命.html',
       en: '/en/12_rising_storm_the_hash_power_revolution.html'
@@ -340,7 +340,7 @@ export const chapters = [
       zh: '支付服务与全球网络效应',
       en: 'Payment Services and Global Network Effects'
     },
-    image: 'img/13.png',
+    image: 'img/ch13.png',
     link: {
       zh: '/zh/13_风起云涌：生态萌芽.html',
       en: '/en/13_rising_storm_ecosystem_emergence.html'
@@ -362,7 +362,7 @@ export const chapters = [
       zh: '金融危机催生避险需求',
       en: 'Financial Crisis Drives Safe-Haven Demand'
     },
-    image: 'img/14.png',
+    image: 'img/ch14.png',
     link: {
       zh: '/zh/14_暗潮汹涌：塞浦路斯时刻.html',
       en: '/en/14_undercurrents_the_cyprus_moment.html'
@@ -382,7 +382,7 @@ export const chapters = [
       zh: '美国监管框架初步形成',
       en: 'Initial Formation of US Regulatory Framework'
     },
-    image: 'img/15.png',
+    image: 'img/ch15.png',
     link: {
       zh: '/zh/15_暗潮汹涌：华盛顿的审视.html',
       en: '/en/15_undercurrents_washingtons_scrutiny.html'
@@ -402,7 +402,7 @@ export const chapters = [
       zh: '从狂热追捧到监管收紧',
       en: 'From Enthusiastic Embrace to Regulatory Tightening'
     },
-    image: 'img/16.png',
+    image: 'img/ch16.png',
     link: {
       zh: '/zh/16_暗潮汹涌：中国政策过山车.html',
       en: '/en/16_undercurrents_chinas_policy_rollercoaster.html'
@@ -422,7 +422,7 @@ export const chapters = [
       zh: '帝国崩塌与行业震荡',
       en: 'Empire Collapse and Industry Shock'
     },
-    image: 'img/17.png',
+    image: 'img/ch17.png',
     link: {
       zh: '/zh/17_暗潮汹涌：Mt.Gox的覆灭.html',
       en: '/en/17_undercurrents_the_fall_of_mt_gox.html'
@@ -442,7 +442,7 @@ export const chapters = [
       zh: '各国监管立场的差异化发展',
       en: 'Divergent Development of National Regulatory Positions'
     },
-    image: 'img/18.png',
+    image: 'img/ch18.png',
     link: {
       zh: '/zh/18_暗潮汹涌：全球监管分化.html',
       en: '/en/18_undercurrents_global_regulatory_divergence.html'
@@ -462,7 +462,7 @@ export const chapters = [
       zh: '区块大小之争的开端',
       en: 'Beginning of the Block Size Debate'
     },
-    image: 'img/19.png',
+    image: 'img/ch19.png',
     link: {
       zh: '/zh/19_暗潮汹涌：扩容争议萌芽.html',
       en: '/en/19_undercurrents_the_scaling_debate_emerges.html'
@@ -484,7 +484,7 @@ export const chapters = [
       zh: '社区分裂与技术路线之争',
       en: 'Community Split and Technical Route Debate'
     },
-    image: 'img/20.png',
+    image: 'img/ch20.png',
     link: {
       zh: '/zh/20_内战与独立：扩容战争白热化.html',
       en: '/en/20_civil_war_the_scaling_war_intensifies.html'
@@ -504,7 +504,7 @@ export const chapters = [
       zh: 'SegWit激活与BCH分叉',
       en: 'SegWit Activation and BCH Fork'
     },
-    image: 'img/21.png',
+    image: 'img/ch21.png',
     link: {
       zh: '/zh/21_内战与独立：比特币独立日.html',
       en: '/en/21_civil_war_bitcoin_independence_day.html'
@@ -524,7 +524,7 @@ export const chapters = [
       zh: '2万美元突破与市场疯狂',
       en: '$20K Breakthrough and Market Frenzy'
     },
-    image: 'img/22.png',
+    image: 'img/ch22.png',
     link: {
       zh: '/zh/22_内战与独立：价格狂欢与投机泡沫.html',
       en: '/en/22_civil_war_price_frenzy_and_speculative_bubble.html'
@@ -546,7 +546,7 @@ export const chapters = [
       zh: '传统金融机构入场试水',
       en: 'Traditional Financial Institutions Enter'
     },
-    image: 'img/23.png',
+    image: 'img/ch23.png',
     link: {
       zh: '/zh/23_西装革命：机构觉醒的开端.html',
       en: '/en/23_suit_revolution_the_awakening_of_institutions.html'
@@ -566,7 +566,7 @@ export const chapters = [
       zh: '疫情引发的数字黄金叙事',
       en: 'Digital Gold Narrative Triggered by Pandemic'
     },
-    image: 'img/24.png',
+    image: 'img/ch24.png',
     link: {
       zh: '/zh/24_西装革命：新冠疫情下的避险转向.html',
       en: '/en/24_suit_revolution_safe_haven_shift_during_covid19.html'
@@ -586,7 +586,7 @@ export const chapters = [
       zh: 'MicroStrategy与特斯拉的历史性决定',
       en: 'Historic Decisions by MicroStrategy and Tesla'
     },
-    image: 'img/25.png',
+    image: 'img/ch25.png',
     link: {
       zh: '/zh/25_西装革命：机构入场里程碑.html',
       en: '/en/25_suit_revolution_the_institutional_entry_milestone.html'
@@ -606,7 +606,7 @@ export const chapters = [
       zh: '中国矿业禁令与全球算力重分布',
       en: 'China Mining Ban and Global Hashrate Redistribution'
     },
-    image: 'img/26.png',
+    image: 'img/ch26.png',
     link: {
       zh: '/zh/26_西装革命：矿业大迁徙.html',
       en: '/en/26_suit_revolution_the_great_mining_migration.html'
@@ -628,7 +628,7 @@ export const chapters = [
       zh: '全球首个比特币法币化国家',
       en: 'World\'s First Bitcoin Legal Tender Country'
     },
-    image: 'img/27.png',
+    image: 'img/ch27.png',
     link: {
       zh: '/zh/27_未来可期：萨尔瓦多先驱.html',
       en: '/en/27_future_promise_the_el_salvador_pioneer.html'
@@ -648,7 +648,7 @@ export const chapters = [
       zh: '比特币在国际政治中的角色',
       en: 'Bitcoin\'s Role in International Politics'
     },
-    image: 'img/28.png',
+    image: 'img/ch28.png',
     link: {
       zh: '/zh/28_未来可期：地缘政治新变量.html',
       en: '/en/28_future_promise_the_new_geopolitical_variable.html'
@@ -668,7 +668,7 @@ export const chapters = [
       zh: 'FTX崩盘与行业信任危机',
       en: 'FTX Collapse and Industry Trust Crisis'
     },
-    image: 'img/29.png',
+    image: 'img/ch29.png',
     link: {
       zh: '/zh/29_未来可期：信任再次破碎.html',
       en: '/en/29_future_promise_trust_shattered_again.html'
@@ -688,7 +688,7 @@ export const chapters = [
       zh: '现货ETF获批的里程碑时刻',
       en: 'Milestone Moment of Spot ETF Approval'
     },
-    image: 'img/30.png',
+    image: 'img/ch30.png',
     link: {
       zh: '/zh/30_未来可期：ETF历史性突破.html',
       en: '/en/30_future_promise_the_historic_etf_breakthrough.html'
@@ -708,7 +708,7 @@ export const chapters = [
       zh: '比特币成为美国大选议题',
       en: 'Bitcoin Becomes a US Election Issue'
     },
-    image: 'img/31.png',
+    image: 'img/ch31.png',
     link: {
       zh: '/zh/31_未来可期：大选与战略储备.html',
       en: '/en/31_future_promise_the_election_and_strategic_reserve.html'
@@ -728,7 +728,7 @@ export const chapters = [
       zh: '价格里程碑与主流化进程',
       en: 'Price Milestone and Mainstream Adoption'
     },
-    image: 'img/32.png',
+    image: 'img/ch32.png',
     link: {
       zh: '/zh/32_未来可期：十万美元突破.html',
       en: '/en/32_future_promise_the_100k_breakthrough.html'
@@ -748,7 +748,7 @@ export const chapters = [
       zh: '致敬那些未能见证今天的先驱',
       en: 'Tribute to Pioneers Who Couldn\'t Witness Today'
     },
-    image: 'img/33.png',
+    image: 'img/ch33.png',
     link: {
       zh: '/zh/33_未来可期：缺席的人.html',
       en: '/en/33_future_promise_the_absent_ones.html'
@@ -768,7 +768,7 @@ export const chapters = [
       zh: '比特币故事的终章与未来',
       en: 'The Final Chapter and the Future of Bitcoin'
     },
-    image: 'img/34.png',
+    image: 'img/ch34.png',
     link: {
       zh: '/zh/34_未来可期：光未熄灭.html',
       en: '/en/34_future_promise_the_light_still_burns.html'
@@ -790,7 +790,7 @@ export const chapters = [
       zh: '纪念比特币社区的先驱',
       en: 'Tribute to a Bitcoin Community Pioneer'
     },
-    image: 'img/special_kirk.png',
+    image: 'img/ch特别篇1.png',
     link: {
       zh: '/zh/特别篇：查理·柯克的比特币之路.html',
       en: '/en/special_charlie_kirks_bitcoin_journey.html'

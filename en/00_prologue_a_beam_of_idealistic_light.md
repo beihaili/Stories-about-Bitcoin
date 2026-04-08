@@ -29,28 +29,18 @@ And this is the entire reason I finally picked up my pen to write *Stories about
 
 ---
 
----
-
 What does Bitcoin have to do with that wedding?
 
-On the surface, nothing at all. One is a vow spoken on a mountaintop; the other is a number on a screen. But at their core, they share the same thing: **a person trying to live according to what they believe in, refusing to bow to the rules that say "this is how it must be done."**
+You'd probably say nothing at all. But let me tell you a few things first.
 
-Bitcoin is not an investment product. It is a sentence written in code by a group of people: "We don't need anyone's permission."
+In 2022, Canadian truckers protested mandatory vaccine requirements, driving their rigs right up to Parliament Hill. Over a hundred thousand people donated to their cause online. The government invoked the Emergencies Act — never once used since it was passed in 1988 — and froze the bank accounts of protesters and donors alike. Ten million Canadian dollars in crowdfunding, frozen just like that.
 
-That sentence comes at a steep price.
+But someone raised 21 BTC through Bitcoin, loaded them into paper wallets inside envelopes, and handed them to the truckers one by one. When the court issued a freezing order to Nunchuk, a Bitcoin wallet provider, Nunchuk wrote back: "We do not hold user keys and cannot freeze anyone's assets. When the Canadian dollar becomes worthless, we will be here to serve you too."
 
-In this book, there is a 77-year-old economist who, amid an audience's ridicule, wrote a "forbidden book" with a print run of only 3,000 copies. Forty-nine years later, his prophecy was vindicated by a technology he never lived to see.
+In 2020, young Nigerians launched the #EndSARS protest against police brutality. The organizers' payment channels were shut down with a single phone call from the central bank. They spent one day setting up Bitcoin payments and received over a hundred thousand dollars in donations within two weeks. This time, no one could make a phone call to shut it down.
 
-There is a programmer stricken with ALS who, in the end, could only write code one letter at a time using an eye-tracking device. He was the first person to run Bitcoin. He never saw it reach one hundred thousand dollars.
+In Afghanistan, a young woman earned 2.5 bitcoins through programming work. When the Taliban came, she had no bank deposits to transfer, no bank that could help her. But she had memorized twelve English words — her seed phrase. She carried those twelve words to Germany and started a new life.
 
-There is a French programmer who bought a trading-card website for tens of thousands of dollars and turned it into an empire controlling 80% of the world's Bitcoin transactions. Then 850,000 bitcoins vanished. He bowed in apology in a Tokyo courtroom.
+What truly moves me about Bitcoin has never been the wealth mythology — it's the backbone. The backbone of knowing "you can't freeze my money." The bride on that mountaintop praised the groom for "living like a true human being." But when your money can be frozen with a single phone call, those words aren't quite so simple anymore.
 
-There is the president of a small Central American nation who announced on Twitter that Bitcoin was now legal tender — and the app crashed on day one. There is a band of anonymous users in baseball caps who defeated a mining cartel controlling the majority of the world's hash power. And there is Beijing in December 2013: a Bitcoin cafe where the price on the display screen was falling, customers drifted away one by one, until only the owner remained — with his cold coffee.
-
-All of this really happened.
-
-Together, these stories make up the story of Bitcoin — a beam of idealism illuminating reality. That light is not perfect. It shone into the slums of El Salvador, and it shone into the drug markets of the dark web. It helped fund Ukraine's war effort, and it wiped out countless retail traders who chased rallies and panic-sold.
-
-But it is real. Just like that wedding on the mountaintop.
-
-So let us begin. Starting in 1976, with a prophecy from a Nobel laureate.
+This book is about where that backbone comes from. Starting in 1976, with a prophecy from a Nobel laureate.

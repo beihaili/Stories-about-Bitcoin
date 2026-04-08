@@ -1,8 +1,8 @@
 ---
 title: 比特币那些事儿
-subtitle: "1976—2025：从密码朋克到数字黄金"
+subtitle: "1976—2025：一群理想主义者改变货币的故事"
 author: beihaili
-date: "2025"
+date: "2026"
 lang: zh-CN
 documentclass: ctexbook
 classoption:
@@ -31,5 +31,6 @@ colorlinks: true
 linkcolor: black
 urlcolor: "btcorange"
 include-before: |
+  \coverpage
   \copyrightpage
 ---
