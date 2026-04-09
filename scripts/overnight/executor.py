@@ -681,6 +681,14 @@ def execute_round(
         slug = _slugify(task.get("description", task.get("issue", task_type)))
         wt_path = create_worktree(round_num, slug[:30])  # cap slug length for branch names
 
+        # Step 3.5: Copy gitignored target files into worktree (for pipeline-fix tasks)
+        if task_type == "pipeline-fix" and target:
+            src = config.PROJECT_ROOT / target
+            dst = wt_path / target
+            if src.exists() and not dst.exists():
+                dst.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copy2(src, dst)
+
         # Step 4: Pre-read target files
         file_contents = _read_target_files(task)
 
