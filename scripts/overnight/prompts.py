@@ -248,7 +248,7 @@ def _constraints_block(task: dict) -> str:
     """
     target = task.get("target", "")
     return f"""## CONSTRAINTS
+- Use the Edit or Write tool to modify files directly. Do NOT just output file contents as text.
 - Only modify the specified file(s): `{target}`. Do not touch any other files.
 - Do not add comments describing what you changed (no "// Fixed:", "# Changed:" etc.)
-- Do not refactor beyond what is needed for this specific task
-- Output the complete corrected file content, not a diff"""
+- Do not refactor beyond what is needed for this specific task"""

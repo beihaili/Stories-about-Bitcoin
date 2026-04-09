@@ -158,6 +158,15 @@ def create_worktree(round_num: int, slug: str) -> Path:
         cwd=config.PROJECT_ROOT,
         timeout=60,
     )
+
+    # Symlink node_modules from main repo so vitest/eslint work in worktree
+    main_nm = config.WEBSITE_DIR / "node_modules"
+    wt_website = wt_path / "new-website"
+    if main_nm.exists() and wt_website.exists():
+        wt_nm = wt_website / "node_modules"
+        if not wt_nm.exists():
+            wt_nm.symlink_to(main_nm)
+
     return wt_path
 
 
