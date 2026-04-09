@@ -215,12 +215,13 @@ def run_claude(
     Run the Claude CLI with the given prompt passed via stdin.
 
     Executes:
-      claude -p --model {model} --cwd {wt_path} --output-format text
-             --no-session-persistence --allowedTools {tools}
+      claude -p --model {model} --output-format text
+             --allowedTools {tools}
+    with subprocess cwd set to the worktree directory.
 
     Args:
         prompt: The prompt text to send via stdin.
-        worktree_path: The worktree directory passed as --cwd to Claude.
+        worktree_path: The worktree directory (subprocess cwd).
         timeout: Seconds before timeout (default from config).
 
     Returns:
@@ -234,9 +235,9 @@ def run_claude(
     cmd = [
         "claude", "-p",
         "--model", config.CLAUDE_MODEL,
-        "--cwd", str(worktree_path),
         "--output-format", "text",
         "--no-session-persistence",
+        "--permission-mode", "auto",
         "--allowedTools", tools_str,
     ]
     result = subprocess.run(
@@ -245,6 +246,7 @@ def run_claude(
         capture_output=True,
         text=True,
         timeout=timeout,
+        cwd=str(worktree_path),
     )
     if result.returncode != 0:
         raise subprocess.CalledProcessError(
