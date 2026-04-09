@@ -30,6 +30,7 @@ def build_prompt(task: dict[str, Any], file_contents: dict[str, str]) -> str:
 
     builders = {
         "code-lint": _build_code_lint,
+        "code-ruff": _build_code_lint,   # same fix logic: address reported lint errors
         "code-test": _build_code_test,
         "code-refactor": _build_code_refactor,
         "content-refine": _build_content_refine,

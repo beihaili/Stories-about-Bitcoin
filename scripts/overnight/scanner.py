@@ -112,7 +112,7 @@ def scan_content() -> list[dict]:
             findings.append({
                 "type": "content-refine",
                 "severity": _content_severity(avg),
-                "target": chapter_path or f"chapter {chapter_num}",
+                "target": _rel(chapter_path) if chapter_path else f"chapter {chapter_num}",
                 "chapter_num": chapter_num,
                 "description": (
                     f"{parsed['weakest_dimension']}: {parsed['weakest_score']}/10"
@@ -442,35 +442,6 @@ def _run_ruff() -> list[dict]:
 
     return findings
 
-
-def _run_score_all() -> list[dict]:
-    """
-    Read all score JSON files from the scores output directory.
-
-    NOTE: This is intentionally NOT calling scan_content() to avoid
-    infinite recursion. The score-reading logic is duplicated inline.
-
-    Returns a list of raw score dicts with metadata.
-    """
-    results: list[dict] = []
-    score_dir = config.SCRIPTS_DIR / "content_pipeline" / "output" / "scores"
-
-    if not score_dir.exists():
-        return results
-
-    for score_file in sorted(score_dir.glob("score_ch*.json")):
-        try:
-            with open(score_file, "r", encoding="utf-8") as f:
-                data = json.load(f)
-            match = re.search(r"score_ch(\d+)\.json", score_file.name)
-            chapter_num = int(match.group(1)) if match else None
-            data["_chapter_num"] = chapter_num
-            data["_score_file"] = str(score_file)
-            results.append(data)
-        except (json.JSONDecodeError, OSError):
-            continue
-
-    return results
 
 
 def _find_chapter_path(chapter_num: int) -> str | None:

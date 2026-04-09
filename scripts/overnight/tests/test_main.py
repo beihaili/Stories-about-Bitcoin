@@ -123,6 +123,7 @@ def test_main_dry_run(tmp_path):
     mock_plan_path.write_text("# Plan\n\n## Round 1 — code-lint\n- status: pending\n")
 
     with patch("scripts.overnight.__main__.config") as mock_cfg, \
+         patch("scripts.overnight.__main__.check_prerequisites"), \
          patch("scripts.overnight.__main__.cleanup_previous_runs") as mock_cleanup, \
          patch("scripts.overnight.__main__.scan_code", return_value=[]) as mock_scan_code, \
          patch("scripts.overnight.__main__.scan_content", return_value=[]) as mock_scan_content, \
@@ -162,7 +163,7 @@ def test_main_filters_code_only(tmp_path):
 
     executed_tasks = []
 
-    def fake_execute(task, round_num, run_dir):
+    def fake_execute(task, round_num, run_dir, timeout=900):
         executed_tasks.append(task["type"])
         return {"round": round_num, "type": task["type"], "target": task["target"],
                 "status": "done", "pr_url": None,
@@ -170,6 +171,7 @@ def test_main_filters_code_only(tmp_path):
                 "started_at": "2026-04-08T00:00:00", "finished_at": "2026-04-08T00:01:00"}
 
     with patch("scripts.overnight.__main__.config") as mock_cfg, \
+         patch("scripts.overnight.__main__.check_prerequisites"), \
          patch("scripts.overnight.__main__.cleanup_previous_runs"), \
          patch("scripts.overnight.__main__.scan_code", return_value=[]), \
          patch("scripts.overnight.__main__.scan_content", return_value=[]), \
@@ -208,7 +210,7 @@ def test_main_filters_content_only(tmp_path):
 
     executed_tasks = []
 
-    def fake_execute(task, round_num, run_dir):
+    def fake_execute(task, round_num, run_dir, timeout=900):
         executed_tasks.append(task["type"])
         return {"round": round_num, "type": task["type"], "target": task["target"],
                 "status": "done", "pr_url": None,
@@ -216,6 +218,7 @@ def test_main_filters_content_only(tmp_path):
                 "started_at": "2026-04-08T00:00:00", "finished_at": "2026-04-08T00:01:00"}
 
     with patch("scripts.overnight.__main__.config") as mock_cfg, \
+         patch("scripts.overnight.__main__.check_prerequisites"), \
          patch("scripts.overnight.__main__.cleanup_previous_runs"), \
          patch("scripts.overnight.__main__.scan_code", return_value=[]), \
          patch("scripts.overnight.__main__.scan_content", return_value=[]), \
@@ -253,6 +256,7 @@ def test_main_resume_skips_scan_when_fresh(tmp_path):
     ]
 
     with patch("scripts.overnight.__main__.config") as mock_cfg, \
+         patch("scripts.overnight.__main__.check_prerequisites"), \
          patch("scripts.overnight.__main__.cleanup_previous_runs"), \
          patch("scripts.overnight.__main__.scan_code") as mock_scan_code, \
          patch("scripts.overnight.__main__.scan_content") as mock_scan_content, \
@@ -304,12 +308,13 @@ def test_main_resume_rescans_stale_findings(tmp_path):
     ]
 
     with patch("scripts.overnight.__main__.config") as mock_cfg, \
+         patch("scripts.overnight.__main__.check_prerequisites"), \
          patch("scripts.overnight.__main__.cleanup_previous_runs"), \
          patch("scripts.overnight.__main__.scan_code", return_value=[]) as mock_scan_code, \
          patch("scripts.overnight.__main__.scan_content", return_value=[]) as mock_scan_content, \
          patch("scripts.overnight.__main__.write_findings",
                return_value=(findings_path, run_dir / "findings.md")) as mock_write, \
-         patch("scripts.overnight.__main__.generate_task_plan", return_value=plan_path), \
+         patch("scripts.overnight.__main__.generate_task_plan", return_value=plan_path) as mock_gen_plan, \
          patch("scripts.overnight.__main__.parse_task_plan", return_value=mock_tasks), \
          patch("scripts.overnight.__main__.update_task_status"), \
          patch("scripts.overnight.__main__.find_latest_run", return_value=run_dir), \
@@ -331,6 +336,8 @@ def test_main_resume_rescans_stale_findings(tmp_path):
     mock_scan_code.assert_called_once()
     mock_scan_content.assert_called_once()
     mock_write.assert_called_once()
+    # Plan MUST also be regenerated when findings were re-scanned (C2 fix)
+    mock_gen_plan.assert_called_once()
 
 
 def test_main_saves_intermediate_results(tmp_path):
@@ -355,7 +362,7 @@ def test_main_saves_intermediate_results(tmp_path):
     execute_call_count = [0]
     json_written_after_round = []
 
-    def fake_execute(task, round_num, run_dir_arg):
+    def fake_execute(task, round_num, run_dir_arg, timeout=900):
         execute_call_count[0] += 1
         result = {"round": round_num, "type": task["type"], "target": task["target"],
                   "status": "done", "pr_url": None,
@@ -371,6 +378,7 @@ def test_main_saves_intermediate_results(tmp_path):
             json_written_after_round.append(round_num)
 
     with patch("scripts.overnight.__main__.config") as mock_cfg, \
+         patch("scripts.overnight.__main__.check_prerequisites"), \
          patch("scripts.overnight.__main__.cleanup_previous_runs"), \
          patch("scripts.overnight.__main__.scan_code", return_value=[]), \
          patch("scripts.overnight.__main__.scan_content", return_value=[]), \

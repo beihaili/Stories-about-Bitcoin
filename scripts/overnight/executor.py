@@ -23,12 +23,15 @@ from scripts.overnight.prompts import build_prompt
 # ---------------------------------------------------------------------------
 
 
-def _run_cmd(cmd: str, cwd: Path | None = None, timeout: int = 120) -> str:
+def _run_cmd(cmd: list[str], cwd: Path | None = None, timeout: int = 120) -> str:
     """
-    Run a shell command and return its stdout.
+    Run a command (list of args) and return its stdout.
+
+    Uses shell=False to prevent shell injection from paths and branch names
+    that may contain spaces, Chinese characters, or special shell characters.
 
     Args:
-        cmd: Shell command string (run with shell=True).
+        cmd: Command as a list of strings (e.g. ["git", "worktree", "list"]).
         cwd: Working directory; defaults to PROJECT_ROOT.
         timeout: Seconds before timeout (default 120).
 
@@ -42,7 +45,7 @@ def _run_cmd(cmd: str, cwd: Path | None = None, timeout: int = 120) -> str:
     cwd = cwd or config.PROJECT_ROOT
     result = subprocess.run(
         cmd,
-        shell=True,
+        shell=False,
         capture_output=True,
         text=True,
         cwd=str(cwd),
@@ -93,7 +96,7 @@ def cleanup_previous_runs() -> None:
       3. Delete orphaned local branches matching overnight/*.
     """
     # Step 1: list worktrees
-    raw = _run_cmd("git worktree list", cwd=config.PROJECT_ROOT)
+    raw = _run_cmd(["git", "worktree", "list"], cwd=config.PROJECT_ROOT)
 
     # Step 2: remove overnight worktrees
     for line in raw.splitlines():
@@ -102,7 +105,7 @@ def cleanup_previous_runs() -> None:
         if "overnight-wt-" in path_str:
             try:
                 _run_cmd(
-                    f"git worktree remove --force {path_str}",
+                    ["git", "worktree", "remove", "--force", path_str],
                     cwd=config.PROJECT_ROOT,
                 )
             except subprocess.CalledProcessError:
@@ -112,7 +115,7 @@ def cleanup_previous_runs() -> None:
     # Step 3: delete orphaned overnight/* branches
     try:
         branch_output = _run_cmd(
-            "git branch --list 'overnight/*'",
+            ["git", "branch", "--list", "overnight/*"],
             cwd=config.PROJECT_ROOT,
         )
         for branch_line in branch_output.splitlines():
@@ -120,7 +123,7 @@ def cleanup_previous_runs() -> None:
             if branch.startswith("overnight/"):
                 try:
                     _run_cmd(
-                        f"git branch -D {branch}",
+                        ["git", "branch", "-D", branch],
                         cwd=config.PROJECT_ROOT,
                     )
                 except subprocess.CalledProcessError:
@@ -151,7 +154,7 @@ def create_worktree(round_num: int, slug: str) -> Path:
     config.WORKTREE_BASE.mkdir(parents=True, exist_ok=True)
 
     _run_cmd(
-        f"git worktree add {wt_path} -b {branch_name} main",
+        ["git", "worktree", "add", str(wt_path), "-b", branch_name, "main"],
         cwd=config.PROJECT_ROOT,
         timeout=60,
     )
@@ -166,7 +169,7 @@ def remove_worktree(wt_path: Path) -> None:
         wt_path: Absolute path to the worktree directory.
     """
     _run_cmd(
-        f"git worktree remove --force {wt_path}",
+        ["git", "worktree", "remove", "--force", str(wt_path)],
         cwd=config.PROJECT_ROOT,
         timeout=60,
     )
@@ -275,6 +278,8 @@ def verify_task(
 
     if task_type == "code-lint":
         return _verify_lint(worktree_path)
+    elif task_type == "code-ruff":
+        return _verify_ruff(task, worktree_path)
     elif task_type == "code-test":
         return _verify_tests(worktree_path)
     elif task_type == "code-refactor":
@@ -292,7 +297,7 @@ def _verify_lint(worktree_path: Path) -> dict[str, Any]:
     """Run npm run lint in new-website; pass if exit code 0."""
     website_dir = worktree_path / "new-website"
     try:
-        _run_cmd("npm run lint", cwd=website_dir, timeout=120)
+        _run_cmd(["npm", "run", "lint"], cwd=website_dir, timeout=120)
         return {"passed": True, "reason": "npm run lint passed", "details": {}}
     except subprocess.CalledProcessError as exc:
         return {
@@ -304,11 +309,28 @@ def _verify_lint(worktree_path: Path) -> dict[str, Any]:
         return {"passed": False, "reason": str(exc), "details": {}}
 
 
+def _verify_ruff(task: dict, worktree_path: Path) -> dict[str, Any]:
+    """Run ruff check on the target file; pass if exit code 0 (no violations)."""
+    target = task.get("target", "")
+    target_path = worktree_path / target
+    try:
+        _run_cmd(["ruff", "check", str(target_path)], cwd=worktree_path, timeout=60)
+        return {"passed": True, "reason": "ruff check passed", "details": {}}
+    except subprocess.CalledProcessError as exc:
+        return {
+            "passed": False,
+            "reason": "ruff check failed",
+            "details": {"stderr": exc.stderr, "stdout": exc.output},
+        }
+    except Exception as exc:
+        return {"passed": False, "reason": str(exc), "details": {}}
+
+
 def _verify_tests(worktree_path: Path) -> dict[str, Any]:
     """Run npx vitest run in new-website; pass if exit code 0."""
     website_dir = worktree_path / "new-website"
     try:
-        _run_cmd("npx vitest run", cwd=website_dir, timeout=180)
+        _run_cmd(["npx", "vitest", "run"], cwd=website_dir, timeout=180)
         return {"passed": True, "reason": "npx vitest run passed", "details": {}}
     except subprocess.CalledProcessError as exc:
         return {
@@ -583,6 +605,7 @@ def execute_round(
     task: dict[str, Any],
     round_num: int,
     run_dir: Path,
+    timeout: int = config.DEFAULT_TIMEOUT,
 ) -> dict[str, Any]:
     """
     Orchestrate one complete improvement round.
@@ -603,6 +626,7 @@ def execute_round(
         task: Task dict from the planner (must include type, target, round).
         round_num: Round number (1-based).
         run_dir: Directory for storing logs and round artifacts.
+        timeout: Seconds before the Claude CLI call times out.
 
     Returns:
         Result dict with keys: round, type, target, status, pr_url,
@@ -654,7 +678,7 @@ def execute_round(
 
         # Step 6: Run Claude
         try:
-            run_claude(prompt, wt_path, timeout=config.DEFAULT_TIMEOUT)
+            run_claude(prompt, wt_path, timeout=timeout)
         except subprocess.CalledProcessError as exc:
             result["status"] = "error"
             result["verification"]["reason"] = f"Claude CLI failed: {exc.stderr or exc.output}"

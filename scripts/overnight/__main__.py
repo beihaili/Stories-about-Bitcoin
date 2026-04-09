@@ -212,6 +212,10 @@ def main(argv: list[str] | None = None) -> None:
         4: Generate morning report
     """
     args = parse_args(argv)
+
+    # Verify required tools (claude, git, gh) are available before doing anything
+    check_prerequisites()
+
     start_time = datetime.now()
 
     print(f"[overnight] Starting run — {start_time.strftime('%Y-%m-%d %H:%M')}", flush=True)
@@ -263,7 +267,10 @@ def main(argv: list[str] | None = None) -> None:
 
     # --- Phase 2: Plan ---
     _need_plan = True
-    if args.resume and plan_path.exists():
+    if args.resume and plan_path.exists() and not _need_scan:
+        # Only reuse the existing plan if we also reused the existing findings.
+        # If findings were stale and re-scanned (_need_scan was True), we must
+        # regenerate the plan so it reflects the fresh findings.
         print("[overnight] Phase 2: Existing task plan found — reusing.", flush=True)
         _need_plan = False
 
@@ -314,7 +321,7 @@ def main(argv: list[str] | None = None) -> None:
 
         print(f"\n[overnight] Round {round_num}: {task_type} — {target}", flush=True)
 
-        result = execute_round(task, round_num, run_dir)
+        result = execute_round(task, round_num, run_dir, timeout=args.timeout)
         results.append(result)
 
         status = result.get("status", "error")

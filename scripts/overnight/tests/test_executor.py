@@ -31,9 +31,12 @@ def test_create_worktree():
         with patch("scripts.overnight.config.WORKTREE_BASE", Path("/tmp/wt")):
             path = create_worktree(1, "lint-fix")
             assert "overnight-wt-1" in str(path)
-            cmd_str = mock_run.call_args[0][0]
-            assert "worktree add" in cmd_str
-            assert "main" in cmd_str
+            # cmd is now a list; check that it contains the expected tokens
+            cmd_list = mock_run.call_args[0][0]
+            assert isinstance(cmd_list, list)
+            assert "worktree" in cmd_list
+            assert "add" in cmd_list
+            assert "main" in cmd_list
 
 
 def test_remove_worktree():
@@ -41,8 +44,10 @@ def test_remove_worktree():
     with patch("scripts.overnight.executor._run_cmd") as mock_run:
         mock_run.return_value = ""
         remove_worktree(Path("/tmp/overnight-wt-1"))
-        cmd_str = mock_run.call_args[0][0]
-        assert "worktree remove" in cmd_str
+        cmd_list = mock_run.call_args[0][0]
+        assert isinstance(cmd_list, list)
+        assert "worktree" in cmd_list
+        assert "remove" in cmd_list
 
 
 def test_check_disk_space():
