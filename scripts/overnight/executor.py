@@ -689,7 +689,10 @@ def execute_round(
 
         # Step 6: Run Claude
         try:
-            run_claude(prompt, wt_path, timeout=timeout)
+            claude_output = run_claude(prompt, wt_path, timeout=timeout)
+            # Store lengths for budget tracking (token estimation)
+            result["prompt_len"] = len(prompt)
+            result["response_len"] = len(claude_output)
         except subprocess.CalledProcessError as exc:
             result["status"] = "error"
             result["verification"]["reason"] = f"Claude CLI failed: {exc.stderr or exc.output}"

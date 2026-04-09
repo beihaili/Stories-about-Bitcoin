@@ -26,6 +26,7 @@ from scripts.overnight.scanner import scan_code, scan_content, write_findings
 from scripts.overnight.planner import generate_task_plan, parse_task_plan, update_task_status
 from scripts.overnight.executor import cleanup_previous_runs, execute_round, check_disk_space
 from scripts.overnight.reporter import generate_report
+from scripts.overnight.budget import BudgetTracker
 
 
 # ---------------------------------------------------------------------------
@@ -85,6 +86,18 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         action="store_true",
         default=False,
         help="Only execute content refinement tasks",
+    )
+    parser.add_argument(
+        "--budget-aware",
+        action="store_true",
+        default=False,
+        help="Track token usage, rescan hourly, burn remaining quota before window resets",
+    )
+    parser.add_argument(
+        "--window-hours",
+        type=float,
+        default=5.0,
+        help="Max plan rolling window in hours (default: 5.0)",
     )
     return parser.parse_args(argv)
 
@@ -218,8 +231,12 @@ def main(argv: list[str] | None = None) -> None:
 
     start_time = datetime.now()
 
+    # Budget tracker (always created; only prints/acts when --budget-aware)
+    tracker = BudgetTracker(window_hours=args.window_hours)
+
     print(f"[overnight] Starting run — {start_time.strftime('%Y-%m-%d %H:%M')}", flush=True)
-    print(f"[overnight] Rounds: {args.rounds} | Timeout: {args.timeout}s "
+    mode_str = "budget-aware" if args.budget_aware else f"rounds: {args.rounds}"
+    print(f"[overnight] Mode: {mode_str} | Timeout: {args.timeout}s "
           f"| dry-run: {args.dry_run} | resume: {args.resume}", flush=True)
 
     # --- Phase 0: Cleanup previous runs ---
@@ -304,6 +321,8 @@ def main(argv: list[str] | None = None) -> None:
 
     # --- Phase 3: Execute rounds ---
     results: list[dict] = []
+    last_scan_time = datetime.now()
+    total_round_counter = len(pending_tasks)  # for generating new round numbers
 
     # Load any prior results from results.json (crash recovery for --resume)
     results_json_path = run_dir / "results.json"
@@ -314,7 +333,10 @@ def main(argv: list[str] | None = None) -> None:
         except (json.JSONDecodeError, OSError):
             results = []
 
-    for task in pending_tasks:
+    task_queue = list(pending_tasks)  # mutable copy
+
+    while task_queue:
+        task = task_queue.pop(0)
         round_num = task.get("round", 0)
         task_type = task.get("type", "unknown")
         target = task.get("target", "")
@@ -324,12 +346,25 @@ def main(argv: list[str] | None = None) -> None:
         result = execute_round(task, round_num, run_dir, timeout=args.timeout)
         results.append(result)
 
+        # Budget tracking — estimate tokens from prompt/response lengths
+        prompt_len = result.get("prompt_len", 0)
+        response_len = result.get("response_len", 0)
+        if prompt_len or response_len:
+            tracker.record_round(
+                "x" * prompt_len,   # reconstruct approximate length
+                "x" * response_len,
+            )
+
         status = result.get("status", "error")
         reason = result.get("verification", {}).get("reason", "")
         pr_url = result.get("pr_url") or ""
         print(f"[overnight]   Status: {status} | {reason[:80]}", flush=True)
         if pr_url:
             print(f"[overnight]   PR: {pr_url}", flush=True)
+
+        # Print budget status
+        if args.budget_aware:
+            print(f"[overnight]   {tracker.format_status_line()}", flush=True)
 
         # Update task status in plan
         try:
@@ -345,6 +380,60 @@ def main(argv: list[str] | None = None) -> None:
             )
         except OSError as exc:
             print(f"[overnight] WARNING: Could not save intermediate results: {exc}", flush=True)
+
+        # --- Budget-aware: hourly rescan + burn mode ---
+        if args.budget_aware and not task_queue:
+            # Queue is empty — should we keep going?
+            if tracker.hours_remaining() <= 0:
+                print("[overnight] Window expired — stopping.", flush=True)
+                break
+
+            if tracker.should_burn():
+                print("[overnight] BURN MODE — quota remaining, generating more tasks...", flush=True)
+                # Rescan for fresh issues
+                try:
+                    new_code = scan_code()
+                    new_content = scan_content()
+                    write_findings(new_code, new_content, run_dir)
+                    last_scan_time = datetime.now()
+                    new_plan_path = generate_task_plan(run_dir, max_rounds=10)
+                    new_tasks = parse_task_plan(new_plan_path)
+                    new_pending = [t for t in new_tasks if t.get("status") == "pending"]
+                    if new_pending:
+                        # Renumber to avoid conflicts
+                        for t in new_pending:
+                            total_round_counter += 1
+                            t["round"] = total_round_counter
+                        task_queue.extend(new_pending)
+                        print(f"[overnight]   Added {len(new_pending)} new tasks.", flush=True)
+                    else:
+                        print("[overnight]   No new tasks found. Stopping.", flush=True)
+                        break
+                except Exception as exc:
+                    print(f"[overnight]   Rescan failed: {exc}. Stopping.", flush=True)
+                    break
+
+            elif tracker.should_rescan(last_scan_time):
+                print("[overnight] Hourly rescan — checking for new issues...", flush=True)
+                try:
+                    new_code = scan_code()
+                    new_content = scan_content()
+                    write_findings(new_code, new_content, run_dir)
+                    last_scan_time = datetime.now()
+                    new_plan_path = generate_task_plan(run_dir, max_rounds=args.rounds)
+                    new_tasks = parse_task_plan(new_plan_path)
+                    new_pending = [t for t in new_tasks if t.get("status") == "pending"]
+                    if new_pending:
+                        for t in new_pending:
+                            total_round_counter += 1
+                            t["round"] = total_round_counter
+                        task_queue.extend(new_pending)
+                        print(f"[overnight]   Added {len(new_pending)} new tasks from rescan.", flush=True)
+                except Exception as exc:
+                    print(f"[overnight]   Rescan failed: {exc}", flush=True)
+            else:
+                # Non-budget-aware already drained the queue, just stop
+                break
 
     # --- Phase 4: Generate report ---
     print("\n[overnight] Phase 4: Generating morning report...", flush=True)
