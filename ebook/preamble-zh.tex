@@ -88,6 +88,18 @@
   before upper={\noindent},
 }
 
+% ===== 禁用 Pandoc 默认标题页 =====
+\renewcommand{\maketitle}{}
+
+% ===== 封面页 =====
+\newcommand{\coverpage}{%
+  \thispagestyle{empty}%
+  \newgeometry{margin=0pt}%
+  \noindent\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{img/封面中文.png}%
+  \restoregeometry%
+  \clearpage
+}
+
 % ===== 版权页 =====
 \newcommand{\copyrightpage}{%
   \thispagestyle{empty}%
@@ -95,14 +107,14 @@
   \begin{center}
   {\Huge\bfseries\color{btcdark} 比特币那些事儿}\\[0.6em]
   {\large\itshape\color{chaptergray} Stories about Bitcoin}\\[0.3em]
-  {\small\color{chaptergray} 1976--2025：从密码朋克到数字黄金}\\[2.5em]
+  {\small\color{chaptergray} 1976--2025：一群理想主义者改变货币的故事}\\[2.5em]
   {\normalsize 作者：beihaili}\\[1em]
   {\small\color{chaptergray} 本书以 CC-BY-SA 4.0 许可证开源}\\[0.4em]
   {\small\color{chaptergray} 在线阅读：https://beihaili.github.io/Stories-about-Bitcoin/zh/}\\[1.5em]
   {\small\color{btcorange} 支持作者}\\[0.3em]
   {\small Lightning: \texttt{latebrook396888@getalby.com}}\\[0.2em]
   {\small BTC: \texttt{\footnotesize bc1qjt7uhztd2pumpx6p5w0sl8jxfzmxp3nyahysmcqklqfkecqftuysu733ca}}\\[2.5em]
-  {\footnotesize\color{chaptergray} 2025年 · 第二版}
+  {\footnotesize\color{chaptergray} 2026年 · 第二版}
   \end{center}
   \vfill
   \clearpage
