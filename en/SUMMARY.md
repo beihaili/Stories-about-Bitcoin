@@ -56,18 +56,21 @@
 * [Suit Revolution: Safe-Haven Shift During COVID-19](24_suit_revolution_safe_haven_shift_during_covid19.md)
 * [Suit Revolution: The Institutional Entry Milestone](25_suit_revolution_the_institutional_entry_milestone.md)
 * [Suit Revolution: The Great Mining Migration](26_suit_revolution_the_great_mining_migration.md)
+* [Suit Revolution: Lightning Strikes](27_suit_revolution_lightning_strikes.md)
 
 ---
 
 ## Future Promise (2021-2025)
-* [Future Promise: The El Salvador Pioneer](27_future_promise_the_el_salvador_pioneer.md)
-* [Future Promise: The New Geopolitical Variable](28_future_promise_the_new_geopolitical_variable.md)
-* [Future Promise: Trust Shattered Again](29_future_promise_trust_shattered_again.md)
-* [Future Promise: The Historic ETF Breakthrough](30_future_promise_the_historic_etf_breakthrough.md)
-* [Future Promise: The Election and Strategic Reserve](31_future_promise_the_election_and_strategic_reserve.md)
-* [Future Promise: The $100,000 Breakthrough](32_future_promise_the_100k_breakthrough.md)
-* [Future Promise: The Absent Ones](33_future_promise_the_absent_ones.md)
-* [Future Promise: The Light Still Burns](34_future_promise_the_light_still_burns.md)
+* [Future Promise: The El Salvador Pioneer](28_future_promise_the_el_salvador_pioneer.md)
+* [Future Promise: The New Geopolitical Variable](29_future_promise_the_new_geopolitical_variable.md)
+* [Future Promise: The Domino Collapse](30_future_promise_the_domino_collapse.md)
+* [Future Promise: Trust Shattered Again](31_future_promise_trust_shattered_again.md)
+* [Future Promise: The Inscription Storm](32_future_promise_the_inscription_storm.md)
+* [Future Promise: The Historic ETF Breakthrough](33_future_promise_the_historic_etf_breakthrough.md)
+* [Future Promise: The Election and Strategic Reserve](34_future_promise_the_election_and_strategic_reserve.md)
+* [Future Promise: The $100,000 Breakthrough](35_future_promise_the_100k_breakthrough.md)
+* [Future Promise: The Absent Ones](36_future_promise_the_absent_ones.md)
+* [Future Promise: The Light Still Burns](37_future_promise_the_light_still_burns.md)
 
 ---
 
