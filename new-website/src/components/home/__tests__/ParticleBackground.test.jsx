@@ -31,7 +31,7 @@ describe('ParticleBackground', () => {
     HTMLCanvasElement.prototype.getContext = vi.fn(() => ctxMock)
 
     observerInstances = []
-    global.IntersectionObserver = vi.fn(function (callback, options) {
+    window.IntersectionObserver = vi.fn(function (callback, options) {
       const instance = {
         callback,
         options,
@@ -45,14 +45,14 @@ describe('ParticleBackground', () => {
 
     rafCallbacks = []
     rafId = 0
-    originalRAF = global.requestAnimationFrame
-    originalCAF = global.cancelAnimationFrame
-    global.requestAnimationFrame = vi.fn((cb) => {
+    originalRAF = window.requestAnimationFrame
+    originalCAF = window.cancelAnimationFrame
+    window.requestAnimationFrame = vi.fn((cb) => {
       rafId += 1
       rafCallbacks.push({ id: rafId, cb })
       return rafId
     })
-    global.cancelAnimationFrame = vi.fn((id) => {
+    window.cancelAnimationFrame = vi.fn((id) => {
       rafCallbacks = rafCallbacks.filter((entry) => entry.id !== id)
     })
 
@@ -64,8 +64,8 @@ describe('ParticleBackground', () => {
 
   afterEach(() => {
     cleanup()
-    global.requestAnimationFrame = originalRAF
-    global.cancelAnimationFrame = originalCAF
+    window.requestAnimationFrame = originalRAF
+    window.cancelAnimationFrame = originalCAF
     Object.defineProperty(window, 'innerWidth', { value: originalInnerWidth, configurable: true, writable: true })
     Object.defineProperty(window, 'innerHeight', { value: originalInnerHeight, configurable: true, writable: true })
     vi.restoreAllMocks()
@@ -134,8 +134,8 @@ describe('ParticleBackground', () => {
   describe('IntersectionObserver integration', () => {
     it('creates an IntersectionObserver with the expected options', () => {
       render(<ParticleBackground />)
-      expect(global.IntersectionObserver).toHaveBeenCalledTimes(1)
-      const [, options] = global.IntersectionObserver.mock.calls[0]
+      expect(window.IntersectionObserver).toHaveBeenCalledTimes(1)
+      const [, options] = window.IntersectionObserver.mock.calls[0]
       expect(options).toEqual({ threshold: 0, rootMargin: '100px' })
     })
 
@@ -175,7 +175,7 @@ describe('ParticleBackground', () => {
   describe('animation loop', () => {
     it('schedules an animation frame on mount', () => {
       render(<ParticleBackground />)
-      expect(global.requestAnimationFrame).toHaveBeenCalled()
+      expect(window.requestAnimationFrame).toHaveBeenCalled()
     })
 
     it('clears the canvas and draws particles on each animated frame', () => {
@@ -193,9 +193,9 @@ describe('ParticleBackground', () => {
 
     it('reschedules the next frame after drawing', () => {
       render(<ParticleBackground />)
-      const initialCalls = global.requestAnimationFrame.mock.calls.length
+      const initialCalls = window.requestAnimationFrame.mock.calls.length
       flushFrame()
-      expect(global.requestAnimationFrame.mock.calls.length).toBeGreaterThan(initialCalls)
+      expect(window.requestAnimationFrame.mock.calls.length).toBeGreaterThan(initialCalls)
     })
   })
 
@@ -217,7 +217,7 @@ describe('ParticleBackground', () => {
     it('cancels the pending animation frame', () => {
       const { unmount } = render(<ParticleBackground />)
       unmount()
-      expect(global.cancelAnimationFrame).toHaveBeenCalled()
+      expect(window.cancelAnimationFrame).toHaveBeenCalled()
     })
   })
 
