@@ -1,6 +1,6 @@
 # 未来可期：ETF历史性突破
 
-![配图](img/ch30.png)
+![配图](img/ch33.png)
 
 ![status](https://img.shields.io/badge/状态-已完成-success)
 ![author](https://img.shields.io/badge/作者-beihaili-blue)
