@@ -90,16 +90,47 @@ def _build_code_test(task: dict, file_contents: dict) -> str:
 
 ## Task
 Write unit tests for `{target}` ({component} component).
+Create the test file at the `__tests__/` directory next to the source file.
 
 Reason: {description}
 
 ## Instructions
 - Use Vitest + React Testing Library + jsdom
-- Place the test file in `__tests__/` next to the source file
+- Place the test file in `__tests__/{component}.test.jsx` next to the source file
 - Cover: rendering, user interactions, edge cases
-- Mock `framer-motion` if the component uses animations (import from `__mocks__/framer-motion`)
 - Each test should have a clear, descriptive name
 - Tests must be independent and not rely on execution order
+
+## Required Mocks
+
+If the component imports from `framer-motion`, add this at the TOP of the test file:
+```javascript
+vi.mock('framer-motion', async () => {{
+  return await import('../../../test/__mocks__/framer-motion.js')
+}})
+```
+(Adjust the relative path `../../../test/__mocks__/framer-motion.js` based on the test file's depth.)
+
+If the component uses `canvas` (e.g. `getContext('2d')`), mock it in `beforeEach`:
+```javascript
+beforeEach(() => {{
+  HTMLCanvasElement.prototype.getContext = vi.fn(() => ({{
+    fillRect: vi.fn(), clearRect: vi.fn(), beginPath: vi.fn(),
+    arc: vi.fn(), fill: vi.fn(), stroke: vi.fn(), moveTo: vi.fn(),
+    lineTo: vi.fn(), createLinearGradient: vi.fn(() => ({{ addColorStop: vi.fn() }})),
+    canvas: {{ width: 800, height: 600 }},
+  }}))
+}})
+```
+
+If the component uses `IntersectionObserver`, mock it in `beforeEach`:
+```javascript
+beforeEach(() => {{
+  global.IntersectionObserver = vi.fn(() => ({{
+    observe: vi.fn(), unobserve: vi.fn(), disconnect: vi.fn(),
+  }}))
+}})
+```
 
 {files_section}"""
 
@@ -247,6 +278,14 @@ def _constraints_block(task: dict) -> str:
     Tells Claude to only touch specified files and avoid noise.
     """
     target = task.get("target", "")
+    task_type = task.get("type", "")
+
+    if task_type == "code-test":
+        return f"""## CONSTRAINTS
+- Use the Write tool to create the test file in the `__tests__/` directory next to `{target}`.
+- Do NOT modify the source component file `{target}` itself.
+- Do not add comments describing what you changed."""
+
     return f"""## CONSTRAINTS
 - Use the Edit or Write tool to modify files directly. Do NOT just output file contents as text.
 - Only modify the specified file(s): `{target}`. Do not touch any other files.

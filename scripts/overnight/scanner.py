@@ -67,9 +67,11 @@ def scan_code() -> list[dict]:
     ruff_findings = _run_ruff()
     findings.extend(ruff_findings)
 
-    # 4. Known pipeline bugs
-    pipeline_findings = scan_pipeline_issues()
-    findings.extend(pipeline_findings)
+    # 4. Known pipeline bugs — DISABLED: content_pipeline/ is gitignored,
+    # so fixes can't produce PRs. Re-enable after refactoring pipeline to be
+    # tracked OR handle gitignored targets differently.
+    # pipeline_findings = scan_pipeline_issues()
+    # findings.extend(pipeline_findings)
 
     # Sort by severity descending
     findings.sort(key=lambda f: f.get("severity", 0), reverse=True)

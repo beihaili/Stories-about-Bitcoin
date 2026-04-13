@@ -681,6 +681,14 @@ def execute_round(
         slug = _slugify(task.get("description", task.get("issue", task_type)))
         wt_path = create_worktree(round_num, slug[:30])  # cap slug length for branch names
 
+        # Step 3.5: Copy gitignored target files into worktree (for pipeline-fix tasks)
+        if task_type == "pipeline-fix" and target:
+            src = config.PROJECT_ROOT / target
+            dst = wt_path / target
+            if src.exists() and not dst.exists():
+                dst.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copy2(src, dst)
+
         # Step 4: Pre-read target files
         file_contents = _read_target_files(task)
 
@@ -689,7 +697,10 @@ def execute_round(
 
         # Step 6: Run Claude
         try:
-            run_claude(prompt, wt_path, timeout=timeout)
+            claude_output = run_claude(prompt, wt_path, timeout=timeout)
+            # Store lengths for budget tracking (token estimation)
+            result["prompt_len"] = len(prompt)
+            result["response_len"] = len(claude_output)
         except subprocess.CalledProcessError as exc:
             result["status"] = "error"
             result["verification"]["reason"] = f"Claude CLI failed: {exc.stderr or exc.output}"
