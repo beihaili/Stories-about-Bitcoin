@@ -1,5 +1,5 @@
 // 比特币那些事儿 - 章节数据
-// 对齐 正文/ 目录结构（00-34 + 特别篇，共 36 章）
+// 对齐 正文/ 目录结构（00-37 + 特别篇，共 39 章）
 // link.zh 必须与 zh/SUMMARY.md 中的文件名完全一致
 // link.en 对齐 en/ 新文件名（全量重翻完成）
 
@@ -615,9 +615,35 @@ export const chapters = [
     readingTime: 12
   },
 
-  // ===== 未来可期篇 (2021-2025) =====
+  // ===== 西装革命篇续 =====
   {
     id: 27,
+    period: 'suit-revolution',
+    title: {
+      zh: '西装革命：闪电降临',
+      en: 'Suit Revolution: Lightning Strikes'
+    },
+    subtitle: {
+      zh: '从白皮书到街头支付',
+      en: 'From Whitepaper to Street Payments'
+    },
+    icon: '⚡',
+    summary: {
+      zh: '从白皮书到街头支付',
+      en: 'From Whitepaper to Street Payments'
+    },
+    image: 'img/ch27.png',
+    link: {
+      zh: '/zh/27_西装革命：闪电降临.html',
+      en: null
+    },
+    year: '2015-2021',
+    readingTime: 12
+  },
+
+  // ===== 未来可期篇 (2021-2025) =====
+  {
+    id: 28,
     period: 'future-promise',
     title: {
       zh: '未来可期：萨尔瓦多先驱',
@@ -628,16 +654,16 @@ export const chapters = [
       zh: '全球首个比特币法币化国家',
       en: 'World\'s First Bitcoin Legal Tender Country'
     },
-    image: 'img/ch27.png',
+    image: 'img/ch28.png',
     link: {
-      zh: '/zh/27_未来可期：萨尔瓦多先驱.html',
-      en: '/en/27_future_promise_the_el_salvador_pioneer.html'
+      zh: '/zh/28_未来可期：萨尔瓦多先驱.html',
+      en: '/en/28_future_promise_the_el_salvador_pioneer.html'
     },
     year: '2021',
     readingTime: 13
   },
   {
-    id: 28,
+    id: 29,
     period: 'future-promise',
     title: {
       zh: '未来可期：地缘政治新变量',
@@ -648,16 +674,40 @@ export const chapters = [
       zh: '比特币在国际政治中的角色',
       en: 'Bitcoin\'s Role in International Politics'
     },
-    image: 'img/ch28.png',
+    image: 'img/ch29.png',
     link: {
-      zh: '/zh/28_未来可期：地缘政治新变量.html',
-      en: '/en/28_future_promise_the_new_geopolitical_variable.html'
+      zh: '/zh/29_未来可期：地缘政治新变量.html',
+      en: '/en/29_future_promise_the_new_geopolitical_variable.html'
     },
     year: '2022',
     readingTime: 13
   },
   {
-    id: 29,
+    id: 30,
+    period: 'future-promise',
+    title: {
+      zh: '未来可期：多米诺崩塌',
+      en: 'Future Promise: Domino Collapse'
+    },
+    subtitle: {
+      zh: 'Terra、三箭、Celsius连环崩盘',
+      en: 'Terra, 3AC, Celsius Chain Reaction'
+    },
+    icon: '🃏',
+    summary: {
+      zh: 'Terra、三箭、Celsius连环崩盘',
+      en: 'Terra, 3AC, Celsius Chain Reaction'
+    },
+    image: 'img/ch30.png',
+    link: {
+      zh: '/zh/30_未来可期：多米诺崩塌.html',
+      en: null
+    },
+    year: '2022',
+    readingTime: 12
+  },
+  {
+    id: 31,
     period: 'future-promise',
     title: {
       zh: '未来可期：信任再次破碎',
@@ -668,16 +718,40 @@ export const chapters = [
       zh: 'FTX崩盘与行业信任危机',
       en: 'FTX Collapse and Industry Trust Crisis'
     },
-    image: 'img/ch29.png',
+    image: 'img/ch31.png',
     link: {
-      zh: '/zh/29_未来可期：信任再次破碎.html',
-      en: '/en/29_future_promise_trust_shattered_again.html'
+      zh: '/zh/31_未来可期：信任再次破碎.html',
+      en: '/en/31_future_promise_trust_shattered_again.html'
     },
     year: '2022',
     readingTime: 12
   },
   {
-    id: 30,
+    id: 32,
+    period: 'future-promise',
+    title: {
+      zh: '未来可期：铭文风暴',
+      en: 'Future Promise: The Inscription Storm'
+    },
+    subtitle: {
+      zh: 'Taproot、Ordinals与比特币的身份之争',
+      en: 'Taproot, Ordinals, and Bitcoin\'s Identity Crisis'
+    },
+    icon: '📜',
+    summary: {
+      zh: 'Taproot、Ordinals与比特币的身份之争',
+      en: 'Taproot, Ordinals, and Bitcoin\'s Identity Crisis'
+    },
+    image: 'img/ch32.png',
+    link: {
+      zh: '/zh/32_未来可期：铭文风暴.html',
+      en: null
+    },
+    year: '2021-2024',
+    readingTime: 12
+  },
+  {
+    id: 33,
     period: 'future-promise',
     title: {
       zh: '未来可期：ETF历史性突破',
@@ -688,16 +762,16 @@ export const chapters = [
       zh: '现货ETF获批的里程碑时刻',
       en: 'Milestone Moment of Spot ETF Approval'
     },
-    image: 'img/ch30.png',
+    image: 'img/ch33.png',
     link: {
-      zh: '/zh/30_未来可期：ETF历史性突破.html',
-      en: '/en/30_future_promise_the_historic_etf_breakthrough.html'
+      zh: '/zh/33_未来可期：ETF历史性突破.html',
+      en: '/en/33_future_promise_the_historic_etf_breakthrough.html'
     },
     year: '2024',
     readingTime: 14
   },
   {
-    id: 31,
+    id: 34,
     period: 'future-promise',
     title: {
       zh: '未来可期：大选与战略储备',
@@ -708,16 +782,16 @@ export const chapters = [
       zh: '比特币成为美国大选议题',
       en: 'Bitcoin Becomes a US Election Issue'
     },
-    image: 'img/ch31.png',
+    image: 'img/ch34.png',
     link: {
-      zh: '/zh/31_未来可期：大选与战略储备.html',
-      en: '/en/31_future_promise_the_election_and_strategic_reserve.html'
+      zh: '/zh/34_未来可期：大选与战略储备.html',
+      en: '/en/34_future_promise_the_election_and_strategic_reserve.html'
     },
     year: '2024',
     readingTime: 13
   },
   {
-    id: 32,
+    id: 35,
     period: 'future-promise',
     title: {
       zh: '未来可期：十万美元突破',
@@ -728,16 +802,16 @@ export const chapters = [
       zh: '价格里程碑与主流化进程',
       en: 'Price Milestone and Mainstream Adoption'
     },
-    image: 'img/ch32.png',
+    image: 'img/ch35.png',
     link: {
-      zh: '/zh/32_未来可期：十万美元突破.html',
-      en: '/en/32_future_promise_the_100k_breakthrough.html'
+      zh: '/zh/35_未来可期：十万美元突破.html',
+      en: '/en/35_future_promise_the_100k_breakthrough.html'
     },
     year: '2024',
     readingTime: 15
   },
   {
-    id: 33,
+    id: 36,
     period: 'future-promise',
     title: {
       zh: '未来可期：缺席的人',
@@ -748,16 +822,16 @@ export const chapters = [
       zh: '致敬那些未能见证今天的先驱',
       en: 'Tribute to Pioneers Who Couldn\'t Witness Today'
     },
-    image: 'img/ch33.png',
+    image: 'img/ch36.png',
     link: {
-      zh: '/zh/33_未来可期：缺席的人.html',
-      en: '/en/33_future_promise_the_absent_ones.html'
+      zh: '/zh/36_未来可期：缺席的人.html',
+      en: '/en/36_future_promise_the_absent_ones.html'
     },
     year: '2024',
     readingTime: 10
   },
   {
-    id: 34,
+    id: 37,
     period: 'future-promise',
     title: {
       zh: '未来可期：光未熄灭',
@@ -768,10 +842,10 @@ export const chapters = [
       zh: '比特币故事的终章与未来',
       en: 'The Final Chapter and the Future of Bitcoin'
     },
-    image: 'img/ch34.png',
+    image: 'img/ch37.png',
     link: {
-      zh: '/zh/34_未来可期：光未熄灭.html',
-      en: '/en/34_future_promise_the_light_still_burns.html'
+      zh: '/zh/37_未来可期：光未熄灭.html',
+      en: '/en/37_future_promise_the_light_still_burns.html'
     },
     year: '2025',
     readingTime: 12
@@ -779,7 +853,7 @@ export const chapters = [
 
   // ===== 特别篇 =====
   {
-    id: 35,
+    id: 38,
     period: 'special',
     title: {
       zh: '特别篇：查理·柯克的比特币之路',

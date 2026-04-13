@@ -43,17 +43,20 @@ SAMPLE_CHAPTERS_EN = [
 
 # 图片编号映射（章节文件名前缀 → 图片文件名）
 def get_chapter_image(fname: str) -> str | None:
-    """根据章节文件名推断配图路径"""
+    """根据章节文件名推断配图路径，优先 chNN.png（最新版），回退 NN.png"""
     m = re.match(r'^(\d+)_', fname)
     if m:
         num = int(m.group(1))
-        img_path = REPO_ROOT / "img" / f"{num:02d}.png"
-        if img_path.exists():
-            return str(img_path)
+        # 优先使用最新版 chNN.png，回退到 NN.png
+        for pattern in [f"ch{num:02d}.png", f"{num:02d}.png"]:
+            img_path = REPO_ROOT / "img" / pattern
+            if img_path.exists():
+                return str(img_path)
     if fname.startswith("特别篇") or fname.startswith("special"):
-        img_path = REPO_ROOT / "img" / "special_kirk.png"
-        if img_path.exists():
-            return str(img_path)
+        for pattern in ["ch特别篇1.png", "special_kirk.png"]:
+            img_path = REPO_ROOT / "img" / pattern
+            if img_path.exists():
+                return str(img_path)
     return None
 
 
