@@ -85,6 +85,10 @@ zh/特别篇*.md
 zh/SUMMARY.md
 zh/img
 
+# Overnight 运行时产物
+scripts/overnight/logs/
+scripts/overnight/runs/
+
 # Python
 __pycache__/
 scripts/__pycache__/
