@@ -1,6 +1,6 @@
 # Contributing to Stories about Bitcoin
 
-Thank you for your interest in contributing to **Stories about Bitcoin** (比特币那些事儿) -- an open-source bilingual Bitcoin history book covering 1976-2024 in 36 chapters, with a React website and free ebooks.
+Thank you for your interest in contributing to **Stories about Bitcoin** (比特币那些事儿) -- an open-source bilingual Bitcoin history book covering 1976-2025 in 39 chapters, with a React website and free ebooks.
 
 Whether you're a translator, historian, developer, or designer, there's a way for you to help. This guide will get you started.
 
