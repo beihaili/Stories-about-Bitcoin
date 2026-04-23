@@ -1,6 +1,11 @@
 # Claude Code configuration
 CLAUDE.md
 
+# Local API keys
+.env
+.env.*
+!.env.example
+
 # macOS
 .DS_Store
 .AppleDouble
@@ -74,6 +79,11 @@ AI模型/
 
 # 草稿
 草稿/
+
+# Generated publishing exports
+发布/
+番茄小说版.txt
+番茄版/
 
 # 废弃目录
 manuscript/
