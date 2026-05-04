@@ -22,7 +22,13 @@
   - 产物：`我给中本聪送外卖/草稿/deepseek_rewrite/01_开篇样章_gpt再改写.md`
 - [x] Phase 5: 三版评分与下一步决策
   - 状态：complete
-  - 产物：`我给中本聪送外卖/设定/结构/章节评分/01_开篇样章三版对比.md`
+  - 产物：`我给中本聪送外卖/设定/结构/章节评分/01_开篇样章多版对比.md`
+- [x] Phase 6: 将畅销作家 prompt 改造成 DeepSeek Prompt v2 并试跑
+  - 状态：complete
+  - 产物：`我给中本聪送外卖/设定/结构/重写计划/DeepSeek_开篇改写Prompt_v2.md`、`我给中本聪送外卖/草稿/deepseek_rewrite/01_开篇样章_deepseek_prompt_v2.md`
+- [x] Phase 7: 更新多版评分结论
+  - 状态：complete
+  - 产物：`我给中本聪送外卖/设定/结构/章节评分/01_开篇样章多版对比.md`
 
 ## 必守规则
 

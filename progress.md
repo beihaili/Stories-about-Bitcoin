@@ -38,5 +38,9 @@
 - 已运行 `python3 scripts/deepseek_rewrite_sample.py --dry-run`，确认可读取 DeepSeek key、base URL 和模型名，未打印密钥。
 - 已运行 `python3 scripts/deepseek_rewrite_sample.py`，生成 `我给中本聪送外卖/草稿/deepseek_rewrite/01_开篇样章_deepseek.md`。
 - 已生成 GPT 再改写版：`我给中本聪送外卖/草稿/deepseek_rewrite/01_开篇样章_gpt再改写.md`。
-- 已完成三版评分对比：`我给中本聪送外卖/设定/结构/章节评分/01_开篇样章三版对比.md`。
+- 已完成三版评分对比，后扩展为多版对比：`我给中本聪送外卖/设定/结构/章节评分/01_开篇样章多版对比.md`。
 - 初步决策：DeepSeek 版可借鉴节奏，不宜直用；第1章建议按 GPT 再改写版做局部嫁接，而不是整章替换。
+- 根据用户提供的畅销小说 prompt 范式，新增专用 prompt：`我给中本聪送外卖/设定/结构/重写计划/DeepSeek_开篇改写Prompt_v2.md`。
+- 已改造 `scripts/deepseek_rewrite_sample.py` 支持 `--prompt-file`，默认读取 Prompt v2。
+- 已运行 Prompt v2 版 DeepSeek 样章，输出 `我给中本聪送外卖/草稿/deepseek_rewrite/01_开篇样章_deepseek_prompt_v2.md`。
+- 已将评分报告扩展为多版对比，结论：Prompt v2 明显改善 DeepSeek 输出，可作为后续默认样章 prompt。
