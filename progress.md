@@ -44,3 +44,5 @@
 - 已改造 `scripts/deepseek_rewrite_sample.py` 支持 `--prompt-file`，默认读取 Prompt v2。
 - 已运行 Prompt v2 版 DeepSeek 样章，输出 `我给中本聪送外卖/草稿/deepseek_rewrite/01_开篇样章_deepseek_prompt_v2.md`。
 - 已将评分报告扩展为多版对比，结论：Prompt v2 明显改善 DeepSeek 输出，可作为后续默认样章 prompt。
+- 已按同一 Prompt v2 生成 GPT 样章：`我给中本聪送外卖/草稿/deepseek_rewrite/01_开篇样章_gpt_prompt_v2.md`。
+- 已将 GPT Prompt v2 纳入多版评分，结论：GPT Prompt v2 版加权分 9.08，当前最适合作为第1章正式嫁接底稿。
