@@ -25,3 +25,13 @@
   - manifest 校验通过：`chapter_count 37`，缺章 `[]`，最后一章 `第037章 光未熄灭`。
   - `git diff --check` 通过。
   - `发布/` 仍按忽略规则显示为 `!! 发布/`。
+
+## 2026-05-04
+
+- 接收新目标：把《我给中本聪送外卖》重写优化设计成可持续 goal，先用 DeepSeek 重写第1章开篇样章，再做 GPT 再改写和三版评分。
+- 已尝试创建线程 goal，但当前线程保留了一个已完成 goal，工具不允许创建第二个 goal；改为写入文件型 goal 和当前计划。
+- 已建立重写计划文件：`我给中本聪送外卖/设定/结构/重写计划/2026-05-04_第1章开篇DeepSeek样章Goal.md`。
+- 已配置 DeepSeek 本地环境文件模板：`.env.deepseek`，真实密钥留空且被 git 忽略。
+- 已更新 `.env.example`，加入 DeepSeek/NewAPI 兼容变量示例。
+- 已新增 `scripts/configure_deepseek_env.sh`，用于隐藏输入 API key 并写入 `.env.deepseek`。
+- 已新增 `scripts/deepseek_rewrite_sample.py`，用于读取第1章开篇并调用 `deepseek-v4-pro` 生成独立草稿样章。

@@ -1,26 +1,28 @@
-# 《我给中本聪送外卖》通宵完本计划
+# 《我给中本聪送外卖》开篇重写优化计划
 
-目标：从当前 01-30 章出发，补齐 31-37 章正文，并完成章节合同、scene beats、审稿、评分、改写、设定回填、番茄发布包导出和 Git 提交，形成整本可审阅初稿。
+上一目标：01-37 章整本初稿已完成并提交，提交 `ec798a4 feat: 完成外卖故事整本初稿`。
 
-当前阶段：complete
+当前目标：先用 DeepSeek 生成第1章开篇样章，再由 GPT 做一版再改写，最后完成“原文 / DeepSeek 版 / GPT 再改写版”评分对比，验证这条重写工作流是否值得扩展到全书。
+
+当前阶段：in_progress
 
 ## Phases
 
-- [ ] Phase 1: 建立计划与恢复点
-  - 状态：in_progress
-  - 产物：`task_plan.md`、`findings.md`、`progress.md`、执行计划文档
-- [x] Phase 2: 核对 31-37 章素材与事实锚点
+- [x] Phase 1: 建立重写 goal 与恢复点
   - 状态：complete
-  - 产物：原书章节摘要、关键史实来源、历史锚点写作边界
-- [x] Phase 3: 生成 31-37 章流程文件与正文初稿
+  - 产物：`我给中本聪送外卖/设定/结构/重写计划/2026-05-04_第1章开篇DeepSeek样章Goal.md`
+- [x] Phase 2: 安全配置 DeepSeek 环境
   - 状态：complete
-  - 产物：每章 `章节合同 / scene_beats / 正文`
-- [x] Phase 4: 审稿、评分、改写
-  - 状态：complete
-  - 产物：每章审稿报告、评分报告、按弱项改写后的正文
-- [x] Phase 5: 全书校验、发布包、提交
-  - 状态：complete
-  - 产物：全书连续性检查、发布包、必要源码提交
+  - 产物：`.env.deepseek` 本地模板、`scripts/configure_deepseek_env.sh`、`.env.example` DeepSeek 示例变量
+- [ ] Phase 3: 生成 DeepSeek 第1章开篇样章
+  - 状态：pending
+  - 产物：`我给中本聪送外卖/草稿/deepseek_rewrite/01_开篇样章_deepseek.md`
+- [ ] Phase 4: GPT 再改写
+  - 状态：pending
+  - 产物：`我给中本聪送外卖/草稿/deepseek_rewrite/01_开篇样章_gpt再改写.md`
+- [ ] Phase 5: 三版评分与下一步决策
+  - 状态：pending
+  - 产物：`我给中本聪送外卖/设定/结构/章节评分/01_开篇样章三版对比.md`
 
 ## 必守规则
 
@@ -30,6 +32,8 @@
 - 评分按 `设定/结构/章节评分标准.md` 八维加权执行；低于 7.0 的章节必须重修，7.0-7.9 必须按最弱维度精修。
 - 保持番茄小说段落风格：不用 Markdown 小标题，不用分割线，段落紧凑，观点从动作和物件中出来。
 - `发布/` 是生成物，保持忽略，不提交。
+- 真实 API key 只允许写入 `.env.deepseek` 或本机环境变量；不得写入提交、计划文件、脚本输出或聊天回复。
+- DeepSeek 样章和 GPT 再改写样章先保存在 `草稿/`，不直接覆盖正文。
 
 ## Error Log
 
