@@ -4,7 +4,7 @@
 
 当前目标：先用 DeepSeek 生成第1章开篇样章，再由 GPT 做一版再改写，最后完成“原文 / DeepSeek 版 / GPT 再改写版”评分对比，验证这条重写工作流是否值得扩展到全书。
 
-当前阶段：in_progress
+当前阶段：complete
 
 ## Phases
 
@@ -14,14 +14,14 @@
 - [x] Phase 2: 安全配置 DeepSeek 环境
   - 状态：complete
   - 产物：`.env.deepseek` 本地模板、`scripts/configure_deepseek_env.sh`、`.env.example` DeepSeek 示例变量
-- [ ] Phase 3: 生成 DeepSeek 第1章开篇样章
-  - 状态：pending
+- [x] Phase 3: 生成 DeepSeek 第1章开篇样章
+  - 状态：complete
   - 产物：`我给中本聪送外卖/草稿/deepseek_rewrite/01_开篇样章_deepseek.md`
-- [ ] Phase 4: GPT 再改写
-  - 状态：pending
+- [x] Phase 4: GPT 再改写
+  - 状态：complete
   - 产物：`我给中本聪送外卖/草稿/deepseek_rewrite/01_开篇样章_gpt再改写.md`
-- [ ] Phase 5: 三版评分与下一步决策
-  - 状态：pending
+- [x] Phase 5: 三版评分与下一步决策
+  - 状态：complete
   - 产物：`我给中本聪送外卖/设定/结构/章节评分/01_开篇样章三版对比.md`
 
 ## 必守规则

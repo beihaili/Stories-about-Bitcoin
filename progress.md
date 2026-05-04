@@ -35,3 +35,8 @@
 - 已更新 `.env.example`，加入 DeepSeek/NewAPI 兼容变量示例。
 - 已新增 `scripts/configure_deepseek_env.sh`，用于隐藏输入 API key 并写入 `.env.deepseek`。
 - 已新增 `scripts/deepseek_rewrite_sample.py`，用于读取第1章开篇并调用 `deepseek-v4-pro` 生成独立草稿样章。
+- 已运行 `python3 scripts/deepseek_rewrite_sample.py --dry-run`，确认可读取 DeepSeek key、base URL 和模型名，未打印密钥。
+- 已运行 `python3 scripts/deepseek_rewrite_sample.py`，生成 `我给中本聪送外卖/草稿/deepseek_rewrite/01_开篇样章_deepseek.md`。
+- 已生成 GPT 再改写版：`我给中本聪送外卖/草稿/deepseek_rewrite/01_开篇样章_gpt再改写.md`。
+- 已完成三版评分对比：`我给中本聪送外卖/设定/结构/章节评分/01_开篇样章三版对比.md`。
+- 初步决策：DeepSeek 版可借鉴节奏，不宜直用；第1章建议按 GPT 再改写版做局部嫁接，而不是整章替换。
