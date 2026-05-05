@@ -1,37 +1,48 @@
-# 《我给中本聪送外卖》开篇重写优化计划
+# 《我给中本聪送外卖》番茄发布优化计划
 
-上一目标：01-37 章整本初稿已完成并提交，提交 `ec798a4 feat: 完成外卖故事整本初稿`。
+上一目标：
+- 01-37 章整本初稿已完成并提交，提交 `ec798a4 feat: 完成外卖故事整本初稿`。
+- 第1章 DeepSeek/GPT Prompt v2 多版样章已完成，当前最佳候选为 GPT Prompt v2。
 
-当前目标：用 DeepSeek 和 GPT 分别生成第1章开篇样章，围绕 Prompt v2 完成多版评分对比，验证这条重写工作流是否值得扩展到全书。
+当前目标：把《我给中本聪送外卖》从完整初稿优化到“可以尝试发布番茄小说的商业化定稿候选”，优先强化前三章留存，再扩展到全书关键章节。
 
 当前阶段：complete
 
 ## Phases
 
-- [x] Phase 1: 建立重写 goal 与恢复点
+- [x] Phase 1: 建立番茄发布优化 goal 与恢复点
   - 状态：complete
-  - 产物：`我给中本聪送外卖/设定/结构/重写计划/2026-05-04_第1章开篇DeepSeek样章Goal.md`
-- [x] Phase 2: 安全配置 DeepSeek 环境
+  - 产物：`我给中本聪送外卖/设定/结构/重写计划/2026-05-05_番茄发布优化Goal.md`
+- [x] Phase 2: 正式嫁接第1章
   - 状态：complete
-  - 产物：`.env.deepseek` 本地模板、`scripts/configure_deepseek_env.sh`、`.env.example` DeepSeek 示例变量
-- [x] Phase 3: 生成 DeepSeek 第1章开篇样章
+  - 产物：`我给中本聪送外卖/正文/01_中本聪下单了.md`
+- [x] Phase 3: 优化第2章开篇
   - 状态：complete
-  - 产物：`我给中本聪送外卖/草稿/deepseek_rewrite/01_开篇样章_deepseek.md`
-- [x] Phase 4: GPT 再改写
+  - 产物：`我给中本聪送外卖/正文/02_密码朋克在咖啡馆.md`
+- [x] Phase 4: 优化第3章开篇
   - 状态：complete
-  - 产物：`我给中本聪送外卖/草稿/deepseek_rewrite/01_开篇样章_gpt再改写.md`
-- [x] Phase 5: 三版评分与下一步决策
+  - 产物：`我给中本聪送外卖/正文/03_中本聪没有下单.md`
+- [ ] Phase 5: 01-03 章评分、导出校验、提交
+  - 状态：complete
+  - 产物：`我给中本聪送外卖/设定/结构/章节评分/01-03章开篇商业化优化报告.md`、番茄导出校验、Git 提交
+- [ ] Phase 6: 全书商业化体检
+  - 状态：pending
+  - 产物：01-37 章追读/冲突/科普味/AI味/变现潜力清单
+- [ ] Phase 7: 关键章节二轮改写
+  - 状态：pending
+  - 产物：按体检清单修订中段科普味和 26-37 章压缩感
+- [ ] Phase 8: 番茄发布包
+  - 状态：pending
+  - 产物：定稿正文、导出版、简介、标签、卖点、前三章发布检查
+
+## 已完成的前置工作
+
+- [x] 第1章 DeepSeek/GPT 多版样章对比
   - 状态：complete
   - 产物：`我给中本聪送外卖/设定/结构/章节评分/01_开篇样章多版对比.md`
-- [x] Phase 6: 将畅销作家 prompt 改造成 DeepSeek Prompt v2 并试跑
+- [x] DeepSeek / GPT Prompt v2 模板
   - 状态：complete
-  - 产物：`我给中本聪送外卖/设定/结构/重写计划/DeepSeek_开篇改写Prompt_v2.md`、`我给中本聪送外卖/草稿/deepseek_rewrite/01_开篇样章_deepseek_prompt_v2.md`
-- [x] Phase 7: 更新多版评分结论
-  - 状态：complete
-  - 产物：`我给中本聪送外卖/设定/结构/章节评分/01_开篇样章多版对比.md`
-- [x] Phase 8: 生成 GPT Prompt v2 样章并评分
-  - 状态：complete
-  - 产物：`我给中本聪送外卖/草稿/deepseek_rewrite/01_开篇样章_gpt_prompt_v2.md`、`我给中本聪送外卖/设定/结构/章节评分/01_开篇样章多版对比.md`
+  - 产物：`我给中本聪送外卖/设定/结构/重写计划/DeepSeek_开篇改写Prompt_v2.md`
 
 ## 必守规则
 
@@ -43,6 +54,7 @@
 - `发布/` 是生成物，保持忽略，不提交。
 - 真实 API key 只允许写入 `.env.deepseek` 或本机环境变量；不得写入提交、计划文件、脚本输出或聊天回复。
 - DeepSeek 样章和 GPT 再改写样章先保存在 `草稿/`，不直接覆盖正文。
+- 正式正文优先使用“局部嫁接”，不做模型整章替换；每次正文变动必须跑导出校验。
 
 ## Error Log
 
