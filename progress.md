@@ -107,3 +107,16 @@
   - `python3 scripts/export_fanqie_delivery.py --clean` 通过：37 章，总正文 80914 字符，达到初始发布门槛。
   - 正文硬禁词扫描无命中。
   - `.env.deepseek`、`发布/`、`草稿/` 仍为忽略文件。
+- 已完成 Phase 8 发布辅助材料：
+  - `我给中本聪送外卖/设定/结构/发布包/番茄作品资料.md`
+  - `我给中本聪送外卖/设定/结构/发布包/前三章发布检查报告.md`
+  - `我给中本聪送外卖/设定/结构/发布包/最终发布清单.md`
+  - `我给中本聪送外卖/设定/结构/发布包/Goal完成审计.md`
+- 已确认最新导出目录：`发布/番茄/我给中本聪送外卖`，包含 `all_chapters.txt`、`copy.html`、37 个单章 txt 和 `manifest.json`。
+- 当前文件型计划阶段已更新为 complete。
+- 最终验证：
+  - `git diff --check` 通过。
+  - `python3 scripts/export_fanqie_delivery.py --clean` 通过：37 章，总正文 80914 字符，达到初始发布门槛。
+  - 正文硬禁词扫描无命中。
+  - 严格 API key 形态扫描无命中：`git grep -n -I -E 'sk-[A-Za-z0-9_-]{20,}' -- . ':(exclude).env*'`。
+  - `.env.deepseek`、`发布/`、`草稿/` 仍为忽略文件。
