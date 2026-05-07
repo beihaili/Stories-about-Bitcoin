@@ -95,3 +95,13 @@
 - 已尝试进一步去排比/去金句，但 DeepSeek 复评从 7.4 降到 6.8，已撤回。
 - DeepSeek 当前最好复评：23 章 7.4（accuracy 7 / narrative 8 / ai_control 7 / soul_moment 7 / connection 8 / rhythm 8）。
 - 当前结论：23 章有进步但未达 9；下一轮需要更大幅单线重排，不能继续在横向资料上补句子。
+
+## 2026-05-08 25 章 Saylor 事实纠偏回炉
+
+- 已优化 `正文/25_西装革命：机构入场里程碑.md`：把 2020-08-11 MicroStrategy 首次购入 BTC 的开篇从“财报电话会”改为 Tysons Corner 新闻稿/SEC 公告语境，避免虚构电话会现场。
+- 已按 SEC Exhibit 99.1 修正关键事实：MicroStrategy 以 2.5 亿美元购买 21,454 BTC，含费用，并将比特币列为主要财政储备资产；同时把“影子银行”改为更准确的“公开市场比特币敞口工具”。
+- 已修正内在矛盾：删除/改写“Saylor 从一开始就是信徒”的表述，使其与 2013 年怀疑比特币、2020 年转向押注的弧线一致。
+- 已压低 PayPal 段落中“几周内数百万新用户涌入”“近四亿人”等较难核证的强表述，改为“入口变化/数亿用户熟悉的入口”。
+- 曾尝试加入 SEC 风险提示、数月审议、资金配置两条腿等更完整决策压力线，但 DeepSeek 复评从 7.4 降至 7.2，已撤回该扩写，只保留事实纠偏与风险修正。
+- DeepSeek 当前复评：25 章 7.4（accuracy 8 / narrative 7 / ai_control 7 / soul_moment 8 / connection 8 / rhythm 7）。
+- 当前结论：25 章事实更稳但未达 9；下一轮不能继续小补丁，应先重排 Saylor 单线人物弧线，再把 PayPal/Dimon/Fink/Dalio/Taproot 压成服务主线的对照。
