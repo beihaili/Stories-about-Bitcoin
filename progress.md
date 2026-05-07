@@ -87,3 +87,11 @@
 - 已重写 Paul Tudor Jones 段落：从“信的内容”转向“职业声誉给会议室提供许可”，新增从“听起来很疯狂”到“Jones 也在看”的语言变化。
 - DeepSeek 最终复评：24 章 7.5（accuracy 8 / narrative 7 / ai_control 7 / soul_moment 8 / connection 8 / rhythm 8）。
 - 当前结论：24 章有提升但未达 9；下一轮必须做完整人物弧线重排，不能继续补宏观说明。
+
+## 2026-05-07 23 章机构入口回炉
+
+- 已优化 `正文/23_西装革命：机构觉醒的开端.md`：强化 Abigail Johnson / Fidelity 线，把 2014-2018 的官网时间线改写成“挖矿、托管、食堂午餐、机构托管服务”的行动过程。
+- 已补强 Fidelity 食堂午餐画面和 GBTC 溢价会议室画面，让“机构为入口付费”从概念变成打印纸、冷咖啡、投屏和铅笔敲纸的场景。
+- 已尝试进一步去排比/去金句，但 DeepSeek 复评从 7.4 降到 6.8，已撤回。
+- DeepSeek 当前最好复评：23 章 7.4（accuracy 7 / narrative 8 / ai_control 7 / soul_moment 7 / connection 8 / rhythm 8）。
+- 当前结论：23 章有进步但未达 9；下一轮需要更大幅单线重排，不能继续在横向资料上补句子。

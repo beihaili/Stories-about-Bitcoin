@@ -87,3 +87,10 @@
 - 24 章有效修法：把“流动性危机”从概念解释改为保证金、赎回、成交等待、喉咙发干、键盘汗痕、清算提醒等身体压力后，soul_moment 从 7 提至 8。
 - Paul Tudor Jones 段落更有效的写法不是继续解释《The Great Monetary Inflation》，而是写他的职业声誉如何改变会议室里的语言，让比特币从笑话变成可尽调的配置项。
 - 24 章最终复评 7.5，仍未达 9。下一轮应围绕 Jones 或一个可证机构决策链做完整人物弧线，不要继续横向罗列 Fed、ECB、BoJ、MicroStrategy、Square、MassMutual。
+
+## 23 章机构入口回炉发现
+
+- 23 章有效修法：Abigail Johnson / Fidelity 线比 JPM、Goldman、Citi 横向罗列更有叙事潜力；把“Fidelity 研究数字资产”写成挖矿、食堂午餐、托管概念验证、机构托管服务的动作后，narrative 达到 8。
+- GBTC 溢价的有效表达不是解释信托结构，而是写机构为什么愿意为“能进现有系统”付费；会议室、合规负责人、投屏、冷咖啡这些细节能帮助读者理解“入口税”。
+- 试图删除排比/金句反而让评分从 7.4 降到 6.8，说明当前版本的节奏还依赖这些句式。下一轮不能只做风格清洗，应先完成结构重排，再去 AI 味。
+- 23 章仍未达 9，accuracy 只有 7。后续若继续改，应补更可靠的一手/权威来源事实：Fidelity Digital Assets 官方时间线、Abigail Johnson Consensus 2017 发言、Grayscale 年度募资数据、Bakkt 上线/延迟的监管来源。
