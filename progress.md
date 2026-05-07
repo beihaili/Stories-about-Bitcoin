@@ -105,3 +105,10 @@
 - 曾尝试加入 SEC 风险提示、数月审议、资金配置两条腿等更完整决策压力线，但 DeepSeek 复评从 7.4 降至 7.2，已撤回该扩写，只保留事实纠偏与风险修正。
 - DeepSeek 当前复评：25 章 7.4（accuracy 8 / narrative 7 / ai_control 7 / soul_moment 8 / connection 8 / rhythm 7）。
 - 当前结论：25 章事实更稳但未达 9；下一轮不能继续小补丁，应先重排 Saylor 单线人物弧线，再把 PayPal/Dimon/Fink/Dalio/Taproot 压成服务主线的对照。
+
+## 2026-05-08 06 章小修回退记录
+
+- 已尝试轻修 `正文/06_初出茅庐：价值发现.md`：替换“历史性突破”“计算思路并不复杂”“有了价格锚”等导语/科普句，加入电费单、讨价还价、订单簿节奏。
+- DeepSeek 同口径对照：HEAD 原文 8.0；小修版 7.8（accuracy 8 / narrative 8 / ai_control 7 / soul_moment 8 / connection 8 / rhythm 8）。
+- 已撤回 06 章正文改动，不提交降分版本。
+- 当前结论：06 章披萨灵魂时刻本身很强，局部去 AI 味会削弱原有顺滑叙事。下一轮如冲 9，需要重排 Malmi/Laszlo 的人物弧线或增强法币成交到实物成交的递进，而不是只替换说明句。
