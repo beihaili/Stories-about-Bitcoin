@@ -156,3 +156,14 @@
 - 已核对 Roger Ver 后续法律状态：参考美国司法部 2025-10-14 公告，补充其与司法部达成暂缓起诉协议并补缴近 5,000 万美元税款、罚金和利息。
 - DeepSeek 同口径对照：回炉前 7.0；本轮最好复评 7.2；最终复评 7.0（accuracy 8 / narrative 7 / ai_control 7 / soul_moment 6 / connection 7 / rhythm 7）。
 - 当前结论：11 章事实与后见之明风险降低，但评分没有稳定提升，仍未达 9。下一轮需要结构性重排泡沫情绪曲线，而不是继续局部换句。
+
+## 2026-05-08 13 章生态萌芽事实回炉
+
+- 已优化 `正文/13_风起云涌：生态萌芽.md`：修正开头中本聪消失表述，区分 2010 年 12 月最后公开论坛帖与 2011 年 4 月给 Mike Hearn 邮件中的 `I've moved on to other things`。
+- 已压低不可证场景：删除 Tony 公寓、桌面文件、Grass Hill Alpacas 老板直接对话、0.88 美元成交时喊 Stephen、公寓没空调等难以核验细节。
+- 已修正 BitPay 融资时间线：把 Founders Fund 领投约 200 万美元种子轮从 2012 年改为 2013 年 5 月，并明确 WordPress 通过 BitPay 接受比特币支付。
+- 已压低 Vitalik 段落后见之明：删除 `5 BTC 后来超过一套房子` 和 2024 价格换算，改为当时约 3.5 美元稿费与 Bitcoin Weekly / Bitcoin Magazine 写作路径。
+- 已修正 2012 年伦敦会议表述：从 `第一届正式的比特币会议` 改为 `一场重要的比特币会议`。
+- 已收敛 Mt.Gox 份额与风险表述：从 `全球超过70%交易量` 改为 `长期占据全球比特币交易量的大头`；把 `白蚁` 比喻改成长期盗币与安全隐患。
+- DeepSeek 最终复评：HEAD 7.7 → 当前 8.5（accuracy 8 / narrative 9 / ai_control 8 / soul_moment 9 / connection 9 / rhythm 8）。
+- 当前结论：13 章事实风险明显降低，叙事强项保留，但仍未达到 9 分。下一轮若冲 9，应继续补强 BitPay/0.88 美元/Grass Hill Alpacas 等来源证据，并弱化 Mt.Gox 预叙的后见之明。
