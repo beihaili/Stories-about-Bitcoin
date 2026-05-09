@@ -64,7 +64,7 @@ codex exec -m gpt-5.5 -s read-only -C /Users/beihai/code/Bitcoin/bitcoinstory/St
 
 Expected: GPT-5.5 outputs a 43-row Fanqie validation scoring table and does not modify files.
 
-- [ ] **Step 4: Commit scoring docs**
+- [x] **Step 4: Commit scoring docs**
 
 Run:
 
@@ -79,7 +79,7 @@ git commit -m "docs: add fanqie scoring framework"
 
 ## Task 2: P0 Chapter 42 Continuity Fix
 
-- [ ] **Step 1: Rewrite chapter 42 opening state**
+- [x] **Step 1: Rewrite chapter 42 opening state**
 
 Change chapter 42 so it starts after chapter 41:
 
@@ -97,7 +97,7 @@ Remove the current contradiction:
 陈浩在旁边收拾行李。
 ```
 
-- [ ] **Step 2: Keep the privacy-boundary scene, but make it a later echo**
+- [x] **Step 2: Keep the privacy-boundary scene, but make it a later echo**
 
 Retain the `公开账本不是公开人的难堪` boundary, but anchor it after the first repayment:
 
@@ -105,11 +105,11 @@ Retain the `公开账本不是公开人的难堪` boundary, but anchor it after 
 编号 003 的单据最终补齐了。李觉只在账本里写“线下核验通过”，没有上传孩子手背贴着胶布的照片。
 ```
 
-- [ ] **Step 3: Reconnect to chapter 43**
+- [x] **Step 3: Reconnect to chapter 43**
 
 End chapter 42 with ordinary orders continuing and the book title sentence, so chapter 43 can remain the active-choice ending.
 
-- [ ] **Step 4: Verify chapter 42 no longer contains old timeline markers**
+- [x] **Step 4: Verify chapter 42 no longer contains old timeline markers**
 
 Run:
 
@@ -121,7 +121,7 @@ Expected: no output.
 
 ## Task 3: P1 Head-To-Tail Hook Pass
 
-- [ ] **Step 1: Chapters 04, 06, 12, 14**
+- [x] **Step 1: Chapters 04, 06, 12, 14**
 
 Apply only ending or opening hook edits:
 
@@ -130,7 +130,7 @@ Apply only ending or opening hook edits:
 - 12: make the v0 route tool fail in someone else's hands, setting up chapter 13 overreach.
 - 14: move a concrete platform loss or missed medicine order into the first screen, then end with Zhao Qing's account-risk screenshot for chapter 15.
 
-- [ ] **Step 2: Chapters 18, 19, 20**
+- [x] **Step 2: Chapters 18, 19, 20**
 
 Differentiate the governance sequence:
 
@@ -138,7 +138,7 @@ Differentiate the governance sequence:
 - 19: new-rider versus old-rider cost conflict.
 - 20: refusal to act as judge.
 
-- [ ] **Step 3: Chapters 24, 27, 31, 41**
+- [x] **Step 3: Chapters 24, 27, 31, 41**
 
 Tighten pacing:
 
@@ -149,7 +149,7 @@ Tighten pacing:
 
 ## Task 4: P2 Micro Pass
 
-- [ ] **Step 1: Review P2 chapters from 01 to 43**
+- [x] **Step 1: Review P2 chapters from 01 to 43**
 
 For P2 chapters, only edit if the change is low-risk:
 
@@ -158,13 +158,13 @@ For P2 chapters, only edit if the change is low-risk:
 - make one concrete action visible;
 - remove any tutorial-like financial operation detail.
 
-- [ ] **Step 2: Do not touch Keep chapters unless verifying typo/continuity**
+- [x] **Step 2: Do not touch Keep chapters unless verifying typo/continuity**
 
 Keep chapters: 01, 13, 25, 28, 29, 43.
 
 ## Task 5: Export And Verification
 
-- [ ] **Step 1: Export Fanqie package**
+- [x] **Step 1: Export Fanqie package**
 
 Run:
 
@@ -174,7 +174,7 @@ python3 scripts/export_fanqie_delivery.py --clean --target-initial-chars 100000
 
 Expected: `readiness: initial submission threshold reached`.
 
-- [ ] **Step 2: Check manifest**
+- [x] **Step 2: Check manifest**
 
 Run:
 
@@ -189,7 +189,7 @@ Expected:
 - At least 100000 body characters.
 - Chapter 43 is `第043章 这次是我自己接单`.
 
-- [ ] **Step 3: Check whitespace**
+- [x] **Step 3: Check whitespace**
 
 Run:
 
@@ -201,7 +201,7 @@ Expected: no output.
 
 ## Task 6: Documentation And Commit
 
-- [ ] **Step 1: Update handoff and indexes**
+- [x] **Step 1: Update handoff and indexes**
 
 Update:
 
@@ -218,3 +218,14 @@ git status --short
 git add docs/superpowers 我给中本聪送外卖
 git commit -m "docs: score and optimize delivery novel for fanqie"
 ```
+
+## Execution Result
+
+Completed on 2026-05-09:
+
+- Created Fanqie scoring framework and GPT-5.5 baseline scoring docs.
+- Fixed P0 chapter 42 continuity conflict.
+- Optimized P1 chapters 04、06、12、14、18、19、20、24、27、31 and fixed P0 chapter 42.
+- Reviewed chapter 41 in the P1/P2 pass; after removing a duplicate bridge, it has no net manuscript diff.
+- Ran read-only GPT-5.5 review of changed chapters: no remaining P0.
+- Exported Fanqie package: 43 chapters, 103947 body characters, `ready_for_initial_submission: true`.
