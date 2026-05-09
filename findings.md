@@ -20,6 +20,8 @@
 - Media Matters 2024-07-29 转录可支撑：Kirk 在 Rumble 版节目中把“不受联邦政府控制的货币”说成与 U.S. Treasury 的直接竞争，自称 crypto enthusiast，拿 Ryan 开玩笑，并声明不是让听众买币；同段还把 Bitcoin 说成 everyday patriots 可 build/store/transfer wealth 的 decentralized way。正文可补这一句增强“翻译给保守派”的事实密度。
 - Trump 2024 Nashville / Bitcoin Conference 的战略储备口径可用 Axios、CNBC 等来源支撑：Trump 承诺保留美国政府持有或取得的 100% bitcoin，形成 strategic national bitcoin stockpile，并使用 `never sell your bitcoin` 语言。正文提“比特币超级大国和战略储备”可保留，但应避免说成 Kirk 促成。
 - 正文 date badge 中 `2025--09 block 863500` 与 2025-09-10 不匹配；公开链上浏览器显示 2025-09-10 附近已在约 914k 高度。特别篇应至少删除或更正该错误高度，避免元信息拖累 accuracy。
+- 2025 年 Iced Coffee Hour 访谈公开转录可支撑 Kirk 对 Graham Stephan 的直接答复：他称自己是 `a big fan of bitcoin`，并在被问到美国是否应该有 bitcoin reserve 时连续回答 yes。该材料能直接补强“他公开支持比特币/战略储备方向”的事实密度，但当前可用来源仍是公开转录而非官方节目稿；正文应继续写成“访谈转录里”，不要放大成课程、计划或技术主张。
+- 补入 Iced Coffee Hour 直接表态后，GPT-5.5 同文本三次复评为 8.54、8.47、8.58，中位数 8.54，且无单次低于 8.3。该章在当前 GPT-5.5 gate 下阶段性通过；但三次 accuracy 均为 8.2，说明来源链条仍是终审风险，不宜再追加未经一手核验的现场细节或政治传播因果。
 
 ## 评分系统可靠性审计结论
 

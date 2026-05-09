@@ -1,5 +1,13 @@
 # 《比特币那些事儿》全书评分优化 Progress
 
+## 2026-05-09 特别篇 GPT-5.5 三次复评
+
+- 已接续最低优先池首章 `正文/特别篇：查理·柯克的比特币之路.md`，本轮只使用 GPT-5.5 作为主评分器，没有使用 DeepSeek 作为裁判。
+- 正文已完成事实边界回炉：更正日期 badge 的区块高度为 914120；现场段落对齐 Utah DPS / FBI / AP / CNBC 口径；2022 与 2024 两段比特币表态改为 Media Matters 保存的节目转录可托住的内容；Trump Bitcoin 2024 段落改成“回声”而不是因果归功；新增 2025 年 Iced Coffee Hour 访谈中 `I'm a big fan of bitcoin` 和 bitcoin reserve 连答 yes 的直接表态。
+- 已运行 `make build-zh`，输出 `Done: 39 chapters + SUMMARY.md`，确认 `zh/特别篇：查理·柯克的比特币之路.md` 已由 `正文/` 重新生成。
+- GPT-5.5 同文本三次复评完成，产物为 `scripts/writing_studio/output/gpt55_probe_special_20260509_r8.json`、`..._r9.json`、`..._r10.json`。三次综合分为 8.54、8.47、8.58；中位数 8.54，且无单次低于 8.3，按当前 gate 阶段性通过。
+- 三次共同弱项仍是 accuracy，均为 8.2。结论：本章的叙事、AI 味、灵魂画面和全书连接已进入候选出版级，但事实边界不能继续靠二手转录扩写；终审时应保留当前克制口径，优先核对公开视频/官方转录，不再添加临终话语、遇袭前比特币问题或传记化桥段。
+
 ## 2026-05-09 GPT-5.5 稳定基线
 
 - 按用户要求，本轮先跑“稳定基线”，并停止把 DeepSeek 作为主评分器；评分通过 `codex exec -m gpt-5.5` 执行，read-only sandbox，固定六维 rubric，只读取当前 `正文/`。
