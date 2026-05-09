@@ -10,6 +10,17 @@
 - 最低优先池为 `特别篇`、`18`、`22`、`02`、`20`、`31`、`05`、`33`、`01`、`37`。与 DeepSeek 旧低分池相比，GPT-5.5 把 `特别篇`、`18`、`02`、`20` 的事实边界问题继续排在前面，也把 `22/31/05/33/37` 的叙事现场或人物行动不足显著暴露出来。
 - 评分策略更新：DeepSeek 只作为历史压力测试或交叉诊断；当前主线应先用 GPT-5.5 稳定基线排序，再做人工事实/叙事审读。完成标准仍不能降级为“单次 GPT 分数 >=8.5”。
 
+## 特别篇 GPT-5.5 核源发现
+
+- GPT-5.5 基线给 `特别篇：查理·柯克的比特币之路.md` 7.66，弱项是 accuracy 5.2；评语认为枪击现场画面强，但核心死亡事件和节目细节高度依赖核验。
+- 犹他州公共安全部 2025-09-10 通报可支撑：12:20 MST 左右，Charlie Kirk 在 Utah Valley University 的 Turning Point USA 学生赞助活动发言时中枪，被送往 Timpanogos Regional Hospital 后死亡；DPS 与 FBI 共同调查；枪击被认为是 targeted attack；枪手据信从建筑屋顶向学生 courtyard 开火；UVU PD 有 6 名警员，加上 Kirk 自带安保；现场约 3,000 人。
+- FBI Utah Valley Shooting Updates 可支撑：FBI 将该案描述为 fatal shooting / murder of Charlie Kirk at UVU in Orem on September 10, 2025；后续公布嫌疑人影像，并称枪手在开枪后从屋顶跳下逃离，枪和弹药遗留在大学附近林地。
+- AP / CNBC 等媒体转述可支撑：柯克中枪前正在回答关于 mass shootings / gun violence 的提问；更精确的最后互动是对方追问近十年 mass shooters 数量，Kirk 反问统计是否包含 gang violence，随后一声枪响。正文不应只写“刚开始回答”，也不宜虚构更多问答细节。
+- Media Matters 2022-12-13 转录可支撑：Kirk 在 YouTube 版节目中说 Bitcoin 在某些方面比美元更有 integrity，理由包括可知总量、ledger、blockchain technology；同时他也说美元背后有美国军事力量的 full faith and credit。正文应保留“两边比较”的克制口径，不把他写成纯比特币信徒。
+- Media Matters 2024-07-29 转录可支撑：Kirk 在 Rumble 版节目中把“不受联邦政府控制的货币”说成与 U.S. Treasury 的直接竞争，自称 crypto enthusiast，拿 Ryan 开玩笑，并声明不是让听众买币；同段还把 Bitcoin 说成 everyday patriots 可 build/store/transfer wealth 的 decentralized way。正文可补这一句增强“翻译给保守派”的事实密度。
+- Trump 2024 Nashville / Bitcoin Conference 的战略储备口径可用 Axios、CNBC 等来源支撑：Trump 承诺保留美国政府持有或取得的 100% bitcoin，形成 strategic national bitcoin stockpile，并使用 `never sell your bitcoin` 语言。正文提“比特币超级大国和战略储备”可保留，但应避免说成 Kirk 促成。
+- 正文 date badge 中 `2025--09 block 863500` 与 2025-09-10 不匹配；公开链上浏览器显示 2025-09-10 附近已在约 914k 高度。特别篇应至少删除或更正该错误高度，避免元信息拖累 accuracy。
+
 ## 评分系统可靠性审计结论
 
 - 当前 DeepSeek 评分系统不是确定性测试，而是一个 LLM 编辑评分器。它的强项是发现方向性问题：AI味、散文化、缺人物行动、事实密度不足、场景感不足。这些评语与人工读感大体一致，且对第37章、第27章这类样本，三次重复评分给出的弱项稳定。
