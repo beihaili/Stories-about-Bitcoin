@@ -13,7 +13,7 @@ def test_default_values():
     from scripts.overnight.config import DEFAULT_ROUNDS, DEFAULT_TIMEOUT, CLAUDE_MODEL
     assert DEFAULT_ROUNDS == 20
     assert DEFAULT_TIMEOUT == 900
-    assert CLAUDE_MODEL == "opus"
+    assert CLAUDE_MODEL == "claude-opus-4-8"
 
 
 def test_run_dir_creates_dated_path():

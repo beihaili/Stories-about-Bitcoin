@@ -58,10 +58,12 @@ def test_check_prerequisites():
 def test_check_prerequisites_missing_tool():
     """check_prerequisites should sys.exit(1) if a required tool is missing."""
     from scripts.overnight.__main__ import check_prerequisites
-    import sys
     with patch("shutil.which", return_value=None):
-        with patch("sys.exit") as mock_exit:
-            check_prerequisites()
+        with patch("sys.exit", side_effect=SystemExit) as mock_exit:
+            try:
+                check_prerequisites()
+            except SystemExit:
+                pass
             mock_exit.assert_called_once_with(1)
 
 
@@ -415,6 +417,22 @@ def test_run_with_caffeinate_non_macos():
                     # If caffeinate raises FileNotFoundError, it should fall through to main()
                 except SystemExit:
                     pass  # Acceptable
+
+
+def test_run_with_caffeinate_propagates_child_failure():
+    """The wrapper should return the caffeinated child process exit code."""
+    from scripts.overnight.__main__ import run_with_caffeinate
+    import os
+
+    env = {k: v for k, v in os.environ.items() if k != "OVERNIGHT_CAFFEINATED"}
+    with patch.dict("os.environ", env, clear=True):
+        with patch("subprocess.run", return_value=MagicMock(returncode=23)):
+            try:
+                run_with_caffeinate()
+            except SystemExit as exc:
+                assert exc.code == 23
+            else:
+                raise AssertionError("child process failure was not propagated")
 
 
 def test_run_with_caffeinate_already_caffeinated():

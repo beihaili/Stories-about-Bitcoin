@@ -31,7 +31,7 @@ cd "$REPO_DIR"
 
 # --- 认证预检 ---
 log "Pre-flight: testing claude CLI auth..."
-AUTH_TEST=$(echo "respond with just OK" | timeout 30 claude -p --model sonnet --no-session-persistence 2>&1 || true)
+AUTH_TEST=$(echo "respond with just OK" | timeout 30 claude -p --model claude-opus-4-8 --no-session-persistence 2>&1 || true)
 if echo "$AUTH_TEST" | grep -qi "OK"; then
     log "Auth OK — proceeding."
 else
@@ -49,14 +49,13 @@ git branch --list 'overnight/*' | xargs git branch -D 2>/dev/null || true
 
 # --- 启动 budget-aware 模式 ---
 log "Launching budget-aware overnight run..."
+EXIT_CODE=0
 python3 -m scripts.overnight \
     --budget-aware \
     --rounds 20 \
     --window-hours 5 \
     --timeout 900 \
-    >> "$LOG_FILE" 2>&1
-
-EXIT_CODE=$?
+    >> "$LOG_FILE" 2>&1 || EXIT_CODE=$?
 log "=== Overnight run finished (exit $EXIT_CODE) ==="
 
 # 发完成通知

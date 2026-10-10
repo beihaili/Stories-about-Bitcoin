@@ -14,7 +14,7 @@ WORKTREE_BASE = PROJECT_ROOT.parent / "overnight-worktrees"
 # Defaults
 DEFAULT_ROUNDS = 20
 DEFAULT_TIMEOUT = 900  # 15 minutes per round
-CLAUDE_MODEL = "opus"
+CLAUDE_MODEL = "claude-opus-4-8"
 MIN_DISK_GB = 1
 
 # Quality thresholds

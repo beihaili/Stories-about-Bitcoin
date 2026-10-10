@@ -201,7 +201,9 @@ def run_with_caffeinate() -> None:
         env = os.environ.copy()
         env["OVERNIGHT_CAFFEINATED"] = "1"
 
-        subprocess.run(caffeinate_cmd, env=env)
+        result = subprocess.run(caffeinate_cmd, env=env)
+        if result.returncode != 0:
+            raise SystemExit(result.returncode)
     except FileNotFoundError:
         # caffeinate not available (non-macOS) — run directly
         main()
