@@ -57,6 +57,12 @@ Grayscale Investments——管理着全球最大的比特币信托基金GBTC—�
 
 2024年1月10日下午，批准令落地。11只比特币现货ETF同时获批。Gensler在声明里特意强调：批准ETF“不意味着SEC认可比特币本身”。这是一份在法院判决后签下的通行证。
 
+SEC内部也没有整齐鼓掌。
+
+同一天，委员 Hester Peirce 在 SEC 网站上发了一篇声明。标题借了《麦克白》里的血迹意象，大意是这块污点终于该洗掉了。她不是在币圈大会上喊单，而是在监管机构内部写下另一份记录：十年来，申请人反复递表，员工反复审查，公众反复等待，SEC 却一直把同一种产品区别对待到法院面前。
+
+这扇门不是某个人突然想通后打开的。它是申请文件、法院判决、内部异议和市场压力一起顶开的。
+
 十年。
 
 ---
@@ -75,13 +81,15 @@ Larry Fink。BlackRock CEO。管理着超过10万亿美元资产的全球最大�
 
 从"洗钱指数"到旗舰ETF，七年。Larry Fink 转得不早，也不快；他的分量来自 BlackRock 的体量。这家最大资产管理公司一改口，投资委员会听到的是一条可以写进尽调材料的产品线。
 
+ETF开盘第二天，Fink 坐到 CNBC《Squawk Box》的直播桌前。采访话题本来是 BlackRock 财报和市场展望，但主持人绕不开刚上市的比特币 ETF。Fink 没再用"洗钱指数"那套语言。他说，ETF 只是金融市场技术革命的第一步，下一步会是更多资产被代币化。
+
+半年后，他又在 CNBC《Squawk on the Street》里把话说得更直：自己曾经是怀疑者，研究之后发现以前的看法错了；现在他把比特币称作一种合法的金融工具，一种数字黄金。
+
+这不是币圈喊单。它更像华尔街完成了一次词汇替换：同一个人，七年前说"洗钱指数"，七年后坐在财经电视台上，把比特币放进资产配置、避险和金融工具的语言里。
+
 IBIT上线后的表现让市场措手不及。它在短短几个月内就突破了100亿美元的管理规模，创下ETF行业最快纪录。到2024年底，规模超过500亿美元。
 
-500亿美元。七年前被同一个公司的CEO称为"洗钱工具"的东西，现在成了这家公司增长最快的产品之一。
-
-Fink被问到为什么改变看法，他的回答很简短："I was wrong."
-
-三个字。在华尔街，承认错误比赚钱难得多。
+七年前被同一个公司的CEO称为"洗钱工具"的东西，现在成了这家公司增长最快的产品之一。
 
 ---
 
@@ -146,6 +154,8 @@ ETF获批不到一年，比特币的价格将突破十万美元。但那是下�
 *Winklevoss兄弟的第一份ETF申请是2013年7月1日提交的。最终获批是2024年1月10日。3845天。他们在2013年公开披露的是约1100万美元比特币、约当时流通量1%的量级。ETF没有先给他们通行证，时间先给了他们复利。*
 
 ---
+
+资料边界：Winklevoss 2013年递表和持仓口径参照当年 SEC 文件及公开采访整理；Grayscale 诉 SEC 判决和 `arbitrary and capricious` 口径参照 D.C. Circuit 2023-08-29 判决及 SEC 后续声明（https://www.sec.gov/newsroom/speeches-statements/gensler-statement-spot-bitcoin-011023、https://www.sec.gov/newsroom/speeches-statements/peirce-statement-spot-bitcoin-011023）；SEC X 账号被盗时间线按 SEC 官方声明：2024-01-09 4:11pm ET 未授权发帖，4:26pm ET 由 Gensler 账号澄清（https://www.sec.gov/newsroom/speeches-statements/gensler-x-account）；11只产品批准名单、Gensler“不认可比特币本身”口径和委员 Peirce / Uyeda / Crenshaw 不同立场参照 SEC 2024-01-10 批准声明及委员声明（https://www.sec.gov/newsroom/speeches-statements/gensler-statement-spot-bitcoin-011023、https://www.sec.gov/newsroom/speeches-statements/peirce-statement-spot-bitcoin-011023、https://www.sec.gov/newsroom/speeches-statements/uyeda-statement-spot-bitcoin-011023、https://www.sec.gov/newsroom/speeches-statements/crenshaw-statement-spot-bitcoin-011023）；Larry Fink 在 ETF 上市后谈技术革命、2024年7月承认自己此前看错并称比特币为合法金融工具/数字黄金，参照 CNBC 2024-01-12 和 2024-07-15 采访报道（https://www.cnbc.com/2024/01/12/blackrocks-larry-fink-says-bitcoin-etfs-are-just-the-first-step-in-the-technological-revolution-of-finance.html、https://www.cnbc.com/2024/07/15/blackrocks-larry-fink-says-hes-a-major-believer-in-bitcoin.html）；首日约45亿到46亿美元成交量、GBTC/IBIT 量级和后续净流入参照 Reuters/LSEG、CNBC、Unchained 等市场报道；IBIT 结构和 Coinbase Prime 托管参照 iShares 官方资料（https://www.ishares.com/us/products/333011/i）。正文中的券商账户 `Filled` 为产品机制示意，不写成具体可核个案。
 
 <div align="center">
 <a href="https://github.com/beihaili/Get-Started-with-Web3">🏠 返回主页</a> |
