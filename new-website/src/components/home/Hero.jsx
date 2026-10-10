@@ -103,15 +103,15 @@ const Hero = ({ lang = 'zh' }) => {
             transition={{ delay: 0.5 }}
           >
             <div className="text-center min-w-[60px]">
-              <div className="text-2xl sm:text-4xl font-bold text-bitcoin-orange">33</div>
+              <div className="text-2xl sm:text-4xl font-bold text-bitcoin-orange">39</div>
               <div className="text-xs sm:text-sm text-historical-antique dark:text-gray-400">{lang === 'zh' ? '章节' : 'Chapters'}</div>
             </div>
             <div className="text-center min-w-[80px]">
-              <div className="text-xl sm:text-4xl font-bold text-bitcoin-orange">1976-2024</div>
-              <div className="text-xs sm:text-sm text-historical-antique dark:text-gray-400">{lang === 'zh' ? '跨越48年' : '48 Years'}</div>
+              <div className="text-xl sm:text-4xl font-bold text-bitcoin-orange">1976-2025</div>
+              <div className="text-xs sm:text-sm text-historical-antique dark:text-gray-400">{lang === 'zh' ? '跨越49年' : '49 Years'}</div>
             </div>
             <div className="text-center min-w-[60px]">
-              <div className="text-2xl sm:text-4xl font-bold text-bitcoin-orange">7</div>
+              <div className="text-2xl sm:text-4xl font-bold text-bitcoin-orange">9</div>
               <div className="text-xs sm:text-sm text-historical-antique dark:text-gray-400">{lang === 'zh' ? '历史时期' : 'Periods'}</div>
             </div>
           </motion.div>

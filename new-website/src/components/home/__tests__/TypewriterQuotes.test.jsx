@@ -10,7 +10,7 @@ describe('TypewriterQuotes', () => {
 
   beforeEach(() => {
     observerInstances = []
-    global.IntersectionObserver = vi.fn(function (callback, options) {
+    globalThis.IntersectionObserver = vi.fn(function (callback, options) {
       const instance = {
         callback,
         options,
@@ -82,8 +82,8 @@ describe('TypewriterQuotes', () => {
   describe('IntersectionObserver integration', () => {
     it('creates an IntersectionObserver with threshold 0 and 100px rootMargin', () => {
       render(<TypewriterQuotes />)
-      expect(global.IntersectionObserver).toHaveBeenCalledTimes(1)
-      const [, options] = global.IntersectionObserver.mock.calls[0]
+      expect(globalThis.IntersectionObserver).toHaveBeenCalledTimes(1)
+      const [, options] = globalThis.IntersectionObserver.mock.calls[0]
       expect(options).toEqual({ threshold: 0, rootMargin: '100px' })
     })
 

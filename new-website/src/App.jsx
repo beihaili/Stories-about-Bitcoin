@@ -89,15 +89,15 @@ function App() {
           ? '比特币那些事儿 — 用文学风格讲述比特币历史'
           : 'Stories about Bitcoin — Bitcoin History in Literary Style'} />
         <meta property="og:description" content={lang === 'zh'
-          ? '36章开源双语电子书，覆盖1976-2025年比特币历史'
-          : '36-chapter open-source bilingual ebook covering Bitcoin history from 1976 to 2025'} />
+          ? '39章开源双语电子书，覆盖1976-2025年比特币历史'
+          : '39-chapter open-source bilingual ebook covering Bitcoin history from 1976 to 2025'} />
         <meta property="og:locale" content={lang === 'zh' ? 'zh_CN' : 'en_US'} />
         <meta name="twitter:title" content={lang === 'zh'
           ? '比特币那些事儿 — 用文学风格讲述比特币历史'
           : 'Stories about Bitcoin — Bitcoin History in Literary Style'} />
         <meta name="twitter:description" content={lang === 'zh'
-          ? '36章开源双语电子书，覆盖1976-2025年比特币历史'
-          : '36-chapter open-source bilingual ebook covering Bitcoin history from 1976 to 2025'} />
+          ? '39章开源双语电子书，覆盖1976-2025年比特币历史'
+          : '39-chapter open-source bilingual ebook covering Bitcoin history from 1976 to 2025'} />
       </Helmet>
 
       {/* Skip to content link for keyboard users */}

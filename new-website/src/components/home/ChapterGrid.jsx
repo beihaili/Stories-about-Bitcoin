@@ -44,8 +44,8 @@ const ChapterGrid = ({
           </h2>
           <p className="text-xl text-historical-antique dark:text-gray-300 max-w-2xl mx-auto">
             {lang === 'zh'
-              ? '穿越48年时光，重访比特币诞生前后的关键历史时刻'
-              : 'Travel through 48 years to revisit key historical moments before and after Bitcoin\'s birth'
+              ? '穿越1976-2025年，重访比特币诞生前后的关键历史时刻'
+              : 'Travel from 1976 to 2025 to revisit key moments before and after Bitcoin\'s birth'
             }
           </p>
         </motion.div>

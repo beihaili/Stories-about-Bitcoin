@@ -1,7 +1,7 @@
 {
   "name": "比特币那些事儿 | Stories about Bitcoin",
   "short_name": "比特币故事",
-  "description": "用文学风格讲述比特币48年历史的开源双语电子书",
+  "description": "涵盖1976-2025年、39章、9个时期的开源双语电子书",
   "start_url": "/Stories-about-Bitcoin/",
   "display": "standalone",
   "theme_color": "#F7931A",

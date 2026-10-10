@@ -9,8 +9,8 @@ const ShareButtons = ({ url, title, lang = 'zh', compact = false }) => {
   const shareTitle = title || (lang === 'zh' ? '比特币那些事儿' : 'Stories about Bitcoin');
 
   const tweetText = lang === 'zh'
-    ? `${shareTitle} - 用《明朝那些事儿》风格讲述比特币48年历史的开源双语电子书 #Bitcoin #比特币`
-    : `${shareTitle} - Bitcoin's 48-year history told in web novel style. Open source & bilingual. #Bitcoin #CryptoHistory`;
+    ? `${shareTitle} - 用《明朝那些事儿》风格讲述1976-2025年比特币历史的39章开源双语电子书 #Bitcoin #比特币`
+    : `${shareTitle} - Bitcoin's 1976-2025 history in 39 chapters. Open source & bilingual. #Bitcoin #CryptoHistory`;
 
   const handleCopyLink = async () => {
     try {

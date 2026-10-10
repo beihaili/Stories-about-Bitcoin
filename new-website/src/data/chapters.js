@@ -635,7 +635,7 @@ export const chapters = [
     image: 'img/ch27.png',
     link: {
       zh: '/zh/27_西装革命：闪电降临.html',
-      en: null
+      en: '/en/27_suit_revolution_lightning_strikes.html'
     },
     year: '2015-2021',
     readingTime: 12
@@ -701,7 +701,7 @@ export const chapters = [
     image: 'img/ch30.png',
     link: {
       zh: '/zh/30_未来可期：多米诺崩塌.html',
-      en: null
+      en: '/en/30_future_promise_the_domino_collapse.html'
     },
     year: '2022',
     readingTime: 12
@@ -745,7 +745,7 @@ export const chapters = [
     image: 'img/ch32.png',
     link: {
       zh: '/zh/32_未来可期：铭文风暴.html',
-      en: null
+      en: '/en/32_future_promise_the_inscription_storm.html'
     },
     year: '2021-2024',
     readingTime: 12

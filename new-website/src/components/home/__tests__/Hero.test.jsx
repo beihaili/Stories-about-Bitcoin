@@ -24,16 +24,22 @@ describe('Hero', () => {
     expect(screen.getByText('Stories about Bitcoin')).toBeInTheDocument()
   })
 
-  it('renders stats: 33 chapters', () => {
+  it('renders stats: 39 chapters', () => {
     render(<Hero lang="zh" />)
-    expect(screen.getByText('33')).toBeInTheDocument()
+    expect(screen.getByText('39')).toBeInTheDocument()
     expect(screen.getByText('章节')).toBeInTheDocument()
   })
 
-  it('renders stats: 48 years', () => {
+  it('renders stats: 1976-2025', () => {
     render(<Hero lang="zh" />)
-    expect(screen.getByText('1976-2024')).toBeInTheDocument()
-    expect(screen.getByText('跨越48年')).toBeInTheDocument()
+    expect(screen.getByText('1976-2025')).toBeInTheDocument()
+    expect(screen.getByText('跨越49年')).toBeInTheDocument()
+  })
+
+  it('renders stats: 9 periods', () => {
+    render(<Hero lang="zh" />)
+    expect(screen.getByText('9')).toBeInTheDocument()
+    expect(screen.getByText('历史时期')).toBeInTheDocument()
   })
 
   it('renders CTA button linking to book', () => {
