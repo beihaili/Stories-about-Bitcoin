@@ -20,7 +20,7 @@ ZH_DIR = REPO_ROOT / "zh"
 TEMPLATE_DIR = Path(__file__).parent / "templates"
 DONATION_BLOCK_FILE = TEMPLATE_DIR / "donation_block.html"
 
-# SUMMARY.md 的分组结构（7 篇 + 特别篇）
+# SUMMARY.md 的分组结构（序言 + 7 个历史时期 + 特别篇）
 PERIOD_CONFIG = [
     {
         "emoji": "🌟",
@@ -60,7 +60,7 @@ PERIOD_CONFIG = [
     {
         "emoji": "🚀",
         "title": "未来可期篇 (2021-2025)",
-        "range": (27, 34),
+        "range": (27, 37),
     },
 ]
 
