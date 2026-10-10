@@ -40,6 +40,8 @@ Temporary Items
 # Temporary files
 *.tmp
 *.temp
+*.bak
+*.bak-*
 
 # Deployment guide (internal use only)
 DEPLOY_GUIDE.md
