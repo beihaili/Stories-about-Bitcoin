@@ -109,3 +109,7 @@ scripts/__pycache__/
 scripts/**/__pycache__/
 *.pyc
 en_legacy_backup_20260324/
+
+# 视频生成（本地工具 + 输出）
+scripts/video_maker/
+video/
