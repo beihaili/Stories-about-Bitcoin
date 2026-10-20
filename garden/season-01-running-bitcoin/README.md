@@ -28,6 +28,7 @@ This season, we want those stories. Yours, or someone else's.
 
 ### Prompts (pick one, or ignore them all)
 
+0. **"I have XX bitcoins, and this is my story."** The classic title from the [2015 contest](../classics/2015-我有XX个比特币/) is open to everyone again. If you wrote one back then, write the sequel: ten years later, do you still have them?
 1. The first time you heard the word "bitcoin". Where were you?
 2. The first transaction you sent, or received. Who was on the other side?
 3. The first time you ran a node, and what the fan sounded like.
@@ -41,15 +42,15 @@ This season, we want those stories. Yours, or someone else's.
 
 ### Awards
 
-| Award | Chosen by |
-|---|---|
-| **Genesis Prize** — best story of the season | Editors |
-| **Readers' Prize** | Reader vote on the shortlist (one GitHub account, one 👍) |
-| **Best Seed** — the seed that grew into the best story | Editors; goes to whoever planted it |
-| **Best Translation** | Language editors |
-| **Honorable mentions** | Editors |
+| Award | Prize | Chosen by |
+|---|---|---|
+| **Genesis Prize** — best story of the season | 100,000 sats | Editors |
+| **Readers' Prize** | 50,000 sats | Reader vote on the shortlist (one GitHub account, one 👍) |
+| **Best Seed** — the seed that grew into the best story | 30,000 sats | Editors; goes to whoever planted it |
+| **Best Translation** | 30,000 sats | Language editors |
+| **Honorable mentions** | Published in the anthology | Editors |
 
-Prizes: *to be announced before the call opens.* All selected stories are published in the Season 01 anthology with full credit.
+Total prize pool: **210,000 sats**, paid over Lightning by the project founder. Anyone who wants to add to the pool can tip the [project's Lightning address](../../README.md); anything added is shared out in the same proportions and reported publicly. All selected stories are published in the Season 01 anthology with full credit.
 
 ### What the editors look for
 
@@ -82,6 +83,7 @@ Prizes: *to be announced before the call opens.* All selected stories are publis
 
 ### 写作提示（任选其一，也可以都不理）
 
+0. **「我有 XX 个比特币，这是我的故事」**。[2015 年那次征文](../classics/2015-我有XX个比特币/)的经典题目，再向所有人开放一次。如果你当年写过，就写一篇续集：十年之后，你还有那些币吗？
 1. 你第一次听到"比特币"这个词，是在哪里？
 2. 你发出或收到的第一笔转账。另一头是谁？
 3. 你第一次运行节点的那个晚上，风扇是什么声音。
@@ -95,15 +97,15 @@ Prizes: *to be announced before the call opens.* All selected stories are publis
 
 ### 奖项
 
-| 奖项 | 评选方式 |
-|---|---|
-| **创世奖**：本季最佳作品 | 编辑评选 |
-| **读者奖** | 入围作品读者投票（一个 GitHub 账号一个 👍） |
-| **最佳种子奖**：长成最佳故事的那颗种子 | 编辑评选，颁给种下它的人 |
-| **最佳翻译奖** | 语言编辑评选 |
-| **荣誉提名** | 编辑评选 |
+| 奖项 | 奖金 | 评选方式 |
+|---|---|---|
+| **创世奖**：本季最佳作品 | 100,000 聪 | 编辑评选 |
+| **读者奖** | 50,000 聪 | 入围作品读者投票（一个 GitHub 账号一个 👍） |
+| **最佳种子奖**：长成最佳故事的那颗种子 | 30,000 聪 | 编辑评选，颁给种下它的人 |
+| **最佳翻译奖** | 30,000 聪 | 语言编辑评选 |
+| **荣誉提名** | 收入合集 | 编辑评选 |
 
-奖品：*征文开始前公布。* 所有入选作品都会收进第一季合集，完整署名。
+总奖金 **210,000 聪**，由发起人自掏腰包，通过闪电网络发放。想给奖池添砖加瓦的朋友，可以打赏到[项目的闪电地址](../../README.md)；追加的部分按同样比例分配，并公开说明。所有入选作品都会收进第一季合集，完整署名。
 
 ### 编辑看重什么
 
@@ -138,7 +140,7 @@ Esta temporada queremos esas historias. La tuya, o la de otra persona.
 
 - **Fechas:** convocatoria del 31 de octubre al 15 de diciembre de 2026; antología el 3 de enero de 2027; premios el 10 de enero de 2027.
 - **Idioma:** cualquiera. Puedes escribir en español; nosotros nos encargamos de la traducción.
-- **Premios:** Premio Génesis (mejor historia), Premio del Público, Mejor Semilla, Mejor Traducción.
+- **Premios (210.000 sats en total):** Premio Génesis (mejor historia, 100.000 sats), Premio del Público (50.000 sats), Mejor Semilla (30.000 sats), Mejor Traducción (30.000 sats).
 - **Reglas:** nada de promoción de tokens ni consejos de inversión; la ficción debe indicarse; protege la privacidad de las personas; declara el uso de IA. Se aceptan seudónimos.
 - **Licencia:** CC BY-SA 4.0.
 - **Enviar:** [formulario de envío](https://github.com/beihaili/Stories-about-Bitcoin/issues/new?template=story-submission.yml) · ¿Sin idea aún? [Planta una semilla](https://github.com/beihaili/Stories-about-Bitcoin/issues/new?template=story-seed.yml).
@@ -155,7 +157,7 @@ Nesta temporada queremos essas histórias. A sua, ou a de outra pessoa.
 
 - **Datas:** inscrições de 31 de outubro a 15 de dezembro de 2026; antologia em 3 de janeiro de 2027; prêmios em 10 de janeiro de 2027.
 - **Idioma:** qualquer um. Pode escrever em português; nós cuidamos da tradução.
-- **Prêmios:** Prêmio Gênesis (melhor história), Prêmio do Público, Melhor Semente, Melhor Tradução.
+- **Prêmios (210.000 sats no total):** Prêmio Gênesis (melhor história, 100.000 sats), Prêmio do Público (50.000 sats), Melhor Semente (30.000 sats), Melhor Tradução (30.000 sats).
 - **Regras:** sem promoção de tokens nem conselhos de investimento; ficção deve ser identificada; proteja a privacidade das pessoas; declare o uso de IA. Pseudônimos são bem-vindos.
 - **Licença:** CC BY-SA 4.0.
 - **Enviar:** [formulário de envio](https://github.com/beihaili/Stories-about-Bitcoin/issues/new?template=story-submission.yml) · Ainda sem ideia? [Plante uma semente](https://github.com/beihaili/Stories-about-Bitcoin/issues/new?template=story-seed.yml).

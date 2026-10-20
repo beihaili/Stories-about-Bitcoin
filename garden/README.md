@@ -117,6 +117,10 @@ Everything in the Garden is published under [CC BY-SA 4.0](https://creativecommo
 |---|---|---|---|---|
 | [01](season-01-running-bitcoin/) | **Running bitcoin** — first times · 第一次的故事 | 2026-10-31 | 2026-12-15 | 2027-01-03 |
 
+## Classics | 前传
+
+- [2015 ·「我有 XX 个比特币，这是我的故事」](classics/2015-我有XX个比特币/) — the contest ahr999 ran in the 2015 bear market. Indexed with links; full texts only with each author's permission. ahr999 在 2015 年熊市里发起的征文，目前只做索引和链接，全文须经作者同意后收录。
+
 ## Long stories | 长篇
 
 - [《我给中本聪送外卖》](../我给中本聪送外卖/正文/) — 一个外卖骑手穿越比特币历史的长篇小说（中文，43 章）。A Chinese serial novel: a delivery rider who keeps ending up inside Bitcoin's history.
