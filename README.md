@@ -96,6 +96,8 @@ From Hayek's dream of private money to Bitcoin crossing $100,000.
 
 ## Contributing
 
+**🌱 [The Garden](garden/)** is the community side of this book: an anthology of short Bitcoin stories in any language. [Season 01 · Running bitcoin](garden/season-01-running-bitcoin/) opens on October 31, 2026.
+
 Translations, fact-checking, and code contributions are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for details.
 
 ## Development
@@ -219,6 +221,8 @@ python3 scripts/build_ebook.py en    # English PDF + EPUB
 </details>
 
 ## 参与贡献
+
+**🌱 [花园](garden/)** 是这本书的社区部分：一部用任何语言写成的比特币短篇故事集。[第一季征文「Running bitcoin」](garden/season-01-running-bitcoin/)将于 2026 年 10 月 31 日开始。
 
 翻译校对、事实核查、代码改进均欢迎。详见 [CONTRIBUTING.md](CONTRIBUTING.md)。
 
