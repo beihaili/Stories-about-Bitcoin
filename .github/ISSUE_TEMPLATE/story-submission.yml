@@ -1,0 +1,108 @@
+name: Story Submission | 投稿
+description: Submit a story to the Garden. No Git needed. | 向花园投稿，不需要会用 Git。
+title: "[Submission]: "
+labels: ["garden", "submission"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for writing. Please read the [Garden guide](https://github.com/beihaili/Stories-about-Bitcoin/tree/main/garden) first.
+        谢谢你写下它。投稿前请先读一下[花园说明](https://github.com/beihaili/Stories-about-Bitcoin/tree/main/garden)。
+
+        An editor will reply here with questions, not rewrites. | 编辑会在这里回复你，提的是问题，而不是改写。
+
+  - type: input
+    id: title
+    attributes:
+      label: Title | 标题
+    validations:
+      required: true
+
+  - type: input
+    id: author
+    attributes:
+      label: Author name or pseudonym | 署名（真名或笔名）
+    validations:
+      required: true
+
+  - type: dropdown
+    id: season
+    attributes:
+      label: Season | 投给哪一季
+      options:
+        - "Season 01 · Running bitcoin · 第一次的故事"
+        - "Not for a season, just the Garden | 不参加征文，只投花园"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: Type | 类型
+      options:
+        - "Memoir | 亲历记"
+        - "Portrait of a real person | 人物小传"
+        - "Historical fiction | 历史短篇小说"
+        - "Letter | 一封信"
+        - "Poem, lyrics or script | 诗、歌词或剧本"
+        - "Oral history | 口述史"
+        - "Translation | 翻译"
+    validations:
+      required: true
+
+  - type: input
+    id: language
+    attributes:
+      label: Original language | 原文语言
+      placeholder: "English / 中文 / Español / ..."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: ai
+    attributes:
+      label: AI assistance | AI 参与程度
+      description: Be honest. Disclosure is not a penalty. | 请如实填写，披露不会扣分。
+      options:
+        - "human: written by me; AI only proofread or fact-checked | 我写的，AI 只做了校对或核查"
+        - "human-led: written by me; AI drafted some transitions or suggested structure | 主体是我写的，AI 起草了部分过渡或提了结构建议"
+        - "ai-assisted: AI drafted; I rewrote it paragraph by paragraph | AI 起草，我逐段重写"
+    validations:
+      required: true
+
+  - type: textarea
+    id: story
+    attributes:
+      label: Your story | 正文
+      description: Paste the full text, or link to a pull request or a public document. | 贴上全文，或给出 PR 或公开文档的链接。
+      render: markdown
+    validations:
+      required: true
+
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources | 来源
+      description: Required for portraits, oral history and historical fiction. One link per claim. | 人物小传、口述史、历史小说必填，每条说法一个链接。
+    validations:
+      required: false
+
+  - type: input
+    id: lightning
+    attributes:
+      label: Lightning address (optional) | 闪电地址（可选）
+      description: Readers can tip you directly. | 读者可以直接打赏给你。
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Agreement | 确认
+      options:
+        - label: "I wrote this (or have the right to submit it), and I license it under CC BY-SA 4.0. | 这是我写的（或我有权投稿），我同意以 CC BY-SA 4.0 授权发布。"
+          required: true
+        - label: "Fiction is labelled, quotes from real people are verbatim, and no one's private information is exposed without consent. | 虚构已标明，真实人物的引语都是原话，没有未经同意公开他人隐私。"
+          required: true
+        - label: "This story does not promote any token, project or investment. | 本文不推广任何代币、项目或投资。"
+          required: true

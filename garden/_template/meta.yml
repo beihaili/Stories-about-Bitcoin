@@ -1,0 +1,31 @@
+# Copy this folder to garden/<season>/<number>-<short-slug>/ and fill it in.
+# 把这个文件夹复制到 garden/<季>/<编号>-<简短英文名>/，然后填写。
+
+title:
+  original: ""            # Title in the original language · 原文标题
+  # en: ""
+  # zh: ""
+
+author:
+  name: ""                # Real name or pseudonym · 真名或笔名
+  link: ""                # Optional: website, Twitter, Nostr npub · 可选
+  lightning: ""           # Optional: your Lightning address for tips · 可选：收打赏的闪电地址
+  signing_key: ""         # Optional: PGP fingerprint or Nostr npub used to sign story.*.md · 可选：签名公钥
+
+season: 1
+original_language: ""     # ISO 639-1 code: en, zh, es, pt, ...
+
+type: ""                  # memoir | portrait | fiction | letter | poem | oral-history
+                          # 亲历记 | 人物小传 | 虚构 | 书信 | 诗歌 | 口述史
+
+ai_assistance: human      # human | human-led | ai-assisted  (see garden/README.md)
+
+translations: []
+# - language: zh
+#   translator: ""
+#   method: "ai-draft, human-reviewed"   # or "human"
+
+sources_required: false   # true for portraits, oral history and historical fiction
+                          # 人物小传、口述史、历史小说填 true，并写 sources.md
+
+license: CC-BY-SA-4.0
