@@ -3,6 +3,8 @@
 *Stories about Bitcoin, written by the people who lived them.*
 *比特币的故事，由经历过它的人来写。*
 
+**Why this garden exists · 为什么有这座花园：[重建巴别塔 · Rebuilding Babel](MANIFESTO.md)**
+
 ---
 
 ## English
