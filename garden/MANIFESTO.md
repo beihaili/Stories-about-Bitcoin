@@ -20,7 +20,7 @@
 
 书里很多部分是 AI 帮我写的。可我来回读了几遍，还是觉得我自己写的那篇序言最有感觉。这件事让我明白：故事要由人来讲。
 
-今年我去了柏林的 bitcoin++。那里的人出身各不相同，却为了同一个爱好、同一个理想一起干活。在 Boss Challenge 里也是这样，十几个时区的同学，我常常要等到夜里两三点才对得上时间。我想重建巴别塔。
+今年我去了柏林的 bitcoin++。那里的人出身各不相同，却为了同一个爱好、同一个理想一起干活。在 Boss Challenge 里也是这样，十几个时区的同学，我常常要等到夜里两三点才对得上时间。我想重建巴别塔。这一次，我们不需要说同一种语言，只需要同一个理想。
 
 所以有了这座花园。它是一个小小的社区，大家一起去找比特币的故事和史料，用自己的语言，把自己的故事写下来。
 
@@ -58,7 +58,7 @@ That is why I wrote *Stories about Bitcoin*. These stories are all online, but t
 
 Much of the book was written with AI. But after reading it through several times, the part I still felt most was the preface I wrote myself. That taught me something: stories have to be told by people.
 
-This year I went to bitcoin++ in Berlin. The people there came from completely different backgrounds, yet they were working side by side for the same passion and the same ideal. The Boss Challenge was the same: classmates across more than a dozen time zones, and I often had to stay up until two or three in the morning to find a time that worked for everyone. I want to rebuild Babel.
+This year I went to bitcoin++ in Berlin. The people there came from completely different backgrounds, yet they were working side by side for the same passion and the same ideal. The Boss Challenge was the same: classmates across more than a dozen time zones, and I often had to stay up until two or three in the morning to find a time that worked for everyone. I want to rebuild Babel. This time, we don't need to speak the same language. We only need the same ideal.
 
 So this garden exists. It is a small community where we search together for bitcoin's stories and history, and write our own stories down in our own languages.
 
