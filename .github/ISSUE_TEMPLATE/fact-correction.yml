@@ -1,0 +1,41 @@
+name: Fact Correction | 事实纠错
+description: Report a factual error in the book or the Garden, with a source. | 报告书中或花园里的事实错误，请附来源。
+title: "[Fact]: "
+labels: ["fact-check"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you. A primary source (the person's own words, the original report, court records, on-chain data) is worth more than ten secondary ones.
+        谢谢你。一条一手来源（当事人原话、原始报道、法庭文件、链上数据）胜过十条转述。
+
+  - type: input
+    id: location
+    attributes:
+      label: Chapter or story | 章节或作品
+      placeholder: "04 The First Believer / 04 第一个信徒"
+    validations:
+      required: true
+
+  - type: textarea
+    id: claim
+    attributes:
+      label: What the text says | 原文怎么写
+      description: Quote the sentence. | 请引用原句。
+    validations:
+      required: true
+
+  - type: textarea
+    id: correction
+    attributes:
+      label: What the source says | 来源怎么说
+    validations:
+      required: true
+
+  - type: textarea
+    id: source
+    attributes:
+      label: Source links | 来源链接
+      description: Add an archive.org snapshot if you can. | 如果可以，附上 archive.org 存档。
+    validations:
+      required: true

@@ -1,0 +1,48 @@
+name: Story Seed | 故事种子
+description: A story someone should write. You don't have to write it yourself. | 一个值得写的故事，不必由你来写。
+title: "[Seed]: "
+labels: ["garden", "seed"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A seed is a story that deserves to be written: a person, a moment, a rumour worth checking. Someone else may pick it up and write it.
+        种子是一个值得写出来的故事：一个人、一个瞬间、一条值得查证的传闻。也许会有别人把它写出来。
+
+        Any language is fine. | 任何语言都可以。
+
+  - type: textarea
+    id: seed
+    attributes:
+      label: The story | 故事
+      description: What happened, to whom, when? A few lines is enough. | 发生了什么，关于谁，什么时候？几行就够。
+      placeholder: "In 2013, a programmer in Cyprus... / 2013 年，塞浦路斯有一个程序员……"
+    validations:
+      required: true
+
+  - type: textarea
+    id: why
+    attributes:
+      label: Why it matters to you | 为什么它打动你
+      description: One or two sentences. | 一两句话。
+    validations:
+      required: false
+
+  - type: textarea
+    id: leads
+    attributes:
+      label: Leads | 线索
+      description: Links, names, forum posts, people who might know more. | 链接、名字、论坛帖子、可能知道更多的人。
+    validations:
+      required: false
+
+  - type: dropdown
+    id: write
+    attributes:
+      label: Will you write it? | 你打算自己写吗？
+      options:
+        - "No, up for grabs | 不，谁都可以认领"
+        - "Maybe, happy to co-write | 也许，欢迎合写"
+        - "Yes, I'm writing it | 是的，我在写"
+    validations:
+      required: true
