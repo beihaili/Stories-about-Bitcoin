@@ -7,6 +7,7 @@ Sources and fact-check tables for the Chronicle and the Garden. One file per cha
 |---|---|
 | ✅ | Supported by a primary or reliable source · 有一手或可靠来源支持 |
 | ⚠️ | Broadly right, but details are wrong or disputed · 大体对，但细节有误或有争议 |
+| ❓ | No source found; cannot be confirmed or refuted · 找不到来源，既不能证实也不能证伪 |
 | ❌ | Contradicted by the sources · 与来源不符 |
 
 | File · 文件 | Chapter · 章节 | Status · 状态 |
